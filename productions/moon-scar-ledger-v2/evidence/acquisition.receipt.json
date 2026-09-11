@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "productionId": "moon-scar-ledger-v2",
+  "status": "candidate",
+  "techniqueTransfer": [
+    "demand-led exact reachable coordinates",
+    "identity and appearance lineage separated from staging",
+    "uniform chroma generation followed by dedicated matte provider",
+    "stage plates briefed with root band, actor marks, depth boundary and dialogue-safe region",
+    "provider events, inputs, outputs and byte digests retained before story admission"
+  ],
+  "models": {
+    "generation": "bytedance/seedream-4.5",
+    "matte": "851-labs/background-remover:a029dff38972b5fda4ec5d75d7d1cd25aeff621d2cf4946a41055d7db66b80bc"
+  },
+  "requestDigests": {
+    "mountain-cleft-stage-v3.generate": "5370e187fbe52b6234bf76f2e7b609a4d07ed3ff7cd564bf25838b243e199518",
+    "secret-cellar-stage-v3.generate": "18b0fe9868971fe25b839aa30e4e9c8be1c488e12bcf44d1379f5f2bb02bd50c",
+    "gu-yue-chun-neutral-v2.generate": "254207360f174359245b9f49ece67fd056b3822b98fc88d398301f681b57f571",
+    "gu-yue-chun-neutral-v2.matte": "b48b34914830b1923644141022db21c45e99145a8598f8c914bd10d8d04f9795",
+    "sealed-substrate-v3.generate": "8b193d2a61d9909e425f8f5dda361bee14c2e4abee016436ab5ddc7057237607",
+    "sealed-substrate-v3.matte": "aeaccbcfd86401c4d5cd3b231c44d5bd43ee13373e5c05281a86aec51ac000ee",
+    "moon-scar-gu-v3.generate": "c47bd70d582b46666954efea94cb6374a9061f6abeb6333bf65fccd5b3810ae0",
+    "moon-scar-gu-v3.matte": "19f3029908d8f0ae238444740472fb16ba80ffd362dc39b5fa1e939de9d6af0d"
+  },
+  "assets": {
+    "fang-field-mantle-guarded-v3": {
+      "sourcePath": "assets/generated/moon-scar-ledger-v2/fang-field-mantle-guarded-v3.png",
+      "sha256": "fb2edde92160508d19674c44ddf7264f1c6fbfcb021821f61ec89cacbc42e0a3",
+      "provenance": "legacy-sfx-lab",
+      "legacySourcePath": "legacy-sfx-lab://productions/reverend-insanity/episode-006-the-supply-tendon/vn-entity-combination-proof-v2/assets/entities/fang-field-mantle-guarded-v3.png",
+      "legacyReceiptPath": "legacy-sfx-lab://productions/reverend-insanity/episode-006-the-supply-tendon/vn-entity-combination-proof-v2/evidence/fang-field-expression-v3/receipt.json"
+    },
+    "legacy-gu-yue-chun-reference-v1": {
+      "sourcePath": "assets/generated/moon-scar-ledger-v2/legacy-gu-yue-chun-reference-v1.jpg",
+      "sha256": "5b4f9043c4ffe15c4a26a974745add75b24133ba2dc15aa35743ab963e215e14",
+      "provenance": "legacy-sfx-lab",
+      "legacySourcePath": "legacy-sfx-lab://productions/reverend-insanity/episode-007-three-heartbeats/vn-reader-v1/assets/entities/gu-yue-chun-ambush-contact-v2.png",
+      "legacyReceiptPath": "legacy-sfx-lab://productions/reverend-insanity/episode-007-three-heartbeats/vn-reader-v1/evidence/gu-yue-chun-ambush-contact-v2/receipt.json"
+    },
+    "mountain-cleft-stage-v3": {
+      "sourcePath": "assets/generated/moon-scar-ledger-v2/mountain-cleft-stage-v3.jpg",
+      "sha256": "6fcfd2ad2723ded696fb7e0c08dde5b55a2162d5a3e6a819c082e4147b36cc67",
+      "provenance": "replicate",
+      "predictionIds": [
+        "x2gdty6fhdrmy0d0j7t97h9w14"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/KENvymGaBrKiElMCkKd4KYjrZF5NTGQe7b4nHdjou3VlSQmLA/tmpr0tg1h21.jpg"
+    },
+    "secret-cellar-stage-v3": {
+      "sourcePath": "assets/generated/moon-scar-ledger-v2/secret-cellar-stage-v3.jpg",
+      "sha256": "4612d2c69b3699d3a703975be3bb6a135aecb507e0f31f156632c8731a4e5bde",
+      "provenance": "replicate",
+      "predictionIds": [
+        "w2xfmjr32xrmy0d0j7tv2pq0tc"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/sf21wzbJeWiINkP6SAo3SclB6ISgqrKO1OaUPtEFWQhYlgMXA/tmpffnq373o.jpg"
+    },
+    "gu-yue-chun-neutral-v2": {
+      "sourcePath": "assets/generated/moon-scar-ledger-v2/gu-yue-chun-neutral-v2.png",
+      "sha256": "4f7efa1946fe18f65c9d10d9a38746b0e61adb38b554ead1cbe786e61bae92c3",
+      "provenance": "replicate",
+      "predictionIds": [
+        "v9g0nfhcz5rmt0d0j7qvvtda70",
+        "gv934sxxs5rga0d0j7qt4am278"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/V6sCZ9MOMzasHFsxuJPbya0dRiYqj9OKPfpfC21HuigxfAZuA/tmpn8a0aamm.jpg",
+      "transparentUrl": "https://replicate.delivery/czjl/bg3lw5c5dHZTOVyG4Hu4jveqMhFffk1XKs0eqUHaf44e9HIzF/output.png",
+      "matteInspection": {
+        "visiblePixels": 784987,
+        "boundaryPixels": 15065,
+        "residualBoundaryFraction": 0.001659475605708596,
+        "transparentRgbPixels": 0
+      }
+    },
+    "sealed-substrate-v3": {
+      "sourcePath": "assets/generated/moon-scar-ledger-v2/sealed-substrate-v3.png",
+      "sha256": "68e970759a94505f3965a0a60650bd531adfb299f81f77a60f15d19a44081b70",
+      "provenance": "replicate",
+      "predictionIds": [
+        "aby763sqrsrmw0d0j7tscak868",
+        "27cvcgv23xrga0d0j7trwjtg4w"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/0OmOsOwVTm4dEtZuQxiftujz2Sd5fBeM3k8spA3YiJhGLBZuA/tmpw6f4gn7a.jpg",
+      "transparentUrl": "https://replicate.delivery/czjl/T7SRZ4eTOtzDLik679pM0W0XHeCuc9pl6PTDV3OeOZdOLBZuA/output.png",
+      "matteInspection": {
+        "visiblePixels": 2189064,
+        "boundaryPixels": 13813,
+        "residualBoundaryFraction": 0,
+        "transparentRgbPixels": 0
+      }
+    },
+    "moon-scar-gu-v3": {
+      "sourcePath": "assets/generated/moon-scar-ledger-v2/moon-scar-gu-v3.png",
+      "sha256": "ef5e118a551c86fb01cbd09cd346c2013d1842e44818d27daccaaaf051b86640",
+      "provenance": "replicate",
+      "predictionIds": [
+        "ydhg4d3zjxrmy0d0j7trdra1e8",
+        "sgj9z4x8phrga0d0j7tv41tg9g"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/52067bedIV0iHCFLEQ6vaFzuR7eGU637MFIvkXtihi11lgMXA/tmpkqrmpek6.jpg",
+      "transparentUrl": "https://replicate.delivery/czjl/MyDwY6zmDhb7O5wb64fejtDOriHdBTjs1btamZtQb1O5lgMXA/output.png",
+      "matteInspection": {
+        "visiblePixels": 2415336,
+        "boundaryPixels": 15329,
+        "residualBoundaryFraction": 0,
+        "transparentRgbPixels": 0
+      }
+    }
+  }
+}

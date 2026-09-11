@@ -33,13 +33,21 @@ Offline Replicate acquisition is optional. Copy `.env.example` to `.env`, set `R
 point `MERIDIANS_ROOT` at a local Meridians checkout only when a production needs its authorized source
 record. Provider jobs write candidates and retained evidence; they never run inside the reader.
 
+`npm run acquire:moon-scar` reproduces the current Moon-Scar acquisition from retained predictions when
+available. It imports exact legacy SFX lineage, generates only demanded coordinates, and prepares isolated
+assets through the shared chroma/segmentation matte. `REBUILD_MATTE=1` reruns preparation without requesting
+new images.
+
 ## Start here
 
 - `src/core/contracts.ts` — the only authoring/runtime shape.
 - `src/core/compiler.ts` — deterministic structural gate.
 - `src/core/figure-normalization.ts` — padding-invariant actor preparation.
+- `src/core/chroma-matte.ts` — deterministic chroma garbage matte and boundary repair.
 - `src/core/reader-state.ts` — deterministic reader transport.
 - `src/story/spider-memory.ts` — dual-identity and viewpoint rehearsal.
 - `src/story/moon-scar.ts` — an earlier representative Experience on the same contract.
 - `scripts/acquire-spider-assets.ts` — resumable, evidence-bearing Replicate acquisition and preparation.
+- `scripts/acquire-moon-scar-assets.ts` — demand-led Moon-Scar acquisition and legacy SFX transfer.
+- `productions/moon-scar-ledger-v2/PRODUCTION_REVIEW.md` — exact dailies and remaining audience limit.
 - `docs/ARCHITECTURE.md` — decisions and non-goals.

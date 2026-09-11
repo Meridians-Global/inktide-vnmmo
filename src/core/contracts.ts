@@ -45,7 +45,7 @@ export const ActorSchema = z.object({
   name: z.string().min(1),
   identityVersion: z.string().min(1),
   defaultAppearanceId: z.string().min(1),
-  stageHeightPercent: z.number().min(45).max(78),
+  stageHeightPercent: z.number().min(45).max(92),
   appearances: z.array(AppearanceSchema).min(1),
 }).strict();
 export type Actor = z.infer<typeof ActorSchema>;

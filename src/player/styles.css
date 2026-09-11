@@ -47,7 +47,7 @@ button { font: inherit; }
 .figures { position: absolute; inset: 0; z-index: 3; }
 .figure {
   position: absolute;
-  bottom: 17.4%;
+  bottom: 2.5%;
   width: auto;
   object-fit: contain;
   object-position: bottom center;
@@ -59,6 +59,8 @@ button { font: inherit; }
 .figure-active { opacity: 1; filter: drop-shadow(0 14px 10px rgba(0,0,0,.46)) brightness(1.06); z-index: 3; }
 .figure-supporting { opacity: .62; filter: drop-shadow(0 14px 10px rgba(0,0,0,.5)) brightness(.72) saturate(.78); z-index: 2; }
 .figure-recessed { opacity: .38; filter: drop-shadow(0 14px 10px rgba(0,0,0,.55)) brightness(.52) saturate(.62); z-index: 1; }
+.figure-projection-three-quarter { bottom: -20%; }
+.figure-projection-portrait { bottom: -47%; }
 
 .artifact-wrap { position: absolute; z-index: 5; top: 51%; transform: translate(-50%, -50%); width: min(36%, 560px); filter: drop-shadow(0 20px 30px rgba(0,0,0,.65)); }
 .artifact { display: block; width: 100%; height: auto; object-fit: contain; image-rendering: auto; }
@@ -129,7 +131,9 @@ button { font: inherit; }
   .transport button { padding: 5px 6px; font-size: 7px; }
   .progress { font-size: 7px; padding: 0 4px; }
   .choice-layer { inset: 9% 7% 36%; }
-  .figure { bottom: 22%; }
+  .figure { bottom: 2%; }
+  .figure-projection-three-quarter { bottom: -20%; }
+  .figure-projection-portrait { bottom: -47%; }
 }
 
 @media (prefers-reduced-motion: reduce) {

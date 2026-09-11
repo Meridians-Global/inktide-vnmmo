@@ -13,7 +13,7 @@ describe('compileExperience', () => {
   it('can compile an experience into an isolated asset namespace', () => {
     const result = compileExperience(moonScarExperience, { assetUrlBase: '/generated/moon-scar/assets' });
     assert.equal(result.ok, true);
-    if (result.ok) assert.equal(result.experience.assets[0]?.url, '/generated/moon-scar/assets/cleft-bg.png');
+    if (result.ok) assert.equal(result.experience.assets[0]?.url, '/generated/moon-scar/assets/cleft-bg.jpg');
   });
 
   it('rejects direct private POV hopping', () => {
@@ -36,6 +36,15 @@ describe('compileExperience', () => {
       })),
     });
     assert.equal(result.ok, false);
+  });
+
+  it('rejects actor presentation above the VN portrait-scale ceiling', () => {
+    const result = compileExperience({
+      ...moonScarExperience,
+      actors: moonScarExperience.actors.map((actor) => ({ ...actor, stageHeightPercent: 93 })),
+    });
+    assert.equal(result.ok, false);
+    if (!result.ok) assert.ok(result.errors.some((error) => error.includes('stageHeightPercent')));
   });
 
   it('rejects unreachable moments', () => {

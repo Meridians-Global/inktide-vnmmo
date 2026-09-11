@@ -11,6 +11,12 @@ const SLOT_POSITION: Record<string, number> = {
   'far-right': 88,
 };
 
+const PROJECTION_SCALE: Record<Appearance['projection'], number> = {
+  'full-body': 1,
+  'three-quarter': 1.28,
+  portrait: 1.55,
+};
+
 const root = document.querySelector<HTMLElement>('#app');
 if (!root) throw new Error('Missing app root');
 
@@ -89,11 +95,11 @@ function renderFigures(tableau: Tableau, assets: Map<string, CompiledAsset>): vo
     const appearance = resolveAppearance(actor, placement.appearanceId);
     const asset = assets.get(appearance.assetId)!;
     const image = document.createElement('img');
-    image.className = `figure figure-${placement.emphasis}`;
+    image.className = `figure figure-${placement.emphasis} figure-projection-${appearance.projection}`;
     image.src = asset.url;
     image.alt = appearance.stageName;
     image.style.left = `${SLOT_POSITION[placement.slot]}%`;
-    image.style.height = `${actor.stageHeightPercent}%`;
+    image.style.height = `${actor.stageHeightPercent * PROJECTION_SCALE[appearance.projection]}%`;
     image.style.transform = `translateX(-50%) ${facingTransform(appearance, placement.facing, placement.slot)}`;
     image.dataset.actorId = actor.id;
     image.dataset.appearanceId = appearance.id;

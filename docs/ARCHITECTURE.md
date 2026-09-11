@@ -19,8 +19,10 @@ generation provider. Reading changes only the local cursor; traversal choices do
 - Stable identity is separate from appearance. One actor owns an identity version, one stage-height contract,
   and sparse appearances that bind wardrobe, expression, concealment, projection, facing, stage name, and exact
   asset. Peter Parker and Spider-Man therefore remain one actor while the reader can stage the mask honestly.
-- Figure scale lives on the actor, while source-facing lives on the appearance. Neither can drift inside a
-  tableau. Requested facing is resolved deterministically against the rendition rather than guessed from pixels.
+- Base figure scale lives on the actor, while source-facing and projection live on the appearance. Neither can
+  drift inside a tableau. The reader maps `full-body`, `three-quarter`, and `portrait` to one fixed scale/crop
+  table, so close framing is repeatable rather than a scene-level size correction. Requested facing is resolved
+  deterministically against the rendition rather than guessed from pixels.
 - Every figure declares one exact preparation recipe. The builder can first apply explicit chroma despill and
   an alpha floor, then trims the visible alpha envelope, scales
   it into a fixed subject box without distortion, centres it horizontally, and grounds it above a fixed
@@ -32,6 +34,9 @@ generation provider. Reading changes only the local cursor; traversal choices do
 - All graph nodes must be reachable and acyclic in this proof.
 - Every source is consumed only after its SHA-256 matches the authored lineage. Receipts separately pin the
   source digest, preparation recipe, and prepared-output digest.
+- Chroma is a generation aid, not the final matte. Isolated candidates pass through semantic segmentation,
+  exterior-connected chroma rejection, partial-alpha colour reconstruction, boundary neutralisation, and
+  transparent-RGB clearing. Inspection metrics remain in the acquisition receipt.
 - UI and audio are adapters over compiled data. They contain no story policy.
 
 ## What is intentionally absent

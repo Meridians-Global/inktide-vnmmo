@@ -1,6 +1,8 @@
 import type { Experience } from '../core/contracts';
 
 const base = 'assets/stage-kit';
+const generated = 'assets/generated/moon-scar-ledger-v2';
+const normalize = { kind: 'figure-normalize' as const, recipeVersion: 1 as const, canvas: { width: 896, height: 1024 }, subjectBox: { width: 850, height: 960 }, bottomPadding: 24 };
 
 export const moonScarExperience: Experience = {
   schemaVersion: 2,
@@ -16,12 +18,12 @@ export const moonScarExperience: Experience = {
   },
   startNodeId: 'cleft-location',
   assets: [
-    { id: 'cleft-bg', kind: 'background', sourcePath: `${base}/locations/mountain-cleft-chamber/candidates/background-plate-v2.png`, sha256: '7901ddccbebc4766a36fdb3889e3f909812778e8a3e8cb2b8a1a4322ad845822' },
-    { id: 'cellar-bg', kind: 'background', sourcePath: `${base}/locations/gu-yue-chun-secret-cellar/candidates/background-plate-imagegen-v1.png`, sha256: '26e37171d18ba861d7bc69752edb287b368309830dba130f30dc66052be2175b' },
-    { id: 'fang-neutral', kind: 'figure', sourcePath: `${base}/characters/fang-yuan/candidates/high-detail-transparent-v1.png`, sha256: '26cce8d9ad66257dd31b1791633902d3a42144bd49464af5d7073a9582886e2a', preparation: { kind: 'figure-normalize', recipeVersion: 1, canvas: { width: 896, height: 1024 }, subjectBox: { width: 850, height: 960 }, bottomPadding: 24 } },
-    { id: 'chun-neutral', kind: 'figure', sourcePath: `${base}/characters/gu-yue-chun/candidates/canonical-transparent-v1.png`, sha256: '85187b4d8ca7a169bd5bb75fd94200d063db91bec8adc918c21b276bc93d4b4e', preparation: { kind: 'figure-normalize', recipeVersion: 1, canvas: { width: 896, height: 1024 }, subjectBox: { width: 850, height: 960 }, bottomPadding: 24 } },
-    { id: 'sealed-substrate', kind: 'artifact', sourcePath: `${base}/props/moonlit-moss-lineage/candidates/states-imagegen-v2/sealed-substrate.png`, sha256: 'e35a7dd821ec26b2e9e0ddb824b3e006602c3f3644f799824ddf8efa85d4a39c' },
-    { id: 'moon-scar-gu', kind: 'artifact', sourcePath: `${base}/props/moonlit-moss-lineage/candidates/states-imagegen-v2/moon-scar-gu.png`, sha256: 'ce900a2efd20e21fc7a3ac6de5f6d623ceec8b04e5be1b99c20ce757ee15b04a' },
+    { id: 'cleft-bg', kind: 'background', sourcePath: `${generated}/mountain-cleft-stage-v3.jpg`, sha256: '6fcfd2ad2723ded696fb7e0c08dde5b55a2162d5a3e6a819c082e4147b36cc67' },
+    { id: 'cellar-bg', kind: 'background', sourcePath: `${generated}/secret-cellar-stage-v3.jpg`, sha256: '4612d2c69b3699d3a703975be3bb6a135aecb507e0f31f156632c8731a4e5bde' },
+    { id: 'fang-neutral', kind: 'figure', sourcePath: `${generated}/fang-field-mantle-guarded-v3.png`, sha256: 'fb2edde92160508d19674c44ddf7264f1c6fbfcb021821f61ec89cacbc42e0a3', preparation: normalize },
+    { id: 'chun-neutral', kind: 'figure', sourcePath: `${generated}/gu-yue-chun-neutral-v2.png`, sha256: '4f7efa1946fe18f65c9d10d9a38746b0e61adb38b554ead1cbe786e61bae92c3', preparation: { ...normalize, matteCleanup: { spill: 'magenta', alphaFloor: 8, edgeAlphaCeiling: 249, channelMargin: 14 } } },
+    { id: 'sealed-substrate', kind: 'artifact', sourcePath: `${generated}/sealed-substrate-v3.png`, sha256: '68e970759a94505f3965a0a60650bd531adfb299f81f77a60f15d19a44081b70' },
+    { id: 'moon-scar-gu', kind: 'artifact', sourcePath: `${generated}/moon-scar-gu-v3.png`, sha256: 'ef5e118a551c86fb01cbd09cd346c2013d1842e44818d27daccaaaf051b86640' },
     { id: 'winter-wind', kind: 'ambience', sourcePath: `${base}/audio/ambience/winter-wind.wav`, sha256: 'f8a696b14987176d9b840e147011818d63f3cc4c54592403f640d94b0b69eecc' },
     { id: 'interior-room', kind: 'ambience', sourcePath: `${base}/audio/ambience/interior-room.wav`, sha256: 'b97136cf6eba23c088dd07b3e8a57a316ea8208778f31648e778a1607dd85044' },
     { id: 'tension-drone', kind: 'music', sourcePath: `${base}/audio/music/subterranean-tension-drone-v1.wav`, sha256: 'dd57f7c71b7c01362afad3255390d0ddee3e9ab8a4ffe9a992c514223b410c0c' },
@@ -30,11 +32,11 @@ export const moonScarExperience: Experience = {
     { id: 'stone-collection', kind: 'cue', sourcePath: `${base}/audio/foley/small-stone-collection-v1.wav`, sha256: '43ecf5b25a16244110b48185c95e14b7b0f6a90feb101e064a9d2e37a00c0790' },
   ],
   actors: [
-    { id: 'fang-yuan', name: 'Fang Yuan', identityVersion: 'fang-yuan-v2', defaultAppearanceId: 'field-neutral', stageHeightPercent: 67, appearances: [
-      { id: 'field-neutral', assetId: 'fang-neutral', stageName: 'Fang Yuan', wardrobe: 'black-grey-field-robes', expression: 'controlled-neutral', concealment: 'civilian', projection: 'full-body', sourceFacing: 'right' },
+    { id: 'fang-yuan', name: 'Fang Yuan', identityVersion: 'fang-yuan-v2', defaultAppearanceId: 'field-neutral', stageHeightPercent: 88, appearances: [
+      { id: 'field-neutral', assetId: 'fang-neutral', stageName: 'Fang Yuan', wardrobe: 'black-grey-field-robes', expression: 'controlled-neutral', concealment: 'civilian', projection: 'three-quarter', sourceFacing: 'right' },
     ] },
-    { id: 'gu-yue-chun', name: 'Gu Yue Chun', identityVersion: 'gu-yue-chun-v1', defaultAppearanceId: 'field-neutral', stageHeightPercent: 67, appearances: [
-      { id: 'field-neutral', assetId: 'chun-neutral', stageName: 'Gu Yue Chun', wardrobe: 'green-field-robes', expression: 'attentive-neutral', concealment: 'civilian', projection: 'full-body', sourceFacing: 'left' },
+    { id: 'gu-yue-chun', name: 'Gu Yue Chun', identityVersion: 'gu-yue-chun-v1', defaultAppearanceId: 'field-neutral', stageHeightPercent: 88, appearances: [
+      { id: 'field-neutral', assetId: 'chun-neutral', stageName: 'Gu Yue Chun', wardrobe: 'green-field-robes', expression: 'attentive-neutral', concealment: 'civilian', projection: 'three-quarter', sourceFacing: 'left' },
     ] },
   ],
   tableaux: [

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "productionId": "moon-scar-ledger-v2",
+  "status": "candidate",
+  "viewport": {
+    "width": 1035,
+    "stageAspectRatio": "16:9"
+  },
+  "frames": [
+    {
+      "momentId": "cleft-location",
+      "path": "dailies/moon-cleft-dialogue-stage.png",
+      "sha256": "38c0f8c07bf521e70f0edd85d42d1a97f89fa7d759de2cbad29e8c4884348b77",
+      "claim": "empty establishing geography"
+    },
+    {
+      "momentId": "chun-arrives",
+      "path": "dailies/moon-chun-arrives-stage.png",
+      "sha256": "a0595668e49ea9375489157ee15c89fa2bd94ffdeec66c56178f14da2a268764",
+      "claim": "stable larger-than-life inward-facing two-shot"
+    },
+    {
+      "momentId": "question-choice",
+      "path": "dailies/moon-question-choice-stage.png",
+      "sha256": "295765fb205a7561bff1d8ced2eda8840bf3f346c4f282237b5eeca23d3f0be2",
+      "claim": "private viewpoint and traversal choice over one fixed tableau"
+    },
+    {
+      "momentId": "moon-scar",
+      "path": "dailies/moon-moon-scar-stage.png",
+      "sha256": "ca4ae623837716e4a698b0cfe6b0552147fa4ccf93481628cd06dbb2b13a85a4",
+      "claim": "clean centre artifact framed by stable actors"
+    }
+  ]
+}

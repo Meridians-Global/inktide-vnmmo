@@ -1,43 +1,41 @@
-# Dailies — Moon-Scar Reading v2
+# Dailies — Moon-Scar Reading v2 modernization
 
-Reviewed at 1440×900 desktop and 844×390 phone landscape, through both character emphasis states, the
-artifact study, the traversal choice, and the final reveal.
+Reviewed in the live 16:9 reader through the empty establishing shot, the larger-than-life two-shot, the
+private traversal choice, and the Moon-Scar reveal. Hash-pinned frames and the full review live under
+`productions/moon-scar-ledger-v2/`.
 
 ## Strongest moment
 
-The sealed-substrate study. The actors recede to the outside slots, the prepared object occupies the
-centre, and the fixed text rail explains why it matters without competing with it. This demonstrates that
-an artifact can become the beat's subject without switching to a dashboard or one-off CG.
+The Moon-Scar reveal. A clean isolated object owns the centre while Fang and Chun form a readable frame
+around it; the same fixed dialogue rail explains the consequence without becoming an info slide.
 
 ## Repaired during dailies
 
-- The reader originally sized itself against a short browser pane in a way that obscured the intended
-  review scale. The final shell fits a 16:9 stage inside both viewport dimensions.
-- The first choice panel reserved more space than its two options needed. It now follows content height.
-- The final private line initially left Fang Yuan dimmed. The compiler now rejects every staged speaker who
-  is not active, and the ending has its own complete tableau.
-- The first install exposed an npm lifecycle collision and an incompatible loose toolchain range. The build
-  command and compatible versions are now explicit; the dependency audit is clean.
-- The first reader used 192×256 stage masters at roughly 500 rendered pixels. Both figures now derive from
-  higher-resolution transparent sources through one digest-pinned normalization recipe. A synthetic test
-  proves that different transparent source padding produces byte-identical prepared output.
-- Fang Yuan and Gu Yue Chun now occupy the same 896×1024 prepared canvas, share one 960-pixel subject-height
-  bound and 24-pixel ground inset, and keep the same 67% stage height across every tableau.
-- The traversal overlay now names its authority posture: it selects an accepted passage and writes no World
-  state. That distinction is visible before the reader chooses.
+- Fang and Chun keep one 88% actor-scale contract. Their `three-quarter` projection is interpreted by one
+  fixed reader crop, so close VN framing no longer depends on per-tableau size changes.
+- Five semantic slots, source-facing metadata, and speaker emphasis place the actors consistently and turn
+  them toward the scene rather than guessing from source pixels.
+- The former mixed-quality plates were replaced with demanded empty-stage locations. Rejected first passes
+  with embedded people/UI remain retained as negative evidence.
+- Fang's trusted SFX rendition is imported byte-for-byte with its legacy receipt coordinate. Chun is a
+  reference-conditioned Replicate rendition rather than an unrelated bulk-generation result.
+- Replicate segmentation is now refined locally with an exterior chroma garbage matte, partial-alpha colour
+  reconstruction, boundary neutralisation, and transparent-RGB clearing. Artifact residual screen-colour
+  boundary fractions are zero; Chun's measured fraction is 0.00166 and receives one runtime despill guard.
+- The two generated artifact candidates that became character-filled CGs were rejected. Their replacements
+  are isolated objects and can occupy the centre slot without leaking scenery into the tableau.
 
 ## Largest remaining audience-quality limit
 
-The figures are sharper and geometrically stable, but both remain neutral-only candidate renditions. The
-reader therefore carries emotional change through prose, speaker emphasis and framing rather than a proved
-expression change. Stable presentation is now ahead of acting range.
+The current materials are not one fully locked style family. Fang is the strongest drawing; Chun and the
+mountain plate retain coarser pixel texture and a slightly different contour language. Stable presentation
+is now ahead of identity/expression range and art-direction continuity.
 
 ## Single next repair
 
-Prove one expression change for Fang Yuan—neutral to intent—using a reference-conditioned rendition with
-the same preparation recipe, visible-body scale, feet anchor, source-facing, wardrobe, and stage height. Add
-it as an actor appearance variant, demonstrate it in the existing private-question moment, and rerun the
-same desktop/phone dailies.
+Acquire one identity-locked Gu Yue Chun close speaking/listening pair in the approved Fang-led contour and
+texture language, then demonstrate the cut in the existing tally exchange without changing either actor's
+base scale, projection recipe, or five-slot blocking.
 
 ---
 
