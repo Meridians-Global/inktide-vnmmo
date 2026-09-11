@@ -11,18 +11,19 @@ keeps one authoring contract, one pure compiler, one pure reader state machine, 
 It currently lives under Meridians' `tmp/` workspace for rapid experimentation, but it has its own Git
 history and remote. It is a presentation system: it does not write Meridians Domain or Scenario state.
 
-## Run
+## Demo
 
 ```bash
 npm install
-npm run check
-npm run dev -- --port 4190
+npm run demo
 ```
 
 Open `http://127.0.0.1:4190`. The catalog opens the Spider-Man rehearsal by default; use
 `?story=moon-scar-reading-v1` for the earlier proof. Add `&moment=<moment-id>` to deep-link exact dailies.
 Click or press Space/Enter/↓ to advance, ↑ to step back, and Tab for the backlog. Sound starts disabled
-because browsers require a reader gesture; use SOUND OFF to enable it.
+because browsers require a reader gesture; use SOUND OFF to enable it. `npm run demo` verifies the source
+assets, compiles every Experience, type-checks the system, builds the static reader, and serves that exact
+production bundle. Use `npm run dev` only for live iteration.
 
 `npm run check` runs pure tests, rebuilds the digest-pinned artifact, type-checks, and creates a static Vite
 bundle. Builds use the repository's exact `assets/` sources by default, so reading and validation require no

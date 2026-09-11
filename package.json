@@ -10,6 +10,7 @@
     "recover:replicate": "tsx scripts/recover-replicate.ts",
     "build:experience": "tsx scripts/build-experience.ts",
     "dev": "vite",
+    "demo": "npm run build && vite preview --host 127.0.0.1 --port 4190 --strictPort",
     "test": "node --import tsx --test tests/*.test.ts",
     "typecheck": "tsc --noEmit",
     "build": "npm run build:experience && npm run typecheck && vite build",
