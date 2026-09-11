@@ -37,4 +37,27 @@ describe('figure normalization', () => {
     assert.equal(metadata.width, 896);
     assert.equal(metadata.height, 1024);
   });
+
+  it('removes chroma color from translucent matte edges without changing opaque pixels', async () => {
+    const pixels = Buffer.alloc(30 * 30 * 4);
+    for (let y = 4; y < 26; y += 1) {
+      for (let x = 4; x < 26; x += 1) {
+        const index = (y * 30 + x) * 4;
+        const edge = x < 7 || x > 22 || y < 7 || y > 22;
+        pixels.set(edge ? [12, 240, 20, 120] : [44, 80, 52, 255], index);
+      }
+    }
+    const source = await sharp(pixels, { raw: { width: 30, height: 30, channels: 4 } }).png().toBuffer();
+    const output = await normalizeFigureBuffer(source, {
+      ...recipe,
+      matteCleanup: { spill: 'green', alphaFloor: 8, edgeAlphaCeiling: 249, channelMargin: 18 },
+    });
+    const normalized = await sharp(output).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+    const visible = [];
+    for (let index = 0; index < normalized.data.length; index += 4) {
+      if (normalized.data[index + 3]! > 0) visible.push([...normalized.data.subarray(index, index + 4)]);
+    }
+    assert.ok(visible.some(([red, green, blue, alpha]) => alpha! < 255 && green === Math.max(red!, blue!)));
+    assert.ok(visible.some(([red, green, blue, alpha]) => red === 44 && green === 80 && blue === 52 && alpha === 255));
+  });
 });

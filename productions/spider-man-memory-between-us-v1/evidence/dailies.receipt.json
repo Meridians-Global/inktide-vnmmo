@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "productionId": "spider-man-memory-between-us-v1",
+  "experienceId": "spider-memory-between-us-v1",
+  "experienceSha256": "1dcf56de0082452b5c8954fe79ff510ba4582762e76eb48be5fdb7b570cc5762",
+  "viewport": {
+    "width": 1600,
+    "height": 900
+  },
+  "frames": [
+    {
+      "momentId": "mj-boundary",
+      "file": "masked.dailies.png",
+      "sha256": "24ebaba85f2df89484c5de41e9c2161a35cd7bea124ce1929af59f29af248713"
+    },
+    {
+      "momentId": "unmask",
+      "file": "unmask.dailies.png",
+      "sha256": "9828fbcde994aeb8f17f44e4e46a0121adff325b3960085af774cfc185583445"
+    },
+    {
+      "momentId": "perspective-choice",
+      "file": "choice.dailies.png",
+      "sha256": "856f2b3d8754ce0a7c459360d762156fe9ceee2e1995814565aba5a258df7c09"
+    }
+  ],
+  "review": "../PRODUCTION_REVIEW.md"
+}

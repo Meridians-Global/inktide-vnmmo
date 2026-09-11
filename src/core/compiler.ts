@@ -33,7 +33,7 @@ function detectCycle(startId: string, moments: Map<string, Moment>): boolean {
   return visit(startId);
 }
 
-export function compileExperience(input: unknown): CompileResult {
+export function compileExperience(input: unknown, options: { assetUrlBase?: string } = {}): CompileResult {
   const parsed = ExperienceSchema.safeParse(input);
   if (!parsed.success) {
     return { ok: false, errors: parsed.error.issues.map((issue) => `${issue.path.join('.')}: ${issue.message}`) };
@@ -68,9 +68,16 @@ export function compileExperience(input: unknown): CompileResult {
   if (!momentsById.has(experience.startNodeId)) errors.push(`Missing start moment: ${experience.startNodeId}`);
 
   for (const actor of experience.actors) {
-    const rendition = assetsById.get(actor.renditionAssetId);
-    if (!rendition) errors.push(`Actor ${actor.id} references missing asset ${actor.renditionAssetId}`);
-    else if (rendition.kind !== 'figure') errors.push(`Actor ${actor.id} must reference a figure asset`);
+    const appearanceIds = actor.appearances.map((appearance) => appearance.id);
+    for (const duplicate of findDuplicates(appearanceIds)) errors.push(`Duplicate appearance id on ${actor.id}: ${duplicate}`);
+    if (!appearanceIds.includes(actor.defaultAppearanceId)) {
+      errors.push(`Actor ${actor.id} references missing default appearance ${actor.defaultAppearanceId}`);
+    }
+    for (const appearance of actor.appearances) {
+      const rendition = assetsById.get(appearance.assetId);
+      if (!rendition) errors.push(`Appearance ${actor.id}/${appearance.id} references missing asset ${appearance.assetId}`);
+      else if (rendition.kind !== 'figure') errors.push(`Appearance ${actor.id}/${appearance.id} must reference a figure asset`);
+    }
   }
 
   for (const tableau of experience.tableaux) {
@@ -83,7 +90,11 @@ export function compileExperience(input: unknown): CompileResult {
       errors.push(`Tableau ${tableau.id} places multiple figures in ${duplicate}`);
     }
     for (const figure of tableau.figures) {
-      if (!actorsById.has(figure.actorId)) errors.push(`Tableau ${tableau.id} references missing actor ${figure.actorId}`);
+      const actor = actorsById.get(figure.actorId);
+      if (!actor) errors.push(`Tableau ${tableau.id} references missing actor ${figure.actorId}`);
+      else if (figure.appearanceId && !actor.appearances.some((appearance) => appearance.id === figure.appearanceId)) {
+        errors.push(`Tableau ${tableau.id} references missing appearance ${figure.actorId}/${figure.appearanceId}`);
+      }
     }
     if (tableau.artifact) {
       const asset = assetsById.get(tableau.artifact.assetId);
@@ -153,7 +164,7 @@ export function compileExperience(input: unknown): CompileResult {
       ...experience,
       assets: experience.assets.map((asset) => ({
         ...asset,
-        url: `/generated/assets/${asset.id}.${asset.sourcePath.split('.').at(-1)}`,
+        url: `${options.assetUrlBase ?? '/generated/assets'}/${asset.id}.${asset.sourcePath.split('.').at(-1)}`,
       })),
     },
   };

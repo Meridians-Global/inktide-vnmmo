@@ -38,3 +38,48 @@ Prove one expression change for Fang Yuan—neutral to intent—using a referenc
 the same preparation recipe, visible-body scale, feet anchor, source-facing, wardrobe, and stage height. Add
 it as an actor appearance variant, demonstrate it in the existing private-question moment, and rerun the
 same desktop/phone dailies.
+
+---
+
+# Dailies — The Memory Between Us v1
+
+Reviewed in the live 16:9 reader at the establishing plate, masked two-shot, unmasking, and traversal choice.
+
+## Strongest moment
+
+The unmasking at `unmask`. Peter keeps the same actor scale, slot, suit, and facing while the appearance changes
+from `Spider-Man` to revealed `Peter Parker`. The mask in his hand, the one cloth cue, and MJ's recessed listening
+state make the emotional change visible before the next line explains it.
+
+## Repaired during dailies
+
+- Peter is one versioned identity with civilian, masked-suit, and revealed-suit appearances. Stage names follow
+  the appearance; wardrobe or concealment changes cannot silently create a second actor.
+- MJ and Peter share one 68% stage-height contract and one preparation canvas, so the provider's original padding
+  cannot alter their apparent height.
+- MJ's removed background retained 49,056 green-dominant translucent pixels. The exact figure recipe now applies
+  a green despill and alpha floor before normalization; the prepared figure has 67 such edge pixels remaining.
+- Two rejected apartment plates remain in acquisition evidence. The used plate is a deterministic crop from the
+  second candidate, with source digest and crop rectangle retained in the receipt.
+- Every provider input digest and both generation/matting prediction IDs are retained. Re-running acquisition
+  resumes completed outputs rather than paying for an unchanged retry.
+- The static catalog now carries multiple Experiences, and story/moment query coordinates make exact frames
+  reloadable for review without adding story policy to the reader.
+
+## Honest capability reading
+
+This is a coherent candidate rehearsal, not a proved expressive repertoire. It demonstrates two exact Peter
+appearances in one scene and one MJ appearance. The civilian Peter rendition is identity/reference capital but is
+not staged. Portrait and three-quarter projections are legal contract coordinates but have no approved assets or
+contextual demonstrations yet.
+
+## Largest remaining audience-quality limit
+
+MJ has only one guarded full-body rendition, so her transition from anger to compassion still relies on prose,
+lighting, and emphasis. At phone scale, the figures also read more as staged bodies than expressive faces.
+
+## Single next repair
+
+Acquire one reference-conditioned MJ conflicted/compassionate three-quarter rendition demanded by `mj-answer`,
+prepare it through an explicit projection recipe, and prove the cut against the current full-body two-shot. Do not
+generate an undirected expression sheet.

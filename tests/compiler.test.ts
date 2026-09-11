@@ -10,6 +10,12 @@ describe('compileExperience', () => {
     if (result.ok) assert.equal(result.experience.moments.length, 14);
   });
 
+  it('can compile an experience into an isolated asset namespace', () => {
+    const result = compileExperience(moonScarExperience, { assetUrlBase: '/generated/moon-scar/assets' });
+    assert.equal(result.ok, true);
+    if (result.ok) assert.equal(result.experience.assets[0]?.url, '/generated/moon-scar/assets/cleft-bg.png');
+  });
+
   it('rejects direct private POV hopping', () => {
     const moments = moonScarExperience.moments.map((moment) =>
       moment.id === 'chun-speaks'
@@ -67,5 +73,16 @@ describe('compileExperience', () => {
     const result = compileExperience({ ...moonScarExperience, assets });
     assert.equal(result.ok, false);
     if (!result.ok) assert.ok(result.errors.includes('Only figure assets may declare a preparation recipe: cleft-bg'));
+  });
+
+  it('rejects a tableau appearance outside its actor identity', () => {
+    const tableaux = moonScarExperience.tableaux.map((tableau) =>
+      tableau.id === 'cleft-fang-active'
+        ? { ...tableau, figures: tableau.figures.map((figure) => figure.actorId === 'fang-yuan' ? { ...figure, appearanceId: 'masked' } : figure) }
+        : tableau,
+    );
+    const result = compileExperience({ ...moonScarExperience, tableaux });
+    assert.equal(result.ok, false);
+    if (!result.ok) assert.ok(result.errors.includes('Tableau cleft-fang-active references missing appearance fang-yuan/masked'));
   });
 });

@@ -23,12 +23,15 @@ function unique(values: string[]): string[] {
   return [...new Set(values)];
 }
 
-export function initialReaderState(experience: CompiledExperience): ReaderState {
+export function initialReaderState(experience: CompiledExperience, startNodeId = experience.startNodeId): ReaderState {
+  if (!experience.moments.some((moment) => moment.id === startNodeId)) {
+    throw new Error(`Cannot start reader at missing moment ${startNodeId}`);
+  }
   return {
-    currentNodeId: experience.startNodeId,
+    currentNodeId: startNodeId,
     history: [],
     route: [],
-    seenNodeIds: [experience.startNodeId],
+    seenNodeIds: [startNodeId],
     isBacklogOpen: false,
     isMuted: false,
   };

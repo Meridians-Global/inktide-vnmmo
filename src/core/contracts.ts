@@ -10,6 +10,12 @@ export const FigurePreparationSchema = z.object({
   canvas: z.object({ width: z.number().int().positive(), height: z.number().int().positive() }).strict(),
   subjectBox: z.object({ width: z.number().int().positive(), height: z.number().int().positive() }).strict(),
   bottomPadding: z.number().int().nonnegative(),
+  matteCleanup: z.object({
+    spill: z.enum(['green', 'blue', 'magenta']),
+    alphaFloor: z.number().int().min(0).max(254),
+    edgeAlphaCeiling: z.number().int().min(1).max(255),
+    channelMargin: z.number().int().min(0).max(255),
+  }).strict().optional(),
 }).strict();
 export type FigurePreparation = z.infer<typeof FigurePreparationSchema>;
 
@@ -22,17 +28,31 @@ export const AssetSchema = z.object({
 }).strict();
 export type Asset = z.infer<typeof AssetSchema>;
 
+export const AppearanceSchema = z.object({
+  id: z.string().min(1),
+  assetId: z.string().min(1),
+  stageName: z.string().min(1),
+  wardrobe: z.string().min(1),
+  expression: z.string().min(1),
+  concealment: z.enum(['civilian', 'masked', 'revealed']),
+  projection: z.enum(['full-body', 'three-quarter', 'portrait']),
+  sourceFacing: z.enum(['left', 'right']),
+}).strict();
+export type Appearance = z.infer<typeof AppearanceSchema>;
+
 export const ActorSchema = z.object({
   id: z.string().min(1),
   name: z.string().min(1),
-  renditionAssetId: z.string().min(1),
-  sourceFacing: z.enum(['left', 'right']),
+  identityVersion: z.string().min(1),
+  defaultAppearanceId: z.string().min(1),
   stageHeightPercent: z.number().min(45).max(78),
+  appearances: z.array(AppearanceSchema).min(1),
 }).strict();
 export type Actor = z.infer<typeof ActorSchema>;
 
 const FigureSchema = z.object({
   actorId: z.string().min(1),
+  appearanceId: z.string().min(1).optional(),
   slot: SlotSchema,
   facing: z.enum(['left', 'right', 'inward']),
   emphasis: z.enum(['active', 'supporting', 'recessed']),
@@ -95,7 +115,7 @@ export const MomentSchema = z.object({
 export type Moment = z.infer<typeof MomentSchema>;
 
 export const ExperienceSchema = z.object({
-  schemaVersion: z.literal(1),
+  schemaVersion: z.literal(2),
   id: z.string().min(1),
   title: z.string().min(1),
   subtitle: z.string().min(1),
@@ -104,6 +124,7 @@ export const ExperienceSchema = z.object({
     domainId: z.string().min(1),
     branchId: z.string().min(1),
     asOfEntryId: z.string().min(1),
+    sourceSha256: z.string().regex(/^[a-f0-9]{64}$/).optional(),
     note: z.string().min(1),
   }).strict(),
   startNodeId: z.string().min(1),

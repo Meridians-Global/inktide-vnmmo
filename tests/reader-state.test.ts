@@ -9,6 +9,10 @@ if (!compiled.ok) throw new Error(compiled.errors.join('\n'));
 const experience = compiled.experience;
 
 describe('reader state', () => {
+  it('can start from an exact valid review moment', () => {
+    assert.equal(initialReaderState(experience, 'tally-bound').currentNodeId, 'tally-bound');
+    assert.throws(() => initialReaderState(experience, 'missing'), /Cannot start reader at missing moment missing/);
+  });
   it('advances and rewinds at moment grain', () => {
     const start = initialReaderState(experience);
     const advanced = reduceReader(experience, start, { type: 'advance' });

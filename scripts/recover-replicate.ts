@@ -1,0 +1,21 @@
+import { createHash } from 'node:crypto';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { dirname, join, resolve } from 'node:path';
+import { recoverReplicatePrediction, selectReplicateOutputUrl } from '../src/provider/replicate';
+
+const [predictionId, evidenceName, target] = process.argv.slice(2);
+if (!predictionId || !evidenceName || !target) throw new Error('Usage: recover-replicate <prediction-id> <evidence-name> <target>');
+const projectRoot = resolve(import.meta.dirname, '..');
+const inktideRoot = '/Users/jasonyu/Documents/github/inktide';
+const env = await readFile(join(inktideRoot, '.env'), 'utf8');
+const configuredToken = env.split(/\r?\n/).find((line) => line.startsWith('REPLICATE_API_TOKEN='))?.slice('REPLICATE_API_TOKEN='.length).trim();
+if (!configuredToken) throw new Error('REPLICATE_API_TOKEN is missing');
+const evidenceDirectory = join(projectRoot, 'productions/spider-man-memory-between-us-v1/evidence');
+await mkdir(evidenceDirectory, { recursive: true });
+await mkdir(dirname(target), { recursive: true });
+const prediction = await recoverReplicatePrediction({ token: configuredToken, predictionId, evidenceDirectory, evidenceName });
+const response = await fetch(selectReplicateOutputUrl(prediction.output));
+if (!response.ok) throw new Error(`Download failed: HTTP ${response.status}`);
+const bytes = Buffer.from(await response.arrayBuffer());
+await writeFile(target, bytes);
+console.log(`${prediction.id} ${createHash('sha256').update(bytes).digest('hex')} ${target}`);

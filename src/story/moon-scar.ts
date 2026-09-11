@@ -3,7 +3,7 @@ import type { Experience } from '../core/contracts';
 const base = 'meridians-stage-kit/assets';
 
 export const moonScarExperience: Experience = {
-  schemaVersion: 1,
+  schemaVersion: 2,
   id: 'moon-scar-reading-v1',
   title: 'Moon-Scar Ledger',
   subtitle: 'A clean-room visual-novel proof',
@@ -30,8 +30,12 @@ export const moonScarExperience: Experience = {
     { id: 'stone-collection', kind: 'cue', sourcePath: `${base}/audio/foley/small-stone-collection-v1.wav`, sha256: '43ecf5b25a16244110b48185c95e14b7b0f6a90feb101e064a9d2e37a00c0790' },
   ],
   actors: [
-    { id: 'fang-yuan', name: 'Fang Yuan', renditionAssetId: 'fang-neutral', sourceFacing: 'right', stageHeightPercent: 67 },
-    { id: 'gu-yue-chun', name: 'Gu Yue Chun', renditionAssetId: 'chun-neutral', sourceFacing: 'left', stageHeightPercent: 67 },
+    { id: 'fang-yuan', name: 'Fang Yuan', identityVersion: 'fang-yuan-v2', defaultAppearanceId: 'field-neutral', stageHeightPercent: 67, appearances: [
+      { id: 'field-neutral', assetId: 'fang-neutral', stageName: 'Fang Yuan', wardrobe: 'black-grey-field-robes', expression: 'controlled-neutral', concealment: 'civilian', projection: 'full-body', sourceFacing: 'right' },
+    ] },
+    { id: 'gu-yue-chun', name: 'Gu Yue Chun', identityVersion: 'gu-yue-chun-v1', defaultAppearanceId: 'field-neutral', stageHeightPercent: 67, appearances: [
+      { id: 'field-neutral', assetId: 'chun-neutral', stageName: 'Gu Yue Chun', wardrobe: 'green-field-robes', expression: 'attentive-neutral', concealment: 'civilian', projection: 'full-body', sourceFacing: 'left' },
+    ] },
   ],
   tableaux: [
     {

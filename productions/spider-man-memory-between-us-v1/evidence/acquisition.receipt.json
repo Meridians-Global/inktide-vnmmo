@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "productionId": "spider-man-memory-between-us-v1",
+  "source": {
+    "domainId": "N-IMP-mtwby1q31jbg",
+    "sceneId": "SCN-SPI-16",
+    "domainSha256": "930e7e571a364a00453a054513a7000a44453052c4cce7a5dafae592e1cd3a2d"
+  },
+  "model": "bytedance/seedream-4.5",
+  "matteModel": "851-labs/background-remover:a029dff38972b5fda4ec5d75d7d1cd25aeff621d2cf4946a41055d7db66b80bc",
+  "requestDigests": {
+    "mj-apartment-night.generate": "ebcbd46e5db3d8f635e726ddcbf5d82ee3a84f3e24ca782e0925b7bec9ebec25",
+    "mj-apartment-night-clean.generate": "d83907366a77ce0fd7f4eb119b5d91ec2f9d52c32196f7189cda9bc967bb47c3",
+    "peter-civilian-guarded.generate": "d1ce7dfe50ea770d53dccdb3345fb263e1582d9c52c62cfaa607639668b8286f",
+    "peter-civilian-guarded.matte": "6b0e0628b427ddea04b04ca1b54cd1cc221d5d6300f37475e0da035bbfe1a90a",
+    "peter-spider-masked.generate": "81db9f0c763448f7e90a697bcd93d6f6f5e5e9c5721ac87fc58b2eebd7760569",
+    "peter-spider-masked.matte": "63b5d4529a7629027d9f356508ff1356109779cb79b69c61b7cdf8cf49fa4075",
+    "peter-spider-revealed.generate": "fa2ae02e36ddee30fdf33134b0fe5b210574dff6266e1a70db340e0251bd2e60",
+    "peter-spider-revealed.matte": "4c4046990364441017c34c0501388a8f9f6912c6c9c2a6bfe1cbb0379dfd966f",
+    "mj-guarded.generate": "0ef63ba911e5c4c2aaeeaedaf9d653359e06deee0dd02448fe718315b11a2f40",
+    "mj-guarded.matte": "4302be9436eb1ac50743ce6dd5234243606d9fbaf758d5fc329b6b18e358efe0"
+  },
+  "assets": {
+    "mj-apartment-night": {
+      "generatedUrl": "https://replicate.delivery/xezq/NFj30TgMSeWYfkUQp38TSHtfBsvY7c4fVJeRiZ9Wfcno8dEzF/tmpdhm1ea0s.jpg",
+      "sourcePath": "vn-lab-assets/spider-man-memory-between-us-v1/mj-apartment-night.jpg",
+      "sha256": "589c73be5c689efadf28077abc487abd46ce9678abc817cf105645868cb53857",
+      "predictionIds": [
+        "9s3kyzbv4hrmt0d0hsesmspeyg"
+      ]
+    },
+    "mj-apartment-night-clean": {
+      "generatedUrl": "https://replicate.delivery/xezq/nwnVwnKww8LWH1nnoiekDY7qwkj0zDjVf3yL01nXe8cTAlYuA/tmp3am7t45n.jpg",
+      "sourcePath": "vn-lab-assets/spider-man-memory-between-us-v1/mj-apartment-night-clean.jpg",
+      "sha256": "1b3283f871cf20ac2b61e6837ef445c4bbeec313ef65aba22bf85c6e1e25cb6c",
+      "predictionIds": [
+        "3963dvfjjdrmr0d0ht285drc7g"
+      ]
+    },
+    "peter-civilian-guarded": {
+      "generatedUrl": "https://replicate.delivery/xezq/JtnXHTQd95I4ClAxf4eUHgwhvAFXuja1ivi5Xf0c6AhdFkYuA/tmp3uarw9pq.jpg",
+      "transparentUrl": "https://replicate.delivery/czjl/UHjyhxYqKkYwIBr4qpw72qQd5Xs4bvwhQBlS2lALlNARhEzF/output.png",
+      "sourcePath": "vn-lab-assets/spider-man-memory-between-us-v1/peter-civilian-guarded.png",
+      "sha256": "cdb2f9a35f688f92745b9a9ce9902fd0a2ed5050f7b152904d1148d106cdfc64",
+      "predictionIds": [
+        "9ft8qehah1rmt0d0hsma89nvgr",
+        "y40wnpcptnrg80d0hsnan7nh1c"
+      ]
+    },
+    "peter-spider-masked": {
+      "generatedUrl": "https://replicate.delivery/xezq/Z4lLFrQ4OrqeKKRxmgxmffJxKtsv4nWTn2vEiTwOIb6iLkYuA/tmpn5v3fxsb.jpg",
+      "transparentUrl": "https://replicate.delivery/czjl/4u0ojyB3blayGxqtrx1B6y8OsOeuatY4q5qIKomK7M16CJmLA/output.png",
+      "sourcePath": "vn-lab-assets/spider-man-memory-between-us-v1/peter-spider-masked.png",
+      "sha256": "f1dabc95b76c58e2933dbfff9a4b1fadaccf12b8bc563446c649e4c584025ff6",
+      "predictionIds": [
+        "z5fs0vxzphrmw0d0hsn9fc6788",
+        "pfs3ggttwxrg80d0hsnsmzepc0"
+      ]
+    },
+    "peter-spider-revealed": {
+      "generatedUrl": "https://replicate.delivery/xezq/c8mMnScPKe1KfE7pc5BWk17xsiw2EYgSQBBh8hv2SdEdGSMXA/tmpyh_azrn6.jpg",
+      "transparentUrl": "https://replicate.delivery/czjl/aJjsIpapGZaMLBmOghDImhZze4Javys2zNUGgi7qid7QDJmLA/output.png",
+      "sourcePath": "vn-lab-assets/spider-man-memory-between-us-v1/peter-spider-revealed.png",
+      "sha256": "0957f3da81aae82ad29406acd6dd2ad6c62e3a266b60a1e54e4bb517c04c6743",
+      "predictionIds": [
+        "w8t7s8bkqdrmr0d0hsntsbf3jr",
+        "scgv55013drga0d0hsp9dcn3s0"
+      ]
+    },
+    "mj-guarded": {
+      "generatedUrl": "https://replicate.delivery/xezq/7ZBBQSEkqwIGCN5tI0m0kuiN2oOrhCwSq3dFzqMEMleYDJmLA/tmpd3uufk45.jpg",
+      "transparentUrl": "https://replicate.delivery/czjl/Fbl6ag617OLfLy9BoVzB7MqW9SlFU1DBXbfWoK4VE3H1GSMXA/output.png",
+      "sourcePath": "vn-lab-assets/spider-man-memory-between-us-v1/mj-guarded.png",
+      "sha256": "9b0a15ecd6ca5c8157c69a9449094a06f49672f48430ed8d1a848f31f9c6d310",
+      "predictionIds": [
+        "11q76d8st9rmw0d0hspbm344rr",
+        "vksrbsahysrge0d0hspbrhnyer"
+      ]
+    }
+  },
+  "preparedAssets": {
+    "mj-apartment-stage-crop-v1": {
+      "sourcePath": "vn-lab-assets/spider-man-memory-between-us-v1/mj-apartment-stage-crop-v1.png",
+      "sha256": "5f3b25e81b7ee78e9b8b5655bd7aa42b3ea3863379ba3b1dc61c85e633332aa8",
+      "preparation": {
+        "kind": "extract",
+        "recipeVersion": 1,
+        "left": 800,
+        "top": 180,
+        "width": 1760,
+        "height": 990,
+        "format": "png",
+        "sourcePath": "vn-lab-assets/spider-man-memory-between-us-v1/mj-apartment-night-clean.jpg",
+        "sourceSha256": "1b3283f871cf20ac2b61e6837ef445c4bbeec313ef65aba22bf85c6e1e25cb6c"
+      }
+    }
+  }
+}

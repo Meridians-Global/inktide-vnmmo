@@ -16,9 +16,13 @@ generation provider. Reading changes only the local cursor; traversal choices do
 
 ## Deliberate constraints
 
-- A figure's scale and source-facing live on the actor, not in tableaux. A character therefore cannot grow
-  between moments by accident.
-- Every figure declares one exact preparation recipe. The builder trims the visible alpha envelope, scales
+- Stable identity is separate from appearance. One actor owns an identity version, one stage-height contract,
+  and sparse appearances that bind wardrobe, expression, concealment, projection, facing, stage name, and exact
+  asset. Peter Parker and Spider-Man therefore remain one actor while the reader can stage the mask honestly.
+- Figure scale lives on the actor, while source-facing lives on the appearance. Neither can drift inside a
+  tableau. Requested facing is resolved deterministically against the rendition rather than guessed from pixels.
+- Every figure declares one exact preparation recipe. The builder can first apply explicit chroma despill and
+  an alpha floor, then trims the visible alpha envelope, scales
   it into a fixed subject box without distortion, centres it horizontally, and grounds it above a fixed
   bottom padding on a fixed transparent canvas. Provider padding therefore cannot change body scale or feet.
 - A tableau is a complete stable composition. Moments reference it; they do not accumulate fragile patches.
@@ -32,6 +36,6 @@ generation provider. Reading changes only the local cursor; traversal choices do
 
 ## What is intentionally absent
 
-No canonical writer, Scenario resolver, model API, asset generator, general animation engine, or duplicated
-production-memory system. Those are upstream responsibilities. A later provider adapter should produce a
-candidate asset plus provenance for approval; it should not become part of reading or compilation.
+No canonical writer, Scenario resolver, general animation engine, or duplicated production-memory system.
+The Replicate adapter is an offline production shell: it writes retained candidate/result evidence and never
+runs in the reader. Generation remains demand-led and cannot promote its own output.

@@ -1,5 +1,5 @@
 import './styles.css';
-import { CompiledExperience, type Actor, type CompiledAsset, type Moment, type Tableau } from '../core/contracts';
+import { CompiledExperience, type Actor, type Appearance, type CompiledAsset, type Moment, type Tableau } from '../core/contracts';
 import { backlog, currentMoment, initialReaderState, reduceReader, type ReaderAction, type ReaderState } from '../core/reader-state';
 import { AudioDirector } from './audio-director';
 
@@ -73,23 +73,30 @@ function byId<T extends { id: string }>(items: T[], id: string): T {
   return item;
 }
 
-function facingTransform(actor: Actor, facing: 'left' | 'right' | 'inward', slot: string): string {
+function resolveAppearance(actor: Actor, appearanceId?: string): Appearance {
+  return byId(actor.appearances, appearanceId ?? actor.defaultAppearanceId);
+}
+
+function facingTransform(appearance: Appearance, facing: 'left' | 'right' | 'inward', slot: string): string {
   const resolved = facing === 'inward' ? (SLOT_POSITION[slot]! < 50 ? 'right' : 'left') : facing;
-  return actor.sourceFacing === resolved ? 'scaleX(1)' : 'scaleX(-1)';
+  return appearance.sourceFacing === resolved ? 'scaleX(1)' : 'scaleX(-1)';
 }
 
 function renderFigures(tableau: Tableau, assets: Map<string, CompiledAsset>): void {
   figures.replaceChildren();
   for (const placement of tableau.figures) {
     const actor = byId(experience.actors, placement.actorId);
-    const asset = assets.get(actor.renditionAssetId)!;
+    const appearance = resolveAppearance(actor, placement.appearanceId);
+    const asset = assets.get(appearance.assetId)!;
     const image = document.createElement('img');
     image.className = `figure figure-${placement.emphasis}`;
     image.src = asset.url;
-    image.alt = actor.name;
+    image.alt = appearance.stageName;
     image.style.left = `${SLOT_POSITION[placement.slot]}%`;
     image.style.height = `${actor.stageHeightPercent}%`;
-    image.style.transform = `translateX(-50%) ${facingTransform(actor, placement.facing, placement.slot)}`;
+    image.style.transform = `translateX(-50%) ${facingTransform(appearance, placement.facing, placement.slot)}`;
+    image.dataset.actorId = actor.id;
+    image.dataset.appearanceId = appearance.id;
     figures.append(image);
   }
 }
@@ -108,7 +115,10 @@ function renderArtifact(tableau: Tableau, assets: Map<string, CompiledAsset>): v
 
 function speakerName(moment: Moment): string {
   if (!moment.speakerId) return '';
-  return byId(experience.actors, moment.speakerId).name;
+  const actor = byId(experience.actors, moment.speakerId);
+  const tableau = byId(experience.tableaux, moment.tableauId);
+  const placement = tableau.figures.find((figure) => figure.actorId === actor.id);
+  return resolveAppearance(actor, placement?.appearanceId).stageName;
 }
 
 function renderChoice(moment: Moment): void {
@@ -168,6 +178,10 @@ function render(): void {
   const tableau = byId(experience.tableaux, moment.tableauId);
   const background = assets.get(tableau.backgroundAssetId)!;
   const ordinal = experience.moments.findIndex((candidate) => candidate.id === moment.id) + 1;
+  const url = new URL(window.location.href);
+  url.searchParams.set('story', experience.id);
+  url.searchParams.set('moment', moment.id);
+  window.history.replaceState(null, '', url);
   shell.dataset.tone = tableau.tone;
   shell.dataset.mode = moment.mode;
   backdrop.src = background.url;
@@ -227,10 +241,23 @@ window.addEventListener('keydown', (event) => {
 });
 
 async function start(): Promise<void> {
-  const response = await fetch('/generated/experience.json');
+  const catalogResponse = await fetch('/generated/catalog.json');
+  if (!catalogResponse.ok) throw new Error('Prepared catalog is missing. Run npm run build:experience.');
+  const catalog = await catalogResponse.json() as {
+    defaultExperienceId: string;
+    experiences: { id: string; url: string }[];
+  };
+  const requestedId = new URLSearchParams(window.location.search).get('story') ?? catalog.defaultExperienceId;
+  const selected = catalog.experiences.find((candidate) => candidate.id === requestedId) ?? catalog.experiences[0];
+  if (!selected) throw new Error('Prepared catalog has no experiences.');
+  const response = await fetch(selected.url);
   if (!response.ok) throw new Error('Prepared experience is missing. Run npm run build:experience.');
   experience = await response.json() as CompiledExperience;
-  state = initialReaderState(experience);
+  const requestedMomentId = new URLSearchParams(window.location.search).get('moment');
+  const startMomentId = requestedMomentId && experience.moments.some((moment) => moment.id === requestedMomentId)
+    ? requestedMomentId
+    : experience.startNodeId;
+  state = initialReaderState(experience, startMomentId);
   audio = new AudioDirector(new Map(experience.assets.map((asset) => [asset.id, asset])));
   state = { ...state, isMuted: true };
   sourceNote.textContent = `${experience.title} · ${experience.source.note}`;
