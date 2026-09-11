@@ -38,6 +38,9 @@ generation provider. Reading changes only the local cursor; traversal choices do
   exterior-connected chroma rejection, partial-alpha colour reconstruction, boundary neutralisation, and
   transparent-RGB clearing. Inspection metrics remain in the acquisition receipt.
 - UI and audio are adapters over compiled data. They contain no story policy.
+- Physical sound and voice are separate reader buses. Both begin off; ambience, music and material cues may
+  be enabled without voice. A moment may bind one exact voice asset, but an Experience with none keeps that
+  setting visibly unavailable. Silence therefore remains authored rather than being mistaken for missing media.
 
 ## What is intentionally absent
 

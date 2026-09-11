@@ -33,6 +33,18 @@ root.innerHTML = `
       <div class="artifact-wrap" aria-hidden="true"><img class="artifact" alt="" /></div>
       <div class="choice-layer" hidden></div>
       <div class="backlog-layer" hidden></div>
+      <aside class="settings-layer" aria-label="Reader settings" hidden>
+        <span class="settings-eyebrow">READER SETTINGS</span>
+        <button type="button" class="setting-row" data-action="audio">
+          <span><strong>Physical sound</strong><small>Ambience, music and material cues</small></span>
+          <b class="sound-setting-value">OFF</b>
+        </button>
+        <button type="button" class="setting-row" data-action="voice">
+          <span><strong>Voice-over</strong><small class="voice-setting-note">Optional spoken rendition</small></span>
+          <b class="voice-setting-value">OFF</b>
+        </button>
+        <p>Silence is authored. Voice begins off.</p>
+      </aside>
       <footer class="text-rail">
         <div class="text-copy">
           <span class="moment-label"></span>
@@ -42,7 +54,7 @@ root.innerHTML = `
         <nav class="transport" aria-label="Reading controls">
           <button type="button" data-action="back">BACK</button>
           <button type="button" data-action="backlog">LOG</button>
-          <button type="button" data-action="audio">SOUND OFF</button>
+          <button type="button" data-action="settings" aria-expanded="false">SETTINGS</button>
           <span class="progress"></span>
           <button type="button" data-action="next">NEXT</button>
         </nav>
@@ -59,6 +71,7 @@ const artifactWrap = root.querySelector<HTMLElement>('.artifact-wrap')!;
 const artifact = root.querySelector<HTMLImageElement>('.artifact')!;
 const choiceLayer = root.querySelector<HTMLElement>('.choice-layer')!;
 const backlogLayer = root.querySelector<HTMLElement>('.backlog-layer')!;
+const settingsLayer = root.querySelector<HTMLElement>('.settings-layer')!;
 const line = root.querySelector<HTMLElement>('.line')!;
 const speaker = root.querySelector<HTMLElement>('.speaker')!;
 const momentLabel = root.querySelector<HTMLElement>('.moment-label')!;
@@ -67,7 +80,12 @@ const locationLabel = root.querySelector<HTMLElement>('.location')!;
 const viewpointLabel = root.querySelector<HTMLElement>('.viewpoint')!;
 const progress = root.querySelector<HTMLElement>('.progress')!;
 const sourceNote = root.querySelector<HTMLElement>('.source-note')!;
+const settingsButton = root.querySelector<HTMLButtonElement>('[data-action="settings"]')!;
 const audioButton = root.querySelector<HTMLButtonElement>('[data-action="audio"]')!;
+const voiceButton = root.querySelector<HTMLButtonElement>('[data-action="voice"]')!;
+const soundSettingValue = root.querySelector<HTMLElement>('.sound-setting-value')!;
+const voiceSettingValue = root.querySelector<HTMLElement>('.voice-setting-value')!;
+const voiceSettingNote = root.querySelector<HTMLElement>('.voice-setting-note')!;
 
 let experience: CompiledExperience;
 let state: ReaderState;
@@ -178,6 +196,16 @@ function renderBacklog(): void {
   backlogLayer.hidden = false;
 }
 
+function renderSettings(): void {
+  const hasVoice = experience.moments.some((moment) => Boolean(moment.voiceAssetId));
+  settingsLayer.hidden = !state.isSettingsOpen;
+  settingsButton.setAttribute('aria-expanded', String(state.isSettingsOpen));
+  soundSettingValue.textContent = state.isMuted ? 'OFF' : 'ON';
+  voiceSettingValue.textContent = state.isVoiceEnabled ? 'ON' : 'OFF';
+  voiceButton.disabled = !hasVoice;
+  voiceSettingNote.textContent = hasVoice ? 'Optional spoken rendition' : 'Not present in this Experience';
+}
+
 function render(): void {
   const assets = new Map(experience.assets.map((asset) => [asset.id, asset]));
   const moment = currentMoment(experience, state);
@@ -202,12 +230,13 @@ function render(): void {
   line.textContent = moment.text;
   line.className = `line line-${moment.mode}`;
   progress.textContent = `${String(ordinal).padStart(2, '0')} / ${String(experience.moments.length).padStart(2, '0')}`;
-  audioButton.textContent = state.isMuted ? 'SOUND OFF' : 'SOUND ON';
   renderFigures(tableau, assets);
   renderArtifact(tableau, assets);
   renderChoice(moment);
   renderBacklog();
-  audio.setEnabled(!state.isMuted);
+  renderSettings();
+  audio.setPhysicalSoundEnabled(!state.isMuted);
+  audio.setVoiceEnabled(state.isVoiceEnabled);
   audio.sync(tableau);
 }
 
@@ -216,9 +245,14 @@ function dispatch(action: ReaderAction): void {
   const nextState = reduceReader(experience, state, action);
   const didMove = nextState.currentNodeId !== state.currentNodeId;
   state = nextState;
-  if (didMove) audio.playCues(currentMoment(experience, state).cueAssetIds);
-  if (action.type === 'toggle-muted' && !state.isMuted) audio.playCues(before.cueAssetIds);
   render();
+  if (didMove) {
+    const current = currentMoment(experience, state);
+    audio.playCues(current.cueAssetIds);
+    audio.playVoice(current.voiceAssetId);
+  }
+  if (action.type === 'toggle-muted' && !state.isMuted) audio.playCues(before.cueAssetIds);
+  if (action.type === 'toggle-voice' && state.isVoiceEnabled) audio.playVoice(before.voiceAssetId);
 }
 
 root.addEventListener('click', (event) => {
@@ -228,9 +262,11 @@ root.addEventListener('click', (event) => {
   const action = target.closest<HTMLButtonElement>('[data-action]')?.dataset.action;
   if (action === 'back') return dispatch({ type: 'back' });
   if (action === 'backlog') return dispatch({ type: 'toggle-backlog' });
+  if (action === 'settings') return dispatch({ type: 'toggle-settings' });
   if (action === 'audio') return dispatch({ type: 'toggle-muted' });
+  if (action === 'voice') return dispatch({ type: 'toggle-voice' });
   if (action === 'next') return dispatch({ type: 'advance' });
-  if (target.closest('.text-rail') || target.closest('.context-rail')) return;
+  if (target.closest('.text-rail') || target.closest('.context-rail') || target.closest('.settings-layer')) return;
   dispatch({ type: 'advance' });
 });
 
@@ -265,7 +301,6 @@ async function start(): Promise<void> {
     : experience.startNodeId;
   state = initialReaderState(experience, startMomentId);
   audio = new AudioDirector(new Map(experience.assets.map((asset) => [asset.id, asset])));
-  state = { ...state, isMuted: true };
   sourceNote.textContent = `${experience.title} · ${experience.source.note}`;
   render();
   stage.focus();

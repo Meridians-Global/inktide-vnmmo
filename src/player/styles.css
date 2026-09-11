@@ -95,7 +95,7 @@ button { font: inherit; }
 .transport [data-action="next"] { color: #f0d38f; }
 .progress { padding: 0 8px; color: rgba(224,231,240,.56); font: 600 clamp(8px, .68vw, 12px)/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
 
-.choice-layer, .backlog-layer {
+.choice-layer, .backlog-layer, .settings-layer {
   position: absolute;
   z-index: 20;
   top: 11%;
@@ -109,6 +109,26 @@ button { font: inherit; }
   box-shadow: 0 24px 70px rgba(0,0,0,.72);
   backdrop-filter: blur(16px);
 }
+.settings-layer {
+  z-index: 22;
+  top: auto;
+  left: auto;
+  right: 4.2%;
+  bottom: 29.5%;
+  width: min(36%, 430px);
+  max-height: none;
+  padding: clamp(14px, 1.4vw, 22px);
+}
+.settings-eyebrow { display: block; margin-bottom: 9px; color: #d7b774; font: 650 clamp(8px, .68vw, 12px)/1.2 ui-monospace, monospace; letter-spacing: .18em; }
+.setting-row { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 18px; padding: 11px 0; color: #f4f2ed; border: 0; border-top: 1px solid rgba(255,255,255,.1); background: transparent; text-align: left; cursor: pointer; }
+.setting-row:hover, .setting-row:focus-visible { color: #f0d38f; outline: none; }
+.setting-row:disabled { color: rgba(224,231,240,.38); cursor: default; }
+.setting-row span { display: grid; gap: 3px; }
+.setting-row strong { font: 600 clamp(10px, .82vw, 14px)/1.2 ui-monospace, monospace; letter-spacing: .04em; text-transform: uppercase; }
+.setting-row small, .settings-layer > p { color: rgba(224,231,240,.58); font: 400 clamp(8px, .68vw, 11px)/1.35 ui-sans-serif, sans-serif; }
+.setting-row b { min-width: 34px; color: #d7b774; font: 650 clamp(8px, .7vw, 12px)/1 ui-monospace, monospace; letter-spacing: .1em; text-align: right; }
+.setting-row:disabled b { color: rgba(224,231,240,.34); }
+.settings-layer > p { margin: 9px 0 0; }
 .choice-heading, .backlog-heading { margin: 0 0 18px; color: #d7b774; font: 650 clamp(10px, .88vw, 15px)/1.3 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .14em; text-transform: uppercase; }
 .choice-posture { display: block; margin-bottom: 6px; color: rgba(225,232,242,.52); font: 600 clamp(8px, .62vw, 11px)/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .18em; }
 .choice-option { display: grid; width: 100%; gap: 5px; margin-top: 10px; padding: 14px 16px; text-align: left; color: #f4f2ed; border: 1px solid rgba(202,215,232,.25); background: rgba(255,255,255,.045); cursor: pointer; }
@@ -131,6 +151,7 @@ button { font: inherit; }
   .transport button { padding: 5px 6px; font-size: 7px; }
   .progress { font-size: 7px; padding: 0 4px; }
   .choice-layer { inset: 9% 7% 36%; }
+  .settings-layer { right: 2%; bottom: 34%; width: min(58%, 320px); padding: 10px 12px; }
   .figure { bottom: 2%; }
   .figure-projection-three-quarter { bottom: -20%; }
   .figure-projection-portrait { bottom: -47%; }

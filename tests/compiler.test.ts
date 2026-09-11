@@ -65,6 +65,33 @@ describe('compileExperience', () => {
     if (!result.ok) assert.ok(result.errors.includes('Speaker fang-yuan must be active in moment fang-private'));
   });
 
+  it('accepts an optional voice rendition and rejects a cue used as voice', () => {
+    const voiceAsset = {
+      id: 'chun-voice-test',
+      kind: 'voice' as const,
+      sourcePath: 'voice/chun-test.wav',
+      sha256: '0'.repeat(64),
+    };
+    const voiced = {
+      ...moonScarExperience,
+      assets: [...moonScarExperience.assets, voiceAsset],
+      moments: moonScarExperience.moments.map((moment) => moment.id === 'chun-speaks'
+        ? { ...moment, voiceAssetId: voiceAsset.id }
+        : moment),
+    };
+    assert.equal(compileExperience(voiced).ok, true);
+
+    const wrongBus = {
+      ...moonScarExperience,
+      moments: moonScarExperience.moments.map((moment) => moment.id === 'chun-speaks'
+        ? { ...moment, voiceAssetId: 'cloth-shift' }
+        : moment),
+    };
+    const result = compileExperience(wrongBus);
+    assert.equal(result.ok, false);
+    if (!result.ok) assert.ok(result.errors.some((error) => error.includes('invalid voice cloth-shift')));
+  });
+
   it('requires deterministic preparation for figures', () => {
     const assets = moonScarExperience.assets.map((asset) =>
       asset.id === 'fang-neutral' ? { ...asset, preparation: undefined } : asset,

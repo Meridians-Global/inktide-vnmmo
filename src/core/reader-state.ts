@@ -8,7 +8,9 @@ export type ReaderState = {
   route: RouteChoice[];
   seenNodeIds: string[];
   isBacklogOpen: boolean;
+  isSettingsOpen: boolean;
   isMuted: boolean;
+  isVoiceEnabled: boolean;
 };
 
 export type ReaderAction =
@@ -16,7 +18,9 @@ export type ReaderAction =
   | { type: 'choose'; optionId: string }
   | { type: 'back' }
   | { type: 'toggle-backlog' }
+  | { type: 'toggle-settings' }
   | { type: 'toggle-muted' }
+  | { type: 'toggle-voice' }
   | { type: 'restart' };
 
 function unique(values: string[]): string[] {
@@ -33,7 +37,9 @@ export function initialReaderState(experience: CompiledExperience, startNodeId =
     route: [],
     seenNodeIds: [startNodeId],
     isBacklogOpen: false,
-    isMuted: false,
+    isSettingsOpen: false,
+    isMuted: true,
+    isVoiceEnabled: false,
   };
 }
 
@@ -50,6 +56,7 @@ function moveTo(state: ReaderState, nodeId: string): ReaderState {
     history: [...state.history, state.currentNodeId],
     seenNodeIds: unique([...state.seenNodeIds, nodeId]),
     isBacklogOpen: false,
+    isSettingsOpen: false,
   };
 }
 
@@ -58,13 +65,15 @@ export function reduceReader(
   state: ReaderState,
   action: ReaderAction,
 ): ReaderState {
-  if (action.type === 'toggle-backlog') return { ...state, isBacklogOpen: !state.isBacklogOpen };
+  if (action.type === 'toggle-backlog') return { ...state, isBacklogOpen: !state.isBacklogOpen, isSettingsOpen: false };
+  if (action.type === 'toggle-settings') return { ...state, isSettingsOpen: !state.isSettingsOpen, isBacklogOpen: false };
   if (action.type === 'toggle-muted') return { ...state, isMuted: !state.isMuted };
+  if (action.type === 'toggle-voice') return { ...state, isVoiceEnabled: !state.isVoiceEnabled };
   if (action.type === 'restart') return initialReaderState(experience);
   if (action.type === 'back') {
     const previous = state.history.at(-1);
     if (!previous) return state;
-    return { ...state, currentNodeId: previous, history: state.history.slice(0, -1), isBacklogOpen: false };
+    return { ...state, currentNodeId: previous, history: state.history.slice(0, -1), isBacklogOpen: false, isSettingsOpen: false };
   }
 
   const moment = currentMoment(experience, state);

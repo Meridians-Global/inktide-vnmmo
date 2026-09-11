@@ -21,9 +21,11 @@ npm run demo
 Open `http://127.0.0.1:4190`. The catalog opens the Spider-Man rehearsal by default; use
 `?story=moon-scar-reading-v1` for the earlier proof. Add `&moment=<moment-id>` to deep-link exact dailies.
 Click or press Space/Enter/↓ to advance, ↑ to step back, and Tab for the backlog. Sound starts disabled
-because browsers require a reader gesture; use SOUND OFF to enable it. `npm run demo` verifies the source
-assets, compiles every Experience, type-checks the system, builds the static reader, and serves that exact
-production bundle. Use `npm run dev` only for live iteration.
+because browsers require a reader gesture; open SETTINGS to enable physical sound. Voice-over is a separate,
+optional rendition lane and always begins off. An Experience without exact voice assets says so rather than
+offering a false control. `npm run demo` verifies the source assets, compiles every Experience, type-checks
+the system, builds the static reader, and serves that exact production bundle. Use `npm run dev` only for
+live iteration.
 
 `npm run check` runs pure tests, rebuilds the digest-pinned artifact, type-checks, and creates a static Vite
 bundle. Builds use the repository's exact `assets/` sources by default, so reading and validation require no

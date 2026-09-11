@@ -21,7 +21,7 @@ export type FigurePreparation = z.infer<typeof FigurePreparationSchema>;
 
 export const AssetSchema = z.object({
   id: z.string().min(1),
-  kind: z.enum(['background', 'figure', 'artifact', 'ambience', 'music', 'cue']),
+  kind: z.enum(['background', 'figure', 'artifact', 'ambience', 'music', 'cue', 'voice']),
   sourcePath: z.string().min(1),
   sha256: z.string().regex(/^[a-f0-9]{64}$/),
   preparation: FigurePreparationSchema.optional(),
@@ -109,6 +109,7 @@ export const MomentSchema = z.object({
   label: z.string().min(1).optional(),
   speakerId: z.string().min(1).optional(),
   text: z.string().min(1),
+  voiceAssetId: z.string().min(1).optional(),
   cueAssetIds: z.array(z.string().min(1)).default([]),
   next: NextSchema,
 }).strict();

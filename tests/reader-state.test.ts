@@ -10,8 +10,23 @@ const experience = compiled.experience;
 
 describe('reader state', () => {
   it('can start from an exact valid review moment', () => {
-    assert.equal(initialReaderState(experience, 'tally-bound').currentNodeId, 'tally-bound');
+    const state = initialReaderState(experience, 'tally-bound');
+    assert.equal(state.currentNodeId, 'tally-bound');
+    assert.equal(state.isMuted, true);
+    assert.equal(state.isVoiceEnabled, false);
     assert.throws(() => initialReaderState(experience, 'missing'), /Cannot start reader at missing moment missing/);
+  });
+
+  it('keeps sound preferences explicit and overlays mutually exclusive', () => {
+    const start = initialReaderState(experience);
+    const settings = reduceReader(experience, start, { type: 'toggle-settings' });
+    assert.equal(settings.isSettingsOpen, true);
+    assert.equal(settings.isBacklogOpen, false);
+    const voiced = reduceReader(experience, settings, { type: 'toggle-voice' });
+    assert.equal(voiced.isVoiceEnabled, true);
+    const backlogOpen = reduceReader(experience, voiced, { type: 'toggle-backlog' });
+    assert.equal(backlogOpen.isBacklogOpen, true);
+    assert.equal(backlogOpen.isSettingsOpen, false);
   });
   it('advances and rewinds at moment grain', () => {
     const start = initialReaderState(experience);

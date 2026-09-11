@@ -109,6 +109,10 @@ export function compileExperience(input: unknown, options: { assetUrlBase?: stri
       const cue = assetsById.get(cueId);
       if (!cue || cue.kind !== 'cue') errors.push(`Moment ${moment.id} references invalid cue ${cueId}`);
     }
+    if (moment.voiceAssetId) {
+      const voice = assetsById.get(moment.voiceAssetId);
+      if (!voice || voice.kind !== 'voice') errors.push(`Moment ${moment.id} references invalid voice ${moment.voiceAssetId}`);
+    }
     if (moment.mode === 'dialogue' && !moment.speakerId) errors.push(`Dialogue moment ${moment.id} needs a speaker`);
     if (moment.mode === 'thought') {
       if (!moment.speakerId) errors.push(`Thought moment ${moment.id} needs a speaker`);
