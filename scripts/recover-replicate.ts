@@ -1,0 +1,20 @@
+import { createHash } from 'node:crypto';
+import { mkdir, writeFile } from 'node:fs/promises';
+import { dirname, join, resolve } from 'node:path';
+import { recoverReplicatePrediction, selectReplicateOutputUrl } from '../src/provider/replicate';
+import { loadLocalEnvironment, requireSetting } from './config';
+
+const [predictionId, evidenceName, target] = process.argv.slice(2);
+if (!predictionId || !evidenceName || !target) throw new Error('Usage: recover-replicate <prediction-id> <evidence-name> <target>');
+const projectRoot = resolve(import.meta.dirname, '..');
+await loadLocalEnvironment(projectRoot);
+const token = requireSetting('REPLICATE_API_TOKEN');
+const evidenceDirectory = join(projectRoot, 'productions/spider-man-memory-between-us-v1/evidence');
+await mkdir(evidenceDirectory, { recursive: true });
+await mkdir(dirname(target), { recursive: true });
+const prediction = await recoverReplicatePrediction({ token, predictionId, evidenceDirectory, evidenceName });
+const response = await fetch(selectReplicateOutputUrl(prediction.output));
+if (!response.ok) throw new Error(`Download failed: HTTP ${response.status}`);
+const bytes = Buffer.from(await response.arrayBuffer());
+await writeFile(target, bytes);
+console.log(`${prediction.id} ${createHash('sha256').update(bytes).digest('hex')} ${target}`);
