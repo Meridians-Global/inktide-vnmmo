@@ -9,8 +9,9 @@ pure compiler, one pure reader state machine, and one static web reader.
 
 ```bash
 npm install
-VN_ASSET_ROOT=/absolute/path/to/inktide/tmp npm run build:experience
-npm run dev
+cp .env.example .env # then set VN_ASSET_ROOT
+npm run check
+npm run dev -- --port 4190
 ```
 
 Open `http://127.0.0.1:4190`. Click or press Space/Enter/↓ to advance, ↑ to step back, and Tab for the
@@ -24,6 +25,7 @@ from the story and exact source bytes.
 
 - `src/core/contracts.ts` — the only authoring/runtime shape.
 - `src/core/compiler.ts` — deterministic structural gate.
+- `src/core/figure-normalization.ts` — padding-invariant actor preparation.
 - `src/core/reader-state.ts` — deterministic reader transport.
 - `src/story/moon-scar.ts` — one representative Experience.
 - `docs/ARCHITECTURE.md` — decisions and non-goals.

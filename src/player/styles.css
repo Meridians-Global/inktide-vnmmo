@@ -108,6 +108,7 @@ button { font: inherit; }
   backdrop-filter: blur(16px);
 }
 .choice-heading, .backlog-heading { margin: 0 0 18px; color: #d7b774; font: 650 clamp(10px, .88vw, 15px)/1.3 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .14em; text-transform: uppercase; }
+.choice-posture { display: block; margin-bottom: 6px; color: rgba(225,232,242,.52); font: 600 clamp(8px, .62vw, 11px)/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .18em; }
 .choice-option { display: grid; width: 100%; gap: 5px; margin-top: 10px; padding: 14px 16px; text-align: left; color: #f4f2ed; border: 1px solid rgba(202,215,232,.25); background: rgba(255,255,255,.045); cursor: pointer; }
 .choice-option:hover, .choice-option:focus-visible { border-color: #d7b774; background: rgba(215,183,116,.1); outline: none; }
 .choice-option strong { font: 520 clamp(13px, 1.1vw, 19px)/1.3 Georgia, serif; }

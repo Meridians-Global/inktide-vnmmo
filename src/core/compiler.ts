@@ -47,6 +47,15 @@ export function compileExperience(input: unknown): CompileResult {
   const tableauxById = new Map(experience.tableaux.map((tableau) => [tableau.id, tableau]));
   const momentsById = new Map(experience.moments.map((moment) => [moment.id, moment]));
 
+  for (const asset of experience.assets) {
+    if (asset.kind === 'figure' && !asset.preparation) {
+      errors.push(`Figure asset ${asset.id} needs an explicit preparation recipe`);
+    }
+    if (asset.kind !== 'figure' && asset.preparation) {
+      errors.push(`Only figure assets may declare a preparation recipe: ${asset.id}`);
+    }
+  }
+
   for (const [label, values] of [
     ['asset', experience.assets.map((item) => item.id)],
     ['actor', experience.actors.map((item) => item.id)],

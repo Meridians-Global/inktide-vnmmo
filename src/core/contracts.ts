@@ -4,11 +4,21 @@ import { z } from 'zod';
 export const SlotSchema = z.enum(['far-left', 'left', 'center', 'right', 'far-right']);
 export type Slot = z.infer<typeof SlotSchema>;
 
+export const FigurePreparationSchema = z.object({
+  kind: z.literal('figure-normalize'),
+  recipeVersion: z.literal(1),
+  canvas: z.object({ width: z.number().int().positive(), height: z.number().int().positive() }).strict(),
+  subjectBox: z.object({ width: z.number().int().positive(), height: z.number().int().positive() }).strict(),
+  bottomPadding: z.number().int().nonnegative(),
+}).strict();
+export type FigurePreparation = z.infer<typeof FigurePreparationSchema>;
+
 export const AssetSchema = z.object({
   id: z.string().min(1),
   kind: z.enum(['background', 'figure', 'artifact', 'ambience', 'music', 'cue']),
   sourcePath: z.string().min(1),
   sha256: z.string().regex(/^[a-f0-9]{64}$/),
+  preparation: FigurePreparationSchema.optional(),
 }).strict();
 export type Asset = z.infer<typeof AssetSchema>;
 

@@ -117,10 +117,13 @@ function renderChoice(moment: Moment): void {
     choiceLayer.hidden = true;
     return;
   }
+  const posture = document.createElement('span');
+  posture.className = 'choice-posture';
+  posture.textContent = 'TRAVERSAL · NO WORLD WRITE';
   const heading = document.createElement('p');
   heading.className = 'choice-heading';
   heading.textContent = moment.next.prompt;
-  choiceLayer.append(heading);
+  choiceLayer.append(posture, heading);
   for (const option of moment.next.options) {
     const button = document.createElement('button');
     button.type = 'button';

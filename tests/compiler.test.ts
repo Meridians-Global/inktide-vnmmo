@@ -49,4 +49,23 @@ describe('compileExperience', () => {
     assert.equal(result.ok, false);
     if (!result.ok) assert.ok(result.errors.includes('Speaker fang-yuan must be active in moment fang-private'));
   });
+
+  it('requires deterministic preparation for figures', () => {
+    const assets = moonScarExperience.assets.map((asset) =>
+      asset.id === 'fang-neutral' ? { ...asset, preparation: undefined } : asset,
+    );
+    const result = compileExperience({ ...moonScarExperience, assets });
+    assert.equal(result.ok, false);
+    if (!result.ok) assert.ok(result.errors.includes('Figure asset fang-neutral needs an explicit preparation recipe'));
+  });
+
+  it('rejects figure preparation on non-figure assets', () => {
+    const preparation = moonScarExperience.assets.find((asset) => asset.id === 'fang-neutral')!.preparation!;
+    const assets = moonScarExperience.assets.map((asset) =>
+      asset.id === 'cleft-bg' ? { ...asset, preparation } : asset,
+    );
+    const result = compileExperience({ ...moonScarExperience, assets });
+    assert.equal(result.ok, false);
+    if (!result.ok) assert.ok(result.errors.includes('Only figure assets may declare a preparation recipe: cleft-bg'));
+  });
 });

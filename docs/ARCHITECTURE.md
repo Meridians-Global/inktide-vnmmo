@@ -6,7 +6,7 @@ This lab proves one strategy: **author a bounded Experience, compile it, then re
 authorized source coordinate
   → typed Experience (assets · actors · tableaux · moments · choices)
   → pure compiler (structure, identity, viewpoint, reachability)
-  → preparation shell (verify digests, copy exact bytes, write receipt)
+  → preparation shell (verify sources, prepare figures, write outputs + receipt)
   → static reader (pure cursor reducer + DOM/audio adapters)
 ```
 
@@ -18,12 +18,16 @@ generation provider. Reading changes only the local cursor; traversal choices do
 
 - A figure's scale and source-facing live on the actor, not in tableaux. A character therefore cannot grow
   between moments by accident.
+- Every figure declares one exact preparation recipe. The builder trims the visible alpha envelope, scales
+  it into a fixed subject box without distortion, centres it horizontally, and grounds it above a fixed
+  bottom padding on a fixed transparent canvas. Provider padding therefore cannot change body scale or feet.
 - A tableau is a complete stable composition. Moments reference it; they do not accumulate fragile patches.
 - Five slots are semantic positions, not hand-tuned pixel coordinates.
 - A private POV may not jump directly into another private POV. A public beat must bridge the handoff.
 - A speaking or thinking actor must be staged at full emphasis; the reader cannot hear a dimmed figure.
 - All graph nodes must be reachable and acyclic in this proof.
-- Every asset is copied only after its SHA-256 matches the authored lineage.
+- Every source is consumed only after its SHA-256 matches the authored lineage. Receipts separately pin the
+  source digest, preparation recipe, and prepared-output digest.
 - UI and audio are adapters over compiled data. They contain no story policy.
 
 ## What is intentionally absent
