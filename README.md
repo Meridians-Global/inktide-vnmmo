@@ -37,8 +37,9 @@ record. Provider jobs write candidates and retained evidence; they never run ins
 
 `npm run acquire:moon-scar` reproduces the current Moon-Scar acquisition from retained predictions when
 available. It imports exact legacy SFX lineage, generates only demanded coordinates, and prepares isolated
-assets through the shared chroma/segmentation matte. `REBUILD_MATTE=1` reruns preparation without requesting
-new images.
+assets through the shared chroma/segmentation matte. Prefer `REBUILD_MATTE_ID=<asset-id>` for a narrow repair;
+`REBUILD_MATTE=1` deliberately rebuilds every isolated matte. `npm run prepare:eyes` reproduces the bounded,
+hash-pinned iris corrections without a provider call.
 
 ## Start here
 
@@ -47,6 +48,7 @@ new images.
 - `src/core/figure-normalization.ts` — padding-invariant actor preparation.
 - `src/core/chroma-matte.ts` — deterministic chroma garbage matte and boundary repair.
 - `src/core/reader-state.ts` — deterministic reader transport.
+- `src/core/performance-beats.ts` — explicit pivotal acting detection and appearance-transition evidence.
 - `src/story/spider-memory.ts` — dual-identity and viewpoint rehearsal.
 - `src/story/moon-scar.ts` — an earlier representative Experience on the same contract.
 - `scripts/acquire-spider-assets.ts` — resumable, evidence-bearing Replicate acquisition and preparation.

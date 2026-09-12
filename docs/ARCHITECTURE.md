@@ -28,6 +28,12 @@ generation provider. Reading changes only the local cursor; traversal choices do
   it into a fixed subject box without distortion, centres it horizontally, and grounds it above a fixed
   bottom padding on a fixed transparent canvas. Provider padding therefore cannot change body scale or feet.
 - A tableau is a complete stable composition. Moments reference it; they do not accumulate fragile patches.
+- Pivotal acting is authored as `baseline → appraisal → decision → after-state`, then detected from exact
+  moment/tableau bindings. It is never guessed from prose keywords. A pivotal sprite beat must name an explicit
+  appearance, making an emotional cut reviewable and preventing an unchanged default pose from passing as acting.
+- A modern VN CG is a typed cut-in, not a background pretending to be a location. It declares the actors and
+  artifact already embodied in the frame, and the compiler rejects duplicate sprite/prop layering. This keeps
+  reusable tableaux and high-impact memory images as two coherent visual modes.
 - Five slots are semantic positions, not hand-tuned pixel coordinates.
 - A private POV may not jump directly into another private POV. A public beat must bridge the handoff.
 - A speaking or thinking actor must be staged at full emphasis; the reader cannot hear a dimmed figure.
@@ -37,6 +43,9 @@ generation provider. Reading changes only the local cursor; traversal choices do
 - Chroma is a generation aid, not the final matte. Isolated candidates pass through semantic segmentation,
   exterior-connected chroma rejection, partial-alpha colour reconstruction, boundary neutralisation, and
   transparent-RGB clearing. Inspection metrics remain in the acquisition receipt.
+- Small local defects that do not justify identity regeneration may use a deterministic, spatially bounded
+  preparation recipe. Iris correction records exact source/output hashes, geometric regions, colour predicate,
+  and target colour; it cannot silently repaint a face.
 - UI and audio are adapters over compiled data. They contain no story policy.
 - Physical sound and voice are separate reader buses. Both begin off; ambience, music and material cues may
   be enabled without voice. A moment may bind one exact voice asset, but an Experience with none keeps that

@@ -21,7 +21,7 @@ export type FigurePreparation = z.infer<typeof FigurePreparationSchema>;
 
 export const AssetSchema = z.object({
   id: z.string().min(1),
-  kind: z.enum(['background', 'figure', 'artifact', 'ambience', 'music', 'cue', 'voice']),
+  kind: z.enum(['background', 'figure', 'artifact', 'cg', 'ambience', 'music', 'cue', 'voice']),
   sourcePath: z.string().min(1),
   sha256: z.string().regex(/^[a-f0-9]{64}$/),
   preparation: FigurePreparationSchema.optional(),
@@ -64,6 +64,27 @@ const ArtifactPlacementSchema = z.object({
   footprint: z.enum(['study', 'large']),
 }).strict();
 
+const CutInSchema = z.object({
+  assetId: z.string().min(1),
+  representedActorIds: z.array(z.string().min(1)).min(1).max(5),
+  representedArtifactId: z.string().min(1).optional(),
+}).strict();
+
+const AtmosphereRegionSchema = z.object({
+  left: z.number().min(0).max(100),
+  top: z.number().min(0).max(100),
+  width: z.number().positive().max(100),
+  height: z.number().positive().max(100),
+}).strict().refine((region) => region.left + region.width <= 100 && region.top + region.height <= 100, 'Atmosphere region must remain inside the stage');
+
+const AtmosphereSchema = z.object({
+  kind: z.enum(['rain', 'snow', 'dust']),
+  layer: z.enum(['back', 'front']),
+  region: AtmosphereRegionSchema,
+  intensity: z.number().int().min(4).max(36),
+  seed: z.number().int(),
+}).strict();
+
 export const TableauSchema = z.object({
   id: z.string().min(1),
   location: z.string().min(1),
@@ -74,7 +95,9 @@ export const TableauSchema = z.object({
   tone: z.enum(['cold', 'neutral', 'intimate', 'ominous']),
   figures: z.array(FigureSchema).max(5),
   artifact: ArtifactPlacementSchema.optional(),
-}).strict();
+  cutIn: CutInSchema.optional(),
+  atmosphere: z.array(AtmosphereSchema).max(3).optional(),
+}).strict().refine((tableau) => !tableau.cutIn || (tableau.figures.length === 0 && !tableau.artifact), 'A CG cut-in embodies its declared cast and artifact; do not double-layer figures or artifact');
 export type Tableau = z.infer<typeof TableauSchema>;
 
 export const ViewpointSchema = z.discriminatedUnion('kind', [
@@ -111,6 +134,11 @@ export const MomentSchema = z.object({
   text: z.string().min(1),
   voiceAssetId: z.string().min(1).optional(),
   cueAssetIds: z.array(z.string().min(1)).default([]),
+  performanceBeat: z.object({
+    actorId: z.string().min(1),
+    phase: z.enum(['baseline', 'appraisal', 'decision', 'after-state']),
+    importance: z.enum(['supporting', 'pivotal']),
+  }).strict().optional(),
   next: NextSchema,
 }).strict();
 export type Moment = z.infer<typeof MomentSchema>;

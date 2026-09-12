@@ -8,6 +8,8 @@
   "scripts": {
     "acquire:moon-scar": "tsx scripts/acquire-moon-scar-assets.ts",
     "acquire:spider": "tsx scripts/acquire-spider-assets.ts",
+    "generate:stage-audio": "tsx scripts/generate-stage-audio.ts",
+    "prepare:eyes": "tsx scripts/prepare-eye-corrections.ts",
     "recover:replicate": "tsx scripts/recover-replicate.ts",
     "build:experience": "tsx scripts/build-experience.ts",
     "dev": "vite",

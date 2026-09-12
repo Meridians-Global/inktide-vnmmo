@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
-import { inspectChromaMatte, keyChromaMatte, refineSegmentedChromaMatte } from '../src/core/chroma-matte';
+import { clearSmallAlphaIslands, inspectChromaMatte, keyChromaMatte, refineSegmentedChromaMatte } from '../src/core/chroma-matte';
 
 describe('deterministic chroma matte', () => {
   it('removes the screen, retains the subject, and zeroes transparent RGB', () => {
@@ -39,5 +39,17 @@ describe('deterministic chroma matte', () => {
     const result = refineSegmentedChromaMatte(source, segmented, width, height, [0, 255, 102]);
     assert.equal(result.data[(1 * width + 1) * 4 + 3], 0);
     assert.equal(result.data[(2 * width + 3) * 4 + 3], 255);
+  });
+
+  it('removes detached segmentation debris relative to the principal subject', () => {
+    const width = 20;
+    const height = 20;
+    const pixels = Buffer.alloc(width * height * 4);
+    for (let y = 4; y < 16; y += 1) for (let x = 6; x < 14; x += 1) pixels.set([60, 70, 80, 255], (y * width + x) * 4);
+    pixels.set([60, 70, 80, 255], (2 * width + 2) * 4);
+    const result = clearSmallAlphaIslands(pixels, width, height, 0.02);
+    assert.equal(result.data[(8 * width + 8) * 4 + 3], 255);
+    assert.equal(result.data[(2 * width + 2) * 4 + 3], 0);
+    assert.equal(result.clearedPixels, 1);
   });
 });

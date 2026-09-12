@@ -1,3 +1,17 @@
+# Dailies — latest pivotal-performance pass
+
+The current build adds explicit performance-beat detection, identity-preserving iris repair, spatial snow/rain,
+and one modern VN CG cut-in at `moon-scar`. Spider-Man now moves through guarded → conflicted → reluctant trust;
+Moon-Scar moves Chun through neutral → disclosure → held consequence. Replicate variants with corrected eyes but
+wrong crop, hair identity, or rendering style were retained and rejected.
+
+This pass was inspected at source/face scale and passed deterministic compilation, media lineage, and tests. It
+was not reviewed in the live reader because local browser automation was unavailable; no new asset or transition
+is promoted beyond candidate. Review these exact spans next:
+
+- Spider-Man: `mj-sees → mj-answer → ride-home`.
+- Moon-Scar: `chun-answers → moon-scar → ending`.
+
 # Dailies — Moon-Scar Reading v2 modernization
 
 Reviewed in the live 16:9 reader through the empty establishing shot, the larger-than-life two-shot, the
@@ -53,7 +67,7 @@ state make the emotional change visible before the next line explains it.
 
 - Peter is one versioned identity with civilian, masked-suit, and revealed-suit appearances. Stage names follow
   the appearance; wardrobe or concealment changes cannot silently create a second actor.
-- MJ and Peter share one 68% stage-height contract and one preparation canvas, so the provider's original padding
+- MJ and Peter share one 88% stage-height contract and one preparation canvas, so the provider's original padding
   cannot alter their apparent height.
 - MJ's removed background retained 49,056 green-dominant translucent pixels. The exact figure recipe now applies
   a green despill and alpha floor before normalization; the prepared figure has 67 such edge pixels remaining.

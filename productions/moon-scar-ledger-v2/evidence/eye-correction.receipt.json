@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "productionId": "moon-scar-ledger-v2",
+  "operation": "deterministic-iris-retouch",
+  "outputs": {
+    "gu-yue-chun-disclosure-eye-fixed-v1": {
+      "sourcePath": "assets/generated/moon-scar-ledger-v2/gu-yue-chun-disclosure-v1.png",
+      "sourceSha256": "348b388da9656e7bf761b8c2e4d127e90e709ce95ee4afb89a49d9e1b7c55420",
+      "outputPath": "assets/generated/moon-scar-ledger-v2/gu-yue-chun-disclosure-eye-fixed-v1.png",
+      "outputSha256": "d3832de2e26ebe3ec08c94d9515decd7957749f8ab35312199773eae7320d1a1",
+      "recipe": {
+        "regions": [
+          {
+            "cx": 955,
+            "cy": 326,
+            "rx": 10,
+            "ry": 16
+          }
+        ],
+        "targetRgb": [
+          78,
+          52,
+          36
+        ],
+        "strength": 0.82,
+        "minimumChroma": 22
+      }
+    }
+  }
+}

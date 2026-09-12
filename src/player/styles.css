@@ -23,8 +23,22 @@ button { font: inherit; }
 }
 .backdrop { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; }
 .plate-scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(4,7,13,.36) 0%, rgba(4,7,13,.04) 38%, rgba(4,7,13,.18) 72%, rgba(4,7,13,.7) 100%); }
+.cut-in-wrap { position: absolute; inset: 0; z-index: 1; overflow: hidden; }
+.cut-in { width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; }
 .reader-shell[data-tone="cold"] .backdrop { filter: saturate(.8) contrast(1.04) brightness(.86); }
 .reader-shell[data-tone="ominous"] .backdrop { filter: saturate(.72) contrast(1.08) brightness(.74); }
+
+.atmosphere { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.atmosphere-back { z-index: 2; }
+.atmosphere-front { z-index: 4; }
+.atmosphere-region { position: absolute; overflow: hidden; mask-image: linear-gradient(to bottom, transparent, #000 12%, #000 88%, transparent); }
+.atmosphere-region i { position: absolute; left: var(--x); top: -12%; display: block; opacity: 0; transform: translateX(0) scale(var(--scale)); animation-delay: var(--delay); animation-duration: var(--duration); animation-iteration-count: infinite; animation-timing-function: linear; }
+.atmosphere-rain i { width: 1px; height: 13%; background: linear-gradient(to bottom, transparent, rgba(200,222,246,.62)); animation-name: rain-fall; }
+.atmosphere-snow i { width: 5px; height: 5px; border-radius: 50%; background: rgba(229,238,246,.74); box-shadow: 0 0 5px rgba(220,235,250,.24); animation-name: snow-fall; }
+.atmosphere-dust i { width: 3px; height: 3px; border-radius: 50%; background: rgba(201,184,159,.48); box-shadow: 0 0 7px rgba(210,190,160,.3); animation-name: dust-rise; }
+@keyframes rain-fall { 0% { opacity: 0; transform: translate(0, -8%) rotate(8deg) scale(var(--scale)); } 8% { opacity: .62; } 92% { opacity: .44; } 100% { opacity: 0; transform: translate(var(--drift), 760%) rotate(8deg) scale(var(--scale)); } }
+@keyframes snow-fall { 0% { opacity: 0; transform: translate(0, -10%) scale(var(--scale)); } 12% { opacity: .72; } 88% { opacity: .58; } 100% { opacity: 0; transform: translate(var(--drift), 1900%) scale(var(--scale)); } }
+@keyframes dust-rise { 0%, 100% { opacity: 0; transform: translate(0, 600%) scale(var(--scale)); } 24%, 72% { opacity: .48; } 50% { transform: translate(var(--drift), 120%) scale(var(--scale)); } }
 
 .context-rail {
   position: absolute;

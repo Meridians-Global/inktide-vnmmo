@@ -16,8 +16,15 @@
   "requestDigests": {
     "mountain-cleft-stage-v3.generate": "5370e187fbe52b6234bf76f2e7b609a4d07ed3ff7cd564bf25838b243e199518",
     "secret-cellar-stage-v3.generate": "18b0fe9868971fe25b839aa30e4e9c8be1c488e12bcf44d1379f5f2bb02bd50c",
-    "gu-yue-chun-neutral-v2.generate": "254207360f174359245b9f49ece67fd056b3822b98fc88d398301f681b57f571",
+    "gu-yue-chun-neutral-v2.generate": "7339fe65bb7fed18c5f94b785c61f14453e29169758e37d60ed7b78cc93eea1a",
     "gu-yue-chun-neutral-v2.matte": "b48b34914830b1923644141022db21c45e99145a8598f8c914bd10d8d04f9795",
+    "gu-yue-chun-disclosure-v1.generate": "aef10e522da6a95cf143140e9587f854659730ad4125f893e1d76d91df13da48",
+    "gu-yue-chun-disclosure-v1.matte": "cf5e586ec259521c7fbe6d621f576bfbddfe5c7a91378b8a7244929e36cf0e46",
+    "gu-yue-chun-disclosure-v2.generate": "d8f3fe867a1bd8bafc9e2cb1e0851bc3e47412e80842554232f8e44829074f9d",
+    "gu-yue-chun-disclosure-v2.matte": "75b11a923dca4e28d7b9390869f7d922eca28754eec3eee0d428a445abcf8cbd",
+    "gu-yue-chun-moon-scar-reaction-v1.generate": "d28be31e449beb9c184eb15596dabcf2fb106aa4dbdd3805aca1f68d5542c404",
+    "gu-yue-chun-moon-scar-reaction-v1.matte": "8403ca6b558c1353f5d46cd8aff8a4c2bc8c41f86a415621729ceccbd81892b4",
+    "moon-scar-revelation-cg-v1.generate": "706f91a560eb2acde9f0a320f21eda739797213fa73b6a52e0c1894255f5585c",
     "sealed-substrate-v3.generate": "8b193d2a61d9909e425f8f5dda361bee14c2e4abee016436ab5ddc7057237607",
     "sealed-substrate-v3.matte": "aeaccbcfd86401c4d5cd3b231c44d5bd43ee13373e5c05281a86aec51ac000ee",
     "moon-scar-gu-v3.generate": "c47bd70d582b46666954efea94cb6374a9061f6abeb6333bf65fccd5b3810ae0",
@@ -37,6 +44,13 @@
       "provenance": "legacy-sfx-lab",
       "legacySourcePath": "legacy-sfx-lab://productions/reverend-insanity/episode-007-three-heartbeats/vn-reader-v1/assets/entities/gu-yue-chun-ambush-contact-v2.png",
       "legacyReceiptPath": "legacy-sfx-lab://productions/reverend-insanity/episode-007-three-heartbeats/vn-reader-v1/evidence/gu-yue-chun-ambush-contact-v2/receipt.json"
+    },
+    "legacy-fang-style-reference-v1": {
+      "sourcePath": "assets/generated/moon-scar-ledger-v2/legacy-fang-style-reference-v1.jpg",
+      "sha256": "c98aea5731a72b3fbc1eed5f819af94e5c09f9e6efea7f06e7c0e6a0ae9b27be",
+      "provenance": "legacy-sfx-lab",
+      "legacySourcePath": "legacy-sfx-lab://productions/reverend-insanity/episode-006-the-supply-tendon/vn-entity-combination-proof-v2/assets/entities/fang-field-mantle-guarded-v3.png",
+      "legacyReceiptPath": "legacy-sfx-lab://productions/reverend-insanity/episode-006-the-supply-tendon/vn-entity-combination-proof-v2/evidence/fang-field-expression-v3/receipt.json"
     },
     "mountain-cleft-stage-v3": {
       "sourcePath": "assets/generated/moon-scar-ledger-v2/mountain-cleft-stage-v3.jpg",
@@ -58,7 +72,7 @@
     },
     "gu-yue-chun-neutral-v2": {
       "sourcePath": "assets/generated/moon-scar-ledger-v2/gu-yue-chun-neutral-v2.png",
-      "sha256": "4f7efa1946fe18f65c9d10d9a38746b0e61adb38b554ead1cbe786e61bae92c3",
+      "sha256": "a343a0837c79508997777d5ed06a4f01729781b4a5c8362f58101688e6972960",
       "provenance": "replicate",
       "predictionIds": [
         "v9g0nfhcz5rmt0d0j7qvvtda70",
@@ -67,11 +81,71 @@
       "generatedUrl": "https://replicate.delivery/xezq/V6sCZ9MOMzasHFsxuJPbya0dRiYqj9OKPfpfC21HuigxfAZuA/tmpn8a0aamm.jpg",
       "transparentUrl": "https://replicate.delivery/czjl/bg3lw5c5dHZTOVyG4Hu4jveqMhFffk1XKs0eqUHaf44e9HIzF/output.png",
       "matteInspection": {
-        "visiblePixels": 784987,
-        "boundaryPixels": 15065,
-        "residualBoundaryFraction": 0.001659475605708596,
+        "visiblePixels": 784814,
+        "boundaryPixels": 14892,
+        "residualBoundaryFraction": 0.0014101531023368251,
         "transparentRgbPixels": 0
       }
+    },
+    "gu-yue-chun-disclosure-v1": {
+      "sourcePath": "assets/generated/moon-scar-ledger-v2/gu-yue-chun-disclosure-v1.png",
+      "sha256": "348b388da9656e7bf761b8c2e4d127e90e709ce95ee4afb89a49d9e1b7c55420",
+      "provenance": "replicate",
+      "predictionIds": [
+        "q6mqzq9f0drmy0d0jgj8hdqrk4",
+        "rxscj7ehsnrg80d0jgj90httf4"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/4LX3qHbtmfWESy1rUDjLjgUSbPnfKqB5KAGNusfUWQx1ETZuA/tmpxdvop7id.jpg",
+      "transparentUrl": "https://replicate.delivery/czjl/edhBHMHfNDttwkh6xCgxVfIWUGsRjRF9HHooj07HPew6JmycB/output.png",
+      "matteInspection": {
+        "visiblePixels": 1113325,
+        "boundaryPixels": 18243,
+        "residualBoundaryFraction": 0.015293537247163296,
+        "transparentRgbPixels": 0
+      }
+    },
+    "gu-yue-chun-disclosure-v2": {
+      "sourcePath": "assets/generated/moon-scar-ledger-v2/gu-yue-chun-disclosure-v2.png",
+      "sha256": "c38627aab885a13607e4c40e8baeb82bcf2e5bb8a35061fd9e5ebb10cfb317d3",
+      "provenance": "replicate",
+      "predictionIds": [
+        "0fgsaenzb5rmt0d0jgtbprgx18",
+        "fzj35gj5p5rg80d0jgtsqk5mm4"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/d8BFD47u2jqtHxLskH6u8GPmSAoNmWU9f3hlLZKGPF0o5UmLA/tmpig_8s3ba.jpg",
+      "transparentUrl": "https://replicate.delivery/czjl/14QuLvubvZILMh7KVRq4M0uBhwUEo6CtwHT13CGrtsJ1cKzF/output.png",
+      "matteInspection": {
+        "visiblePixels": 1246397,
+        "boundaryPixels": 22812,
+        "residualBoundaryFraction": 0.0014027704716815712,
+        "transparentRgbPixels": 0
+      }
+    },
+    "gu-yue-chun-moon-scar-reaction-v1": {
+      "sourcePath": "assets/generated/moon-scar-ledger-v2/gu-yue-chun-moon-scar-reaction-v1.png",
+      "sha256": "c6f83edf9740e958c5e4f5648ffbff1e46f90d2e84981f13f87faf706b56af1e",
+      "provenance": "replicate",
+      "predictionIds": [
+        "kp2rtmb7fxrmw0d0jgts4twzc0",
+        "7qvdkxfncsrga0d0jgtsmwdn3g"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/PlsD5BrM7q4RIJmCL6clOcIrEZvOvjcusCWBY2hJWWtf5UmLA/tmp2h08761i.jpg",
+      "transparentUrl": "https://replicate.delivery/czjl/f5TgXCBSzIznDyJD6nuJGxxJTeTjNATA02pwUMHvdAeCoTZuA/output.png",
+      "matteInspection": {
+        "visiblePixels": 1086628,
+        "boundaryPixels": 24240,
+        "residualBoundaryFraction": 0.0031353135313531354,
+        "transparentRgbPixels": 0
+      }
+    },
+    "moon-scar-revelation-cg-v1": {
+      "sourcePath": "assets/generated/moon-scar-ledger-v2/moon-scar-revelation-cg-v1.jpg",
+      "sha256": "a9b98de23c59b5e2f3fac20b33adc4a202e45bb3adb3ca7e1f15d3a3041ecd1a",
+      "provenance": "replicate",
+      "predictionIds": [
+        "6v5wfec8y9rmw0d0jh1apf02xr"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/JdiSI94zFzaJBd0OiDdRlk4Q0Onqz8zQGYQtyKJGaUFXgKzF/tmpllnlfyid.jpg"
     },
     "sealed-substrate-v3": {
       "sourcePath": "assets/generated/moon-scar-ledger-v2/sealed-substrate-v3.png",

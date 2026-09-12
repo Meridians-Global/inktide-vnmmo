@@ -2,6 +2,8 @@ import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
 import { compileExperience } from '../src/core/compiler';
 import { moonScarExperience } from '../src/story/moon-scar';
+import { spiderMemoryExperience } from '../src/story/spider-memory';
+import { detectPerformanceBeats } from '../src/core/performance-beats';
 
 describe('compileExperience', () => {
   it('compiles the prepared catch-up reading', () => {
@@ -45,6 +47,55 @@ describe('compileExperience', () => {
     });
     assert.equal(result.ok, false);
     if (!result.ok) assert.ok(result.errors.some((error) => error.includes('stageHeightPercent')));
+  });
+
+  it('keeps spatial atmosphere inside its declared stage region', () => {
+    assert.equal(compileExperience(spiderMemoryExperience).ok, true);
+    const tableaux = spiderMemoryExperience.tableaux.map((tableau) => tableau.id === 'apartment-empty'
+      ? { ...tableau, atmosphere: [{ kind: 'rain' as const, layer: 'back' as const, region: { left: 80, top: 10, width: 29, height: 64 }, intensity: 24, seed: 1616 }] }
+      : tableau);
+    const result = compileExperience({ ...spiderMemoryExperience, tableaux });
+    assert.equal(result.ok, false);
+    if (!result.ok) assert.ok(result.errors.some((error) => error.includes('Atmosphere region must remain inside the stage')));
+  });
+
+  it('binds each pivotal answer to a distinct actor rendition', () => {
+    const spiderAnswer = spiderMemoryExperience.moments.find((moment) => moment.id === 'mj-answer')!;
+    const spiderTableau = spiderMemoryExperience.tableaux.find((tableau) => tableau.id === spiderAnswer.tableauId)!;
+    assert.equal(spiderTableau.figures.find((figure) => figure.actorId === 'mj')?.appearanceId, 'conflicted-boundary');
+    const moonAnswer = moonScarExperience.moments.find((moment) => moment.id === 'chun-answers')!;
+    const moonTableau = moonScarExperience.tableaux.find((tableau) => tableau.id === moonAnswer.tableauId)!;
+    assert.equal(moonTableau.figures.find((figure) => figure.actorId === 'gu-yue-chun')?.appearanceId, 'restrained-disclosure');
+  });
+
+  it('detects authored pivotal beats and their exact appearance shifts', () => {
+    const spiderBeats = detectPerformanceBeats(spiderMemoryExperience);
+    assert.deepEqual(spiderBeats.find((beat) => beat.momentId === 'mj-sees')?.changesAppearanceFrom, ['guarded-listening']);
+    assert.equal(spiderBeats.find((beat) => beat.momentId === 'ride-home')?.appearanceId, 'reluctant-trust');
+    const moonBeats = detectPerformanceBeats(moonScarExperience);
+    assert.equal(moonBeats.find((beat) => beat.momentId === 'chun-answers')?.appearanceId, 'restrained-disclosure');
+    assert.equal(moonBeats.filter((beat) => beat.importance === 'pivotal').length, 3);
+  });
+
+  it('rejects a pivotal beat without an explicit rendition', () => {
+    const moments = moonScarExperience.moments.map((moment) => moment.id === 'chun-speaks'
+      ? { ...moment, performanceBeat: { actorId: 'gu-yue-chun', phase: 'decision' as const, importance: 'pivotal' as const } }
+      : moment);
+    const result = compileExperience({ ...moonScarExperience, moments });
+    assert.equal(result.ok, false);
+    if (!result.ok) assert.ok(result.errors.includes('Pivotal performance chun-speaks needs an explicit appearance for gu-yue-chun'));
+  });
+
+  it('treats a CG cut-in as an embodied cast and rejects duplicate sprite layering', () => {
+    const reveal = moonScarExperience.tableaux.find((tableau) => tableau.id === 'moon-scar-reveal')!;
+    assert.deepEqual(reveal.cutIn?.representedActorIds, ['fang-yuan', 'gu-yue-chun']);
+    assert.equal(compileExperience(moonScarExperience).ok, true);
+    const tableaux = moonScarExperience.tableaux.map((tableau) => tableau.id === reveal.id
+      ? { ...tableau, figures: [{ actorId: 'fang-yuan', appearanceId: 'field-neutral', slot: 'left' as const, facing: 'right' as const, emphasis: 'active' as const }] }
+      : tableau);
+    const result = compileExperience({ ...moonScarExperience, tableaux });
+    assert.equal(result.ok, false);
+    if (!result.ok) assert.ok(result.errors.some((error) => error.includes('do not double-layer figures or artifact')));
   });
 
   it('rejects unreachable moments', () => {

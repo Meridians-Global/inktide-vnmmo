@@ -100,6 +100,19 @@ export function compileExperience(input: unknown, options: { assetUrlBase?: stri
       const asset = assetsById.get(tableau.artifact.assetId);
       if (!asset || asset.kind !== 'artifact') errors.push(`Tableau ${tableau.id} needs an artifact asset`);
     }
+    if (tableau.cutIn) {
+      const cutIn = assetsById.get(tableau.cutIn.assetId);
+      if (!cutIn || cutIn.kind !== 'cg') errors.push(`Tableau ${tableau.id} needs a CG cut-in asset`);
+      for (const actorId of tableau.cutIn.representedActorIds) {
+        if (!actorsById.has(actorId)) errors.push(`Tableau ${tableau.id} CG represents missing actor ${actorId}`);
+      }
+      if (tableau.cutIn.representedArtifactId) {
+        const representedArtifact = assetsById.get(tableau.cutIn.representedArtifactId);
+        if (!representedArtifact || representedArtifact.kind !== 'artifact') {
+          errors.push(`Tableau ${tableau.id} CG represents missing artifact ${tableau.cutIn.representedArtifactId}`);
+        }
+      }
+    }
   }
 
   for (const moment of experience.moments) {
@@ -120,13 +133,22 @@ export function compileExperience(input: unknown, options: { assetUrlBase?: stri
         errors.push(`Thought moment ${moment.id} must be private to its speaker`);
       }
     }
-    if (moment.speakerId && tableau && !tableau.figures.some((figure) => figure.actorId === moment.speakerId)) {
+    if (moment.speakerId && tableau && !tableau.figures.some((figure) => figure.actorId === moment.speakerId) && !tableau.cutIn?.representedActorIds.includes(moment.speakerId)) {
       errors.push(`Speaker ${moment.speakerId} is not staged in moment ${moment.id}`);
     }
     if (moment.speakerId && tableau) {
       const speakerFigure = tableau.figures.find((figure) => figure.actorId === moment.speakerId);
       if (speakerFigure && speakerFigure.emphasis !== 'active') {
         errors.push(`Speaker ${moment.speakerId} must be active in moment ${moment.id}`);
+      }
+    }
+    if (moment.performanceBeat && tableau) {
+      const performanceFigure = tableau.figures.find((figure) => figure.actorId === moment.performanceBeat?.actorId);
+      const representedInCutIn = tableau.cutIn?.representedActorIds.includes(moment.performanceBeat.actorId);
+      if (!performanceFigure && !representedInCutIn) {
+        errors.push(`Performance actor ${moment.performanceBeat.actorId} is not staged in moment ${moment.id}`);
+      } else if (moment.performanceBeat.importance === 'pivotal' && performanceFigure && !performanceFigure.appearanceId) {
+        errors.push(`Pivotal performance ${moment.id} needs an explicit appearance for ${moment.performanceBeat.actorId}`);
       }
     }
     for (const nextId of destinations(moment.next)) {

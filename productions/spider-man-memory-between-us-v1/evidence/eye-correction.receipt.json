@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "productionId": "spider-man-memory-between-us-v1",
+  "operation": "deterministic-iris-retouch",
+  "outputs": {
+    "mj-conflicted-boundary-eye-fixed-v1": {
+      "sourcePath": "assets/generated/spider-man-memory-between-us-v1/mj-conflicted-boundary-v1.png",
+      "sourceSha256": "68c2adbd62c9d456bb783f1284884e4b11cf936fa111465525cb39df39e952fe",
+      "outputPath": "assets/generated/spider-man-memory-between-us-v1/mj-conflicted-boundary-eye-fixed-v1.png",
+      "outputSha256": "4bdf7138a57b4c59f3332edb30c1609aeff1ab54535b2750892af6c7792a7680",
+      "recipe": {
+        "regions": [
+          {
+            "cx": 800,
+            "cy": 457,
+            "rx": 14,
+            "ry": 18
+          },
+          {
+            "cx": 853,
+            "cy": 463,
+            "rx": 11,
+            "ry": 17
+          }
+        ],
+        "targetRgb": [
+          90,
+          55,
+          32
+        ],
+        "strength": 0.74,
+        "minimumChroma": 24
+      }
+    },
+    "mj-reluctant-trust-eye-fixed-v1": {
+      "sourcePath": "assets/generated/spider-man-memory-between-us-v1/mj-reluctant-trust-v1.png",
+      "sourceSha256": "6d896b1b6ef69aa3c689b9db34711ce483b20504c035b4fa8ad86b42541fadbc",
+      "outputPath": "assets/generated/spider-man-memory-between-us-v1/mj-reluctant-trust-eye-fixed-v1.png",
+      "outputSha256": "3e28c985076cd51248e9b05094516e28fb31bf33196185c51ec342dd0837233b",
+      "recipe": {
+        "regions": [
+          {
+            "cx": 936,
+            "cy": 373,
+            "rx": 15,
+            "ry": 19
+          },
+          {
+            "cx": 996,
+            "cy": 376,
+            "rx": 13,
+            "ry": 18
+          }
+        ],
+        "targetRgb": [
+          90,
+          55,
+          32
+        ],
+        "strength": 0.74,
+        "minimumChroma": 24
+      }
+    }
+  }
+}

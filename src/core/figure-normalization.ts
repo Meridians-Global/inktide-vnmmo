@@ -45,7 +45,7 @@ export async function normalizeFigureBuffer(
     .resize({ width: placement.width, height: placement.height, fit: 'fill' })
     .png()
     .toBuffer();
-  return sharp(resized)
+  const normalized = await sharp(resized)
     .extend({
       top: placement.top,
       right: placement.right,
@@ -55,6 +55,9 @@ export async function normalizeFigureBuffer(
     })
     .png()
     .toBuffer();
+  return recipe.matteCleanup
+    ? cleanMatteBuffer(normalized, recipe.matteCleanup)
+    : normalized;
 }
 
 async function cleanMatteBuffer(
@@ -64,20 +67,29 @@ async function cleanMatteBuffer(
   const raw = await sharp(source).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
   const pixels = Buffer.from(raw.data);
   for (let index = 0; index < pixels.length; index += 4) {
+    if (pixels[index + 3]! <= cleanup.alphaFloor) pixels.fill(0, index, index + 4);
+  }
+  const nearTransparency = (x: number, y: number): boolean => {
+    for (let offsetY = -2; offsetY <= 2; offsetY += 1) for (let offsetX = -2; offsetX <= 2; offsetX += 1) {
+      const nearX = x + offsetX;
+      const nearY = y + offsetY;
+      if (nearX >= 0 && nearY >= 0 && nearX < raw.info.width && nearY < raw.info.height && pixels[(nearY * raw.info.width + nearX) * 4 + 3] === 0) return true;
+    }
+    return false;
+  };
+  for (let y = 0; y < raw.info.height; y += 1) for (let x = 0; x < raw.info.width; x += 1) {
+    const index = (y * raw.info.width + x) * 4;
     const red = pixels[index]!;
     const green = pixels[index + 1]!;
     const blue = pixels[index + 2]!;
     const alpha = pixels[index + 3]!;
-    if (alpha <= cleanup.alphaFloor) {
-      pixels[index + 3] = 0;
-      continue;
-    }
-    if (alpha > cleanup.edgeAlphaCeiling) continue;
-    if (cleanup.spill === 'green' && green > red + cleanup.channelMargin && green > blue + cleanup.channelMargin) {
+    if (!alpha || (alpha > cleanup.edgeAlphaCeiling && !nearTransparency(x, y))) continue;
+    const channelMargin = alpha <= cleanup.edgeAlphaCeiling ? Math.min(cleanup.channelMargin, 5) : cleanup.channelMargin;
+    if (cleanup.spill === 'green' && green > red + channelMargin && green > blue + channelMargin) {
       pixels[index + 1] = Math.max(red, blue);
-    } else if (cleanup.spill === 'blue' && blue > red + cleanup.channelMargin && blue > green + cleanup.channelMargin) {
+    } else if (cleanup.spill === 'blue' && blue > red + channelMargin && blue > green + channelMargin) {
       pixels[index + 2] = Math.max(red, green);
-    } else if (cleanup.spill === 'magenta' && red > green + cleanup.channelMargin && blue > green + cleanup.channelMargin) {
+    } else if (cleanup.spill === 'magenta' && red > green + channelMargin && blue > green + channelMargin) {
       const neutral = green;
       pixels[index] = neutral;
       pixels[index + 2] = neutral;

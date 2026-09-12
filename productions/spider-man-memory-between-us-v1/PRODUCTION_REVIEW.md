@@ -15,12 +15,19 @@ writes no Domain or branch state.
   region and leaves a useful two-actor room. This is contextual acceptance, not a globally approved location.
 - Peter civilian, masked, and revealed figures — candidate identity family. Masked and revealed are demonstrated
   in this Experience; civilian remains an unstaged identity reference.
-- MJ guarded figure — candidate after deterministic green-edge despill. It is demonstrated once, not an
-  expression family.
+- MJ guarded, conflicted-boundary, and reluctant-trust figures — candidate expression progression. The two
+  generated emotional figures retain the same wardrobe and identity; a deterministic iris-only recipe replaces
+  the provider's unintended red irises without regenerating her face. Exact source/output bytes and regions are
+  pinned in `evidence/eye-correction.receipt.json`.
+- `mj-conflicted-boundary-v2` — rejected: brown eyes improved, but the provider returned a cropped body that
+  breaks the stable actor scale contract.
 
 ## Dailies verdict
 
-The strongest beat is the masked-to-revealed substitution: it is readable without moving or resizing Peter.
-The clearest remaining failure is emotional coverage on MJ. One guarded body cannot carry confrontation,
-recognition, boundary, and reluctant trust at phone scale. The next repair is one demanded three-quarter
-conflicted/compassionate MJ rendition, not more undirected generation.
+The strongest established beat remains the masked-to-revealed substitution: it is readable without moving or
+resizing Peter. This pass adds explicit appraisal (`mj-sees`), decision (`mj-answer`), and after-state
+(`ride-home`) coordinates, with the last state visibly opening her hands without resolving the boundary.
+
+This pass received asset-scale and structural review, not a live-reader audience review: local browser automation
+was unavailable. Keep the new MJ progression candidate until a human reviews those three consecutive beats at
+phone scale. The next repair is that bounded contextual review, not another generated expression.

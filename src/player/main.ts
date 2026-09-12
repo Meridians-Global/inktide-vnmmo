@@ -25,11 +25,14 @@ root.innerHTML = `
     <div class="stage" tabindex="0" aria-label="Advance story">
       <img class="backdrop" alt="" />
       <div class="plate-scrim"></div>
+      <div class="cut-in-wrap" aria-hidden="true"><img class="cut-in" alt="" /></div>
+      <div class="atmosphere atmosphere-back" aria-hidden="true"></div>
       <header class="context-rail">
         <div><span class="eyebrow chapter"></span><strong class="location"></strong></div>
         <span class="viewpoint"></span>
       </header>
       <div class="figures" aria-hidden="true"></div>
+      <div class="atmosphere atmosphere-front" aria-hidden="true"></div>
       <div class="artifact-wrap" aria-hidden="true"><img class="artifact" alt="" /></div>
       <div class="choice-layer" hidden></div>
       <div class="backlog-layer" hidden></div>
@@ -67,6 +70,10 @@ const shell = root.querySelector<HTMLElement>('.reader-shell')!;
 const stage = root.querySelector<HTMLElement>('.stage')!;
 const backdrop = root.querySelector<HTMLImageElement>('.backdrop')!;
 const figures = root.querySelector<HTMLElement>('.figures')!;
+const cutInWrap = root.querySelector<HTMLElement>('.cut-in-wrap')!;
+const cutIn = root.querySelector<HTMLImageElement>('.cut-in')!;
+const atmosphereBack = root.querySelector<HTMLElement>('.atmosphere-back')!;
+const atmosphereFront = root.querySelector<HTMLElement>('.atmosphere-front')!;
 const artifactWrap = root.querySelector<HTMLElement>('.artifact-wrap')!;
 const artifact = root.querySelector<HTMLImageElement>('.artifact')!;
 const choiceLayer = root.querySelector<HTMLElement>('.choice-layer')!;
@@ -122,6 +129,49 @@ function renderFigures(tableau: Tableau, assets: Map<string, CompiledAsset>): vo
     image.dataset.actorId = actor.id;
     image.dataset.appearanceId = appearance.id;
     figures.append(image);
+  }
+}
+
+function renderCutIn(tableau: Tableau, assets: Map<string, CompiledAsset>): void {
+  if (!tableau.cutIn) {
+    cutInWrap.hidden = true;
+    return;
+  }
+  cutIn.src = assets.get(tableau.cutIn.assetId)!.url;
+  cutInWrap.hidden = false;
+}
+
+function fraction(seed: number): number {
+  const value = Math.sin(seed * 12.9898) * 43758.5453;
+  return value - Math.floor(value);
+}
+
+function renderAtmosphere(tableau: Tableau): void {
+  for (const [layer, container] of [['back', atmosphereBack], ['front', atmosphereFront]] as const) {
+    const effects = (tableau.atmosphere ?? []).filter((effect) => effect.layer === layer);
+    const signature = JSON.stringify(effects);
+    if (container.dataset.signature === signature) continue;
+    container.replaceChildren();
+    container.dataset.signature = signature;
+    effects.forEach((effect, effectIndex) => {
+      const region = document.createElement('div');
+      region.className = `atmosphere-region atmosphere-${effect.kind}`;
+      region.style.left = `${effect.region.left}%`;
+      region.style.top = `${effect.region.top}%`;
+      region.style.width = `${effect.region.width}%`;
+      region.style.height = `${effect.region.height}%`;
+      for (let index = 0; index < effect.intensity; index += 1) {
+        const particle = document.createElement('i');
+        const base = effect.seed + effectIndex * 101 + index * 17;
+        particle.style.setProperty('--x', `${fraction(base) * 100}%`);
+        particle.style.setProperty('--delay', `${-fraction(base + 1) * 6}s`);
+        particle.style.setProperty('--duration', `${2.8 + fraction(base + 2) * 4.2}s`);
+        particle.style.setProperty('--drift', `${-10 + fraction(base + 3) * 20}px`);
+        particle.style.setProperty('--scale', `${0.55 + fraction(base + 4) * 0.9}`);
+        region.append(particle);
+      }
+      container.append(region);
+    });
   }
 }
 
@@ -231,6 +281,8 @@ function render(): void {
   line.className = `line line-${moment.mode}`;
   progress.textContent = `${String(ordinal).padStart(2, '0')} / ${String(experience.moments.length).padStart(2, '0')}`;
   renderFigures(tableau, assets);
+  renderCutIn(tableau, assets);
+  renderAtmosphere(tableau);
   renderArtifact(tableau, assets);
   renderChoice(moment);
   renderBacklog();

@@ -40,3 +40,21 @@ scale/projection/blocking unchanged. Do not broaden into an expression sheet.
 The v2 location plates introduced people or interface-like composition. The v2 artifacts expanded isolated
 object requests into character-filled CGs. Their exact bytes remain under `evidence/rejected/`; provider
 events and results remain alongside the acquisition receipt. They are excluded from the Experience.
+
+## Pivotal-performance and CG hill climb
+
+`chun-answers` now binds an identity-stable restrained disclosure pose, followed by an explicit after-state at
+`moon-scar`. The provider's first rendition kept Chun's compact braided bun but invented red-violet irises; the
+used derivative corrects only iris pixels through a hash-pinned deterministic recipe. A second attempt fixed the
+eyes by changing her hairstyle to a long ponytail, and a reaction attempt drifted into glossy chibi rendering;
+both remain rejected acquisition evidence rather than entering the cast.
+
+`moon-scar-revelation-cg-v1` is the first candidate modern VN CG cut-in. It concentrates both inward-facing
+identities, the opened reliquary, violet practical light, and expressive close framing in one pivotal frame. The
+typed cut-in declares the actors and artifact it already embodies, so the compiler rejects duplicate sprite or
+prop layering. This is the 事半功倍 strategy: reusable figures carry ordinary reading; one costly image carries a
+true memory pivot.
+
+The CG and new expression transitions have received source-scale visual inspection and deterministic gates, but
+not a live-reader audience pass because local browser automation was unavailable. Their status remains candidate.
+The next repair is a human review of `chun-answers → moon-scar → ending` at phone scale before generating more.

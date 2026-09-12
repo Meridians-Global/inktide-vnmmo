@@ -93,6 +93,43 @@ function neutralizeBoundary(raw: Buffer, width: number, height: number, matte: R
   return output;
 }
 
+/** Removes segmentation debris while preserving every meaningful disconnected part of the subject. */
+export function clearSmallAlphaIslands(raw: Buffer, width: number, height: number, relativeFloor = 0.005): { data: Buffer; clearedPixels: number } {
+  if (raw.length !== width * height * 4) throw new Error('Alpha island cleanup requires one RGBA raster');
+  if (relativeFloor < 0 || relativeFloor > 1) throw new Error('Alpha island cleanup requires a relative floor between zero and one');
+  const visited = new Uint8Array(width * height);
+  const components: number[][] = [];
+  let largest = 0;
+  for (let pixel = 0; pixel < width * height; pixel += 1) {
+    if (visited[pixel] || raw[pixel * 4 + 3]! < 16) continue;
+    const component: number[] = [];
+    const queue = [pixel];
+    visited[pixel] = 1;
+    for (let head = 0; head < queue.length; head += 1) {
+      const current = queue[head]!;
+      component.push(current);
+      const x = current % width;
+      const y = Math.floor(current / width);
+      for (const neighbor of [x > 0 ? current - 1 : -1, x + 1 < width ? current + 1 : -1, y > 0 ? current - width : -1, y + 1 < height ? current + width : -1]) {
+        if (neighbor < 0 || visited[neighbor] || raw[neighbor * 4 + 3]! < 16) continue;
+        visited[neighbor] = 1;
+        queue.push(neighbor);
+      }
+    }
+    components.push(component);
+    largest = Math.max(largest, component.length);
+  }
+  const output = Buffer.from(raw);
+  const minimum = largest * relativeFloor;
+  let clearedPixels = 0;
+  for (const component of components) {
+    if (component.length >= minimum) continue;
+    for (const pixel of component) output.fill(0, pixel * 4, pixel * 4 + 4);
+    clearedPixels += component.length;
+  }
+  return { data: output, clearedPixels };
+}
+
 export function inspectChromaMatte(raw: Buffer, width: number, height: number, matte: Rgb): { visiblePixels: number; boundaryPixels: number; residualBoundaryFraction: number; transparentRgbPixels: number } {
   let visiblePixels = 0;
   let boundaryPixels = 0;
@@ -133,10 +170,11 @@ export function keyChromaMatte(raw: Buffer, width: number, height: number, matte
 /** Combines semantic segmentation with an exterior chroma garbage matte and boundary RGB repair. */
 export function refineSegmentedChromaMatte(source: Buffer, segmented: Buffer, width: number, height: number, matte: Rgb): { data: Buffer; clearedPixels: number; inspection: ReturnType<typeof inspectChromaMatte> } {
   const flooded = clearExteriorConnectedChroma(source, segmented, width, height, matte);
-  let cleaned = reconstructPartialAlphaRgb(flooded.data, width, height);
+  const islands = clearSmallAlphaIslands(flooded.data, width, height);
+  let cleaned = reconstructPartialAlphaRgb(islands.data, width, height);
   for (let pass = 0; pass < 3; pass += 1) cleaned = neutralizeBoundary(cleaned, width, height, matte);
   for (let offset = 0; offset < cleaned.length; offset += 4) {
     if (cleaned[offset + 3]! < 16) cleaned.fill(0, offset, offset + 4);
   }
-  return { data: cleaned, clearedPixels: flooded.clearedPixels, inspection: inspectChromaMatte(cleaned, width, height, matte) };
+  return { data: cleaned, clearedPixels: flooded.clearedPixels + islands.clearedPixels, inspection: inspectChromaMatte(cleaned, width, height, matte) };
 }

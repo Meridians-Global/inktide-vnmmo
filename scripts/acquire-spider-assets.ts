@@ -3,6 +3,8 @@ import { access, mkdir, readFile, writeFile } from 'node:fs/promises';
 import { join, resolve } from 'node:path';
 import sharp from 'sharp';
 import { runReplicatePrediction, replicateInputDigest, selectReplicateOutputUrl } from '../src/provider/replicate';
+import { refineSegmentedChromaMatte } from '../src/core/chroma-matte';
+import { normalizeFigureBuffer } from '../src/core/figure-normalization';
 import { loadLocalEnvironment, requireSetting } from './config';
 
 const projectRoot = resolve(import.meta.dirname, '..');
@@ -64,7 +66,20 @@ async function download(url: string): Promise<Buffer> {
   return Buffer.from(await response.arrayBuffer());
 }
 
+async function prepareLocalMatte(source: Buffer, segmented: Buffer): Promise<Buffer> {
+  const [decodedSource, decodedSegmented] = await Promise.all([
+    sharp(source).ensureAlpha().raw().toBuffer({ resolveWithObject: true }),
+    sharp(segmented).ensureAlpha().raw().toBuffer({ resolveWithObject: true }),
+  ]);
+  if (decodedSource.info.width !== decodedSegmented.info.width || decodedSource.info.height !== decodedSegmented.info.height) {
+    throw new Error('Generated and segmented mattes have different dimensions');
+  }
+  const refined = refineSegmentedChromaMatte(decodedSource.data, decodedSegmented.data, decodedSource.info.width, decodedSource.info.height, [0, 255, 102]);
+  return sharp(refined.data, { raw: { width: decodedSource.info.width, height: decodedSource.info.height, channels: 4 } }).png().toBuffer();
+}
+
 async function existingAsset(id: string, extension: 'jpg' | 'png'): Promise<{ generatedUrl: string; transparentUrl?: string; sourcePath: string; sha256: string; predictionIds: string[] } | undefined> {
+  if (extension === 'png' && process.env.REBUILD_MATTE_ID === id) return undefined;
   const targetName = `${id}.${extension}`;
   const target = join(outputDirectory, targetName);
   try {
@@ -117,14 +132,17 @@ async function acquireFigure(request: Request, references: string[]): Promise<st
   const generated = retainedGeneration
     ? { prediction: retainedGeneration, url: selectReplicateOutputUrl(retainedGeneration.output) }
     : await run(request.id, 'bytedance/seedream-4.5', input, `${request.id}.generate`);
-  const removed = await run(request.id, '851-labs/background-remover:a029dff38972b5fda4ec5d75d7d1cd25aeff621d2cf4946a41055d7db66b80bc', {
-    image: generated.url,
-    background_type: 'rgba',
-    format: 'png',
-    reverse: false,
-    threshold: 0,
-  }, `${request.id}.matte`);
-  const bytes = await download(removed.url);
+  const retainedMatte = await completedPrediction(`${request.id}.matte`);
+  const removed = retainedMatte
+    ? { prediction: retainedMatte, url: selectReplicateOutputUrl(retainedMatte.output) }
+    : await run(request.id, '851-labs/background-remover:a029dff38972b5fda4ec5d75d7d1cd25aeff621d2cf4946a41055d7db66b80bc', {
+      image: generated.url,
+      background_type: 'rgba',
+      format: 'png',
+      reverse: false,
+      threshold: 0,
+    }, `${request.id}.matte`);
+  const bytes = await prepareLocalMatte(await download(generated.url), await download(removed.url));
   const targetName = `${request.id}.png`;
   await writeFile(join(outputDirectory, targetName), bytes);
   results[request.id] = {
@@ -175,6 +193,41 @@ for (const request of requests) {
     }, []);
   }
 }
+
+const referenceRecipe = {
+  kind: 'figure-normalize' as const,
+  recipeVersion: 1 as const,
+  canvas: { width: 896, height: 1024 },
+  subjectBox: { width: 850, height: 960 },
+  bottomPadding: 24,
+};
+const mjReference = await normalizeFigureBuffer(await readFile(join(outputDirectory, 'mj-guarded.png')), {
+  ...referenceRecipe,
+  matteCleanup: { spill: 'green', alphaFloor: 8, edgeAlphaCeiling: 249, channelMargin: 18 },
+});
+const peterReference = await normalizeFigureBuffer(await readFile(join(outputDirectory, 'peter-spider-revealed.png')), referenceRecipe);
+const compactReference = async (bytes: Buffer): Promise<string> => `data:image/jpeg;base64,${(await sharp(bytes)
+  .flatten({ background: '#76727d' })
+  .resize({ width: 576, height: 768, fit: 'contain', background: '#76727d' })
+  .jpeg({ quality: 86 })
+  .toBuffer()).toString('base64')}`;
+await acquireFigure({
+  id: 'mj-conflicted-boundary-v1',
+  kind: 'figure',
+  prompt: `${style} Reference one owns MJ's exact identity, face, skin tone, hair, proportions and olive-jacket wardrobe. Reference two owns only the established cast linework, shading depth and cinematic finish; do not copy Peter's body, face, clothing or colours. Full-body MJ facing screen-right at the same standing height and grounded feet. This is the moment after she understands Peter's grief but refuses to inherit another woman's answer: her gaze softens without looking away, inner brows lift slightly, jaw releases from anger, lips part for a measured boundary, and one hand loosens from the guarded clasp while her posture stays self-possessed. No smile, tears, embrace, pointing, folded arms or melodramatic gesture. Uniform perfectly flat #00FF66 chroma field with generous padding, no floor, cast shadow, scenery, green rim light or reflected green. ${exclusions}`,
+}, [await compactReference(mjReference), await compactReference(peterReference)]);
+
+await acquireFigure({
+  id: 'mj-conflicted-boundary-v2',
+  kind: 'figure',
+  prompt: `${style} Reference one owns MJ's exact identity, face, warm brown skin, long textured dark hair, proportions and olive-jacket wardrobe. Reference two owns only the established cast linework, shading depth and cinematic finish; do not copy Peter's body, face, clothing, eye colour or palette. Full-body MJ facing screen-right at the same standing height and grounded feet. Her irises are natural dark brown with white sclera and small dark pupils—never red, pink, amber, glowing or stylized. This is the moment after she understands Peter's grief but refuses to inherit another woman's answer: her gaze softens without looking away, inner brows lift slightly, jaw releases from anger, lips part for a measured boundary, and one hand loosens from the guarded clasp while her posture stays self-possessed. No smile, tears, embrace, pointing, folded arms or melodramatic gesture. Uniform perfectly flat #00FF66 chroma field with generous padding, no floor, cast shadow, scenery, green rim light or reflected green. ${exclusions}`,
+}, [await compactReference(mjReference), await compactReference(peterReference)]);
+
+await acquireFigure({
+  id: 'mj-reluctant-trust-v1',
+  kind: 'figure',
+  prompt: `${style} Reference one owns MJ's exact identity, face, warm brown skin, long textured dark hair, proportions and olive-jacket wardrobe. Reference two owns only the established cast linework, shading depth and cinematic finish; do not copy Peter's body, face, clothing, eye colour or palette. Full-body MJ facing screen-right at the same standing height and grounded feet. Her irises are natural dark brown with white sclera and small dark pupils—never red, pink, amber, glowing or stylized. This is the quiet after-state after she preserves her boundary but asks Peter to take her home: her shoulders ease by a fraction, gaze remains direct, mouth closes into thoughtful resolve, and both hands rest open and visible at her sides. The change is cautious practical trust, not romance or reconciliation. No smile, tears, embrace, pointing, folded arms, chin touch or heroic stance. Uniform perfectly flat #00FF66 chroma field with generous padding, no floor, cast shadow, scenery, green rim light or reflected green. ${exclusions}`,
+}, [await compactReference(mjReference), await compactReference(peterReference)]);
 
 const preparedBackground = await prepareStageCrop();
 
