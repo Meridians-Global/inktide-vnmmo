@@ -27,15 +27,47 @@ function unique(values: string[]): string[] {
   return [...new Set(values)];
 }
 
+function pathToMoment(experience: CompiledExperience, targetId: string): { history: string[]; route: RouteChoice[] } | undefined {
+  const moments = new Map(experience.moments.map((moment) => [moment.id, moment]));
+  const visit = (
+    nodeId: string,
+    history: string[],
+    route: RouteChoice[],
+    visiting: Set<string>,
+  ): { history: string[]; route: RouteChoice[] } | undefined => {
+    if (nodeId === targetId) return { history, route };
+    if (visiting.has(nodeId)) return undefined;
+    const moment = moments.get(nodeId);
+    if (!moment || moment.next.type === 'end') return undefined;
+    const nextVisiting = new Set(visiting).add(nodeId);
+    const transitions: Array<{ nodeId: string; optionId?: string }> = moment.next.type === 'goto'
+      ? [{ nodeId: moment.next.nodeId }]
+      : moment.next.options.map((option) => ({ nodeId: option.nodeId, optionId: option.id }));
+    for (const transition of transitions) {
+      const found = visit(
+        transition.nodeId,
+        [...history, nodeId],
+        transition.optionId ? [...route, { nodeId, optionId: transition.optionId }] : route,
+        nextVisiting,
+      );
+      if (found) return found;
+    }
+    return undefined;
+  };
+  return visit(experience.startNodeId, [], [], new Set());
+}
+
 export function initialReaderState(experience: CompiledExperience, startNodeId = experience.startNodeId): ReaderState {
   if (!experience.moments.some((moment) => moment.id === startNodeId)) {
     throw new Error(`Cannot start reader at missing moment ${startNodeId}`);
   }
+  const seeded = pathToMoment(experience, startNodeId);
+  if (!seeded) throw new Error(`Cannot reconstruct reader path to moment ${startNodeId}`);
   return {
     currentNodeId: startNodeId,
-    history: [],
-    route: [],
-    seenNodeIds: [startNodeId],
+    history: seeded.history,
+    route: seeded.route,
+    seenNodeIds: unique([...seeded.history, startNodeId]),
     isBacklogOpen: false,
     isSettingsOpen: false,
     isMuted: true,

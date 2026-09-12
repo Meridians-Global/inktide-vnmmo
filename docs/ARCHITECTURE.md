@@ -34,6 +34,11 @@ generation provider. Reading changes only the local cursor; traversal choices do
 - A modern VN CG is a typed cut-in, not a background pretending to be a location. It declares the actors and
   artifact already embodied in the frame, and the compiler rejects duplicate sprite/prop layering. This keeps
   reusable tableaux and high-impact memory images as two coherent visual modes.
+- CG framing is explicit. `location-match` keeps the established plate beneath a graded, edge-feathered camera
+  push and carries the same ambience across the cut; `memory-full-frame` is reserved for an acknowledged break
+  from physical continuity. Both return to the unchanged reading rail.
+- An exact review URL reconstructs one deterministic start-to-moment path, including its traversal choices, so
+  Back and backlog remain useful instead of treating the linked frame as an isolated slideshow.
 - Five slots are semantic positions, not hand-tuned pixel coordinates.
 - A private POV may not jump directly into another private POV. A public beat must bridge the handoff.
 - A speaking or thinking actor must be staged at full emphasis; the reader cannot hear a dimmed figure.

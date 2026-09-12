@@ -89,6 +89,7 @@ describe('compileExperience', () => {
   it('treats a CG cut-in as an embodied cast and rejects duplicate sprite layering', () => {
     const reveal = moonScarExperience.tableaux.find((tableau) => tableau.id === 'moon-scar-reveal')!;
     assert.deepEqual(reveal.cutIn?.representedActorIds, ['fang-yuan', 'gu-yue-chun']);
+    assert.equal(reveal.cutIn?.framing, 'location-match');
     assert.equal(compileExperience(moonScarExperience).ok, true);
     const tableaux = moonScarExperience.tableaux.map((tableau) => tableau.id === reveal.id
       ? { ...tableau, figures: [{ actorId: 'fang-yuan', appearanceId: 'field-neutral', slot: 'left' as const, facing: 'right' as const, emphasis: 'active' as const }] }

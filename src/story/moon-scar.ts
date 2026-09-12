@@ -88,7 +88,7 @@ export const moonScarExperience: Experience = {
     },
     {
       id: 'moon-scar-reveal', location: 'Gu Yue Clan · Chun’s Cellar', backgroundAssetId: 'cellar-bg', ambienceAssetId: 'interior-room', musicAssetId: 'tension-drone', shot: 'artifact', tone: 'ominous', figures: [],
-      cutIn: { assetId: 'moon-scar-cg', representedActorIds: ['fang-yuan', 'gu-yue-chun'], representedArtifactId: 'moon-scar-gu' },
+      cutIn: { assetId: 'moon-scar-cg', framing: 'location-match', representedActorIds: ['fang-yuan', 'gu-yue-chun'], representedArtifactId: 'moon-scar-gu' },
     },
     {
       id: 'moon-scar-reflection', location: 'Gu Yue Clan · Chun’s Cellar', backgroundAssetId: 'cellar-bg', ambienceAssetId: 'interior-room', musicAssetId: 'tension-drone', shot: 'artifact', tone: 'ominous', figures: [

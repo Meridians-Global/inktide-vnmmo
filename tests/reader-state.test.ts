@@ -12,9 +12,19 @@ describe('reader state', () => {
   it('can start from an exact valid review moment', () => {
     const state = initialReaderState(experience, 'tally-bound');
     assert.equal(state.currentNodeId, 'tally-bound');
+    assert.equal(state.history.at(-1), 'substrate-reveal');
     assert.equal(state.isMuted, true);
     assert.equal(state.isVoiceEnabled, false);
     assert.throws(() => initialReaderState(experience, 'missing'), /Cannot start reader at missing moment missing/);
+  });
+
+  it('can go back from a deep-linked moment through a deterministic branch path', () => {
+    const state = initialReaderState(experience, 'chun-answers');
+    assert.deepEqual(state.route, [{ nodeId: 'question-choice', optionId: 'ask-rank' }]);
+    const question = reduceReader(experience, state, { type: 'back' });
+    assert.equal(question.currentNodeId, 'rank-question');
+    const choice = reduceReader(experience, question, { type: 'back' });
+    assert.equal(choice.currentNodeId, 'question-choice');
   });
 
   it('keeps sound preferences explicit and overlays mutually exclusive', () => {

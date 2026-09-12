@@ -138,6 +138,7 @@ function renderCutIn(tableau: Tableau, assets: Map<string, CompiledAsset>): void
     return;
   }
   cutIn.src = assets.get(tableau.cutIn.assetId)!.url;
+  cutInWrap.className = `cut-in-wrap cut-in-${tableau.cutIn.framing}`;
   cutInWrap.hidden = false;
 }
 

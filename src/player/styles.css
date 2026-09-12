@@ -24,7 +24,11 @@ button { font: inherit; }
 .backdrop { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; }
 .plate-scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(4,7,13,.36) 0%, rgba(4,7,13,.04) 38%, rgba(4,7,13,.18) 72%, rgba(4,7,13,.7) 100%); }
 .cut-in-wrap { position: absolute; inset: 0; z-index: 1; overflow: hidden; }
-.cut-in { width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; }
+.cut-in-wrap::after { content: ""; position: absolute; inset: 0; pointer-events: none; box-shadow: inset 0 0 clamp(32px, 7vw, 112px) rgba(5,5,12,.52); background: linear-gradient(180deg, rgba(10,7,18,.1), transparent 54%, rgba(7,7,15,.5)); }
+.cut-in { width: 100%; height: 100%; object-fit: cover; object-position: 50% 46%; }
+.cut-in-location-match { -webkit-mask-image: radial-gradient(ellipse 100% 112% at 50% 43%, #000 0 76%, rgba(0,0,0,.92) 84%, transparent 100%); mask-image: radial-gradient(ellipse 100% 112% at 50% 43%, #000 0 76%, rgba(0,0,0,.92) 84%, transparent 100%); }
+.cut-in-location-match .cut-in { filter: saturate(.86) contrast(1.04) brightness(.9); animation: location-match-push 520ms cubic-bezier(.2,.72,.2,1) both; }
+@keyframes location-match-push { from { opacity: 0; transform: scale(1.035); } to { opacity: 1; transform: scale(1.012); } }
 .reader-shell[data-tone="cold"] .backdrop { filter: saturate(.8) contrast(1.04) brightness(.86); }
 .reader-shell[data-tone="ominous"] .backdrop { filter: saturate(.72) contrast(1.08) brightness(.74); }
 
