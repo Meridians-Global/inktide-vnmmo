@@ -21,6 +21,12 @@ writes no Domain or branch state.
   pinned in `evidence/eye-correction.receipt.json`.
 - `mj-conflicted-boundary-v2` — rejected: brown eyes improved, but the provider returned a cropped body that
   breaks the stable actor scale contract.
+- `spider-unmask-revelation-cg-v1` — rejected: neither the removed mask nor an intact chest survived generation.
+- `spider-unmask-revelation-cg-v2` — rejected: the camera and identities improved, but the same two semantic
+  failures remained. Attractive composition alone does not satisfy the authored action.
+- `spider-unmask-revelation-cg-v3` — candidate event CG. A bounded reference edit preserves the apartment and
+  inward eyelines while making Peter's complete removed mask and intact suit readable. It is staged only at
+  `unmask`, using the distinct `relationship-close` frame; ordinary dialogue returns to the stable figure setup.
 
 ## Dailies verdict
 
@@ -28,6 +34,9 @@ The strongest established beat remains the masked-to-revealed substitution: it i
 resizing Peter. This pass adds explicit appraisal (`mj-sees`), decision (`mj-answer`), and after-state
 (`ride-home`) coordinates, with the last state visibly opening her hands without resolving the boundary.
 
-This pass received asset-scale and structural review, not a live-reader audience review: local browser automation
-was unavailable. Keep the new MJ progression candidate until a human reviews those three consecutive beats at
-phone scale. The next repair is that bounded contextual review, not another generated expression.
+This pass received source-scale, structural, and live 16:9 reader review. The CG keeps both faces and the removed
+mask above the fixed dialogue rail, the cloth cue remains attached to the same beat, and the next moment returns to
+the unchanged revealed-Peter tableau; Back returns to the CG without an error. This is still not independent
+audience approval. Keep the new MJ progression and unmask CG candidate until a human reviews
+`peter-protection → unmask → name` at phone scale. The next repair is that bounded contextual review, not another
+generated expression or CG variant.

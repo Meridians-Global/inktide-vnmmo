@@ -11,14 +11,15 @@ async function digest(path: string): Promise<string> {
   return createHash('sha256').update(await readFile(path)).digest('hex');
 }
 
-describe('Moon-Scar production evidence', () => {
+describe('production evidence', () => {
   it('pins every admitted acquisition byte', async () => {
-    const receipt = JSON.parse(await readFile(resolve(evidenceRoot, 'acquisition.receipt.json'), 'utf8')) as {
-      assets: Record<string, { sourcePath: string; sha256: string }>;
-    };
-
-    for (const [assetId, asset] of Object.entries(receipt.assets)) {
-      assert.equal(await digest(resolve(projectRoot, asset.sourcePath)), asset.sha256, assetId);
+    for (const productionId of ['moon-scar-ledger-v2', 'spider-man-memory-between-us-v1']) {
+      const receipt = JSON.parse(await readFile(resolve(projectRoot, 'productions', productionId, 'evidence', 'acquisition.receipt.json'), 'utf8')) as {
+        assets: Record<string, { sourcePath: string; sha256: string }>;
+      };
+      for (const [assetId, asset] of Object.entries(receipt.assets)) {
+        assert.equal(await digest(resolve(projectRoot, asset.sourcePath)), asset.sha256, `${productionId}:${assetId}`);
+      }
     }
   });
 

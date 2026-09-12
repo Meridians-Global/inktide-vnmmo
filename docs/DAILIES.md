@@ -1,15 +1,16 @@
 # Dailies — latest pivotal-performance pass
 
 The current build adds explicit performance-beat detection, identity-preserving iris repair, spatial snow/rain,
-and one modern VN CG cut-in at `moon-scar`. Spider-Man now moves through guarded → conflicted → reluctant trust;
-Moon-Scar moves Chun through neutral → disclosure → held consequence. Replicate variants with corrected eyes but
-wrong crop, hair identity, or rendering style were retained and rejected.
+and two purpose-framed modern VN CG cut-ins. `moon-scar` is an artifact-centred location push; `unmask` is a
+relationship close-up that replaces the ordinary two-sprite tableau for one irreversible identity beat. Spider-Man
+now moves through guarded → conflicted → reluctant trust; Moon-Scar moves Chun through neutral → disclosure →
+held consequence. Failed Replicate crops, identities, and semantically incomplete CG takes remain retained.
 
-This pass was inspected at source/face scale and passed deterministic compilation, media lineage, and tests. It
-was not reviewed in the live reader because local browser automation was unavailable; no new asset or transition
-is promoted beyond candidate. Review these exact spans next:
+This pass was inspected at source/face scale and in the live 16:9 reader, and passed deterministic compilation,
+media lineage, Back/Next navigation, and console checks. That is agent dailies rather than independent audience
+approval, so no new asset or transition is promoted beyond candidate. Review these exact spans next:
 
-- Spider-Man: `mj-sees → mj-answer → ride-home`.
+- Spider-Man: `peter-protection → unmask → name`, then `mj-sees → mj-answer → ride-home`.
 - Moon-Scar: `chun-answers → moon-scar → ending`.
 
 # Dailies — Moon-Scar Reading v2 modernization

@@ -66,7 +66,7 @@ const ArtifactPlacementSchema = z.object({
 
 const CutInSchema = z.object({
   assetId: z.string().min(1),
-  framing: z.enum(['location-match', 'memory-full-frame']),
+  framing: z.enum(['location-match', 'relationship-close', 'memory-full-frame']),
   representedActorIds: z.array(z.string().min(1)).min(1).max(5),
   representedArtifactId: z.string().min(1).optional(),
 }).strict();

@@ -58,8 +58,10 @@ true memory pivot.
 The first integration made that CG read as a separate illustration. The repaired presentation now treats it as
 a location-matched push into the existing cellar: the cellar plate remains beneath it, its perimeter and lower
 generated decoration feather into the physical set, the same room tone and tension bed continue, and `ending`
-returns to the wide with the Moon-Scar Gu still present. The stable dialogue rail does not resize or relocate.
+returns to the wide with the Moon-Scar Gu still present. Its focal group is lifted within an overscanned frame so
+the fixed rail does not swallow the hands or relic; the rail itself does not resize or relocate.
 
-The CG and new expression transitions have received source-scale visual inspection and deterministic gates, but
-not a live-reader audience pass because local browser automation was unavailable. Their status remains candidate.
-The next repair is a human review of `chun-answers → moon-scar → ending` at phone scale before generating more.
+The CG and new expression transitions have received source-scale inspection, deterministic gates, and a live 16:9
+reader/navigation check without console errors. That is agent dailies rather than independent audience approval;
+their status remains candidate. The next repair is a human review of `chun-answers → moon-scar → ending` at phone
+scale before generating more.

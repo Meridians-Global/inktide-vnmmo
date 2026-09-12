@@ -21,10 +21,13 @@
     "mj-guarded.matte": "4302be9436eb1ac50743ce6dd5234243606d9fbaf758d5fc329b6b18e358efe0",
     "mj-conflicted-boundary-v1.generate": "4795e04069be0189487a4158b5f5d7257592e8c1ece141b4699c49847320c507",
     "mj-conflicted-boundary-v1.matte": "55f029e0715e7ae8c6bb994eb070b6a6882b9048b12a565bf62ff79a7dc06f9b",
-    "mj-conflicted-boundary-v2.generate": "940eb74a4ee092a187933bbb736ce4c17f7683c4c19a8892bc0d33f537ba0c5e",
+    "mj-conflicted-boundary-v2.generate": "d130ee7f50e0e519df6bf3121d0ab7d4281b00154baf91ada1fbcd23571f6990",
     "mj-conflicted-boundary-v2.matte": "e7e4d7224b0ccc172817ccfc2492aecde8691a2b93a05b114daaa2e2cfe5a21b",
-    "mj-reluctant-trust-v1.generate": "50b8a77ba5284ae998ab39338f12645bb2f5ea5c204095eb2b3c6253b46b3c7b",
-    "mj-reluctant-trust-v1.matte": "f9a6333c0f335fc83589908e682c606857e1a5c9dd01aaeb09d827289608a790"
+    "mj-reluctant-trust-v1.generate": "4acdc3d26309a2e0074f0c7cb87b0e0e3ecde3303ef5ad1c5770d3aabc877dbe",
+    "mj-reluctant-trust-v1.matte": "f9a6333c0f335fc83589908e682c606857e1a5c9dd01aaeb09d827289608a790",
+    "spider-unmask-revelation-cg-v1.generate": "571d5092c36b4637505f8867ac116e3e3f67094be3b6d7d1a802316c12e73cce",
+    "spider-unmask-revelation-cg-v2.generate": "13e3b24737491645eba6168107039186dd27c972aca0320f91a590caaacd6c12",
+    "spider-unmask-revelation-cg-v3.generate": "3b2f5455a7ada4ecf5ba3f95da21198517dcf86c845bab525e5ed31962fea424"
   },
   "assets": {
     "mj-apartment-night": {
@@ -112,6 +115,44 @@
         "mnr7neaxc9rmr0d0jgtshthegm",
         "waa1by6xphrgc0d0jgtr5jpyrg"
       ]
+    },
+    "spider-unmask-revelation-cg-v1": {
+      "generatedUrl": "https://replicate.delivery/xezq/Lbjl8x62Es4xOB5FwqPFE0owD1eJpUgGRexASPn0t7LASqMXA/tmpaiwr2_v_.jpg",
+      "sourcePath": "assets/generated/spider-man-memory-between-us-v1/spider-unmask-revelation-cg-v1.jpg",
+      "sha256": "bdee0d9b3895295f3381704647f8782d293ac6a5cc9e7c897d6787ec9f886dd6",
+      "predictionIds": [
+        "88f7c6xkp1rmw0d0jh9aj10y1c"
+      ]
+    },
+    "spider-unmask-revelation-cg-v2": {
+      "generatedUrl": "https://replicate.delivery/xezq/fifBwvnUtLo4IkZz41IAHvJPHDxiWSd0s1vi04y7bbxwTqMXA/tmpzrd3z4d1.jpg",
+      "sourcePath": "assets/generated/spider-man-memory-between-us-v1/spider-unmask-revelation-cg-v2.jpg",
+      "sha256": "2a5f0e9ccac422c86a09bb1cd83ab933b007f5c3525e574df2ded6f82526a987",
+      "predictionIds": [
+        "5y936t9vn5rmw0d0jhab3q1cmc"
+      ]
+    },
+    "spider-unmask-revelation-cg-v3": {
+      "generatedUrl": "https://replicate.delivery/xezq/rICelmJTR5RcYCZ6BZOyI6fXEKf18JKwRY1fDfqex0k3rlKzF/tmp55a8xgwi.jpg",
+      "sourcePath": "assets/generated/spider-man-memory-between-us-v1/spider-unmask-revelation-cg-v3.jpg",
+      "sha256": "3657a0b9b6bcfdaf83b1de7b225d5f8570c7ab612a37db5a420f59b3a21d73ae",
+      "predictionIds": [
+        "hn5n0skfc5rmt0d0jhbsfrghm0"
+      ]
+    }
+  },
+  "reviews": {
+    "spider-unmask-revelation-cg-v1": {
+      "status": "rejected",
+      "reason": "The unmasking action is absent and the chest contains a false wound."
+    },
+    "spider-unmask-revelation-cg-v2": {
+      "status": "rejected",
+      "reason": "The cast and camera improve, but the mask remains absent and the false chest wound persists."
+    },
+    "spider-unmask-revelation-cg-v3": {
+      "status": "candidate",
+      "reason": "The complete removed mask, uncovered identity, intact chest, inward eyelines, and apartment continuity are readable in one close two-shot; human target-scale review remains due."
     }
   },
   "preparedAssets": {

@@ -231,6 +231,43 @@ await acquireFigure({
 
 const preparedBackground = await prepareStageCrop();
 
+for (const rejectedId of ['spider-unmask-revelation-cg-v1', 'spider-unmask-revelation-cg-v2']) {
+  const rejectedCg = await existingAsset(rejectedId, 'jpg');
+  if (rejectedCg) results[rejectedId] = rejectedCg;
+}
+const maskedPeterReference = await normalizeFigureBuffer(await readFile(join(outputDirectory, 'peter-spider-masked.png')), referenceRecipe);
+const cgId = 'spider-unmask-revelation-cg-v3';
+const existingCg = await existingAsset(cgId, 'jpg');
+if (existingCg) {
+  results[cgId] = existingCg;
+} else {
+  const repairReference = await sharp(join(outputDirectory, 'spider-unmask-revelation-cg-v2.jpg'))
+    .resize({ width: 1024, height: 576, fit: 'cover' })
+    .jpeg({ quality: 88 })
+    .toBuffer();
+  const input = {
+    prompt: `${style} Make a precise continuity repair to reference one, preserving its exact 16:9 camera, two-person staging, faces, eyelines, apartment, rain window, palette, lighting and mature visual-novel finish. Change only Peter's unmasking action and suit chest. Peter remains frame-right with the exact uncovered face and hair already shown. Replace the small red fabric pinched near his raised hand with the COMPLETE loose Spider-Man head mask from reference two: red cloth, black web lines, both white eye lenses, visibly empty and removed, hanging from his raised gloved hand at chest height. Restore the lower-right suit torso to intact red-and-deep-navy fabric with a clean black spider emblem; remove the false hole, exposed skin, wound and torn ring completely. MJ remains frame-left, guarded and startled, without changing identity or wardrobe. The readable focal order is their faces, the complete removed mask, then the emotional distance. Preserve low-detail space in the lower quarter for the fixed dialogue rail. No embrace, touch, smile, romance, interface, border, duplicate mask, chest wound, exposed skin, or missing fabric. ${exclusions}`,
+    aspect_ratio: '16:9',
+    image_input: [`data:image/jpeg;base64,${repairReference.toString('base64')}`, await compactReference(maskedPeterReference)],
+    max_images: 1,
+    sequential_image_generation: 'disabled',
+    size: '2K',
+  };
+  const retained = await completedPrediction(`${cgId}.generate`);
+  const generated = retained
+    ? { prediction: retained, url: selectReplicateOutputUrl(retained.output) }
+    : await run(cgId, 'bytedance/seedream-4.5', input, `${cgId}.generate`);
+  const bytes = await download(generated.url);
+  const targetName = `${cgId}.jpg`;
+  await writeFile(join(outputDirectory, targetName), bytes);
+  results[cgId] = {
+    generatedUrl: generated.url,
+    sourcePath: `${generatedAssetRoot}/${targetName}`,
+    sha256: createHash('sha256').update(bytes).digest('hex'),
+    predictionIds: [generated.prediction.id],
+  };
+}
+
 await writeFile(join(evidenceDirectory, 'acquisition.receipt.json'), `${JSON.stringify({
   schemaVersion: 1,
   productionId: 'spider-man-memory-between-us-v1',
@@ -239,6 +276,11 @@ await writeFile(join(evidenceDirectory, 'acquisition.receipt.json'), `${JSON.str
   matteModel: '851-labs/background-remover:a029dff38972b5fda4ec5d75d7d1cd25aeff621d2cf4946a41055d7db66b80bc',
   requestDigests,
   assets: results,
+  reviews: {
+    'spider-unmask-revelation-cg-v1': { status: 'rejected', reason: 'The unmasking action is absent and the chest contains a false wound.' },
+    'spider-unmask-revelation-cg-v2': { status: 'rejected', reason: 'The cast and camera improve, but the mask remains absent and the false chest wound persists.' },
+    'spider-unmask-revelation-cg-v3': { status: 'candidate', reason: 'The complete removed mask, uncovered identity, intact chest, inward eyelines, and apartment continuity are readable in one close two-shot; human target-scale review remains due.' },
+  },
   preparedAssets: { 'mj-apartment-stage-crop-v1': preparedBackground },
 }, null, 2)}\n`);
 

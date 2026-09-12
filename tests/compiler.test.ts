@@ -99,6 +99,15 @@ describe('compileExperience', () => {
     if (!result.ok) assert.ok(result.errors.some((error) => error.includes('do not double-layer figures or artifact')));
   });
 
+  it('frames pivotal CGs by dramatic purpose rather than the default sprite tableau', () => {
+    const relic = moonScarExperience.tableaux.find((tableau) => tableau.id === 'moon-scar-reveal')!;
+    const unmask = spiderMemoryExperience.tableaux.find((tableau) => tableau.id === 'unmask-cg')!;
+    assert.equal(relic.cutIn?.framing, 'location-match');
+    assert.equal(unmask.cutIn?.framing, 'relationship-close');
+    assert.deepEqual(unmask.cutIn?.representedActorIds, ['mj', 'peter-parker']);
+    assert.equal(spiderMemoryExperience.moments.find((moment) => moment.id === 'unmask')?.tableauId, 'unmask-cg');
+  });
+
   it('rejects unreachable moments', () => {
     const orphan = { ...moonScarExperience.moments[0]!, id: 'orphan', next: { type: 'end' as const } };
     const result = compileExperience({ ...moonScarExperience, moments: [...moonScarExperience.moments, orphan] });
