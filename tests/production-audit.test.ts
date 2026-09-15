@@ -4,6 +4,16 @@ import { auditExperience, summarizeProductionPortfolio } from '../src/core/produ
 import { moonScarExperience } from '../src/story/moon-scar';
 import { spiderMemoryExperience } from '../src/story/spider-memory';
 import { productionTargetFor } from '../src/story/production-targets';
+import type { Experience } from '../src/core/contracts';
+
+// Moon-Scar with Fang Yuan's pivotal decision at `question-choice` left on his baseline rendition.
+const staticFangDecision: Experience = {
+  ...moonScarExperience,
+  tableaux: moonScarExperience.tableaux.map((tableau) => tableau.id !== 'fang-question' ? tableau : {
+    ...tableau,
+    figures: tableau.figures.map((figure) => figure.actorId !== 'fang-yuan' ? figure : { ...figure, appearanceId: 'field-neutral' }),
+  }),
+};
 
 describe('production audit', () => {
   it('derives exact choice convergence and payoff coordinates', () => {
@@ -24,7 +34,9 @@ describe('production audit', () => {
 
     assert.ok(!spider.demands.some((demand) => demand.lane === 'story' || demand.lane === 'set'));
     assert.ok(!moon.demands.some((demand) => demand.lane === 'story' || demand.lane === 'set'));
-    assert.ok(moon.demands.some((demand) => demand.id === 'performance:question-choice:fang-yuan'));
+    assert.ok(!moon.demands.some((demand) => demand.lane === 'performance'));
+    const staticMoon = auditExperience(staticFangDecision, productionTargetFor(moonScarExperience.id));
+    assert.ok(staticMoon.demands.some((demand) => demand.id === 'performance:question-choice:fang-yuan'));
   });
 
   it('measures the shortest valid route instead of summing mutually exclusive branches', () => {
@@ -60,7 +72,7 @@ describe('production audit', () => {
         receiptSha256: 'spider-receipt',
       },
       {
-        audit: auditExperience(moonScarExperience, moonTarget),
+        audit: auditExperience(staticFangDecision, moonTarget),
         target: moonTarget,
         experienceSha256: 'moon-experience',
         productionAuditSha256: 'moon-audit',

@@ -119,7 +119,7 @@ export const moonScarExperience: Experience = {
     },
     {
       id: 'fang-question', location: 'Gu Yue Clan · Chun’s Cellar', backgroundAssetId: 'cellar-bg', ambienceAssetId: 'interior-room', musicAssetId: 'tension-drone', shot: 'conversation', tone: 'intimate', figures: [
-        { actorId: 'fang-yuan', appearanceId: 'field-neutral', slot: 'left', facing: 'right', emphasis: 'active' },
+        { actorId: 'fang-yuan', appearanceId: 'leverage-appraisal', slot: 'left', facing: 'right', emphasis: 'active' },
         { actorId: 'gu-yue-chun', slot: 'right', facing: 'left', emphasis: 'supporting' },
       ],
     },

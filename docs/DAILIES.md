@@ -11,7 +11,9 @@ media lineage, Back/Next navigation, and console checks. That is agent dailies r
 approval, so no new asset or transition is promoted beyond candidate. Review these exact spans next:
 
 - Spider-Man: `peter-protection → unmask → name`, then `mj-sees → mj-answer → ride-home`.
-- Moon-Scar: `chun-answers → moon-scar → ending`.
+- Moon-Scar: `chun-answers → moon-scar → ending`, and `tally-bound → question-choice → rank-question | loss-question`,
+  where Fang Yuan now cuts to the existing `leverage-appraisal` portrait as he chooses the question (first `climb:step`
+  pass; clears the last high demand and takes the portfolio to `targets-met`, pending the author's verdict).
 
 The guarded MJ repair retained three visual-model takes. V1 fixed the eyes but cropped the actor; V2 restored the
 body but reversed her eyeline; V3 preserved natural eyes, the complete figure and the inward screen-right facing in
