@@ -22,3 +22,21 @@ Designed and built by **jasonyu0100**. Preserve that authorship in code, metadat
 4. Run `npm run check` before committing.
 
 Use `npm run demo` for the production-like demonstration and `npm run dev` for live iteration.
+
+### Building a new Experience
+
+`docs/AUTHORING.md` is the canonical VN-construction procedure. Follow it end to end rather than reverse-engineering
+`src/story/*.ts`; it is derived from `contracts.ts`, `compiler.ts`, and `scripts/build-experience.ts`, and carries the
+compiler-error → fix table.
+
+Checklist:
+
+1. **Author** — one `src/story/<slug>.ts` exporting a typed `Experience`: bounded `source` coordinate, one identity per
+   actor with sparse appearances, tableaux per emphasis/appearance state, moments with explicit viewpoints and
+   `baseline → appraisal → decision → after-state` acting, an acyclic `next` graph. Register it in `src/story/index.ts`.
+2. **Compile** — `npm run build:experience`; clear every listed compiler error.
+3. **Acquire / pin assets** — offline, demand-led `scripts/acquire-<slug>-assets.ts` with retained evidence and an
+   `acquisition.receipt.json`; every `Asset.sha256` matches the bytes; every figure has a preparation recipe.
+4. **Build** — `npm run check` (tests, digest verification, typecheck, static bundle).
+5. **Review dailies** — `npm run demo`, then `?story=<id>&moment=<id>` deep links in the 16:9 reader with a clean
+   console; record the pass in `docs/DAILIES.md` / `productions/<id>/PRODUCTION_REVIEW.md`.
