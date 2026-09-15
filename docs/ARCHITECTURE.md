@@ -10,6 +10,9 @@ authorized source coordinate
   → static reader (pure cursor reducer + DOM/audio adapters)
 ```
 
+This document records the decisions and non-goals. For the step-by-step procedure that satisfies them —
+source coordinate, actors, asset acquisition, tableaux, moments, graph, validation — see `docs/AUTHORING.md`.
+
 The compiler is the centre. It rejects structural errors before Vite or the browser is involved. The
 preparation script is the only filesystem shell. The player never reads source folders and never calls a
 generation provider. Reading changes only the local cursor; traversal choices do not write canon.

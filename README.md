@@ -43,6 +43,7 @@ hash-pinned iris corrections without a provider call.
 
 ## Start here
 
+- `docs/AUTHORING.md` — how to build a new compiling Experience, step by step.
 - `src/core/contracts.ts` — the only authoring/runtime shape.
 - `src/core/compiler.ts` — deterministic structural gate.
 - `src/core/figure-normalization.ts` — padding-invariant actor preparation.
@@ -55,3 +56,4 @@ hash-pinned iris corrections without a provider call.
 - `scripts/acquire-moon-scar-assets.ts` — demand-led Moon-Scar acquisition and legacy SFX transfer.
 - `productions/moon-scar-ledger-v2/PRODUCTION_REVIEW.md` — exact dailies and remaining audience limit.
 - `docs/ARCHITECTURE.md` — decisions and non-goals.
+- `docs/DAILIES.md` — latest review passes and the single next repair for each Experience.
