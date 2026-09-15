@@ -2,12 +2,12 @@
   "schemaVersion": 1,
   "productionId": "moon-scar-ledger-v2",
   "experienceId": "moon-scar-reading-v1",
-  "experienceSha256": "d07078983eac7153eb00bda9dd21c82a51247d5f6b8cd3bd99394204669782c5",
+  "experienceSha256": "8d759a822e31b6ad614316c88dc473fb8783fe9ad246a437bc65d4943e295a55",
   "viewport": {
     "width": 1600,
     "height": 900
   },
-  "capturedAt": "2026-09-15T21:56:34.549Z",
+  "capturedAt": "2026-09-15T22:12:44.175Z",
   "consoleErrors": [],
   "frames": [
     {
@@ -183,7 +183,7 @@
       "tableauId": "fang-question",
       "reading": "base",
       "file": "auto-dailies/question-choice.png",
-      "sha256": "796b7bf6396dc3811a2a9f83f920729ada3df8965fb67b086ca1500ca21b967c",
+      "sha256": "79b2777bed37296cb0bbc430303572a0ef40697387dc0ba97ee99c8e73de5bc6",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -206,7 +206,7 @@
       "tableauId": "fang-question",
       "reading": "base",
       "file": "auto-dailies/rank-question.png",
-      "sha256": "9768af5b0c09417f6372940d5336975d4c1e64acd480b7408e5802a54b825164",
+      "sha256": "dcf2579414f37d8364eb26f0bf9ab15719541d86665f93199b747d5f5345266e",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -254,7 +254,7 @@
       "tableauId": "fang-question",
       "reading": "base",
       "file": "auto-dailies/loss-question.png",
-      "sha256": "a680bcaca1d3173d372603c8691a994176a03a9a5c8f5031da98cb4ed6756ca9",
+      "sha256": "506c537a8829f1b914cfa000744dbb1b93eab45f4f20c375bfd80cd2ddc07596",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -657,7 +657,7 @@
       "tableauId": "moon-scar-aftermath",
       "reading": "base",
       "file": "auto-dailies/chun-hesitates.png",
-      "sha256": "35b344f30370987c5ac2e9bdc329dc1720ca38931a93933a3c63e3b5d0e5b998",
+      "sha256": "184b798c0cb65bc0190ce3ed591d1d6a0208277dc56feb554cad71e16886cd29",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -677,7 +677,7 @@
         "fang-leverage-understood"
       ],
       "availableOptionIds": [],
-      "textSha256": "6b5c731f714a94aea1b661d484ef0d5c389fb686cf61a4cf4b576253e79336f5",
+      "textSha256": "a2f09ad6c246dd763c385f2af067073d940d99967836c1766670f0810a207f5f",
       "steps": 18
     },
     {
