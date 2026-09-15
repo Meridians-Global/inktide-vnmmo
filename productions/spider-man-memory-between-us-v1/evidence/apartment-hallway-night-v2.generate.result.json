@@ -1,0 +1,35 @@
+{
+  "id": "70w41mvww9rmw0d0kxfvbg6494",
+  "model": "bytedance/seedream-4.5",
+  "version": "hidden",
+  "input": {
+    "aspect_ratio": "16:9",
+    "image_input": [],
+    "max_images": 1,
+    "prompt": "Empty animation background plate, environment only. A modest New York apartment building corridor after midnight in rain, drawn in polished high-resolution 2D anime background art with crisp clean contours, subtle surface texture, cool blue window light and restrained warm ceiling lights. Straight-on eye-level camera. A broad unobstructed level floor fills the near foreground; closed apartment doors recede on both walls; a simple stairwell begins at the distant centre. The architecture is quiet, plausible and empty. Keep the lower foreground visually simple. No character, person, body, face, portrait, phone, hand, silhouette, character-shaped shadow, speech box, user interface, subtitle, caption, writing, letters, number, sign, logo, decorative frame, diagram, prop close-up or magical effect anywhere. Output only the unoccupied building interior as one continuous full-frame 16:9 painting. No text, letters, captions, logos, border, UI, watermark, duplicate body, extra limbs, malformed hands, chibi anatomy, glossy 3D, photorealism, thick pixel blocks, or anonymous people.",
+    "sequential_image_generation": "disabled",
+    "size": "2K"
+  },
+  "logs": "Generating 2560x1440 image with aspect ratio 16:9 at 2K resolution\nGenerating...\nGenerated in 9.8sec\n",
+  "output": [
+    "https://replicate.delivery/xezq/Fy9UWqqa5cpJOl0eSWctAgESj5u62z9U3e8eSS5QvmggEvauA/tmp6tvngwk0.jpg"
+  ],
+  "data_removed": false,
+  "error": null,
+  "source": "api",
+  "status": "succeeded",
+  "created_at": "2026-09-14T10:03:50.37Z",
+  "started_at": "2026-09-14T10:03:50.387096176Z",
+  "completed_at": "2026-09-14T10:04:00.518971882Z",
+  "urls": {
+    "cancel": "https://api.replicate.com/v1/predictions/70w41mvww9rmw0d0kxfvbg6494/cancel",
+    "get": "https://api.replicate.com/v1/predictions/70w41mvww9rmw0d0kxfvbg6494",
+    "stream": "https://stream.replicate.com/v1/files/jbxs-yuqdb233f45onkh5spu3plczqecghughg2tawlbvqrf42iw7s5ia",
+    "web": "https://replicate.com/p/70w41mvww9rmw0d0kxfvbg6494"
+  },
+  "metrics": {
+    "image_output_count": 1,
+    "predict_time": 10.131875696,
+    "total_time": 10.148971882
+  }
+}

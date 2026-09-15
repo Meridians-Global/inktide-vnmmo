@@ -11,13 +11,17 @@
     "generate:stage-audio": "tsx scripts/generate-stage-audio.ts",
     "prepare:eyes": "tsx scripts/prepare-eye-corrections.ts",
     "recover:replicate": "tsx scripts/recover-replicate.ts",
+    "audit:experiences": "tsx scripts/audit-experiences.ts",
+    "production:status": "tsx scripts/production-status.ts",
     "build:experience": "tsx scripts/build-experience.ts",
     "dev": "vite",
-    "demo": "npm run build && vite preview --host 127.0.0.1 --port 4190 --strictPort",
+    "demo": "npm run produce && vite preview --host 127.0.0.1 --port 4190 --strictPort",
     "test": "node --import tsx --test tests/*.test.ts",
     "typecheck": "tsc --noEmit",
     "build": "npm run build:experience && npm run typecheck && vite build",
-    "check": "npm run test && npm run build"
+    "check": "npm run test && npm run build",
+    "produce": "npm run check && npm run production:status",
+    "produce:strict": "npm run check && npm run production:status -- --fail-on-high"
   },
   "dependencies": {
     "sharp": "^0.35.4",

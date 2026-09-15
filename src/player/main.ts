@@ -1,6 +1,6 @@
 import './styles.css';
 import { CompiledExperience, type Actor, type Appearance, type CompiledAsset, type Moment, type Tableau } from '../core/contracts';
-import { backlog, currentMoment, initialReaderState, reduceReader, type ReaderAction, type ReaderState } from '../core/reader-state';
+import { availableChoiceOptions, backlog, currentMoment, initialReaderStateFromLink, reduceReader, type ReaderAction, type ReaderState } from '../core/reader-state';
 import { AudioDirector } from './audio-director';
 
 const SLOT_POSITION: Record<string, number> = {
@@ -196,6 +196,15 @@ function speakerName(moment: Moment): string {
   return resolveAppearance(actor, placement?.appearanceId).stageName;
 }
 
+function viewpointSide(moment: Moment, tableau: Tableau): 'left' | 'center' | 'right' {
+  if (moment.viewpoint.kind === 'public') return 'center';
+  const holderId = moment.viewpoint.holderId;
+  const placement = tableau.figures.find((figure) => figure.actorId === holderId);
+  if (!placement) return 'center';
+  const position = SLOT_POSITION[placement.slot]!;
+  return position < 42 ? 'left' : position > 58 ? 'right' : 'center';
+}
+
 function renderChoice(moment: Moment): void {
   choiceLayer.replaceChildren();
   if (moment.next.type !== 'choice') {
@@ -204,12 +213,18 @@ function renderChoice(moment: Moment): void {
   }
   const posture = document.createElement('span');
   posture.className = 'choice-posture';
-  posture.textContent = 'TRAVERSAL · NO WORLD WRITE';
+  posture.textContent = {
+    observe: 'ATTENTION · HIDDEN PERSPECTIVE',
+    interpret: 'READING · PERSPECTIVE',
+    predict: 'FORECAST · READER MODEL',
+    decide: 'DECISION · BRANCH',
+  }[moment.next.purpose];
   const heading = document.createElement('p');
   heading.className = 'choice-heading';
   heading.textContent = moment.next.prompt;
+  choiceLayer.className = `choice-layer choice-${moment.next.weight}`;
   choiceLayer.append(posture, heading);
-  for (const option of moment.next.options) {
+  for (const option of availableChoiceOptions(moment, state)) {
     const button = document.createElement('button');
     button.type = 'button';
     button.className = 'choice-option';
@@ -269,6 +284,8 @@ function render(): void {
   window.history.replaceState(null, '', url);
   shell.dataset.tone = tableau.tone;
   shell.dataset.mode = moment.mode;
+  shell.dataset.viewpoint = moment.viewpoint.kind;
+  shell.dataset.povSide = viewpointSide(moment, tableau);
   backdrop.src = background.url;
   chapter.textContent = moment.chapter;
   locationLabel.textContent = tableau.location;
@@ -348,11 +365,8 @@ async function start(): Promise<void> {
   const response = await fetch(selected.url);
   if (!response.ok) throw new Error('Prepared experience is missing. Run npm run build:experience.');
   experience = await response.json() as CompiledExperience;
-  const requestedMomentId = new URLSearchParams(window.location.search).get('moment');
-  const startMomentId = requestedMomentId && experience.moments.some((moment) => moment.id === requestedMomentId)
-    ? requestedMomentId
-    : experience.startNodeId;
-  state = initialReaderState(experience, startMomentId);
+  const requestedMomentId = new URLSearchParams(window.location.search).get('moment') ?? undefined;
+  state = initialReaderStateFromLink(experience, requestedMomentId);
   audio = new AudioDirector(new Map(experience.assets.map((asset) => [asset.id, asset])));
   sourceNote.textContent = `${experience.title} · ${experience.source.note}`;
   render();

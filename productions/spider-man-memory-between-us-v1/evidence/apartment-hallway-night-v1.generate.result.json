@@ -1,0 +1,35 @@
+{
+  "id": "a60vndh1esrmw0d0kxfb4amm6g",
+  "model": "bytedance/seedream-4.5",
+  "version": "hidden",
+  "input": {
+    "aspect_ratio": "16:9",
+    "image_input": [],
+    "max_images": 1,
+    "prompt": "High-fidelity cinematic 2D visual-novel illustration, mature anime-influenced anatomy, crisp tapered ink contours, detailed faces and hands, slightly desaturated urban palette, dramatic practical lighting, subtle texture with only faint deliberate pixel clusters in shadow edges, never coarse pixel art, clean readable silhouette at phone scale. A single clean environmental background painting of the empty hallway immediately outside a modest New York apartment after midnight. Match the cool rainy night and restrained warm practical lighting of an intimate apartment scene. Stable eye-level camera, long shallow corridor with apartment doors receding toward screen-left, the open foreground spanning the full width as a clear level actor stage, one stairwell door at the far end, rain-muted city glow through a narrow wired-glass window. The geography must make a quiet departure and preserved interpersonal distance readable. Keep the lower quarter low-detail for a translucent visual-novel dialogue rail. Absolutely no people, human silhouettes, character-shaped shadows, furniture blocking the actor marks, signs, readable numbers, text, interface, panels, arrows or magic. This is only a coherent world background plate. No text, letters, captions, logos, border, UI, watermark, duplicate body, extra limbs, malformed hands, chibi anatomy, glossy 3D, photorealism, thick pixel blocks, or anonymous people.",
+    "sequential_image_generation": "disabled",
+    "size": "2K"
+  },
+  "logs": "Generating 2560x1440 image with aspect ratio 16:9 at 2K resolution\nGenerating...\nGenerated in 12.8sec\n",
+  "output": [
+    "https://replicate.delivery/xezq/3TXt8t61MOIyMRyC8tLxqUqUqaw0bXhCFRgNgipBKZoO4VzF/tmpe0g_39o4.jpg"
+  ],
+  "data_removed": false,
+  "error": null,
+  "source": "api",
+  "status": "succeeded",
+  "created_at": "2026-09-14T10:02:21.43Z",
+  "started_at": "2026-09-14T10:02:21.466613712Z",
+  "completed_at": "2026-09-14T10:02:34.604278499Z",
+  "urls": {
+    "cancel": "https://api.replicate.com/v1/predictions/a60vndh1esrmw0d0kxfb4amm6g/cancel",
+    "get": "https://api.replicate.com/v1/predictions/a60vndh1esrmw0d0kxfb4amm6g",
+    "stream": "https://stream.replicate.com/v1/files/jbxs-zyvn6b5lxzcqmjpovrb5g3fgam2frsojtfsojnym4a2xqirfwxva",
+    "web": "https://replicate.com/p/a60vndh1esrmw0d0kxfb4amm6g"
+  },
+  "metrics": {
+    "image_output_count": 1,
+    "predict_time": 13.137664787,
+    "total_time": 13.174278499
+  }
+}

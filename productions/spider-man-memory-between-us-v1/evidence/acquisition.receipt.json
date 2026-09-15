@@ -4,13 +4,20 @@
   "source": {
     "domainId": "N-IMP-mtwby1q31jbg",
     "sceneId": "SCN-SPI-16",
-    "domainSha256": "930e7e571a364a00453a054513a7000a44453052c4cce7a5dafae592e1cd3a2d"
+    "domainSha256": "63fd4a63f1618c5e1e1a3ea23549d40c16676c5dd092e284c004ac870d76706e"
   },
-  "model": "bytedance/seedream-4.5",
-  "matteModel": "851-labs/background-remover:a029dff38972b5fda4ec5d75d7d1cd25aeff621d2cf4946a41055d7db66b80bc",
+  "models": {
+    "generation": "bytedance/seedream-4.5",
+    "faithfulEdit": "google/nano-banana-pro",
+    "matte": "851-labs/background-remover:a029dff38972b5fda4ec5d75d7d1cd25aeff621d2cf4946a41055d7db66b80bc"
+  },
   "requestDigests": {
     "mj-apartment-night.generate": "ebcbd46e5db3d8f635e726ddcbf5d82ee3a84f3e24ca782e0925b7bec9ebec25",
     "mj-apartment-night-clean.generate": "d83907366a77ce0fd7f4eb119b5d91ec2f9d52c32196f7189cda9bc967bb47c3",
+    "apartment-hallway-night-v1.generate": "32061a5b6c36237be8fc00a5b4e174be5de193fafcb90cecab7f6551769619ff",
+    "apartment-hallway-night-v2.generate": "85c6f0f371cd7ed93a82262403d7a299b805752f9fd62c9a5330728dfe43df69",
+    "apartment-hallway-night-v3.generate": "ca453c402d124a879301c096db9fe6077c26cca1be6aabf052272b8a314ad9cb",
+    "apartment-hallway-night-v4.generate": "f5f912913bbb0386b4a0621974c4830c38db0677cfa823c9aa91844143edcc2c",
     "peter-civilian-guarded.generate": "d1ce7dfe50ea770d53dccdb3345fb263e1582d9c52c62cfaa607639668b8286f",
     "peter-civilian-guarded.matte": "6b0e0628b427ddea04b04ca1b54cd1cc221d5d6300f37475e0da035bbfe1a90a",
     "peter-spider-masked.generate": "81db9f0c763448f7e90a697bcd93d6f6f5e5e9c5721ac87fc58b2eebd7760569",
@@ -19,12 +26,30 @@
     "peter-spider-revealed.matte": "4c4046990364441017c34c0501388a8f9f6912c6c9c2a6bfe1cbb0379dfd966f",
     "mj-guarded.generate": "0ef63ba911e5c4c2aaeeaedaf9d653359e06deee0dd02448fe718315b11a2f40",
     "mj-guarded.matte": "4302be9436eb1ac50743ce6dd5234243606d9fbaf758d5fc329b6b18e358efe0",
+    "peter-choice-returned-staying-v2.generate": "e34a44c65aa4d1efba7eccb43818661751fb92f7ee6848b144d5a6678a45d037",
+    "peter-choice-returned-staying-v2.matte": "3e84921993549a03a14d5d08468c887b5a2285cc2105d07111a413fe62a70b78",
+    "peter-choice-returned-staying-v3.generate": "ae8d49a1401170e5ecaf417aad34087bd27e82510e9cc3625d29bb42d13c313b",
+    "peter-choice-returned-staying-v3.matte": "a729ae2f3ac55dba45eef97258e89b2528cfbeefe45c7a402030055eb3687ddd",
+    "mj-guarded-eye-refined-v1.generate": "b335045d8b004c6466aebf0705f1becff8a334567c5b58b7a3f0e41adaff8ae5",
+    "mj-guarded-eye-refined-v1.matte": "89e208b8ec5f0ee74c1ccf218866bdfcc9416bf6a9da9b5c5e4a56e79a8d4ee2",
+    "mj-guarded-eye-refined-v2.generate": "3e940819495070ad93833676d29d9ad5eb9615b7bcc2871abe636ecf9e058bd5",
+    "mj-guarded-eye-refined-v2.matte": "a1909336a044c1e9d91884e0549e7529ec21fb4d8726857f4ad10981afddee9e",
+    "mj-guarded-eye-refined-v3.generate": "d8901467249ec63166e812c851df331211729bad70f356bfefebc272131ac297",
+    "mj-guarded-eye-refined-v3.matte": "41ab743e6cb9a6f129a96cbb28116a182cb59767e6abbcca2f41c0b394899270",
     "mj-conflicted-boundary-v1.generate": "4795e04069be0189487a4158b5f5d7257592e8c1ece141b4699c49847320c507",
     "mj-conflicted-boundary-v1.matte": "55f029e0715e7ae8c6bb994eb070b6a6882b9048b12a565bf62ff79a7dc06f9b",
     "mj-conflicted-boundary-v2.generate": "d130ee7f50e0e519df6bf3121d0ab7d4281b00154baf91ada1fbcd23571f6990",
     "mj-conflicted-boundary-v2.matte": "e7e4d7224b0ccc172817ccfc2492aecde8691a2b93a05b114daaa2e2cfe5a21b",
     "mj-reluctant-trust-v1.generate": "4acdc3d26309a2e0074f0c7cb87b0e0e3ecde3303ef5ad1c5770d3aabc877dbe",
     "mj-reluctant-trust-v1.matte": "f9a6333c0f335fc83589908e682c606857e1a5c9dd01aaeb09d827289608a790",
+    "mj-conflicted-boundary-eye-refined-v1.generate": "6b63a9864781ec5155500027824afd66467496eb407e470b982d7d6597a97b6c",
+    "mj-conflicted-boundary-eye-refined-v1.matte": "c1b350818d15be8fce9415a0f19fd39f0f6e789da6d77fe27aa731599f93d7b4",
+    "mj-conflicted-boundary-eye-refined-v2.generate": "6351738b743b40eb3106a48cef6092aa11fab03a3483b230d36654712b0314e6",
+    "mj-conflicted-boundary-eye-refined-v2.matte": "a088b458d4ec61f5800c09edb48f19b69bdb17ff386e2bde12614fefcab280f1",
+    "mj-reluctant-trust-eye-refined-v1.generate": "5d64c8d73f37fceb11cffb86a154c87bea1703aa4bef9d1240cb269b346509e2",
+    "mj-reluctant-trust-eye-refined-v1.matte": "a566ee52b8597f99851f8489f3ada28757a97920beaf39f8ba01ebfdcf3e7211",
+    "mj-choice-returned-listening-v1.generate": "5e515ec4198e66470c386a9e0bce024b6e13d771841a8faac54cfa34bb0f157f",
+    "mj-choice-returned-listening-v1.matte": "355b3fae7e3cc4f7f04b258b9ad54e609685a155349f56b7ec85f56a89897b0e",
     "spider-unmask-revelation-cg-v1.generate": "571d5092c36b4637505f8867ac116e3e3f67094be3b6d7d1a802316c12e73cce",
     "spider-unmask-revelation-cg-v2.generate": "13e3b24737491645eba6168107039186dd27c972aca0320f91a590caaacd6c12",
     "spider-unmask-revelation-cg-v3.generate": "3b2f5455a7ada4ecf5ba3f95da21198517dcf86c845bab525e5ed31962fea424"
@@ -44,6 +69,38 @@
       "sha256": "1b3283f871cf20ac2b61e6837ef445c4bbeec313ef65aba22bf85c6e1e25cb6c",
       "predictionIds": [
         "3963dvfjjdrmr0d0ht285drc7g"
+      ]
+    },
+    "apartment-hallway-night-v1": {
+      "generatedUrl": "https://replicate.delivery/xezq/3TXt8t61MOIyMRyC8tLxqUqUqaw0bXhCFRgNgipBKZoO4VzF/tmpe0g_39o4.jpg",
+      "sourcePath": "assets/generated/spider-man-memory-between-us-v1/apartment-hallway-night-v1.jpg",
+      "sha256": "29f37406b3a848c6a5fa63399ac8c63bc6630261bddcdec174b40f37d768811e",
+      "predictionIds": [
+        "a60vndh1esrmw0d0kxfb4amm6g"
+      ]
+    },
+    "apartment-hallway-night-v2": {
+      "generatedUrl": "https://replicate.delivery/xezq/Fy9UWqqa5cpJOl0eSWctAgESj5u62z9U3e8eSS5QvmggEvauA/tmp6tvngwk0.jpg",
+      "sourcePath": "assets/generated/spider-man-memory-between-us-v1/apartment-hallway-night-v2.jpg",
+      "sha256": "02a88eec68ba20e08d34fd90e6339ff5c4b115218ccc96bebcb302334c2e027a",
+      "predictionIds": [
+        "70w41mvww9rmw0d0kxfvbg6494"
+      ]
+    },
+    "apartment-hallway-night-v3": {
+      "generatedUrl": "https://replicate.delivery/xezq/4xJsNQf48AX4Iqy5lVccHADw2Jy8g5rVe1bzhlUlol7WjXNXA/tmp9521730d.jpg",
+      "sourcePath": "assets/generated/spider-man-memory-between-us-v1/apartment-hallway-night-v3.jpg",
+      "sha256": "f2c00336d3060fa1c2179c5a8a435eb459313227a6c58d1a06fd943b7a269800",
+      "predictionIds": [
+        "e89723m5mxrmw0d0kxgb6w6pw0"
+      ]
+    },
+    "apartment-hallway-night-v4": {
+      "generatedUrl": "https://replicate.delivery/xezq/er48cJDNFAWzeEtfYSpTweH5ulgDDd1NEeRfKrIPY9jnK5VzF/tmpmwj6l75m.jpg",
+      "sourcePath": "assets/generated/spider-man-memory-between-us-v1/apartment-hallway-night-v4.jpg",
+      "sha256": "69670baac88885f3c7b046477442095178309fcf7b5560aba6247cfd63f83955",
+      "predictionIds": [
+        "5pkwbzy24xrmr0d0kxgts1pnxg"
       ]
     },
     "peter-civilian-guarded": {
@@ -86,6 +143,56 @@
         "vksrbsahysrge0d0hspbrhnyer"
       ]
     },
+    "peter-choice-returned-staying-v2": {
+      "generatedUrl": "https://replicate.delivery/xezq/hezJevHSQ3h8QUj3BoJC01BFSfj21KgMfO3qZYnef85qbnLzF/tmpgfmu5azu.jpg",
+      "transparentUrl": "https://replicate.delivery/czjl/8va8grfxYu3lYaG9du8h060A14ED4cepsKCCWxMdLA0xduMXA/output.png",
+      "sourcePath": "assets/generated/spider-man-memory-between-us-v1/peter-choice-returned-staying-v2.png",
+      "sha256": "9f845e1854c2df95a646e66f9fddcc2cc8585c607544f1dd3df571370314aeb9",
+      "predictionIds": [
+        "t4c2psvskhrmt0d0jncajrf1tm",
+        "7bnee1drqdrga0d0jnc8d9yng0"
+      ]
+    },
+    "peter-choice-returned-staying-v3": {
+      "generatedUrl": "https://replicate.delivery/xezq/3It547UmeD3exUMiTKCPLK2s6CWeOqvdXmdbOVs27NTze5ycB/tmp0_4affpz.jpg",
+      "transparentUrl": "https://replicate.delivery/czjl/VZD4d1yutHqhGN18r7a6JPb66BtweZxGTQ6qpuUYsZEvPXmLA/output.png",
+      "sourcePath": "assets/generated/spider-man-memory-between-us-v1/peter-choice-returned-staying-v3.png",
+      "sha256": "4e87dbaa1e49422daf28964e0760cea28ff11ea5dba860345b2e8fa3166e0c32",
+      "predictionIds": [
+        "a88082798drmt0d0jncs6qxjcg",
+        "jghxn5axesrge0d0jnd8ecrk7m"
+      ]
+    },
+    "mj-guarded-eye-refined-v1": {
+      "generatedUrl": "https://replicate.delivery/xezq/LIOfUfOMianGYULyVz7uqaTK4uClsSLJ7GWMneLdmNi7SVZuA/tmpo8pndjyu.jpg",
+      "transparentUrl": "https://replicate.delivery/czjl/nrJMN78vklI6IhLWtKT1AspIfjDD1dzPVg47jjK3p7fhpqMXA/output.png",
+      "sourcePath": "assets/generated/spider-man-memory-between-us-v1/mj-guarded-eye-refined-v1.png",
+      "sha256": "8aea733f5990ddac029ab260e0de4aa325dda923551d92490d11470bfdd6dfd0",
+      "predictionIds": [
+        "b8gh8zet4srmt0d0jhmvnndnxr",
+        "v80ez31kgsrge0d0jhna6vkamr"
+      ]
+    },
+    "mj-guarded-eye-refined-v2": {
+      "generatedUrl": "https://replicate.delivery/xezq/JmNJKqe7zOwNEq3mXx8OCLKfzSS9BttJN3qy2bCeEkrtWVZuA/tmpfz4xigl1.jpg",
+      "transparentUrl": "https://replicate.delivery/czjl/pcRGD8KoeIR7f0Uf48boN2wuBUn6Ww8X5QC5f69Q1mhltqycB/output.png",
+      "sourcePath": "assets/generated/spider-man-memory-between-us-v1/mj-guarded-eye-refined-v2.png",
+      "sha256": "eeacdadbea55c57dc5ab89b0bd68dea17dddf4c91b7aa3a9d92196e1e3478737",
+      "predictionIds": [
+        "7hztvzcezsrmr0d0jhnrqthh7r",
+        "dvvq5zr9nsrge0d0jhp84px4pg"
+      ]
+    },
+    "mj-guarded-eye-refined-v3": {
+      "generatedUrl": "https://replicate.delivery/xezq/vZzLODAcEW5XFFnoHs8ntZS8su1wOV2Br0I2qVJyHSkorKzF/tmpds61qwa6.png",
+      "transparentUrl": "https://replicate.delivery/czjl/NWCGGbR9z77UHFOnB6bgJ3nxOwyP0A4mpdDmjsevjuVUXVmLA/output.png",
+      "sourcePath": "assets/generated/spider-man-memory-between-us-v1/mj-guarded-eye-refined-v3.png",
+      "sha256": "cf4ab5dd9777159677ec9bd84a6404e938692e0fde209a0142db1b2edbe42751",
+      "predictionIds": [
+        "60dqzaejbhrmy0d0jhq9fvkzec",
+        "j12m721aahrge0d0jhqs5qtzar"
+      ]
+    },
     "mj-conflicted-boundary-v1": {
       "generatedUrl": "https://replicate.delivery/xezq/Mx2ywiSW9taqB5GEx9VqppmmLLlKv7CAEBV1ycnJ3DxJYKzF/tmpwfhr2fme.jpg",
       "transparentUrl": "https://replicate.delivery/czjl/RorgLIA9btq1MFCTffEWSurIdcLlbzLe1rLvOu8tFUdXBTZuA/output.png",
@@ -116,6 +223,46 @@
         "waa1by6xphrgc0d0jgtr5jpyrg"
       ]
     },
+    "mj-conflicted-boundary-eye-refined-v1": {
+      "generatedUrl": "https://replicate.delivery/xezq/U910uIdIwn7eEaMeFwfkER8aplrTvrfafZMarvBVvf0nztKzF/tmpgk2i96uq.png",
+      "transparentUrl": "https://replicate.delivery/czjl/D45JTtaMwxqiLJJh95Kuef9rqffyTI1dMHtvq66zyIqQdrycB/output.png",
+      "sourcePath": "assets/generated/spider-man-memory-between-us-v1/mj-conflicted-boundary-eye-refined-v1.png",
+      "sha256": "a7cd2cc0e2561d2b394ebc1a62ccf6dd63267b2f34b40a3cc1a349b44873fb4b",
+      "predictionIds": [
+        "9qc8n72915rmt0d0jhvrmbhfhw",
+        "0z9hnk57y5rga0d0jhvrmbjzzr"
+      ]
+    },
+    "mj-conflicted-boundary-eye-refined-v2": {
+      "generatedUrl": "https://replicate.delivery/xezq/SZQ53Dy4c6rnD90f4WZPjjv2At3eMgOyyR7kOiOPWoAq5qMXA/tmpl638jye2.png",
+      "transparentUrl": "https://replicate.delivery/czjl/iQDYQ31W1G6FGxt4NCuJTZO1GYqR0tSuEZ6E5WZtg94buKzF/output.png",
+      "sourcePath": "assets/generated/spider-man-memory-between-us-v1/mj-conflicted-boundary-eye-refined-v2.png",
+      "sha256": "0450ea37f0c50fe80ae0a02a9054c07bc6b7e5feb955f3da4386a0c556a28d9f",
+      "predictionIds": [
+        "bj7edd5cz5rmy0d0jhwv1svh5c",
+        "qg68ka8531rg80d0jhx8cn99am"
+      ]
+    },
+    "mj-reluctant-trust-eye-refined-v1": {
+      "generatedUrl": "https://replicate.delivery/xezq/ap0z2CE3OqJKMxtBKqGqAcgURocmI8DRB3YiATviF9c9tKzF/tmpjf8wvmiw.png",
+      "transparentUrl": "https://replicate.delivery/czjl/dkVjN8hMOf0KMCHPWUCjel4mfRw2fSznS5eD7scJf2fl9bVmLA/output.png",
+      "sourcePath": "assets/generated/spider-man-memory-between-us-v1/mj-reluctant-trust-eye-refined-v1.png",
+      "sha256": "ef4b02084577485c232a683caffdfd9e80a67b7703826e166f1562605bdfa644",
+      "predictionIds": [
+        "t91mqxpd41rmr0d0jhvvtx4w90",
+        "4zp9vvt121rg80d0jhw9nrg8pw"
+      ]
+    },
+    "mj-choice-returned-listening-v1": {
+      "generatedUrl": "https://replicate.delivery/xezq/ckCF48lMOC52FluiPOCVqb7uyneJdcnEfesyfGN88ivR9vycB/tmpry7d2_bf.png",
+      "transparentUrl": "https://replicate.delivery/czjl/9nV2R5kLEOKTENJ7HG5CAe31DiFuiOeIiUTFuEWeh9mwevycB/output.png",
+      "sourcePath": "assets/generated/spider-man-memory-between-us-v1/mj-choice-returned-listening-v1.png",
+      "sha256": "a248fc1bc2eaf894f9d27e28b10a6212f1cd909c4e2ddcf6744537758ef2f270",
+      "predictionIds": [
+        "nep6jnd91srmw0d0jjytvy8ecg",
+        "9tbhgpr9z1rgc0d0jjzbwpn1nc"
+      ]
+    },
     "spider-unmask-revelation-cg-v1": {
       "generatedUrl": "https://replicate.delivery/xezq/Lbjl8x62Es4xOB5FwqPFE0owD1eJpUgGRexASPn0t7LASqMXA/tmpaiwr2_v_.jpg",
       "sourcePath": "assets/generated/spider-man-memory-between-us-v1/spider-unmask-revelation-cg-v1.jpg",
@@ -142,6 +289,62 @@
     }
   },
   "reviews": {
+    "apartment-hallway-night-v1": {
+      "status": "rejected",
+      "reason": "The model embedded a character portrait, phone, Chinese dialogue and UI into the lower frame, so it is not an admissible environmental plate."
+    },
+    "apartment-hallway-night-v2": {
+      "status": "rejected",
+      "reason": "The architectural composition is clean, but the model rendered rain and standing water inside the corridor, breaking physical set continuity."
+    },
+    "apartment-hallway-night-v3": {
+      "status": "rejected",
+      "reason": "The set is physically cleaner, but rain-like streaks persist across the interior and the stepped pixel treatment is too coarse beside the cast."
+    },
+    "apartment-hallway-night-v4": {
+      "status": "candidate",
+      "reason": "Fourth request removes visible weather entirely, preserves its lighting implication, and explicitly requires smooth high-resolution architectural rendering; contextual review remains due."
+    },
+    "mj-guarded-eye-refined-v1": {
+      "status": "rejected",
+      "reason": "The eye anatomy improved, but the model reframed the full-body actor as a portrait and broke stage-scale continuity."
+    },
+    "mj-guarded-eye-refined-v2": {
+      "status": "rejected",
+      "reason": "The full-body composition returned, but the edit reversed MJ to screen-left and broke the inward eyeline in the real two-shot."
+    },
+    "mj-guarded-eye-refined-v3": {
+      "status": "candidate",
+      "reason": "A faithful in-place visual edit on the original full-body source is constrained to the eye region; contextual human review remains due."
+    },
+    "mj-conflicted-boundary-eye-refined-v1": {
+      "status": "rejected",
+      "reason": "The face and eyes improved, but the edit collapsed the released-hand boundary pose back into a guarded clasp."
+    },
+    "mj-conflicted-boundary-eye-refined-v2": {
+      "status": "candidate",
+      "reason": "Single-source in-place edit locks the released-hand boundary pose while repairing eye anatomy; contextual review remains due."
+    },
+    "mj-reluctant-trust-eye-refined-v1": {
+      "status": "candidate",
+      "reason": "Reference-based edit preserves the open-handed after-state while using the accepted guarded rendition as MJ identity and eye-anatomy guidance; contextual review remains due."
+    },
+    "mj-choice-returned-listening-v1": {
+      "status": "candidate",
+      "reason": "Single-source reference edit targets the exact listening beat after Peter returns agency to MJ; identity, inward facing, restrained hand release, and contextual scale require Dailies review."
+    },
+    "peter-choice-returned-staying-v1": {
+      "status": "rejected",
+      "reason": "The faithful-edit provider blocked the first frozen request before producing an image; the failed provider result is retained and the repaired take uses a new ID."
+    },
+    "peter-choice-returned-staying-v2": {
+      "status": "rejected",
+      "reason": "The first fast-model take preserved wardrobe but turned restraint into an upward tearful pose, lost the horizontal eyeline toward MJ, and placed the open hand on his hip."
+    },
+    "peter-choice-returned-staying-v3": {
+      "status": "candidate",
+      "reason": "Second fast-model take narrows the demanded behavior to a level inward eyeline, planted feet, settled shoulders and one low open hand; contextual review remains due."
+    },
     "spider-unmask-revelation-cg-v1": {
       "status": "rejected",
       "reason": "The unmasking action is absent and the chest contains a false wound."

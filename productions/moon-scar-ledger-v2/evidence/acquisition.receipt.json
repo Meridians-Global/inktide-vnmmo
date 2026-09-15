@@ -11,6 +11,7 @@
   ],
   "models": {
     "generation": "bytedance/seedream-4.5",
+    "faithfulEdit": "google/nano-banana-pro",
     "matte": "851-labs/background-remover:a029dff38972b5fda4ec5d75d7d1cd25aeff621d2cf4946a41055d7db66b80bc"
   },
   "requestDigests": {
@@ -24,11 +25,17 @@
     "gu-yue-chun-disclosure-v2.matte": "75b11a923dca4e28d7b9390869f7d922eca28754eec3eee0d428a445abcf8cbd",
     "gu-yue-chun-moon-scar-reaction-v1.generate": "d28be31e449beb9c184eb15596dabcf2fb106aa4dbdd3805aca1f68d5542c404",
     "gu-yue-chun-moon-scar-reaction-v1.matte": "8403ca6b558c1353f5d46cd8aff8a4c2bc8c41f86a415621729ceccbd81892b4",
-    "moon-scar-revelation-cg-v1.generate": "706f91a560eb2acde9f0a320f21eda739797213fa73b6a52e0c1894255f5585c",
+    "moon-scar-revelation-cg-v1.generate": "5de848d6c4ce8797bdb500f4e5167a5c5d2482638c61ad213e66b8887668906d",
     "sealed-substrate-v3.generate": "8b193d2a61d9909e425f8f5dda361bee14c2e4abee016436ab5ddc7057237607",
     "sealed-substrate-v3.matte": "aeaccbcfd86401c4d5cd3b231c44d5bd43ee13373e5c05281a86aec51ac000ee",
     "moon-scar-gu-v3.generate": "c47bd70d582b46666954efea94cb6374a9061f6abeb6333bf65fccd5b3810ae0",
-    "moon-scar-gu-v3.matte": "19f3029908d8f0ae238444740472fb16ba80ffd362dc39b5fa1e939de9d6af0d"
+    "moon-scar-gu-v3.matte": "19f3029908d8f0ae238444740472fb16ba80ffd362dc39b5fa1e939de9d6af0d",
+    "gu-yue-chun-held-warning-v1.generate": "26053e47cf1226e8f58aa7e7094faa6d1d166ba93759fe5d80f82158f31b2d7b",
+    "gu-yue-chun-held-warning-v1.matte": "fbc7c412bf60a1fad6f3177663802d7f0fefda8e16cd80f6acb50ddb2f7adf25",
+    "fang-withheld-touch-v1.generate": "287deed8fda200668af477b7165ebf33092c9146c1166cd1318b0445a5460b8a",
+    "fang-withheld-touch-v1.matte": "4da0945384ba6831986083534757b9f1f780f842a46413f125c784ba829b45a4",
+    "fang-withheld-touch-v2.generate": "04e8e76fb69e279afab43a6ea818552ba9486b7d62227fcead1505f718cc8864",
+    "fang-withheld-touch-v2.matte": "ee586eded30ce7e75898dc7101546cb7ae0e12042376484d22dc157856c2dc92"
   },
   "assets": {
     "fang-field-mantle-guarded-v3": {
@@ -180,6 +187,71 @@
         "residualBoundaryFraction": 0,
         "transparentRgbPixels": 0
       }
+    },
+    "gu-yue-chun-held-warning-v1": {
+      "sourcePath": "assets/generated/moon-scar-ledger-v2/gu-yue-chun-held-warning-v1.png",
+      "sha256": "68ff37476636752dc3f935e440a9282f8f889cb8059eaadcd11f73e9955fb8e7",
+      "provenance": "replicate",
+      "predictionIds": [
+        "gd7agdn9sxrmy0d0jjytxbw23r",
+        "sa98dqjy1nrgc0d0jjza3tmfbg"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/fe7q6LldYjhLYEQtvxPlSkeiVv7LzgCZpKTBykOfxwhnefKzF/tmpeijbjins.png",
+      "transparentUrl": "https://replicate.delivery/czjl/fGK7ZwkFqt3fHUjoev39jX3wASdHdFewsMpdfUyS4mT19fKzF/output.png",
+      "matteInspection": {
+        "visiblePixels": 826800,
+        "boundaryPixels": 16260,
+        "residualBoundaryFraction": 0.001107011070110701,
+        "transparentRgbPixels": 0
+      }
+    },
+    "fang-withheld-touch-v1": {
+      "sourcePath": "assets/generated/moon-scar-ledger-v2/fang-withheld-touch-v1.png",
+      "sha256": "7b13bf6449c54dbf03728e6173339b104dbdd5904fcf8a6aace389d67d99e8ff",
+      "provenance": "replicate",
+      "predictionIds": [
+        "56kgmqd40nrmr0d0jnbvhpz39w",
+        "2584e386msrga0d0jncbjr6g9r"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/YAWnBCMW4FYrHd2OiywZFp4L1fFjCq4sJQSBdHBweNJf5cZuA/tmp6wz_xyn_.png",
+      "transparentUrl": "https://replicate.delivery/czjl/MTpbByIhH6L2MJe0DESXmKQQ35C81ofiZ4AOZag70vjEduMXA/output.png",
+      "matteInspection": {
+        "visiblePixels": 1315674,
+        "boundaryPixels": 23069,
+        "residualBoundaryFraction": 0,
+        "transparentRgbPixels": 0
+      }
+    },
+    "fang-withheld-touch-v2": {
+      "sourcePath": "assets/generated/moon-scar-ledger-v2/fang-withheld-touch-v2.png",
+      "sha256": "7d6df9319d6c8b8abc3efbcb59dd6fdc5e2e7356cfcf405e8b5c52f24f86264a",
+      "provenance": "replicate",
+      "predictionIds": [
+        "xbteak62c9rmw0d0jnm8dxy904",
+        "6qhst4s641rgc0d0jnmrxf1wj0"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/QuXvv5PChQKRNBHoGpPeYbOnmd2wcVMud7vQr2MG27jQXXmLA/tmpo0j3uhn7.png",
+      "transparentUrl": "https://replicate.delivery/czjl/r827cl4rw5LeMqf3Fl9CLjAsVM1VtaZXtoEAGnleJwgPddZuA/output.png",
+      "matteInspection": {
+        "visiblePixels": 1325676,
+        "boundaryPixels": 23650,
+        "residualBoundaryFraction": 0,
+        "transparentRgbPixels": 0
+      }
+    }
+  },
+  "reviews": {
+    "gu-yue-chun-held-warning-v1": {
+      "status": "candidate",
+      "reason": "Single-source reference edit preserves Chun identity, wardrobe, screen-left facing, full-body scale and controlled hand containment at the demanded post-CG warning beat; independent audience approval remains due."
+    },
+    "fang-withheld-touch-v1": {
+      "status": "rejected",
+      "reason": "The arrested hand reads and the matte is clean, but the generated drawing faces screen-left and therefore fails the demanded frame-left inward stage coordinate."
+    },
+    "fang-withheld-touch-v2": {
+      "status": "candidate",
+      "reason": "The repaired take starts from a mirrored composition-locked reference and targets a screen-right level eyeline, grounded feet and visibly arrested low hand; contextual review remains due."
     }
   }
 }

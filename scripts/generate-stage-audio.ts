@@ -13,6 +13,37 @@ const random = (): number => {
   return state / 0x100000000;
 };
 
+function wavBuffer(source: Float64Array, channelCount = 2): Buffer {
+  let peak = 0;
+  for (const sample of source) peak = Math.max(peak, Math.abs(sample));
+  const gain = 0.22 / Math.max(peak, 0.001);
+  const pcm = Buffer.alloc(source.length * 2);
+  for (let index = 0; index < source.length; index += 1) {
+    pcm.writeInt16LE(Math.round(Math.max(-1, Math.min(1, source[index]! * gain)) * 32767), index * 2);
+  }
+  const header = Buffer.alloc(44);
+  header.write('RIFF', 0);
+  header.writeUInt32LE(36 + pcm.length, 4);
+  header.write('WAVEfmt ', 8);
+  header.writeUInt32LE(16, 16);
+  header.writeUInt16LE(1, 20);
+  header.writeUInt16LE(channelCount, 22);
+  header.writeUInt32LE(sampleRate, 24);
+  header.writeUInt32LE(sampleRate * channelCount * 2, 28);
+  header.writeUInt16LE(channelCount * 2, 32);
+  header.writeUInt16LE(16, 34);
+  header.write('data', 36);
+  header.writeUInt32LE(pcm.length, 40);
+  return Buffer.concat([header, pcm]);
+}
+
+async function writeWave(relativePath: string, source: Float64Array): Promise<string> {
+  const output = resolve(import.meta.dirname, `../${relativePath}`);
+  await mkdir(resolve(output, '..'), { recursive: true });
+  await writeFile(output, wavBuffer(source));
+  return output;
+}
+
 // Integer-period harmonics make the ambience loop without a restart seam.
 for (let voice = 0; voice < 128; voice += 1) {
   const harmonic = 72 + Math.floor(random() * 1450);
@@ -42,27 +73,35 @@ for (let drop = 0; drop < 34; drop += 1) {
   }
 }
 
-let peak = 0;
-for (const sample of samples) peak = Math.max(peak, Math.abs(sample));
-const gain = 0.22 / Math.max(peak, 0.001);
-const pcm = Buffer.alloc(frames * channels * 2);
-for (let index = 0; index < samples.length; index += 1) pcm.writeInt16LE(Math.round(Math.max(-1, Math.min(1, samples[index]! * gain)) * 32767), index * 2);
+const outputs = [await writeWave('assets/generated/spider-man-memory-between-us-v1/rain-at-window-v1.wav', samples)];
 
-const header = Buffer.alloc(44);
-header.write('RIFF', 0);
-header.writeUInt32LE(36 + pcm.length, 4);
-header.write('WAVEfmt ', 8);
-header.writeUInt32LE(16, 16);
-header.writeUInt16LE(1, 20);
-header.writeUInt16LE(channels, 22);
-header.writeUInt32LE(sampleRate, 24);
-header.writeUInt32LE(sampleRate * channels * 2, 28);
-header.writeUInt16LE(channels * 2, 32);
-header.writeUInt16LE(16, 34);
-header.write('data', 36);
-header.writeUInt32LE(pcm.length, 40);
+const sirenSeconds = 3.8;
+const siren = new Float64Array(Math.floor(sampleRate * sirenSeconds) * 2);
+for (let frame = 0; frame < siren.length / 2; frame += 1) {
+  const time = frame / sampleRate;
+  const fade = Math.sin(Math.PI * time / sirenSeconds) ** 1.8;
+  const frequency = 470 + 65 * Math.sin(Math.PI * 2 * time / 2.7);
+  const distant = Math.sin(Math.PI * 2 * frequency * time) * fade * (0.62 + 0.38 * Math.sin(Math.PI * 2 * 1.7 * time));
+  siren[frame * 2] = distant * 0.72;
+  siren[frame * 2 + 1] = distant;
+}
+outputs.push(await writeWave('assets/generated/spider-man-memory-between-us-v1/distant-siren-v1.wav', siren));
 
-const output = resolve(import.meta.dirname, '../assets/generated/spider-man-memory-between-us-v1/rain-at-window-v1.wav');
-await mkdir(resolve(output, '..'), { recursive: true });
-await writeFile(output, Buffer.concat([header, pcm]));
-console.log(output);
+const resonanceSeconds = 3.2;
+const resonance = new Float64Array(Math.floor(sampleRate * resonanceSeconds) * 2);
+const partials = [196, 294, 392, 588, 784];
+for (let frame = 0; frame < resonance.length / 2; frame += 1) {
+  const time = frame / sampleRate;
+  const onset = Math.min(1, time / 0.045);
+  const decay = Math.exp(-time * 1.12) * onset;
+  let value = 0;
+  for (let index = 0; index < partials.length; index += 1) {
+    value += Math.sin(Math.PI * 2 * partials[index]! * time + index * 0.73) * decay / (index + 1);
+  }
+  const shimmer = 0.72 + 0.28 * Math.sin(Math.PI * 2 * 4.2 * time);
+  resonance[frame * 2] = value * shimmer;
+  resonance[frame * 2 + 1] = value * (1.44 - shimmer);
+}
+outputs.push(await writeWave('assets/generated/moon-scar-ledger-v2/moon-resonance-v1.wav', resonance));
+
+console.log(outputs.join('\n'));

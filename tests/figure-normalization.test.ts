@@ -61,4 +61,31 @@ describe('figure normalization', () => {
     assert.ok(visible.some(([red, green, blue, alpha]) => alpha === 255 && red === 12 && green === 20 && blue === 20));
     assert.ok(visible.some(([red, green, blue, alpha]) => red === 44 && green === 80 && blue === 52 && alpha === 255));
   });
+
+  it('removes a bounded pale model-painted fringe while preserving pale interior detail', async () => {
+    const pixels = Buffer.alloc(30 * 30 * 4);
+    for (let y = 4; y < 26; y += 1) for (let x = 4; x < 26; x += 1) {
+      const index = (y * 30 + x) * 4;
+      const fringe = x < 7 || x > 22 || y < 7 || y > 22;
+      pixels.set(fringe ? [250, 232, 228, 255] : [32, 36, 48, 255], index);
+    }
+    pixels.set([245, 240, 236, 255], (15 * 30 + 15) * 4);
+    const source = await sharp(pixels, { raw: { width: 30, height: 30, channels: 4 } }).png().toBuffer();
+    const output = await normalizeFigureBuffer(source, {
+      kind: 'figure-normalize',
+      recipeVersion: 1,
+      canvas: { width: 30, height: 30 },
+      subjectBox: { width: 16, height: 16 },
+      bottomPadding: 0,
+      matteCleanup: {
+        spill: 'green', alphaFloor: 8, edgeAlphaCeiling: 249, channelMargin: 18,
+        lightFringe: { minChannel: 220, maxChroma: 36, passes: 3 }, alphaErodePasses: 1,
+      },
+    });
+    const normalized = await sharp(output).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+    const visible = [];
+    for (let index = 0; index < normalized.data.length; index += 4) if (normalized.data[index + 3]! > 0) visible.push([...normalized.data.subarray(index, index + 4)]);
+    assert.ok(!visible.some(([red, green, blue]) => red! >= 248 && green! >= 228 && blue! >= 224));
+    assert.ok(visible.some(([red, green, blue, alpha]) => red! > 120 && green! > 120 && blue! > 120 && alpha === 255));
+  });
 });

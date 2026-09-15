@@ -3,7 +3,9 @@ import { mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { extname, join, resolve } from 'node:path';
 import { compileExperience } from '../src/core/compiler';
 import { normalizeFigureBuffer } from '../src/core/figure-normalization';
+import { auditExperience, summarizeProductionPortfolio, type ProductionPortfolioInput } from '../src/core/production-audit';
 import { experiences } from '../src/story';
+import { productionTargetFor } from '../src/story/production-targets';
 import { loadLocalEnvironment } from './config';
 
 const projectRoot = resolve(import.meta.dirname, '..');
@@ -15,6 +17,7 @@ await rm(outputRoot, { recursive: true, force: true });
 await mkdir(outputRoot, { recursive: true });
 
 const catalog: { id: string; title: string; subtitle: string; url: string }[] = [];
+const portfolioInputs: ProductionPortfolioInput[] = [];
 for (const input of experiences) {
   const experienceRoot = join(outputRoot, input.id);
   const assetOutput = join(experienceRoot, 'assets');
@@ -50,16 +53,35 @@ for (const input of experiences) {
 
   const experienceJson = `${JSON.stringify(compiled.experience, null, 2)}\n`;
   const experienceDigest = createHash('sha256').update(experienceJson).digest('hex');
+  const target = productionTargetFor(input.id);
+  const productionAudit = auditExperience(input, target);
+  const productionAuditJson = `${JSON.stringify(productionAudit, null, 2)}\n`;
+  const productionAuditSha256 = createHash('sha256').update(productionAuditJson).digest('hex');
   await writeFile(join(experienceRoot, 'experience.json'), experienceJson);
-  await writeFile(join(experienceRoot, 'receipt.json'), `${JSON.stringify({
-    schemaVersion: 2,
+  await writeFile(join(experienceRoot, 'production-audit.json'), productionAuditJson);
+  const receiptJson = `${JSON.stringify({
+    schemaVersion: 3,
     experienceId: compiled.experience.id,
     experienceSha256: experienceDigest,
+    productionAuditSha256,
     source: compiled.experience.source,
     assets: copiedAssets,
-  }, null, 2)}\n`);
+  }, null, 2)}\n`;
+  await writeFile(join(experienceRoot, 'receipt.json'), receiptJson);
+  portfolioInputs.push({
+    audit: productionAudit,
+    target,
+    experienceSha256: experienceDigest,
+    productionAuditSha256,
+    receiptSha256: createHash('sha256').update(receiptJson).digest('hex'),
+  });
   catalog.push({ id: input.id, title: input.title, subtitle: input.subtitle, url: `/generated/${input.id}/experience.json` });
-  console.log(`Prepared ${compiled.experience.id} · ${copiedAssets.length} verified assets · ${experienceDigest}`);
+  console.log(`Prepared ${compiled.experience.id} · ${copiedAssets.length} verified assets · ${experienceDigest} · audit ${productionAuditSha256}`);
 }
 
 await writeFile(join(outputRoot, 'catalog.json'), `${JSON.stringify({ schemaVersion: 1, defaultExperienceId: catalog[0]!.id, experiences: catalog }, null, 2)}\n`);
+const productionReport = summarizeProductionPortfolio(portfolioInputs);
+const productionReportJson = `${JSON.stringify(productionReport, null, 2)}\n`;
+await writeFile(join(outputRoot, 'production-report.json'), productionReportJson);
+console.log(`Production portfolio · ${productionReport.status} · ${createHash('sha256').update(productionReportJson).digest('hex')}`);
+if (productionReport.nextRepair) console.log(`Next repair · ${productionReport.nextRepair.experienceId} · ${productionReport.nextRepair.id}`);

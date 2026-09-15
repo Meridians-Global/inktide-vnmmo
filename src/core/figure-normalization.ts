@@ -56,18 +56,64 @@ export async function normalizeFigureBuffer(
     .png()
     .toBuffer();
   return recipe.matteCleanup
-    ? cleanMatteBuffer(normalized, recipe.matteCleanup)
+    ? cleanMatteBuffer(normalized, recipe.matteCleanup, false)
     : normalized;
 }
 
 async function cleanMatteBuffer(
   source: Buffer,
   cleanup: NonNullable<FigurePreparation['matteCleanup']>,
+  repairBoundary = true,
 ): Promise<Buffer> {
   const raw = await sharp(source).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
   const pixels = Buffer.from(raw.data);
   for (let index = 0; index < pixels.length; index += 4) {
     if (pixels[index + 3]! <= cleanup.alphaFloor) pixels.fill(0, index, index + 4);
+  }
+  if (repairBoundary && cleanup.lightFringe) {
+    for (let pass = 0; pass < cleanup.lightFringe.passes; pass += 1) {
+      const snapshot = Buffer.from(pixels);
+      const clear: number[] = [];
+      for (let y = 0; y < raw.info.height; y += 1) for (let x = 0; x < raw.info.width; x += 1) {
+        const index = (y * raw.info.width + x) * 4;
+        if (!snapshot[index + 3]) continue;
+        const channels = [snapshot[index]!, snapshot[index + 1]!, snapshot[index + 2]!];
+        if (Math.min(...channels) < cleanup.lightFringe.minChannel || Math.max(...channels) - Math.min(...channels) > cleanup.lightFringe.maxChroma) continue;
+        let touchesTransparency = false;
+        for (let offsetY = -1; offsetY <= 1 && !touchesTransparency; offsetY += 1) for (let offsetX = -1; offsetX <= 1; offsetX += 1) {
+          if (!offsetX && !offsetY) continue;
+          const nearX = x + offsetX;
+          const nearY = y + offsetY;
+          if (nearX < 0 || nearY < 0 || nearX >= raw.info.width || nearY >= raw.info.height || snapshot[(nearY * raw.info.width + nearX) * 4 + 3] === 0) {
+            touchesTransparency = true;
+            break;
+          }
+        }
+        if (touchesTransparency) clear.push(index);
+      }
+      if (!clear.length) break;
+      for (const index of clear) pixels.fill(0, index, index + 4);
+    }
+  }
+  for (let pass = 0; repairBoundary && pass < (cleanup.alphaErodePasses ?? 0); pass += 1) {
+    const snapshot = Buffer.from(pixels);
+    const clear: number[] = [];
+    for (let y = 0; y < raw.info.height; y += 1) for (let x = 0; x < raw.info.width; x += 1) {
+      const index = (y * raw.info.width + x) * 4;
+      if (!snapshot[index + 3]) continue;
+      let touchesTransparency = false;
+      for (let offsetY = -1; offsetY <= 1 && !touchesTransparency; offsetY += 1) for (let offsetX = -1; offsetX <= 1; offsetX += 1) {
+        if (!offsetX && !offsetY) continue;
+        const nearX = x + offsetX;
+        const nearY = y + offsetY;
+        if (nearX < 0 || nearY < 0 || nearX >= raw.info.width || nearY >= raw.info.height || snapshot[(nearY * raw.info.width + nearX) * 4 + 3] === 0) {
+          touchesTransparency = true;
+          break;
+        }
+      }
+      if (touchesTransparency) clear.push(index);
+    }
+    for (const index of clear) pixels.fill(0, index, index + 4);
   }
   const nearTransparency = (x: number, y: number): boolean => {
     for (let offsetY = -2; offsetY <= 2; offsetY += 1) for (let offsetX = -2; offsetX <= 2; offsetX += 1) {

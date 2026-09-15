@@ -9,7 +9,10 @@ describe('compileExperience', () => {
   it('compiles the prepared catch-up reading', () => {
     const result = compileExperience(moonScarExperience);
     assert.equal(result.ok, true);
-    if (result.ok) assert.equal(result.experience.moments.length, 14);
+    if (result.ok) assert.equal(result.experience.moments.length, 40);
+    const spider = compileExperience(spiderMemoryExperience);
+    assert.equal(spider.ok, true);
+    if (spider.ok) assert.equal(spider.experience.moments.length, 39);
   });
 
   it('can compile an experience into an isolated asset namespace', () => {
@@ -59,6 +62,139 @@ describe('compileExperience', () => {
     if (!result.ok) assert.ok(result.errors.some((error) => error.includes('Atmosphere region must remain inside the stage')));
   });
 
+  it('uses traversal choices to reveal private perspective before an honest public reconvergence', () => {
+    const cases = [
+      {
+        experience: spiderMemoryExperience,
+        choiceId: 'name-reading-choice',
+        privateIds: ['peter-name-private', 'mj-name-private'],
+        bottleneckId: 'name-settles',
+      },
+      {
+        experience: moonScarExperience,
+        choiceId: 'question-choice',
+        privateIds: ['rank-chun-private', 'loss-chun-private'],
+        bottleneckId: 'chun-answers',
+      },
+    ];
+
+    for (const fixture of cases) {
+      const choice = fixture.experience.moments.find((moment) => moment.id === fixture.choiceId)!;
+      assert.equal(choice.next.type, 'choice');
+      if (choice.next.type !== 'choice') continue;
+      assert.deepEqual(choice.next.options.map((option) => option.nodeId), fixture.privateIds.map((id) => {
+        if (id === 'rank-chun-private') return 'rank-question';
+        if (id === 'loss-chun-private') return 'loss-question';
+        return id;
+      }));
+      for (const privateId of fixture.privateIds) {
+        const privateMoment = fixture.experience.moments.find((moment) => moment.id === privateId)!;
+        assert.equal(privateMoment.viewpoint.kind, 'private');
+        assert.equal(privateMoment.next.type === 'goto' && privateMoment.next.nodeId, fixture.bottleneckId);
+      }
+    }
+  });
+
+  it('rejects undeclared and unharvested reader insights', () => {
+    const malformedMoments = spiderMemoryExperience.moments.map((moment) => moment.id === 'perspective-choice' && moment.next.type === 'choice'
+      ? {
+        ...moment,
+        next: {
+          ...moment.next,
+          options: moment.next.options.map((option) => option.id === 'hold-both'
+            ? { ...option, requiresInsightIds: ['missing-insight'] }
+            : option),
+        },
+      }
+      : moment);
+    const result = compileExperience({ ...spiderMemoryExperience, moments: malformedMoments });
+    assert.equal(result.ok, false);
+    if (!result.ok) {
+      assert.ok(result.errors.includes('Choice perspective-choice/hold-both requires undeclared reader insight missing-insight'));
+      assert.ok(result.errors.includes('Choice perspective-choice/hold-both requires reader insight missing-insight that cannot be learned before the gate'));
+      assert.ok(result.errors.includes('Reading variant both-truths-reading orders reader insight peter-restraint-understood that cannot be learned before it'));
+      assert.ok(result.errors.includes('Reading variant both-truths-reading orders reader insight mj-memory-boundary-understood that cannot be learned before it'));
+    }
+  });
+
+  it('rejects declared reader insights without both a learning and harvest coordinate', () => {
+    const result = compileExperience({
+      ...spiderMemoryExperience,
+      readerInsights: [...spiderMemoryExperience.readerInsights, { id: 'decorative-insight', meaning: 'Nothing downstream reads it.' }],
+    });
+    assert.equal(result.ok, false);
+    if (!result.ok) {
+      assert.ok(result.errors.includes('Reader insight decorative-insight is never learned'));
+      assert.ok(result.errors.includes('Reader insight decorative-insight is never harvested'));
+    }
+  });
+
+  it('keeps delayed reading variants public, choice-bound, and downstream', () => {
+    assert.equal(compileExperience(moonScarExperience).ok, true);
+    const privateVariants = moonScarExperience.moments.map((moment) => moment.id === 'fang-private'
+      ? {
+        ...moment,
+        readingVariants: [{ when: { kind: 'active-choice' as const, choiceNodeId: 'question-choice', optionId: 'ask-rank' }, text: 'Leaked reader knowledge.' }],
+      }
+      : moment);
+    const result = compileExperience({ ...moonScarExperience, moments: privateVariants });
+    assert.equal(result.ok, false);
+    if (!result.ok) {
+      assert.ok(result.errors.includes('Reading variants on fang-private require a public viewpoint'));
+      assert.ok(result.errors.includes('Reading variant fang-private/question-choice/ask-rank must be downstream of its chosen route'));
+    }
+
+    const missingOption = moonScarExperience.moments.map((moment) => moment.id === 'chun-answers'
+      ? {
+        ...moment,
+        readingVariants: [{ when: { kind: 'active-choice' as const, choiceNodeId: 'question-choice', optionId: 'not-an-option' }, text: 'Impossible variant.' }],
+      }
+      : moment);
+    const missing = compileExperience({ ...moonScarExperience, moments: missingOption });
+    assert.equal(missing.ok, false);
+    if (!missing.ok) assert.ok(missing.errors.includes('Reading variant chun-answers/question-choice/not-an-option references a missing choice option'));
+  });
+
+  it('rejects ambiguous persistent-insight callbacks without a combined reading', () => {
+    const moments = spiderMemoryExperience.moments.map((moment) => moment.id === 'small-defence-returns'
+      ? { ...moment, readingVariants: moment.readingVariants?.slice(0, 2) }
+      : moment);
+    const result = compileExperience({ ...spiderMemoryExperience, moments });
+    assert.equal(result.ok, false);
+    if (!result.ok) {
+      assert.ok(result.errors.includes('Reader-insight variants on small-defence-returns are ambiguous without a combined variant for mj-grip-noticed, threshold-distance-noticed'));
+    }
+  });
+
+  it('requires both traversal orders for an order-sensitive synthesis', () => {
+    const moments = spiderMemoryExperience.moments.map((moment) => moment.id === 'both-truths-reading'
+      ? { ...moment, readingVariants: moment.readingVariants?.slice(0, 1) }
+      : moment);
+    const result = compileExperience({ ...spiderMemoryExperience, moments });
+    assert.equal(result.ok, false);
+    if (!result.ok) {
+      assert.ok(result.errors.includes('Reader-insight-order variants on both-truths-reading need both traversal orders for mj-memory-boundary-understood+peter-restraint-understood'));
+    }
+  });
+
+  it('allows a reading to change camera emphasis without changing the material scene', () => {
+    assert.equal(compileExperience(spiderMemoryExperience).ok, true);
+    const synthesis = spiderMemoryExperience.moments.find((moment) => moment.id === 'both-truths-reading')!;
+    assert.deepEqual(synthesis.readingVariants?.map((variant) => variant.tableauId), [
+      'revealed-peter-appraisal',
+      'revealed-mj-appraisal',
+    ]);
+
+    const tableaux = spiderMemoryExperience.tableaux.map((tableau) => tableau.id === 'revealed-peter-appraisal'
+      ? { ...tableau, location: 'A different room' }
+      : tableau);
+    const result = compileExperience({ ...spiderMemoryExperience, tableaux });
+    assert.equal(result.ok, false);
+    if (!result.ok) {
+      assert.ok(result.errors.includes('Reading variant both-truths-reading/revealed-peter-appraisal changes material scene continuity'));
+    }
+  });
+
   it('binds each pivotal answer to a distinct actor rendition', () => {
     const spiderAnswer = spiderMemoryExperience.moments.find((moment) => moment.id === 'mj-answer')!;
     const spiderTableau = spiderMemoryExperience.tableaux.find((tableau) => tableau.id === spiderAnswer.tableauId)!;
@@ -106,6 +242,19 @@ describe('compileExperience', () => {
     assert.equal(unmask.cutIn?.framing, 'relationship-close');
     assert.deepEqual(unmask.cutIn?.representedActorIds, ['mj', 'peter-parker']);
     assert.equal(spiderMemoryExperience.moments.find((moment) => moment.id === 'unmask')?.tableauId, 'unmask-cg');
+  });
+
+  it('returns from each pivotal CG to a changed physical tableau', () => {
+    const moonScar = moonScarExperience.moments.find((moment) => moment.id === 'moon-scar')!;
+    const moonReturn = moonScarExperience.moments.find((moment) => moment.id === 'chun-hesitates')!;
+    const spiderUnmask = spiderMemoryExperience.moments.find((moment) => moment.id === 'unmask')!;
+    const spiderReturn = spiderMemoryExperience.moments.find((moment) => moment.id === 'name')!;
+    assert.equal(moonScar.next.type === 'goto' && moonScar.next.nodeId, 'chun-hesitates');
+    assert.equal(moonReturn.tableauId, 'moon-scar-aftermath');
+    assert.equal(spiderUnmask.next.type === 'goto' && spiderUnmask.next.nodeId, 'name');
+    assert.equal(spiderReturn.tableauId, 'revealed-peter-active');
+    assert.notEqual(moonScar.tableauId, moonReturn.tableauId);
+    assert.notEqual(spiderUnmask.tableauId, spiderReturn.tableauId);
   });
 
   it('rejects unreachable moments', () => {

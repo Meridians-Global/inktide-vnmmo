@@ -278,6 +278,63 @@ for (const request of requests) {
   };
 }
 
+async function acquireFaithfulActorEdit(id: string, prompt: string, referencePath: string, mirrorReference = false): Promise<void> {
+  const request: Request = { id, kind: 'isolated', aspectRatio: '3:4', prompt };
+  if (await reuseExisting(request)) return;
+  const matteRgb = matteFor(id);
+  const chroma = `#${matteRgb.map((channel) => channel.toString(16).padStart(2, '0')).join('')}`;
+  const referencePipeline = sharp(referencePath);
+  const reference = await (mirrorReference ? referencePipeline.flop() : referencePipeline)
+    .flatten({ background: chroma })
+    .png()
+    .toBuffer();
+  const generationInput = {
+    prompt,
+    image_input: [`data:image/png;base64,${reference.toString('base64')}`],
+    aspect_ratio: 'match_input_image',
+    resolution: '2K',
+    output_format: 'png',
+    safety_filter_level: 'block_only_high',
+    allow_fallback_model: false,
+  };
+  const generated = await predict(`${id}.generate`, 'google/nano-banana-pro', generationInput);
+  const generatedUrl = selectReplicateOutputUrl(generated.output);
+  const matteInput = { image: generatedUrl, background_type: 'rgba', format: 'png', reverse: false, threshold: 0 };
+  const matte = await predict(`${id}.matte`, matteModel, matteInput);
+  const transparentUrl = selectReplicateOutputUrl(matte.output);
+  const target = join(outputDirectory, `${id}.png`);
+  const prepared = await prepareLocalMatte(await download(generatedUrl), await download(transparentUrl), matteFor(id));
+  await writeFile(target, prepared.bytes);
+  assets[id] = {
+    sourcePath: `${assetRoot}/${id}.png`,
+    sha256: await fileDigest(target),
+    provenance: 'replicate',
+    predictionIds: [generated.id, matte.id],
+    generatedUrl,
+    transparentUrl,
+    matteInspection: prepared.report,
+  };
+}
+
+await acquireFaithfulActorEdit(
+  'gu-yue-chun-held-warning-v1',
+  `${style} Create one precise acting variation from the supplied canonical Gu Yue Chun image. Preserve her exact identity, face, compact braided bun, natural very-dark-brown eyes, age, full-body proportions, muted olive-grey clan robes, screen-left facing, canvas, subject scale, padding, linework, shading and palette. Change only the performance after the Moon-Scar reliquary opens and Fang Yuan refuses to touch it: her gaze lifts screen-left from the unseen vessel back toward Fang, her lips remain closed, her shoulders hold very still, and one withdrawn hand stays half-hidden close to her sleeve while the other remains relaxed. The emotion is a controlled warning mixed with newly measured respect—not relief, fear, accusation or agreement. Both feet stay level; the complete head-to-boots figure remains visible. Do not mirror, crop, zoom, rotate, change wardrobe, smile, cry, recoil, fold arms, point, touch her chin or create an attack stance. Output the isolated actor on a perfectly uniform flat #FF00FF field with no floor, cast shadow, scenery, magenta rim light or reflected magenta. ${exclusions}`,
+  join(outputDirectory, 'gu-yue-chun-neutral-v2.png'),
+);
+
+await acquireFaithfulActorEdit(
+  'fang-withheld-touch-v1',
+  `${style} Create one precise acting variation from the supplied canonical Fang Yuan image. Preserve his exact identity, face, long black hair and ornament, age, complete full-body proportions, layered charcoal-violet robes, screen-right facing, canvas, subject scale, padding, linework, shading and palette. Change only the performance at the instant he chooses not to touch the opened Moon-Scar reliquary. Both feet remain planted and level. His gaze fixes screen-right and slightly downward toward the unseen centre object. One hand has begun to emerge from its sleeve but stops at waist height with relaxed separated fingertips, visibly short of contact; the other hand remains quiet inside or beside its sleeve. His torso remains upright and controlled, with only a fractional forward inclination arrested before it becomes a reach. The emotion is ruthless patience and analytical restraint, not fear, surprise or reverence. No contact, object, pointing, clenched fist, folded arms, chin touch, combat stance, smile or theatrical gesture. Do not mirror, crop, zoom, rotate, change wardrobe, alter his height, add scenery or redesign his face. Output the isolated complete head-to-boots actor on a perfectly uniform flat #00FF66 field with no floor, cast shadow, green rim light or reflected green. ${exclusions}`,
+  fangTarget,
+);
+
+await acquireFaithfulActorEdit(
+  'fang-withheld-touch-v2',
+  `${style} Edit the supplied full-body Fang Yuan reference as one restrained acting variation. The mirrored reference owns his exact identity, face, long black hair and ornament, age, complete proportions, layered charcoal-violet robes, screen-right facing, canvas, scale, padding, linework, shading and palette. He stands on frame-left and looks horizontally screen-right, slightly down toward an unseen reliquary at centre stage. Both feet stay planted and level. One hand has emerged only to waist height and stops there: wrist soft, fingers separated and slightly curved, palm angled down, visibly withholding contact. The other hand remains quiet beside its sleeve. His head remains level, torso upright, mouth closed and expression analytically calm. Preserve the full head-to-boots figure. No screen-left gaze, contact, object, pointing, clenched fist, folded arms, chin touch, combat stance, smile, recoil or theatrical gesture. Do not crop, zoom, change wardrobe, alter height, add scenery or redesign his face. Perfectly uniform flat #00FF66 field with no floor, cast shadow, green rim light or reflected green. ${exclusions}`,
+  fangTarget,
+  true,
+);
+
 await writeFile(join(evidenceDirectory, 'acquisition.receipt.json'), `${JSON.stringify({
   schemaVersion: 1,
   productionId,
@@ -289,9 +346,23 @@ await writeFile(join(evidenceDirectory, 'acquisition.receipt.json'), `${JSON.str
     'stage plates briefed with root band, actor marks, depth boundary and dialogue-safe region',
     'provider events, inputs, outputs and byte digests retained before story admission',
   ],
-  models: { generation: model, matte: matteModel },
+  models: { generation: model, faithfulEdit: 'google/nano-banana-pro', matte: matteModel },
   requestDigests,
   assets,
+  reviews: {
+    'gu-yue-chun-held-warning-v1': {
+      status: 'candidate',
+      reason: 'Single-source reference edit preserves Chun identity, wardrobe, screen-left facing, full-body scale and controlled hand containment at the demanded post-CG warning beat; independent audience approval remains due.',
+    },
+    'fang-withheld-touch-v1': {
+      status: 'rejected',
+      reason: 'The arrested hand reads and the matte is clean, but the generated drawing faces screen-left and therefore fails the demanded frame-left inward stage coordinate.',
+    },
+    'fang-withheld-touch-v2': {
+      status: 'candidate',
+      reason: 'The repaired take starts from a mirrored composition-locked reference and targets a screen-right level eyeline, grounded feet and visibly arrested low hand; contextual review remains due.',
+    },
+  },
 }, null, 2)}\n`);
 
 console.log(JSON.stringify(assets, null, 2));

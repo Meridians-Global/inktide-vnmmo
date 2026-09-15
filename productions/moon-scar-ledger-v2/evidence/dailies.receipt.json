@@ -2,6 +2,8 @@
   "schemaVersion": 1,
   "productionId": "moon-scar-ledger-v2",
   "status": "candidate",
+  "experienceId": "moon-scar-reading-v1",
+  "experienceSha256": "62788102a1aeb7f7f1da5499fd46e84af64fb09b9fecf16679e9b8b8adc80f63",
   "viewport": {
     "width": 1035,
     "stageAspectRatio": "16:9"
@@ -26,10 +28,143 @@
       "claim": "private viewpoint and traversal choice over one fixed tableau"
     },
     {
+      "momentId": "loss-chun-private",
+      "path": "loss-chun-private.dailies.png",
+      "sha256": "cee25dc6933ce4b996631fa6cf772f252de9f0e0de1f0dd26be54bdf7b335c68",
+      "viewport": { "width": 1280, "height": 720 },
+      "claim": "the accounting route reveals Chun's private appraisal, then rejoins the same public answer without a world write"
+    },
+    {
       "momentId": "moon-scar",
       "path": "dailies/moon-moon-scar-stage.png",
       "sha256": "ca4ae623837716e4a698b0cfe6b0552147fa4ccf93481628cd06dbb2b13a85a4",
       "claim": "clean centre artifact framed by stable actors"
+    },
+    {
+      "momentId": "reliquary-reading-choice",
+      "path": "reliquary-reading-unlocked.dailies.png",
+      "sha256": "33c7048c440fca7ec77f20a6201323e2c434b19aa42f4cfa088528ac5438279d",
+      "viewport": { "width": 1035, "height": 582 },
+      "claim": "the third reading is hidden until both private appraisals have been traversed, then names its reader-only provenance"
+    },
+    {
+      "momentId": "moon-scar-synthesis",
+      "path": "moon-scar-synthesis.dailies.png",
+      "sha256": "7ac80b9946b4480d002c179b85617b12dd4fa50e0a23a535293bb50b597b4806",
+      "viewport": { "width": 1035, "height": 582 },
+      "claim": "the reader can hold leverage and warning together while neither cultivator acquires the other's private reason"
+    },
+    {
+      "momentId": "moon-scar-synthesis",
+      "path": "moon-scar-synthesis-fang-first.dailies.jpg",
+      "sha256": "e82a867befa35288ae0c1fc46b0d73d9463cdf97b47559d6ecee9992bcc5a73c",
+      "viewport": { "width": 1280, "height": 720 },
+      "claim": "after Fang's private appraisal is encountered first, leverage establishes the frame before Chun's warning revises its price"
+    },
+    {
+      "momentId": "moon-scar-synthesis",
+      "path": "moon-scar-synthesis-chun-first.dailies.jpg",
+      "sha256": "668d79c3d2f1bd37e63b4c3bb7460f1851bf5d76df13b67f714d2abee3e846d8",
+      "viewport": { "width": 1280, "height": 720 },
+      "claim": "after Chun's private appraisal is encountered first, warning establishes the frame before Fang's leverage reveals why caution cannot end the question"
+    },
+    {
+      "momentId": "chun-answers",
+      "path": "chun-answers-loss.dailies.jpg",
+      "sha256": "ca2864ad0ab019ad729afb7d6330ccc87d2fdf0df7c2c9f515d594cf0258228e",
+      "viewport": { "width": 1035, "height": 582 },
+      "claim": "the same authorized result answers Fang's selected accounting question instead of reverting to generic branch-insensitive dialogue"
+    },
+    {
+      "momentId": "fang-does-not-touch",
+      "path": "fang-does-not-touch-both.dailies.jpg",
+      "sha256": "26dabe51e88ffe0c6975bc9507730895a7b8c809bc62ae0f92748662bb557e9f",
+      "viewport": { "width": 1035, "height": 582 },
+      "claim": "the dual reading echoes after the CG through one observable restraint beat with the artifact still physically centred"
+    },
+    {
+      "momentId": "seal-order",
+      "path": "seal-order.dailies.jpg",
+      "sha256": "415646fae5bfe0e7c6a1172550c30528ae8625018390f544b47fb9b39bec1e61",
+      "viewport": { "width": 1035, "height": 582 },
+      "claim": "Fang turns interpretation into a bounded next action without resolving the larger Fate question"
+    },
+    {
+      "momentId": "fang-does-not-touch",
+      "path": "fang-does-not-touch-acting-v2.dailies.png",
+      "sha256": "f98b4f3939ae78171f8e7289f9efd7fd18254ba090af5da77c37f85d3611d57c",
+      "viewport": { "width": 1280, "height": 720 },
+      "claim": "the reference-conditioned Chun held-warning rendition preserves identity, inward facing, locked height and controlled hand containment beside Fang's post-CG restraint"
+    },
+    {
+      "momentId": "chun-answers",
+      "path": "chun-answers-fixed-aperture.dailies.png",
+      "sha256": "2028bd23c0984687b31d7283677000329f95fd63d9a45d8d28153b3b1df776cf",
+      "viewport": { "width": 1035, "height": 582 },
+      "claim": "the same fixed-aperture repair survives transport focus in the companion Experience without shifting the context or dialogue rails"
+    },
+    {
+      "momentId": "inspection-returns",
+      "path": "inspection-returns-both.dailies.png",
+      "sha256": "8e16195497fd5513fa8835f38a8cd1b4e4948942692fc637d6e52ee89327fea6",
+      "viewport": { "width": 1280, "height": 720 },
+      "claim": "after both inspection detours, the public artifact frame combines the crescent failure pattern with Chun's covered-hand caution while keeping the artifact dominant"
+    },
+    {
+      "momentId": "inspection-returns",
+      "path": "inspection-returns-acting-v2.dailies.png",
+      "sha256": "a07895891943b472b3c45f47b856bddb9bc63c9025215672383f10c1fdb4c0ed",
+      "viewport": { "width": 1280, "height": 720 },
+      "claim": "the early inspection callback now reuses Chun's identity-locked held-warning rendition at full emphasis, then the same drawing returns after the pivotal CG"
+    },
+    {
+      "momentId": "fang-leverage-private",
+      "path": "fang-leverage-appraisal-projection-v1.dailies.png",
+      "sha256": "13c9f34015a0c026e468a7778ec5915fd0cb4efad75beb5887109f64f62e14ba",
+      "viewport": { "width": 1034, "height": 582 },
+      "claim": "Fang's exact neutral rendition is reused in close projection while Chun and the sealed substrate preserve the unchanged cellar geography"
+    },
+    {
+      "momentId": "chun-warning-private",
+      "path": "chun-warning-appraisal-projection-v1.dailies.png",
+      "sha256": "c1a9ce002b498ee5fb08006eacc02e20e1c11f41cb5c6929bb3aceb6dd7ca768",
+      "viewport": { "width": 1034, "height": 582 },
+      "claim": "Chun's exact held-warning rendition is reused in close projection while Fang and the sealed substrate preserve the unchanged cellar geography"
+    },
+    {
+      "momentId": "fang-conduct-forecast",
+      "path": "fang-conduct-forecast-choice.dailies.jpg",
+      "sha256": "f03204227369ac400d09620597706889d8b578304f748dc608efcc34eed26031",
+      "viewport": { "width": 1280, "height": 720 },
+      "claim": "the reader is explicitly asked to forecast Fang's conduct after leverage, warning, and the exposed seam are visible together"
+    },
+    {
+      "momentId": "conduct-prediction-settles",
+      "path": "prediction-seize-corrected.dailies.jpg",
+      "sha256": "302c87dc86ec8c9085b55f7be7646da9b2211a28ce3075e1a055d087e8206dc9",
+      "viewport": { "width": 1280, "height": 720 },
+      "claim": "a seizure prediction is corrected by Fang's unchanged still-hand event and reinterpreted as patient possession"
+    },
+    {
+      "momentId": "conduct-prediction-settles",
+      "path": "prediction-preserve-confirmed.dailies.jpg",
+      "sha256": "6dec0cf2c22df126bf4cee885ba02aa9e4afd31a3e766417ab94356f6669a5b8",
+      "viewport": { "width": 1280, "height": 720 },
+      "claim": "a preservation prediction is confirmed while the payoff sharpens Fang's motive from caution into long-horizon advantage"
+    },
+    {
+      "momentId": "fang-does-not-touch",
+      "path": "fang-withheld-touch-v2.dailies.png",
+      "sha256": "d0c17d173ee6a7760466460631fffebb08e519b0f5a4f6f9a3ae64b0f7905e75",
+      "viewport": { "width": 1280, "height": 720 },
+      "claim": "the generated decision rendition gives Fang a screen-right stopped reach, grounded scale and visible distance from the centred reliquary while Chun holds warning on the opposite mark"
+    },
+    {
+      "momentId": "seal-order",
+      "path": "seal-order-constraint-v1.dailies.png",
+      "sha256": "29576c9ebe43930860b6408b82f346b02654a8c3a55f0a2da7f02d8eb035c3e9",
+      "viewport": { "width": 1280, "height": 720 },
+      "claim": "the three-minute continuation turns the reader's chosen safeguard into a distinct public reading while the fixed order preserves both evidence and split custody"
     }
   ]
 }

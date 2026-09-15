@@ -15,6 +15,12 @@ export const FigurePreparationSchema = z.object({
     alphaFloor: z.number().int().min(0).max(254),
     edgeAlphaCeiling: z.number().int().min(1).max(255),
     channelMargin: z.number().int().min(0).max(255),
+    lightFringe: z.object({
+      minChannel: z.number().int().min(0).max(255),
+      maxChroma: z.number().int().min(0).max(255),
+      passes: z.number().int().min(1).max(4),
+    }).strict().optional(),
+    alphaErodePasses: z.number().int().min(1).max(8).optional(),
   }).strict().optional(),
 }).strict();
 export type FigurePreparation = z.infer<typeof FigurePreparationSchema>;
@@ -112,17 +118,43 @@ const EndSchema = z.object({ type: z.literal('end') }).strict();
 const ChoiceSchema = z.object({
   type: z.literal('choice'),
   posture: z.literal('traversal'),
+  weight: z.enum(['texture', 'fork']),
+  purpose: z.enum(['observe', 'interpret', 'predict', 'decide']),
   prompt: z.string().min(1),
   options: z.array(z.object({
     id: z.string().min(1),
     label: z.string().min(1),
     consequence: z.string().min(1),
     nodeId: z.string().min(1),
+    grantsInsightIds: z.array(z.string().min(1)).min(1).optional(),
+    requiresInsightIds: z.array(z.string().min(1)).min(1).optional(),
   }).strict()).min(2).max(4),
 }).strict();
 
 export const NextSchema = z.discriminatedUnion('type', [GotoSchema, ChoiceSchema, EndSchema]);
 export type Next = z.infer<typeof NextSchema>;
+
+const ReadingVariantWhenSchema = z.discriminatedUnion('kind', [
+  z.object({
+    kind: z.literal('active-choice'),
+    choiceNodeId: z.string().min(1),
+    optionId: z.string().min(1),
+  }).strict(),
+  z.object({
+    kind: z.literal('reader-insights'),
+    insightIds: z.array(z.string().min(1)).min(1),
+  }).strict(),
+  z.object({
+    kind: z.literal('reader-insight-order'),
+    insightIds: z.array(z.string().min(1)).length(2),
+  }).strict(),
+]);
+
+const ReadingVariantSchema = z.object({
+  when: ReadingVariantWhenSchema,
+  text: z.string().min(1),
+  tableauId: z.string().min(1).optional(),
+}).strict();
 
 export const MomentSchema = z.object({
   id: z.string().min(1),
@@ -133,6 +165,7 @@ export const MomentSchema = z.object({
   label: z.string().min(1).optional(),
   speakerId: z.string().min(1).optional(),
   text: z.string().min(1),
+  readingVariants: z.array(ReadingVariantSchema).min(1).max(4).optional(),
   voiceAssetId: z.string().min(1).optional(),
   cueAssetIds: z.array(z.string().min(1)).default([]),
   performanceBeat: z.object({
@@ -143,6 +176,11 @@ export const MomentSchema = z.object({
   next: NextSchema,
 }).strict();
 export type Moment = z.infer<typeof MomentSchema>;
+
+const ReaderInsightSchema = z.object({
+  id: z.string().min(1),
+  meaning: z.string().min(1),
+}).strict();
 
 export const ExperienceSchema = z.object({
   schemaVersion: z.literal(2),
@@ -158,6 +196,7 @@ export const ExperienceSchema = z.object({
     note: z.string().min(1),
   }).strict(),
   startNodeId: z.string().min(1),
+  readerInsights: z.array(ReaderInsightSchema),
   assets: z.array(AssetSchema),
   actors: z.array(ActorSchema),
   tableaux: z.array(TableauSchema),

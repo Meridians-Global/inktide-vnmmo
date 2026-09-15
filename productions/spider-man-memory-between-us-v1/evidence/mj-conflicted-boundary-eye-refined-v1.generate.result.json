@@ -1,0 +1,38 @@
+{
+  "id": "9qc8n72915rmt0d0jhvrmbhfhw",
+  "model": "google/nano-banana-pro",
+  "version": "hidden",
+  "input": {
+    "allow_fallback_model": false,
+    "aspect_ratio": "match_input_image",
+    "image_input": [
+      "data:image/png;base64,...",
+      "https://replicate.delivery/xezq/vZzLODAcEW5XFFnoHs8ntZS8su1wOV2Br0I2qVJyHSkorKzF/tmpds61qwa6.png"
+    ],
+    "output_format": "png",
+    "prompt": "Edit reference one in place as a precise acting-rendition repair. Reference one owns every compositional pixel: retain its exact 3:4 canvas, complete head-to-boots figure, subject position, scale, padding, body proportions, screen-right head direction, softened but self-possessed boundary pose, released left hand, right hand near the jacket, wardrobe, linework, shading and colors. Reference two owns only MJ's canonical facial identity and anatomically coherent natural dark-brown eyes. Transfer that eye anatomy and identity consistency into reference one's face while preserving reference one's parted lips and conflicted, compassionate boundary expression. Both eyes must share the same screen-right eyeline toward Peter. Do not mirror, crop, zoom, rotate, change pose, close her mouth, move her hands, or redesign clothing. Output the same complete actor on a perfectly uniform #00FF66 chroma field. No text, letters, captions, logos, border, UI, watermark, duplicate body, extra limbs, malformed hands, chibi anatomy, glossy 3D, photorealism, thick pixel blocks, or anonymous people.",
+    "resolution": "2K",
+    "safety_filter_level": "block_only_high"
+  },
+  "logs": "Matched input image aspect ratio 0.81 to 4:5\nNo sid\nGenerating image...\nTokens: 2739\nGenerated image in 21.83 seconds\n",
+  "output": "https://replicate.delivery/xezq/U910uIdIwn7eEaMeFwfkER8aplrTvrfafZMarvBVvf0nztKzF/tmpgk2i96uq.png",
+  "data_removed": false,
+  "error": null,
+  "source": "api",
+  "status": "succeeded",
+  "created_at": "2026-09-12T07:14:00.585Z",
+  "started_at": "2026-09-12T07:14:00.6620434Z",
+  "completed_at": "2026-09-12T07:14:23.113410214Z",
+  "urls": {
+    "cancel": "https://api.replicate.com/v1/predictions/9qc8n72915rmt0d0jhvrmbhfhw/cancel",
+    "get": "https://api.replicate.com/v1/predictions/9qc8n72915rmt0d0jhvrmbhfhw",
+    "stream": "https://stream.replicate.com/v1/files/jbxs-wqxdeeajzsfmadvfqes6sdpt2rc24ufnontl454xt6itlg4g7q4q",
+    "web": "https://replicate.com/p/9qc8n72915rmt0d0jhvrmbhfhw"
+  },
+  "metrics": {
+    "image_output_count": 1,
+    "predict_time": 22.451366814,
+    "resolution_target": "2K",
+    "total_time": 22.528410214
+  }
+}

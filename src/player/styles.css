@@ -6,16 +6,32 @@
 }
 
 * { box-sizing: border-box; }
-html, body, #app { min-width: 320px; min-height: 100%; margin: 0; }
-body { min-height: 100vh; display: grid; place-items: center; background: radial-gradient(circle at 50% 10%, #171d29 0%, #07090e 60%); }
+html, body { width: 100%; height: 100%; min-width: 320px; margin: 0; overflow: hidden; }
+body { background: radial-gradient(circle at 50% 10%, #171d29 0%, #07090e 60%); }
+#app {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  min-width: 320px;
+  overflow: hidden;
+  place-items: center;
+}
 button { font: inherit; }
 
-.reader-shell { width: min(100vw, calc(100vh * 16 / 9), 1600px); }
+.reader-shell {
+  width: min(100%, calc(100dvh * 16 / 9), 1600px);
+  max-width: 100%;
+  max-height: 100dvh;
+  contain: layout paint;
+}
 .stage {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 9;
-  overflow: hidden;
+  /* A VN stage is a fixed camera aperture, not a scroll container. `hidden`
+     still permits focus-driven scrolling, which displaced every absolute
+     layer when a transport control received focus. */
+  overflow: clip;
   background: #111722;
   outline: none;
   box-shadow: 0 26px 80px rgba(0,0,0,.65);
@@ -23,6 +39,9 @@ button { font: inherit; }
 }
 .backdrop { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; }
 .plate-scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(4,7,13,.36) 0%, rgba(4,7,13,.04) 38%, rgba(4,7,13,.18) 72%, rgba(4,7,13,.7) 100%); }
+.reader-shell[data-viewpoint="private"][data-pov-side="left"] .plate-scrim { background: radial-gradient(ellipse 47% 78% at 29% 43%, transparent 0 48%, rgba(6,7,14,.28) 78%, rgba(4,5,11,.5) 100%), linear-gradient(180deg, rgba(4,7,13,.3), rgba(4,7,13,.08) 48%, rgba(4,7,13,.72)); }
+.reader-shell[data-viewpoint="private"][data-pov-side="right"] .plate-scrim { background: radial-gradient(ellipse 47% 78% at 71% 43%, transparent 0 48%, rgba(6,7,14,.28) 78%, rgba(4,5,11,.5) 100%), linear-gradient(180deg, rgba(4,7,13,.3), rgba(4,7,13,.08) 48%, rgba(4,7,13,.72)); }
+.reader-shell[data-viewpoint="private"][data-pov-side="center"] .plate-scrim { background: radial-gradient(ellipse 54% 78% at 50% 43%, transparent 0 48%, rgba(6,7,14,.3) 80%, rgba(4,5,11,.52) 100%), linear-gradient(180deg, rgba(4,7,13,.3), rgba(4,7,13,.08) 48%, rgba(4,7,13,.72)); }
 .cut-in-wrap { position: absolute; inset: 0; z-index: 1; overflow: hidden; }
 .cut-in-wrap::after { content: ""; position: absolute; inset: 0; pointer-events: none; box-shadow: inset 0 0 clamp(32px, 7vw, 112px) rgba(5,5,12,.52); background: linear-gradient(180deg, rgba(10,7,18,.1), transparent 54%, rgba(7,7,15,.5)); }
 .cut-in { width: 100%; height: 100%; object-fit: cover; object-position: 50% 46%; }
@@ -65,6 +84,7 @@ button { font: inherit; }
 .eyebrow, .moment-label, .viewpoint { font: 600 clamp(8px, .72vw, 13px)/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .2em; text-transform: uppercase; color: rgba(225,232,242,.72); }
 .location { font: 650 clamp(11px, 1vw, 18px)/1.15 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .08em; text-transform: uppercase; }
 .viewpoint { padding: 8px 11px; border: 1px solid rgba(210,222,239,.28); background: rgba(5,9,17,.42); backdrop-filter: blur(10px); }
+.reader-shell[data-viewpoint="private"] .viewpoint { color: rgba(241,216,167,.88); border-color: rgba(215,183,116,.42); background: rgba(15,10,19,.52); }
 
 .figures { position: absolute; inset: 0; z-index: 3; }
 .figure {
@@ -80,7 +100,7 @@ button { font: inherit; }
 }
 .figure-active { opacity: 1; filter: drop-shadow(0 14px 10px rgba(0,0,0,.46)) brightness(1.06); z-index: 3; }
 .figure-supporting { opacity: .62; filter: drop-shadow(0 14px 10px rgba(0,0,0,.5)) brightness(.72) saturate(.78); z-index: 2; }
-.figure-recessed { opacity: .38; filter: drop-shadow(0 14px 10px rgba(0,0,0,.55)) brightness(.52) saturate(.62); z-index: 1; }
+.figure-recessed { opacity: .5; filter: drop-shadow(0 14px 10px rgba(0,0,0,.55)) brightness(.64) saturate(.72); z-index: 1; }
 .figure-projection-three-quarter { bottom: -20%; }
 .figure-projection-portrait { bottom: -47%; }
 
@@ -99,9 +119,9 @@ button { font: inherit; }
   min-height: 112px;
   padding: clamp(14px, 1.5vw, 28px) clamp(16px, 2.1vw, 38px) clamp(42px, 4vw, 64px);
   border: 1px solid rgba(191,209,230,.6);
-  background: linear-gradient(135deg, rgba(7,12,21,.88), rgba(13,18,29,.76));
+  background: linear-gradient(135deg, rgba(7,12,21,.72), rgba(13,18,29,.6));
   box-shadow: 0 16px 52px rgba(0,0,0,.5), inset 0 1px rgba(255,255,255,.08);
-  backdrop-filter: blur(14px) saturate(1.1);
+  backdrop-filter: blur(16px) saturate(1.08);
 }
 .text-copy { max-width: 72ch; }
 .moment-label { display: block; margin-bottom: 4px; color: #d7b774; }
@@ -127,7 +147,7 @@ button { font: inherit; }
   padding: clamp(18px, 2.2vw, 36px);
   overflow: auto;
   border: 1px solid rgba(202,215,232,.48);
-  background: rgba(6,10,18,.9);
+  background: rgba(6,10,18,.78);
   box-shadow: 0 24px 70px rgba(0,0,0,.72);
   backdrop-filter: blur(16px);
 }
@@ -157,6 +177,8 @@ button { font: inherit; }
 .choice-option:hover, .choice-option:focus-visible { border-color: #d7b774; background: rgba(215,183,116,.1); outline: none; }
 .choice-option strong { font: 520 clamp(13px, 1.1vw, 19px)/1.3 Georgia, serif; }
 .choice-option span { color: rgba(224,231,240,.62); font-size: clamp(10px, .78vw, 13px); }
+.choice-texture { border-color: rgba(202,215,232,.42); background: linear-gradient(145deg, rgba(9,14,24,.88), rgba(14,18,28,.78)); }
+.choice-texture .choice-posture { color: rgba(215,183,116,.72); }
 .backlog-layer { inset: 8% 16% 12%; max-height: none; }
 .backlog-entry { padding: 12px 0; border-top: 1px solid rgba(255,255,255,.08); }
 .backlog-entry strong { color: #d7b774; font: 600 11px/1.2 ui-monospace, monospace; letter-spacing: .12em; text-transform: uppercase; }
@@ -164,8 +186,8 @@ button { font: inherit; }
 .source-note { display: none; }
 
 @media (max-width: 720px) {
-  body { align-items: start; }
-  .reader-shell { width: 100vw; }
+  #app { align-items: start; }
+  .reader-shell { width: 100%; }
   .text-rail { left: 2%; right: 2%; bottom: 2%; height: 31%; padding: 9px 12px 36px; }
   .line { font-size: clamp(11px, 3.2vw, 15px); line-height: 1.32; }
   .speaker { font-size: 9px; }

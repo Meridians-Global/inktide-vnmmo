@@ -1,0 +1,35 @@
+{
+  "id": "5pkwbzy24xrmr0d0kxgts1pnxg",
+  "model": "bytedance/seedream-4.5",
+  "version": "hidden",
+  "input": {
+    "aspect_ratio": "16:9",
+    "image_input": [],
+    "max_images": 1,
+    "prompt": "One empty interior environment painting for a modern dramatic animated film: the dry hallway outside a modest New York apartment after midnight. Smooth high-resolution 2D anime illustration with refined tapered linework, nuanced surfaces, cinematic cool-blue window light, restrained warm ceiling lamps, and natural continuous curves. Straight-on eye-level lens. Broad level dry floor in the near foreground, closed apartment doors along both walls, and one stairwell at the distant centre. The weather is conveyed only by soft blue night light and blurred city lights beyond closed glass; do not draw rain streaks, drops, water, puddles, reflections, particles, snow or mist anywhere. No pixel-art blocks or stair-stepped edges. No character, person, body, face, portrait, phone, hand, silhouette, character shadow, box, interface, subtitle, writing, letters, numbers, signs, logos, frame, diagram, prop close-up or magic. Output one unoccupied full-frame 16:9 architectural painting and nothing else.",
+    "sequential_image_generation": "disabled",
+    "size": "2K"
+  },
+  "logs": "Generating 2560x1440 image with aspect ratio 16:9 at 2K resolution\nGenerating...\nGenerated in 14.8sec\n",
+  "output": [
+    "https://replicate.delivery/xezq/er48cJDNFAWzeEtfYSpTweH5ulgDDd1NEeRfKrIPY9jnK5VzF/tmpmwj6l75m.jpg"
+  ],
+  "data_removed": false,
+  "error": null,
+  "source": "api",
+  "status": "succeeded",
+  "created_at": "2026-09-14T10:06:19.175Z",
+  "started_at": "2026-09-14T10:06:19.21405143Z",
+  "completed_at": "2026-09-14T10:06:34.286167193Z",
+  "urls": {
+    "cancel": "https://api.replicate.com/v1/predictions/5pkwbzy24xrmr0d0kxgts1pnxg/cancel",
+    "get": "https://api.replicate.com/v1/predictions/5pkwbzy24xrmr0d0kxgts1pnxg",
+    "stream": "https://stream.replicate.com/v1/files/jbxs-ilouuacnyq2m5bblwc2tefduni6kh7rqqut5av3sgothpvqb6laa",
+    "web": "https://replicate.com/p/5pkwbzy24xrmr0d0kxgts1pnxg"
+  },
+  "metrics": {
+    "image_output_count": 1,
+    "predict_time": 15.072115763,
+    "total_time": 15.111167193
+  }
+}

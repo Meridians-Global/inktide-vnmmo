@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "productionId": "spider-man-memory-between-us-v1",
   "experienceId": "spider-memory-between-us-v1",
-  "experienceSha256": "1dcf56de0082452b5c8954fe79ff510ba4582762e76eb48be5fdb7b570cc5762",
+  "experienceSha256": "f6429adbcdb9b17d3f4e2c820074e668680d6bf62bd2ed859515f588cd11632d",
   "viewport": {
     "width": 1600,
     "height": 900
@@ -22,6 +22,167 @@
       "momentId": "perspective-choice",
       "file": "choice.dailies.png",
       "sha256": "856f2b3d8754ce0a7c459360d762156fe9ceee2e1995814565aba5a258df7c09"
+    },
+    {
+      "momentId": "name-reading-choice",
+      "file": "name-reading-choice.dailies.png",
+      "sha256": "8a88c64a577eb721ab2526c2ea3c41b0e90c4eeb98b4c18d0a1d952bf66e3b30",
+      "viewport": { "width": 1280, "height": 720 },
+      "claim": "a low-consequence attention choice exposes either private history before both readings rejoin the same public room"
+    },
+    {
+      "momentId": "peter-name-private",
+      "file": "peter-name-private.dailies.png",
+      "sha256": "0bd869001b9f4437f47f1356247b97d6c9d0ad91a26f95920f1e702479e954a5",
+      "viewport": { "width": 1280, "height": 720 },
+      "claim": "Peter's private reading keeps his revealed identity active while MJ remains spatially present but recessed"
+    },
+    {
+      "momentId": "peter-restraint",
+      "file": "peter-restraint.dailies.png",
+      "sha256": "3bb5d2bfce503a93f9e3aec738a3454fb5402a34582b94cc997bcc7f961c8d6f",
+      "viewport": { "width": 1035, "height": 1119 },
+      "claim": "reference-edited natural eyes retain full-body scale and inward eyeline behind a translucent fixed reader rail"
+    },
+    {
+      "momentId": "mj-answer",
+      "file": "mj-answer-refined.dailies.png",
+      "sha256": "64832d403443e246c8361236184749f2400efb6a377f6d56f3ef5cd41c39940d",
+      "viewport": { "width": 1280, "height": 720 },
+      "claim": "conflicted-boundary expression retains the released-hand pose, inward eyeline and natural eyes"
+    },
+    {
+      "momentId": "ride-home",
+      "file": "ride-home-refined.dailies.png",
+      "sha256": "d68671b506e67732f40411b95e5e862943aec2ae01a403c6e452b3ffe451cd81",
+      "viewport": { "width": 1280, "height": 720 },
+      "claim": "reluctant-trust after-state retains its open-handed silhouette, inward eyeline and natural eyes"
+    },
+    {
+      "momentId": "perspective-choice",
+      "file": "perspective-choice-unlocked.dailies.png",
+      "sha256": "1425f6c3f31a8c5b93e3ba193c8dde5ddef523803b656b172175f174c1307d59",
+      "viewport": { "width": 1035, "height": 582 },
+      "claim": "the synthesis option is absent on first visit and appears only after the reader has traversed both private perspective detours"
+    },
+    {
+      "momentId": "both-truths-reading",
+      "file": "both-truths-reading.dailies.png",
+      "sha256": "f19838cb5723bceeaf85ad87bcbc49961931d7644727d0d732e4e302036cbbb2",
+      "viewport": { "width": 1035, "height": 582 },
+      "claim": "the reader may synthesize Peter's love and MJ's boundary without leaking either private reading into the characters"
+    },
+    {
+      "momentId": "both-truths-reading",
+      "file": "both-truths-peter-first.dailies.jpg",
+      "sha256": "df6f8a15e7908b2c75b2342b9c2a9438b691e433afdb7ef41b26467b377d54b9",
+      "viewport": { "width": 1035, "height": 1119 },
+      "claim": "after Peter's private reading is encountered first, the synthesis names love's cost before MJ's boundary revises what that cost can authorize"
+    },
+    {
+      "momentId": "both-truths-reading",
+      "file": "both-truths-mj-first.dailies.jpg",
+      "sha256": "6bb42411f4bf40d280a1154640b56a381be7139419a06b90017358a4dafd6d2a",
+      "viewport": { "width": 1035, "height": 1119 },
+      "claim": "after MJ's private reading is encountered first, the synthesis names memory's absence before Peter's restraint complicates it"
+    },
+    {
+      "momentId": "name-settles",
+      "file": "name-settles-mj-reading.dailies.jpg",
+      "sha256": "9fcfc9bb77c734bb462ced9589ba8ff3eb0f872bc3a3f37e39f0c1aefc7ea1eb",
+      "viewport": { "width": 1280, "height": 720 },
+      "claim": "MJ's earlier attention route receives a delayed public callback after reconvergence without changing the room or either actor's knowledge"
+    },
+    {
+      "momentId": "shared-silence",
+      "file": "shared-silence-both.dailies.jpg",
+      "sha256": "6c277003efdec64e262903bec3bfc1fbf15c56c0d15253771cb019ffc6db4612",
+      "viewport": { "width": 1280, "height": 720 },
+      "claim": "the unlocked synthesis route returns as a distinct later reading of the same silence"
+    },
+    {
+      "momentId": "peter-offers-distance",
+      "file": "peter-offers-distance.dailies.jpg",
+      "sha256": "dbccb3f8c1a4b6c6e9423cd50fb96429fc1d8b5a38b567047916a91e12f469c7",
+      "viewport": { "width": 1280, "height": 720 },
+      "claim": "Peter converts restraint into an explicit choice for MJ while both actors remain grounded in the stable two-shot"
+    },
+    {
+      "momentId": "peter-offers-distance",
+      "file": "peter-offers-distance-acting-v2.dailies.png",
+      "sha256": "001d5b7eb8119b94c7e97f88068c74cf61cc52faf59974bcde59bd443fc5244a",
+      "viewport": { "width": 1280, "height": 720 },
+      "claim": "the reference-conditioned MJ listening rendition preserves identity, full-body scale, inward eyeline and a restrained hand release at the exact moment Peter returns the choice to her"
+    },
+    {
+      "momentId": "mj-answer",
+      "file": "mj-answer-fixed-aperture.dailies.png",
+      "sha256": "f60a42fa7010b8deab7ad96e6ab7a1827ed6acaf0f9d96823834d6ee7c032e1e",
+      "viewport": { "width": 1280, "height": 720 },
+      "claim": "transport focus cannot scroll the fixed camera aperture; context, actors, dialogue and controls remain inside the 16:9 stage after Next and Back"
+    },
+    {
+      "momentId": "small-defence-returns",
+      "file": "small-defence-returns-both.dailies.png",
+      "sha256": "b6bae52b7f2cc476b7e39b4fa93f4a9249ba02a9d9fc29a461d4d3a59951f813",
+      "viewport": { "width": 1035, "height": 582 },
+      "claim": "after both early observational detours, one later public frame recalls Peter's open exit and MJ's released grip without changing character knowledge or world state"
+    },
+    {
+      "momentId": "small-defence-returns",
+      "file": "small-defence-returns-acting-v2.dailies.png",
+      "sha256": "618855a42dd14e2397fe96298f52951da20bf023630d58a36ecd3153c6aee200",
+      "viewport": { "width": 1035, "height": 1119 },
+      "claim": "the delayed physical callback now binds the identity-locked released-hand rendition itself, with MJ and Peter both fully present at the public payoff"
+    },
+    {
+      "momentId": "peter-restraint",
+      "file": "peter-restraint-appraisal-projection-v1.dailies.png",
+      "sha256": "b4c303c9b688d968317c66322e38b8af9c68ea3037deceddaf9d923a9f061f79",
+      "viewport": { "width": 1034, "height": 582 },
+      "claim": "Peter's exact revealed rendition is reused as the close visual subject for private restraint while MJ remains recessed in the unchanged apartment"
+    },
+    {
+      "momentId": "mj-boundary-private",
+      "file": "mj-boundary-appraisal-projection-v1.dailies.png",
+      "sha256": "5239e3feffca39946a873fdef78324b8a551268b327f98222856331f3223fb4c",
+      "viewport": { "width": 1034, "height": 582 },
+      "claim": "MJ's exact conflicted-boundary rendition is reused as the close visual subject while Peter remains recessed in the unchanged apartment"
+    },
+    {
+      "momentId": "restraint-forecast",
+      "file": "restraint-forecast-choice.dailies.jpg",
+      "sha256": "7567e6e29a5f2673682d458c6b729e0b856a648f776c7190dc43cf6ddb7c0ae0",
+      "viewport": { "width": 1280, "height": 720 },
+      "claim": "the reader is explicitly asked to forecast Peter's conduct after learning how restraint and boundary operate"
+    },
+    {
+      "momentId": "peter-offers-distance",
+      "file": "prediction-retreat-corrected.dailies.jpg",
+      "sha256": "92aef5556e47ad29cf7fe235f938acca2471a81fdfaa3eebdbc82498424bbed7",
+      "viewport": { "width": 1280, "height": 720 },
+      "claim": "a retreat prediction is corrected by the same authored offer when Peter looks toward the exit and remains present"
+    },
+    {
+      "momentId": "peter-offers-distance",
+      "file": "prediction-choice-confirmed.dailies.jpg",
+      "sha256": "ca4216d70a01c47fba36df782756fb96f25b0ff86131643a3d1419985fd0f6c7",
+      "viewport": { "width": 1280, "height": 720 },
+      "claim": "a returned-choice prediction is confirmed by the same authored offer without changing MJ's eventual answer"
+    },
+    {
+      "momentId": "peter-offers-distance",
+      "file": "peter-choice-returned-staying-v3.dailies.png",
+      "sha256": "534d599aa8855159714777fa01849e363cc2d29617b48e42ff1d3f18aaadd8b4",
+      "viewport": { "width": 1280, "height": 720 },
+      "claim": "the generated decision rendition makes Peter's planted presence, level eyeline and low open hand visible when he returns the choice to MJ; a residual light contour keeps the take at candidate"
+    },
+    {
+      "momentId": "hallway-threshold",
+      "file": "hallway-threshold-v1.dailies.png",
+      "sha256": "a5ded3802932ce8864f511483d775b062cc689f82b01a1921296fd02e11212bc",
+      "viewport": { "width": 1280, "height": 720 },
+      "claim": "the three-minute continuation crosses into a second clean set while preserving exact actor heights, inward eyelines, the fixed dialogue rail and a decision-specific public callback"
     }
   ],
   "review": "../PRODUCTION_REVIEW.md"
