@@ -1,0 +1,1384 @@
+{
+  "schemaVersion": 1,
+  "productionId": "spider-man-memory-between-us-v1",
+  "experienceId": "spider-memory-between-us-v1",
+  "experienceSha256": "f6429adbcdb9b17d3f4e2c820074e668680d6bf62bd2ed859515f588cd11632d",
+  "viewport": {
+    "width": 1600,
+    "height": 900
+  },
+  "capturedAt": "2026-09-15T22:04:21.509Z",
+  "consoleErrors": [],
+  "frames": [
+    {
+      "frameId": "rain-location",
+      "momentId": "rain-location",
+      "tableauId": "apartment-empty",
+      "reading": "base",
+      "file": "auto-dailies/rain-location.png",
+      "sha256": "fa73dde2c89e884d3eb91219423382b5c5072896093eb417b7d41eaf604508dc",
+      "route": [],
+      "insightIds": [],
+      "availableOptionIds": [],
+      "textSha256": "78914e1c50cbdee41413ef27a00e94e276a1b02fc8679b4079082b0c7f796da2",
+      "steps": 0
+    },
+    {
+      "frameId": "distance",
+      "momentId": "distance",
+      "tableauId": "masked-two-shot",
+      "reading": "base",
+      "file": "auto-dailies/distance.png",
+      "sha256": "4584fa3f19bdbc2ec06412a8febb7231a2f7654a8b75c04d27def137d89aef46",
+      "route": [],
+      "insightIds": [],
+      "availableOptionIds": [],
+      "textSha256": "ba7092cf3f72fd5b6b3a0f4b21a25387379a53b8581dba4854e73ef5160b9ff3",
+      "steps": 1
+    },
+    {
+      "frameId": "room-reading-choice",
+      "momentId": "room-reading-choice",
+      "tableauId": "masked-two-shot",
+      "reading": "base",
+      "file": "auto-dailies/room-reading-choice.png",
+      "sha256": "d0af7d1e0786856ff02ffc148070f0255194fae98d1c004b81f11dc4d2d1bfad",
+      "route": [],
+      "insightIds": [],
+      "availableOptionIds": [
+        "watch-threshold",
+        "watch-mj-grip"
+      ],
+      "textSha256": "fc0b1b44d0a538a5517849207bf2115edc5439f2cc6810c4e6c83585321a98a0",
+      "steps": 2
+    },
+    {
+      "frameId": "threshold-reading",
+      "momentId": "threshold-reading",
+      "tableauId": "masked-peter-active",
+      "reading": "base",
+      "file": "auto-dailies/threshold-reading.png",
+      "sha256": "6dbd6c0b6aeffb5fedd594059963eb04beebecde895c536a780d1ca0fc681722",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "70c19df362496b8ef014f386deaf9ad1afcc0ba951dcf30d9cdc3f2e0d6f4d81",
+      "steps": 3
+    },
+    {
+      "frameId": "mj-grip-reading",
+      "momentId": "mj-grip-reading",
+      "tableauId": "masked-two-shot",
+      "reading": "base",
+      "file": "auto-dailies/mj-grip-reading.png",
+      "sha256": "b22243350df9640bec024d54fa5781765fc206bb7fe130e0adb216be41d1f7bb",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-mj-grip"
+        }
+      ],
+      "insightIds": [
+        "mj-grip-noticed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "b47b3cc66ec55104b763d3e323b1842fc20db052f3f06915152bff725aca5e5b",
+      "steps": 3
+    },
+    {
+      "frameId": "mj-boundary",
+      "momentId": "mj-boundary",
+      "tableauId": "masked-two-shot",
+      "reading": "base",
+      "file": "auto-dailies/mj-boundary.png",
+      "sha256": "353ea59f0572221c3a1f9f05da2b7cb3d0a843acc42214f92946831ce72c00b1",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "b91e38ccc91519c33b74d042cc4cd67a43b0bc664cff20d35066c017f3e6b8af",
+      "steps": 4
+    },
+    {
+      "frameId": "peter-mask-thought",
+      "momentId": "peter-mask-thought",
+      "tableauId": "masked-peter-active",
+      "reading": "base",
+      "file": "auto-dailies/peter-mask-thought.png",
+      "sha256": "1f795da1675afa9b1279a80a9fcbd36c971eb66aae53ed0e7ebe98dcd3975dda",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "52099ecd210c51cdfbc1874eb2f4b019c1c8a76db767e5c536c2e8dfdc8a1733",
+      "steps": 5
+    },
+    {
+      "frameId": "peter-protection",
+      "momentId": "peter-protection",
+      "tableauId": "masked-peter-active",
+      "reading": "base",
+      "file": "auto-dailies/peter-protection.png",
+      "sha256": "10ab006d9ad323c706b57228412d6bff9ff907512be406b40795604b62a4c90b",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "9587075440108687c7208bc4fbc764bd987e99226da93d33ab220c5902191036",
+      "steps": 6
+    },
+    {
+      "frameId": "unmask",
+      "momentId": "unmask",
+      "tableauId": "unmask-cg",
+      "reading": "base",
+      "file": "auto-dailies/unmask.png",
+      "sha256": "b4617fc394e8b8bdb7b6f4f4bbb04ac2f5c4f890450331e913b0fa8f4348d828",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "3f8e56563db375322ce16aa7f0b55d73a18ad91129a08529ea9b291c933e9b86",
+      "steps": 7
+    },
+    {
+      "frameId": "name",
+      "momentId": "name",
+      "tableauId": "revealed-peter-active",
+      "reading": "base",
+      "file": "auto-dailies/name.png",
+      "sha256": "14381b416c98e7fc610b9fef9bf663a2684220bdf5c6e3d144902720f69f2553",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "9c2d5d2dda15cedd5ab502ec4b10ed38a93814cc71196b4fa09b8eb73046b4fe",
+      "steps": 8
+    },
+    {
+      "frameId": "name-reading-choice",
+      "momentId": "name-reading-choice",
+      "tableauId": "revealed-shared-silence",
+      "reading": "base",
+      "file": "auto-dailies/name-reading-choice.png",
+      "sha256": "44d3baf7f03778b4f4568a8be7edc5d4d1d79af757215d09bbd04b64a71cc574",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed"
+      ],
+      "availableOptionIds": [
+        "stay-with-peter",
+        "watch-mj-receive"
+      ],
+      "textSha256": "83967167e89bff6e19669f6a2e2cb8a843a4bc5c9cb20bc9ceb0b66c62ae7d75",
+      "steps": 9
+    },
+    {
+      "frameId": "peter-name-private",
+      "momentId": "peter-name-private",
+      "tableauId": "revealed-peter-active",
+      "reading": "base",
+      "file": "auto-dailies/peter-name-private.png",
+      "sha256": "83fbe2233df85c25438c8b4beb6ce43ec4d55df0a3a5c5f8f9d1a976480aaddf",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "bc4ba443fbf6eeea74db74f462f432a44259cad641140dbfe22eb13c301c9ab4",
+      "steps": 10
+    },
+    {
+      "frameId": "mj-name-private",
+      "momentId": "mj-name-private",
+      "tableauId": "revealed-mj-active",
+      "reading": "base",
+      "file": "auto-dailies/mj-name-private.png",
+      "sha256": "0348cb6acb2ad95c6f5f748b4b055f15cc56b0f198111efe7ab0b6992564a915",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "watch-mj-receive"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "8c45e96910630fecb5a01ce5e9d451398c5a2db9468c8f1b9de0a03d2d3df956",
+      "steps": 10
+    },
+    {
+      "frameId": "name-settles--5f6e79",
+      "momentId": "name-settles",
+      "tableauId": "revealed-name-settles",
+      "reading": "variant",
+      "file": "auto-dailies/name-settles--5f6e79.png",
+      "sha256": "2c71201e66cee57da0133810ba07281237da6c2690480e2c0859005c78f03e0a",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "watch-mj-receive"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "1e7e9212de9ea25331f12f8e3dee3ec0e99329db875be8bd27c54625ceca38e9",
+      "steps": 11
+    },
+    {
+      "frameId": "name-settles--66ee32",
+      "momentId": "name-settles",
+      "tableauId": "revealed-name-settles",
+      "reading": "variant",
+      "file": "auto-dailies/name-settles--66ee32.png",
+      "sha256": "6e7937075df1600b18c5867c49319774e2cb2d0ba8bcf31621dfe7c19435d420",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "b8d8764dfcf587701c9c20165517289d17d04a4320e79e7effa531b01a659d13",
+      "steps": 11
+    },
+    {
+      "frameId": "mj-sees",
+      "momentId": "mj-sees",
+      "tableauId": "revealed-mj-appraisal",
+      "reading": "base",
+      "file": "auto-dailies/mj-sees.png",
+      "sha256": "f968d4ea7b7e67f9581ef6b04663bbf2c5a5a290494236cd7b4f9c83f22ca9b4",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "5aab60a63fabd07ad7d44b6a697076b96ece5db25a42b27dcb10d36d54b28647",
+      "steps": 12
+    },
+    {
+      "frameId": "mj-answer",
+      "momentId": "mj-answer",
+      "tableauId": "revealed-mj-active",
+      "reading": "base",
+      "file": "auto-dailies/mj-answer.png",
+      "sha256": "95828e1442f9166c50730370d0f4eee869c8614009ab26d9791f2d6a770d98b2",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "0d43d645ed9e1966bb0908f681beebfc5170b8973cc4f1fe4114008afaf2eeaf",
+      "steps": 13
+    },
+    {
+      "frameId": "perspective-choice",
+      "momentId": "perspective-choice",
+      "tableauId": "revealed-mj-active",
+      "reading": "base",
+      "file": "auto-dailies/perspective-choice.png",
+      "sha256": "3537092b821b9058cc2d7271dc70f55e34edbb53ba5e729f99f0ab4bcb9a9dbe",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed"
+      ],
+      "availableOptionIds": [
+        "read-peter",
+        "read-mj"
+      ],
+      "textSha256": "a4f55b763e426abe0a8f58b0c499027e500e496c20269317dab5b3317793726d",
+      "steps": 14
+    },
+    {
+      "frameId": "perspective-choice--6d906c",
+      "momentId": "perspective-choice",
+      "tableauId": "revealed-mj-active",
+      "reading": "variant",
+      "file": "auto-dailies/perspective-choice--6d906c.png",
+      "sha256": "a9a601542adcc1ebd1d36397b0f6dbd439cd34eb69c227e256b7ce7320bed1fb",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "peter-restraint-understood",
+        "mj-memory-boundary-understood"
+      ],
+      "availableOptionIds": [
+        "read-peter",
+        "read-mj",
+        "hold-both"
+      ],
+      "textSha256": "a4f55b763e426abe0a8f58b0c499027e500e496c20269317dab5b3317793726d",
+      "steps": 18
+    },
+    {
+      "frameId": "peter-restraint",
+      "momentId": "peter-restraint",
+      "tableauId": "revealed-peter-appraisal",
+      "reading": "base",
+      "file": "auto-dailies/peter-restraint.png",
+      "sha256": "1e4a46d04f5f970fbaaa97cf5383792cc05147a2c0390c3d592b87db0a40be54",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "read-peter"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "peter-restraint-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "7c04dd2859441f0328953ec4bd052438a64bd66419a54117249a14e972060ef7",
+      "steps": 15
+    },
+    {
+      "frameId": "mj-boundary-private",
+      "momentId": "mj-boundary-private",
+      "tableauId": "revealed-mj-appraisal",
+      "reading": "base",
+      "file": "auto-dailies/mj-boundary-private.png",
+      "sha256": "a1902137fcf543f4cf974df74342cc695cd1cad19847a6709b866c1a846fa7f4",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "read-mj"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "mj-memory-boundary-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "2b7664c346d39388863dfdf1d08379199716136b4655f94f0db3120783d9cc65",
+      "steps": 15
+    },
+    {
+      "frameId": "both-truths-reading--b737ea",
+      "momentId": "both-truths-reading",
+      "tableauId": "revealed-mj-appraisal",
+      "reading": "variant",
+      "file": "auto-dailies/both-truths-reading--b737ea.png",
+      "sha256": "6c746c2e6e8791d6f9d8256a33467da54a2b23ff44766ef3f797790215a754d5",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "hold-both"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "mj-memory-boundary-understood",
+        "peter-restraint-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "45c836637032d77bb21be3cdc034f4faee62186bf000bf15741aa4c8bfeb9e90",
+      "steps": 19
+    },
+    {
+      "frameId": "both-truths-reading--bff09f",
+      "momentId": "both-truths-reading",
+      "tableauId": "revealed-peter-appraisal",
+      "reading": "variant",
+      "file": "auto-dailies/both-truths-reading--bff09f.png",
+      "sha256": "7bb6bfa77045c2b65e34e8cec951d3d148e7adcf585462950857c1f2482857d2",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "hold-both"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "peter-restraint-understood",
+        "mj-memory-boundary-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "641dbe4ae2c44b59a89d320078e8967c77901cd47c6a6ce285513623803325cf",
+      "steps": 19
+    },
+    {
+      "frameId": "room-without-verdict",
+      "momentId": "room-without-verdict",
+      "tableauId": "revealed-shared-silence",
+      "reading": "base",
+      "file": "auto-dailies/room-without-verdict.png",
+      "sha256": "0b16d121cdc44faa3b183dbe13a8a89a766ba587b9b68222c012d85dbe4e165e",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "hold-both"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "peter-restraint-understood",
+        "mj-memory-boundary-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "bd23c49ffd2dd36137cd38b490ba8cbe1d8f48e99c848da870d4bc034dcd1483",
+      "steps": 20
+    },
+    {
+      "frameId": "shared-silence--091ec5",
+      "momentId": "shared-silence",
+      "tableauId": "revealed-shared-silence",
+      "reading": "variant",
+      "file": "auto-dailies/shared-silence--091ec5.png",
+      "sha256": "bd24d5a64095b27ab7d1e05ca5f238eb1a109f2d31c6a1c8e236e9ca945dc6b9",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "read-mj"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "mj-memory-boundary-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "a05357a051ee652e8f1b18033b21a27a11fccf5d615aa3b24b81d2188d8ef7bb",
+      "steps": 16
+    },
+    {
+      "frameId": "shared-silence--afa097",
+      "momentId": "shared-silence",
+      "tableauId": "revealed-shared-silence",
+      "reading": "variant",
+      "file": "auto-dailies/shared-silence--afa097.png",
+      "sha256": "2363d9eab06d971512cc8c13569a5712527f62436bd48ddc9f8c328cc401188b",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "hold-both"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "peter-restraint-understood",
+        "mj-memory-boundary-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "28ff740b4c4ca8ca1a10677aeb5d5a3eda71b0953ff1ab5f9283f9ce519d147c",
+      "steps": 21
+    },
+    {
+      "frameId": "shared-silence--fe257c",
+      "momentId": "shared-silence",
+      "tableauId": "revealed-shared-silence",
+      "reading": "variant",
+      "file": "auto-dailies/shared-silence--fe257c.png",
+      "sha256": "53fe0faac9df6ef211a6667b090d4689916dfe37bd4a2f88d87e90cfb8eae580",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "read-peter"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "peter-restraint-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "23a060a14e4fb2084a0fa48b29730f00b2017142d87ef3cc6b10db62880e16fe",
+      "steps": 16
+    },
+    {
+      "frameId": "small-defence-returns--3ee236",
+      "momentId": "small-defence-returns",
+      "tableauId": "revealed-small-defences",
+      "reading": "variant",
+      "file": "auto-dailies/small-defence-returns--3ee236.png",
+      "sha256": "2442ed7f378ca9507d0898a821ac988f2b4c77362fc081eaea97ca1ce0617a6a",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-mj-grip"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "read-peter"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "mj-grip-noticed",
+        "peter-restraint-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "ca95e908a258aaf3bd648f4ba0304a5f2e6f296b49c133752dce247893993154",
+      "steps": 19
+    },
+    {
+      "frameId": "small-defence-returns--63cd71",
+      "momentId": "small-defence-returns",
+      "tableauId": "revealed-small-defences",
+      "reading": "variant",
+      "file": "auto-dailies/small-defence-returns--63cd71.png",
+      "sha256": "5c009a770aa4cebba33c52852c11bab80a0b78f676d086b1b58bee40c064344b",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-mj-grip"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "read-peter"
+        }
+      ],
+      "insightIds": [
+        "mj-grip-noticed",
+        "peter-restraint-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "db302a8ab5cf781bdbe9acba401842b97dd3da439c7aea677bb09863f021a658",
+      "steps": 17
+    },
+    {
+      "frameId": "small-defence-returns--89cf6b",
+      "momentId": "small-defence-returns",
+      "tableauId": "revealed-small-defences",
+      "reading": "variant",
+      "file": "auto-dailies/small-defence-returns--89cf6b.png",
+      "sha256": "d9ef56dbdf18c99dfe4d4f9c7b074c1341035851083cb973220645319c5e4038",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "read-peter"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "peter-restraint-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "0071b40512271a0f9e7704884db40a2854b190767e364989faca8cffca4d6dff",
+      "steps": 17
+    },
+    {
+      "frameId": "restraint-forecast",
+      "momentId": "restraint-forecast",
+      "tableauId": "revealed-shared-silence",
+      "reading": "base",
+      "file": "auto-dailies/restraint-forecast.png",
+      "sha256": "cc691a107d462a91c2342528701be2f50a2575271475164b4daf461cff189c00",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "read-peter"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "peter-restraint-understood"
+      ],
+      "availableOptionIds": [
+        "expect-retreat",
+        "expect-return-choice"
+      ],
+      "textSha256": "3dbb5dc450d0d458e41c06b3b7149aa757e5e52aa00c91aba0b78ad8f609729a",
+      "steps": 18
+    },
+    {
+      "frameId": "forecast-retreat",
+      "momentId": "forecast-retreat",
+      "tableauId": "revealed-peter-appraisal",
+      "reading": "base",
+      "file": "auto-dailies/forecast-retreat.png",
+      "sha256": "63bf82baee241ec576eab22ad2c5445c268c1220ab405be853f364867a67637d",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "read-peter"
+        },
+        {
+          "nodeId": "restraint-forecast",
+          "optionId": "expect-retreat"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "peter-restraint-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "fec2cc81ac844bdeace55a718a2140f6d9af7495f18e8507f0843c0d5a8021d7",
+      "steps": 19
+    },
+    {
+      "frameId": "forecast-return-choice",
+      "momentId": "forecast-return-choice",
+      "tableauId": "revealed-mj-appraisal",
+      "reading": "base",
+      "file": "auto-dailies/forecast-return-choice.png",
+      "sha256": "3393383314a6983abef23a710cfc75f71e6b6f29da679e5e730445f1ac0d8788",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "read-peter"
+        },
+        {
+          "nodeId": "restraint-forecast",
+          "optionId": "expect-return-choice"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "peter-restraint-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "cea1d2280a012eecfaf9ec27ba3c9134fbbf70c178538d8030e5506d3f5ca956",
+      "steps": 19
+    },
+    {
+      "frameId": "peter-offers-distance--6534d9",
+      "momentId": "peter-offers-distance",
+      "tableauId": "revealed-choice-returned",
+      "reading": "variant",
+      "file": "auto-dailies/peter-offers-distance--6534d9.png",
+      "sha256": "531fa68b331ac9d4940483cec24d759fb498e0193d87a1a0974dbbccb7f8653b",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "read-peter"
+        },
+        {
+          "nodeId": "restraint-forecast",
+          "optionId": "expect-retreat"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "peter-restraint-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "f8f044f8e467ce77d66b6cc70227c682b972af3e8df3ac091da19cbe2dd228fd",
+      "steps": 20
+    },
+    {
+      "frameId": "peter-offers-distance--cb2784",
+      "momentId": "peter-offers-distance",
+      "tableauId": "revealed-choice-returned",
+      "reading": "variant",
+      "file": "auto-dailies/peter-offers-distance--cb2784.png",
+      "sha256": "2418a749208610dd4f1ade77e235a5bbe5dddc1956c75ec826a9190196902c5b",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "read-peter"
+        },
+        {
+          "nodeId": "restraint-forecast",
+          "optionId": "expect-return-choice"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "peter-restraint-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "26440e23181e5a2f15b6eb9c859ea013838bfa8263989c9b693a36d7718f2733",
+      "steps": 20
+    },
+    {
+      "frameId": "ride-home",
+      "momentId": "ride-home",
+      "tableauId": "revealed-mj-trust",
+      "reading": "base",
+      "file": "auto-dailies/ride-home.png",
+      "sha256": "04e9b74322e54f5c084d0f8e30e66469d53d3a56b0c0172b2d04d1b74cb936f9",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "read-peter"
+        },
+        {
+          "nodeId": "restraint-forecast",
+          "optionId": "expect-retreat"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "peter-restraint-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "6d5401e8ec9e47ac64196e3de1e46357303ee0199ac2a42bcf565ea075e2b384",
+      "steps": 21
+    },
+    {
+      "frameId": "departure-decision",
+      "momentId": "departure-decision",
+      "tableauId": "revealed-shared-silence",
+      "reading": "base",
+      "file": "auto-dailies/departure-decision.png",
+      "sha256": "ddd22bbdd394c1aa3451ece0072bab6f6fbd04b0d2c2c632e17fec9dbe4b70c5",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "read-peter"
+        },
+        {
+          "nodeId": "restraint-forecast",
+          "optionId": "expect-retreat"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "peter-restraint-understood"
+      ],
+      "availableOptionIds": [
+        "choose-ordinary-route",
+        "choose-visible-route"
+      ],
+      "textSha256": "93f6b010348ca7081477201bf98a01f11cd9c1c97eb388dccc30e99c6206affb",
+      "steps": 22
+    },
+    {
+      "frameId": "ordinary-route-reading",
+      "momentId": "ordinary-route-reading",
+      "tableauId": "revealed-mj-trust",
+      "reading": "base",
+      "file": "auto-dailies/ordinary-route-reading.png",
+      "sha256": "eddf23fac0be60d9e9126cd1a7b2f4da638f7b9655691fc9a169e0c7ed9136f9",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "read-peter"
+        },
+        {
+          "nodeId": "restraint-forecast",
+          "optionId": "expect-retreat"
+        },
+        {
+          "nodeId": "departure-decision",
+          "optionId": "choose-ordinary-route"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "peter-restraint-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "97c0f242dd96fe020643bd4fb05f626806b9c0955243f310f15fb3f466a0dcc3",
+      "steps": 23
+    },
+    {
+      "frameId": "visible-route-reading",
+      "momentId": "visible-route-reading",
+      "tableauId": "revealed-peter-appraisal",
+      "reading": "base",
+      "file": "auto-dailies/visible-route-reading.png",
+      "sha256": "6970d18c6a09bc5ce8f1ac433803d82315be64311de5e4fa19a505187d777d2c",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "read-peter"
+        },
+        {
+          "nodeId": "restraint-forecast",
+          "optionId": "expect-retreat"
+        },
+        {
+          "nodeId": "departure-decision",
+          "optionId": "choose-visible-route"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "peter-restraint-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "7d8b117402cbcdf438b8fb0d5b03e6c67bee9c80c61d33cc3221207fcdb7c8fa",
+      "steps": 23
+    },
+    {
+      "frameId": "mj-names-route",
+      "momentId": "mj-names-route",
+      "tableauId": "revealed-mj-trust",
+      "reading": "base",
+      "file": "auto-dailies/mj-names-route.png",
+      "sha256": "06bd348c9ff04abef6073343b5770f7cb8bd5270cb51f8a33c84589ff2493480",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "read-peter"
+        },
+        {
+          "nodeId": "restraint-forecast",
+          "optionId": "expect-retreat"
+        },
+        {
+          "nodeId": "departure-decision",
+          "optionId": "choose-ordinary-route"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "peter-restraint-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "780ce88ef64196a0348fd1c83b94045341ba0f3fc5fd70b38ca0d5051bf9bceb",
+      "steps": 24
+    },
+    {
+      "frameId": "door-opens",
+      "momentId": "door-opens",
+      "tableauId": "hallway-empty",
+      "reading": "base",
+      "file": "auto-dailies/door-opens.png",
+      "sha256": "4a93ff6470ecad7a5f9cb8e760d449866642c3294db19ff1db2400e16a7e37da",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "read-peter"
+        },
+        {
+          "nodeId": "restraint-forecast",
+          "optionId": "expect-retreat"
+        },
+        {
+          "nodeId": "departure-decision",
+          "optionId": "choose-ordinary-route"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "peter-restraint-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "dc413075a976cbc2edf9e75ec3e339e8c86cbb66464bf73fd2172fb30fdad274",
+      "steps": 25
+    },
+    {
+      "frameId": "hallway-threshold--bcf1f3",
+      "momentId": "hallway-threshold",
+      "tableauId": "hallway-shared-distance",
+      "reading": "variant",
+      "file": "auto-dailies/hallway-threshold--bcf1f3.png",
+      "sha256": "47d873bfa32097a225dde20ebe4f6ccced0a60d9ae819c24222d6e9883373124",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "read-peter"
+        },
+        {
+          "nodeId": "restraint-forecast",
+          "optionId": "expect-retreat"
+        },
+        {
+          "nodeId": "departure-decision",
+          "optionId": "choose-visible-route"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "peter-restraint-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "851f0829b38d899a2176b5a45b122fe60afc600bf8f028fb24f6d54046e36d5a",
+      "steps": 26
+    },
+    {
+      "frameId": "hallway-threshold--fbbe31",
+      "momentId": "hallway-threshold",
+      "tableauId": "hallway-shared-distance",
+      "reading": "variant",
+      "file": "auto-dailies/hallway-threshold--fbbe31.png",
+      "sha256": "1317eb2b7ff72e4e8ce6af90ac09a47ccb54dd0bc0c307dc6d51a06ff0c071b8",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "read-peter"
+        },
+        {
+          "nodeId": "restraint-forecast",
+          "optionId": "expect-retreat"
+        },
+        {
+          "nodeId": "departure-decision",
+          "optionId": "choose-ordinary-route"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "peter-restraint-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "9983113eef8c225608232e6637ff25db15672f4f54fc7a4301911347dd95b531",
+      "steps": 26
+    },
+    {
+      "frameId": "mj-corrects-promise",
+      "momentId": "mj-corrects-promise",
+      "tableauId": "hallway-mj-active",
+      "reading": "base",
+      "file": "auto-dailies/mj-corrects-promise.png",
+      "sha256": "b135c88fa873360380a862ac92417f748c1c021bd6bbd18507877a8f5415e401",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "read-peter"
+        },
+        {
+          "nodeId": "restraint-forecast",
+          "optionId": "expect-retreat"
+        },
+        {
+          "nodeId": "departure-decision",
+          "optionId": "choose-ordinary-route"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "peter-restraint-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "0b7939ea44d81e3680144722cf607126cf7d4146c0a267e56a2ce6d44cb51302",
+      "steps": 27
+    },
+    {
+      "frameId": "peter-hears-limit",
+      "momentId": "peter-hears-limit",
+      "tableauId": "hallway-peter-active",
+      "reading": "base",
+      "file": "auto-dailies/peter-hears-limit.png",
+      "sha256": "bcad79ccc01b1ae2a39dad1058b8ae4105e1a7ec92f84ca18ef695e41194c668",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "read-peter"
+        },
+        {
+          "nodeId": "restraint-forecast",
+          "optionId": "expect-retreat"
+        },
+        {
+          "nodeId": "departure-decision",
+          "optionId": "choose-ordinary-route"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "peter-restraint-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "442d1a543a2eb13b89aa220e0858252acb71d1c73bc3c87c61849257c8e2516f",
+      "steps": 28
+    },
+    {
+      "frameId": "peter-accepts-limit",
+      "momentId": "peter-accepts-limit",
+      "tableauId": "hallway-peter-active",
+      "reading": "base",
+      "file": "auto-dailies/peter-accepts-limit.png",
+      "sha256": "52b10e3eefed95fd333cf62fbb78ea9784c80ccaea06f6b90816305e237c9a51",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "read-peter"
+        },
+        {
+          "nodeId": "restraint-forecast",
+          "optionId": "expect-retreat"
+        },
+        {
+          "nodeId": "departure-decision",
+          "optionId": "choose-ordinary-route"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "peter-restraint-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "da3558bb5d2f2fa5bf2b9c2f18bd440654eaf110e643eb311c2f1d4fe34cd76b",
+      "steps": 29
+    },
+    {
+      "frameId": "stairs-begin",
+      "momentId": "stairs-begin",
+      "tableauId": "hallway-shared-distance",
+      "reading": "base",
+      "file": "auto-dailies/stairs-begin.png",
+      "sha256": "00144dd528a027bf66fce7f064b9c471663fcf81e4ec08d6c6cd1bb8344e8845",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "read-peter"
+        },
+        {
+          "nodeId": "restraint-forecast",
+          "optionId": "expect-retreat"
+        },
+        {
+          "nodeId": "departure-decision",
+          "optionId": "choose-ordinary-route"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "peter-restraint-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "d1a2a5d1e3dfedd9c08450e2f819437ae56f363d34403b362571d664d34dbcd8",
+      "steps": 30
+    },
+    {
+      "frameId": "ending",
+      "momentId": "ending",
+      "tableauId": "hallway-shared-distance",
+      "reading": "base",
+      "file": "auto-dailies/ending.png",
+      "sha256": "2526ec3a2ef3ba342ad7dca5539a79de0ab8c34c3062c4111debbd0a18d210fe",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "read-peter"
+        },
+        {
+          "nodeId": "restraint-forecast",
+          "optionId": "expect-retreat"
+        },
+        {
+          "nodeId": "departure-decision",
+          "optionId": "choose-ordinary-route"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "peter-restraint-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "f714057f5c6d9fe5379d21e8206bb74d346945a1c76d7a1b7634fc7f64956658",
+      "steps": 31
+    }
+  ]
+}

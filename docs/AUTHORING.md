@@ -274,14 +274,32 @@ rail shows the mode. `cueAssetIds` must be `cue` assets; `voiceAssetId` must be 
 ```ts
 next: { type: 'goto', nodeId: 'distance' }
 next: { type: 'end' }
-next: { type: 'choice', posture: 'traversal', prompt: 'Whose accepted perspective do you read?', options: [
-  { id: 'read-peter', label: 'Peter · the cost of restraint', consequence: 'Read the truth he chooses not to use as leverage.', nodeId: 'peter-restraint' },
-  { id: 'read-mj',    label: 'MJ · the boundary of memory',   consequence: 'Read the life she refuses to counterfeit.',      nodeId: 'mj-boundary-private' },
+next: { type: 'choice', posture: 'traversal', weight: 'fork', purpose: 'interpret',
+  prompt: 'Whose accepted perspective do you read?', options: [
+  { id: 'read-peter', label: 'Peter · the cost of restraint', consequence: 'Read the truth he chooses not to use as leverage.', nodeId: 'peter-restraint',      grantsInsightIds: ['peter-restraint-cost'] },
+  { id: 'read-mj',    label: 'MJ · the boundary of memory',   consequence: 'Read the life she refuses to counterfeit.',      nodeId: 'mj-boundary-private', grantsInsightIds: ['mj-memory-boundary'] },
 ] }
 ```
 
 - Choices have 2–4 options and are `traversal` only: they choose *which accepted passage is read*, and both
   branches rejoin (`shared-silence`, `chun-answers`). They do not write canon.
+- Every choice declares a `weight` (`texture` — the branches differ in reading only; `fork` — they visit different
+  moments) and a `purpose` (`observe` · `interpret` · `predict` · `decide`). The production audit
+  (`src/story/production-targets.ts`) requires each Experience to offer all four purposes at least once.
+- **Reader insights.** Declare every semantic thing a reader can *learn* in `experience.readerInsights`
+  (`{ id, meaning }`). An option `grantsInsightIds` when reading it teaches that thing; an option
+  `requiresInsightIds` when it is only offered to a reader who already knows it. Insights survive Back (the reader
+  still knows what they read) and clear on Restart; the compiler rejects insights that are declared but never
+  granted, granted but never declared, or granted with no downstream moment that harvests them.
+- **Reading variants.** A moment may carry up to four `readingVariants`, each `{ when, text, tableauId? }`, that
+  replace the base text (and optionally the tableau) for a reader in a given state:
+  - `{ kind: 'active-choice', choiceNodeId, optionId }` — the reader took this option on the *current* route;
+  - `{ kind: 'reader-insights', insightIds }` — the reader holds all of these insights, in any order;
+  - `{ kind: 'reader-insight-order', insightIds: [first, second] }` — order-sensitive synthesis; the compiler
+    requires both orders to be authored so first-look bias is deliberate, not accidental.
+  Variants must stay public, downstream of the choice they depend on, and must not fork the graph; if two
+  persistent insights could both apply, author the combined reading explicitly. Rereading is cumulative: a reader
+  who goes Back after an observational detour reads the earlier public moment with what they now know.
 - Every moment must be reachable from `startNodeId`; the graph must be acyclic (no "loop back" moments —
   Back is a reader-transport feature, not a story edge). Order the `moments` array in reading order; the reader's
   ordinal counter uses array position.
@@ -314,6 +332,52 @@ Dailies in the 16:9 reader:
 - Record what you saw in `docs/DAILIES.md` (strongest moment · repaired · honest capability reading · largest
   remaining limit · single next repair) and, for a production, `productions/<id>/PRODUCTION_REVIEW.md`. Dailies
   are agent review, not audience approval; nothing is promoted beyond candidate by a dailies pass.
+
+### Production audit
+
+`npm run produce` (= `check` + `production:status`) reads `public/generated/production-report.json` and prints, per
+Experience, the shortest-route reading duration, `targets-met` / `needs-repair`, and typed demand ids
+(`purpose:<choice-purpose>`, `locations:minimum`, `duration:minimum`, `payoff:<choice-node>`,
+`performance:<moment>:<actor>`). The single `next repair` is mechanically derived — it names the smallest
+structural gap, never an artistic verdict. `npm run produce:strict` fails on any high-priority demand.
+
+## 8. Hill-climb: automated dailies around manual edits
+
+Authoring stays manual; the loop around each edit is automated so its visual effect is one page to review.
+
+```bash
+npm run climb                                   # watch src/ + productions/, rerun the step below on every save
+npm run climb:step [-- --story <id>]             # once: produce → capture → diff → ledger row
+npm run climb:verdict -- <id> keep|revert|note "…"   # your judgement on the last row
+npm run dailies [-- --story <id>]                # capture only (uses the current prepared bundle)
+npm run dailies:diff [-- --story <id> --all]     # diff only; --all lists unchanged frames too
+```
+
+One climb step:
+
+1. `produce` — tests, digest-pinned build, typecheck, Vite bundle, production audit. Compiler errors stop the
+   step; nothing is captured from a bundle that did not compile.
+2. **Capture** (`scripts/capture-dailies.ts`). `src/core/dailies-plan.ts` walks the *real* reader reducer
+   (advance / choose / Back) breadth-first and emits every distinct reading — moment × resolved text × visible
+   options — with the shortest action path that reaches it, so every choice route, insight-gated reread and
+   reading variant is covered without a second, browser-only model of the story. Playwright replays each path in
+   headless Chromium (1600×900, reduced motion) against `vite preview` and screenshots `.stage`. Any application
+   console error fails the capture. Output: `productions/<production-id>/evidence/auto-dailies/<frameId>.png`
+   and `auto-dailies.receipt.json` (experience sha256, per-frame screenshot + text sha256, route, insights,
+   visible option ids). Base frames are named by moment id; variant frames append a short content hash.
+3. **Diff** (`scripts/diff-dailies.ts`, pure logic in `src/core/dailies-diff.ts`). The new receipt is compared
+   against the previous capture (`auto-dailies.previous/`), falling back to the committed receipt (hash-only, no
+   before-image). Frames are `changed` / `added` / `removed` / `unchanged` by screenshot bytes, with text changes
+   flagged separately. Open `auto-dailies/DIFF.html` — a before/after contact sheet of everything that moved.
+4. **Ledger** (`productions/<production-id>/evidence/iterations.ndjson`). One row per step: timestamp,
+   experience and story-file sha, produce result, audit status + demand ids + next repair, frame counts,
+   `verdict: null`. Fill the verdict yourself with `climb:verdict`; the tooling never invents one and never edits
+   story or asset content.
+
+A deterministic capture means an unchanged story yields `0 changed`; a one-word text edit isolates to exactly the
+frames that render that text. Screenshots and previous captures are gitignored; receipts and the ledger are
+committed evidence. The experience→production coordinate lives in `src/story/productions.ts` — add an entry when
+registering a new Experience.
 
 ## Common compiler errors → fix
 

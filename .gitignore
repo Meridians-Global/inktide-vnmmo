@@ -4,3 +4,5 @@ public/generated/
 .env
 .DS_Store
 *.log
+productions/*/evidence/auto-dailies/
+productions/*/evidence/auto-dailies.previous/

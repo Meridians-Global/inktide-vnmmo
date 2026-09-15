@@ -21,7 +21,9 @@ Designed and built by **jasonyu0100**. Preserve that authorship in code, metadat
 3. Add pure tests for policy or transforms; review visual changes in the running 16:9 reader.
 4. Run `npm run check` before committing.
 
-Use `npm run demo` for the production-like demonstration and `npm run dev` for live iteration.
+Use `npm run demo` for the production-like demonstration and `npm run dev` for live iteration. For a manual
+edit → review loop, `npm run climb` watches `src/` and reruns produce → capture every reachable reading → diff →
+ledger row on save; you supply the verdict (`npm run climb:verdict`). The tooling never edits story or asset content.
 
 ### Building a new Experience
 
@@ -40,3 +42,6 @@ Checklist:
 4. **Build** — `npm run check` (tests, digest verification, typecheck, static bundle).
 5. **Review dailies** — `npm run demo`, then `?story=<id>&moment=<id>` deep links in the 16:9 reader with a clean
    console; record the pass in `docs/DAILIES.md` / `productions/<id>/PRODUCTION_REVIEW.md`.
+6. **Climb** — add the Experience to `src/story/productions.ts`, then `npm run climb:step` per edit: read
+   `productions/<production-id>/evidence/auto-dailies/DIFF.html`, record `keep` / `revert` / `note` in the ledger,
+   and take the audit's `next repair` as the suggested — not mandatory — next edit.

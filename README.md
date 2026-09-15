@@ -85,7 +85,8 @@ typed visual edit, then pass identity, full-body framing, facing, scale and cont
 
 ## Start here
 
-- `docs/AUTHORING.md` — how to build a new compiling Experience, step by step.
+- `docs/AUTHORING.md` — how to build a new compiling Experience, step by step, and the `npm run climb` loop
+  (manual edit → produce → capture every reachable reading → before/after diff → human verdict).
 - `src/core/contracts.ts` — the only authoring/runtime shape.
 - `src/core/compiler.ts` — deterministic structural gate.
 - `src/core/figure-normalization.ts` — padding-invariant actor preparation.
@@ -96,6 +97,8 @@ typed visual edit, then pass identity, full-body framing, facing, scale and cont
 - `src/story/spider-memory.ts` — dual-identity and viewpoint rehearsal.
 - `src/story/moon-scar.ts` — an earlier representative Experience on the same contract.
 - `src/story/production-targets.ts` — explicit per-Experience expansion targets; never hidden generator policy.
+- `src/core/dailies-plan.ts` / `src/core/dailies-diff.ts` — pure reader-reducer walk of every reachable reading and
+  the receipt diff behind `scripts/capture-dailies.ts`, `scripts/diff-dailies.ts`, `scripts/climb.ts`.
 - `scripts/acquire-spider-assets.ts` — resumable, evidence-bearing Replicate acquisition and preparation.
 - `scripts/acquire-moon-scar-assets.ts` — demand-led Moon-Scar acquisition and legacy SFX transfer.
 - `productions/moon-scar-ledger-v2/PRODUCTION_REVIEW.md` — exact dailies and remaining audience limit.

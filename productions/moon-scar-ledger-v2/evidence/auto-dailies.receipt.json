@@ -1,0 +1,1354 @@
+{
+  "schemaVersion": 1,
+  "productionId": "moon-scar-ledger-v2",
+  "experienceId": "moon-scar-reading-v1",
+  "experienceSha256": "d07078983eac7153eb00bda9dd21c82a51247d5f6b8cd3bd99394204669782c5",
+  "viewport": {
+    "width": 1600,
+    "height": 900
+  },
+  "capturedAt": "2026-09-15T21:56:34.549Z",
+  "consoleErrors": [],
+  "frames": [
+    {
+      "frameId": "cleft-location",
+      "momentId": "cleft-location",
+      "tableauId": "cleft-establishing",
+      "reading": "base",
+      "file": "auto-dailies/cleft-location.png",
+      "sha256": "dd9ab45a6cafe708a997b8c5890edb32e956ed9fd40d7b07944288871cf71190",
+      "route": [],
+      "insightIds": [],
+      "availableOptionIds": [],
+      "textSha256": "679351040805fc758eab147c0d77e678e1790adf1f5ef81f7a4e1db5798d8e8f",
+      "steps": 0
+    },
+    {
+      "frameId": "chun-arrives",
+      "momentId": "chun-arrives",
+      "tableauId": "cleft-chun-active",
+      "reading": "base",
+      "file": "auto-dailies/chun-arrives.png",
+      "sha256": "ff24132c7b9947b77f11c90f6a01edc6eb969f718838c0d8809abaeacba90510",
+      "route": [],
+      "insightIds": [],
+      "availableOptionIds": [],
+      "textSha256": "cade515c78027847385ebb522e3516c1630b9a2663c26cf79924c3117d1521f2",
+      "steps": 1
+    },
+    {
+      "frameId": "fang-private",
+      "momentId": "fang-private",
+      "tableauId": "cleft-fang-active",
+      "reading": "base",
+      "file": "auto-dailies/fang-private.png",
+      "sha256": "beaccb0af70f625d57fb223f6b72404a608da6bac313d8e9a26b10e33dcdb910",
+      "route": [],
+      "insightIds": [],
+      "availableOptionIds": [],
+      "textSha256": "3ee6f886a5a150956dfe3111c941b6c35005c460ed56e52359c86b2e2d6b7763",
+      "steps": 2
+    },
+    {
+      "frameId": "chun-speaks",
+      "momentId": "chun-speaks",
+      "tableauId": "cleft-chun-active",
+      "reading": "base",
+      "file": "auto-dailies/chun-speaks.png",
+      "sha256": "94b1652dcb2e21b5d0b30007665378f5dfb11fb94db311deef85568675f89c05",
+      "route": [],
+      "insightIds": [],
+      "availableOptionIds": [],
+      "textSha256": "1a63c37b06fb449f01f74932f7f5296a763c532db5cef3f6f053202ace127947",
+      "steps": 3
+    },
+    {
+      "frameId": "chun-private",
+      "momentId": "chun-private",
+      "tableauId": "cleft-chun-active",
+      "reading": "base",
+      "file": "auto-dailies/chun-private.png",
+      "sha256": "822df34dadad9788b31120df6555fcdb54933ce077c6a87c6888f163732e8adf",
+      "route": [],
+      "insightIds": [],
+      "availableOptionIds": [],
+      "textSha256": "fb44ebcacfeefb0ffc4b2528888001214ef3c0f81c11b67b61253f3824c7fd5a",
+      "steps": 4
+    },
+    {
+      "frameId": "cellar-location",
+      "momentId": "cellar-location",
+      "tableauId": "cellar-establishing",
+      "reading": "base",
+      "file": "auto-dailies/cellar-location.png",
+      "sha256": "39f686074ce132bcaa728f7afddc469fd4de32cff50c02394abbca38a6888a1a",
+      "route": [],
+      "insightIds": [],
+      "availableOptionIds": [],
+      "textSha256": "a7d18c6dbf5fab08b5b14b96863182ea96cf02cab6ff960ca18e79926f2f7a64",
+      "steps": 5
+    },
+    {
+      "frameId": "substrate-reveal",
+      "momentId": "substrate-reveal",
+      "tableauId": "substrate-study",
+      "reading": "base",
+      "file": "auto-dailies/substrate-reveal.png",
+      "sha256": "054733e63d6485c7f88aa3318c74af0933546323e9b70fa858365dcf26be8e78",
+      "route": [],
+      "insightIds": [],
+      "availableOptionIds": [],
+      "textSha256": "9dada67317b80b37e7563fb471817f2748825b3aceccae0f8c921dffe48318cb",
+      "steps": 6
+    },
+    {
+      "frameId": "evidence-reading-choice",
+      "momentId": "evidence-reading-choice",
+      "tableauId": "substrate-study",
+      "reading": "base",
+      "file": "auto-dailies/evidence-reading-choice.png",
+      "sha256": "cdfdfce23e62610b2f84e35bb9eaf9ef53550bfd8b16cd9b74f911aedd8b68fe",
+      "route": [],
+      "insightIds": [],
+      "availableOptionIds": [
+        "trace-empty-cells",
+        "watch-chun-contact"
+      ],
+      "textSha256": "820f0c9b055e78ba338311352ca483b434186f258ba0cc557d00be69ba7f698b",
+      "steps": 7
+    },
+    {
+      "frameId": "crescent-reading",
+      "momentId": "crescent-reading",
+      "tableauId": "substrate-fang-appraisal",
+      "reading": "base",
+      "file": "auto-dailies/crescent-reading.png",
+      "sha256": "3a87bc3015ba60a2c1e4f927f4b5396ac443919d939273b0e0e2363c357764e6",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "d83d257e02aa2538abaaf44d5ae0d94b8e9b847a0bdc4a511d6e09ac3c6f1e33",
+      "steps": 8
+    },
+    {
+      "frameId": "contact-distance-reading",
+      "momentId": "contact-distance-reading",
+      "tableauId": "substrate-chun-appraisal",
+      "reading": "base",
+      "file": "auto-dailies/contact-distance-reading.png",
+      "sha256": "51ce5690189a064db74942e30cbb91d838a31158570a76bd8d2d3a3650a5268a",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "watch-chun-contact"
+        }
+      ],
+      "insightIds": [
+        "chun-contact-distance-noticed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "c226424fd4e74a13e79c622015ed70e96cd8a98e6a62297773f7b61d619a3d95",
+      "steps": 8
+    },
+    {
+      "frameId": "tally-bound",
+      "momentId": "tally-bound",
+      "tableauId": "cellar-conversation",
+      "reading": "base",
+      "file": "auto-dailies/tally-bound.png",
+      "sha256": "edcaa08174aadd052fa2626c1611ae6b5dab4fa111cb25441b3215402f6f238d",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "104bbab9fa0ea04c5976194653c014a63b7e8fa2dac8532b720394276849da49",
+      "steps": 9
+    },
+    {
+      "frameId": "question-choice",
+      "momentId": "question-choice",
+      "tableauId": "fang-question",
+      "reading": "base",
+      "file": "auto-dailies/question-choice.png",
+      "sha256": "796b7bf6396dc3811a2a9f83f920729ada3df8965fb67b086ca1500ca21b967c",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed"
+      ],
+      "availableOptionIds": [
+        "ask-rank",
+        "ask-loss"
+      ],
+      "textSha256": "4d2f486d5aabe813d30d7ce8cc827595312b1fd268ed950ea5941f1cc6e3771c",
+      "steps": 10
+    },
+    {
+      "frameId": "rank-question",
+      "momentId": "rank-question",
+      "tableauId": "fang-question",
+      "reading": "base",
+      "file": "auto-dailies/rank-question.png",
+      "sha256": "9768af5b0c09417f6372940d5336975d4c1e64acd480b7408e5802a54b825164",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "dd36c64ac8f390a5867b1fd6fc620221099decbb1232db40d2d4aeac9d765f4b",
+      "steps": 11
+    },
+    {
+      "frameId": "rank-chun-private",
+      "momentId": "rank-chun-private",
+      "tableauId": "cellar-conversation",
+      "reading": "base",
+      "file": "auto-dailies/rank-chun-private.png",
+      "sha256": "618801f814df9dd2aadf801668bc7c24a1f7a31e351d83ebb92c678ab175737b",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "a78fbe7d155f26cf0ffb2b07b87cccc30fb9a4c754223e4870a3ee04ddae77a2",
+      "steps": 12
+    },
+    {
+      "frameId": "loss-question",
+      "momentId": "loss-question",
+      "tableauId": "fang-question",
+      "reading": "base",
+      "file": "auto-dailies/loss-question.png",
+      "sha256": "a680bcaca1d3173d372603c8691a994176a03a9a5c8f5031da98cb4ed6756ca9",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-loss"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "95389e600aab589e49340d56d2a1735e6172fe389b932a903253b3267c2c4037",
+      "steps": 11
+    },
+    {
+      "frameId": "loss-chun-private",
+      "momentId": "loss-chun-private",
+      "tableauId": "cellar-conversation",
+      "reading": "base",
+      "file": "auto-dailies/loss-chun-private.png",
+      "sha256": "fcdb7042fc482a446bf44dd9fcab24b032cafd5d998514b1f9812d994c267484",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-loss"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "d1f6ddd805b9227b75c01756fbc167226a36ceeeca630fe4ce9d6bb9181cf535",
+      "steps": 12
+    },
+    {
+      "frameId": "chun-answers--92cdae",
+      "momentId": "chun-answers",
+      "tableauId": "cellar-disclosure",
+      "reading": "variant",
+      "file": "auto-dailies/chun-answers--92cdae.png",
+      "sha256": "ab0d9834b3453a696bd80869074e0f95c2c7a8aff3ec512497cb07d716bf6dd5",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "10eff642da1778db1fd6d83d18b89bc00d585af61dc681e0693b5528e6432736",
+      "steps": 13
+    },
+    {
+      "frameId": "chun-answers--f18b56",
+      "momentId": "chun-answers",
+      "tableauId": "cellar-disclosure",
+      "reading": "variant",
+      "file": "auto-dailies/chun-answers--f18b56.png",
+      "sha256": "d739db11bbcf276ddb2aef90f94d6b9fc25c4771b6fd2d633ce897248a8f0b87",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-loss"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "0dea0f7816b043df48a51b8a7fd7e9fa0cc088e69d9f557197392638b4d99cf7",
+      "steps": 13
+    },
+    {
+      "frameId": "inspection-returns--5c1aa6",
+      "momentId": "inspection-returns",
+      "tableauId": "substrate-held-warning",
+      "reading": "variant",
+      "file": "auto-dailies/inspection-returns--5c1aa6.png",
+      "sha256": "e76ecc91e562de5871c02bf3060059b671077abf1237c9b2c2c77cd5590daf50",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "watch-chun-contact"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "chun-contact-distance-noticed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "e33de9ea6ea7e697a1b38de970c94badb2867c6e75c5930fd39db8342d03e201",
+      "steps": 16
+    },
+    {
+      "frameId": "inspection-returns--95b4d6",
+      "momentId": "inspection-returns",
+      "tableauId": "substrate-held-warning",
+      "reading": "variant",
+      "file": "auto-dailies/inspection-returns--95b4d6.png",
+      "sha256": "20f23b7d4b9e47efaa9a1c99c3faeccadd303fb8b19a12d18e55e0e63a3c3d03",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "dcccd06b25219fb88ac1f3eb1160bf25538b9bc0d938589b114dd6d4a17f4b86",
+      "steps": 14
+    },
+    {
+      "frameId": "inspection-returns--f19559",
+      "momentId": "inspection-returns",
+      "tableauId": "substrate-held-warning",
+      "reading": "variant",
+      "file": "auto-dailies/inspection-returns--f19559.png",
+      "sha256": "695ab7433ea7bfcf53a95eeb99ea492cdf63621052fa2be24e2fd016988dfa94",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "watch-chun-contact"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        }
+      ],
+      "insightIds": [
+        "chun-contact-distance-noticed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "31bc751fb7efc2619b643d135910fe1ef3ce571135f439925bc137ffe8dd465d",
+      "steps": 14
+    },
+    {
+      "frameId": "reliquary-reading-choice",
+      "momentId": "reliquary-reading-choice",
+      "tableauId": "substrate-study",
+      "reading": "base",
+      "file": "auto-dailies/reliquary-reading-choice.png",
+      "sha256": "8d588be1d5a06c5f5fed88f35d97433871933a21125084bd9eb2307dae98058d",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed"
+      ],
+      "availableOptionIds": [
+        "read-fang-calculation",
+        "read-chun-warning"
+      ],
+      "textSha256": "6564b7ec763d8f118edde5c51c4fb42e5fe44b6fb28b18aed21b88d28856d79a",
+      "steps": 15
+    },
+    {
+      "frameId": "reliquary-reading-choice--e56278",
+      "momentId": "reliquary-reading-choice",
+      "tableauId": "substrate-study",
+      "reading": "variant",
+      "file": "auto-dailies/reliquary-reading-choice--e56278.png",
+      "sha256": "239d72b0154750b6de7f5693e1c23dcc95eb287c2b986d192aa10a18b333741c",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "fang-leverage-understood",
+        "chun-warning-understood"
+      ],
+      "availableOptionIds": [
+        "read-fang-calculation",
+        "read-chun-warning",
+        "hold-leverage-warning"
+      ],
+      "textSha256": "6564b7ec763d8f118edde5c51c4fb42e5fe44b6fb28b18aed21b88d28856d79a",
+      "steps": 19
+    },
+    {
+      "frameId": "fang-leverage-private",
+      "momentId": "fang-leverage-private",
+      "tableauId": "substrate-fang-appraisal",
+      "reading": "base",
+      "file": "auto-dailies/fang-leverage-private.png",
+      "sha256": "891d69728857e0f008fc65133d753411607b89e44b77a2fae1d2b37aa5c557c0",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "read-fang-calculation"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "fang-leverage-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "f4aa12efd6748cd610a89643b064236e1500b6385a68123b62a68748d1f98cb1",
+      "steps": 16
+    },
+    {
+      "frameId": "chun-warning-private",
+      "momentId": "chun-warning-private",
+      "tableauId": "substrate-chun-appraisal",
+      "reading": "base",
+      "file": "auto-dailies/chun-warning-private.png",
+      "sha256": "db1e2ea6514156446691aabfab582b9ceba311e94415f7707a503feda8da79ee",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "read-chun-warning"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "chun-warning-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "92660a654941c01e07da0c578c00bde43af901e7b7cd012806045bdd54cbc574",
+      "steps": 16
+    },
+    {
+      "frameId": "moon-scar-synthesis--736d76",
+      "momentId": "moon-scar-synthesis",
+      "tableauId": "substrate-fang-appraisal",
+      "reading": "variant",
+      "file": "auto-dailies/moon-scar-synthesis--736d76.png",
+      "sha256": "15e2110a3fd8962a7ae493e3b6a1544eb6b54e16a4c871ea7b6b09bbb79dd598",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "hold-leverage-warning"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "fang-leverage-understood",
+        "chun-warning-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "2e4802e4bce911eebe8dcf878092db29da8df9d38c5edbae2da9e92ad2d16c9c",
+      "steps": 20
+    },
+    {
+      "frameId": "moon-scar-synthesis--866c6e",
+      "momentId": "moon-scar-synthesis",
+      "tableauId": "substrate-chun-appraisal",
+      "reading": "variant",
+      "file": "auto-dailies/moon-scar-synthesis--866c6e.png",
+      "sha256": "92f6dfaacf89cf3a8acaa9355be0ff7ecacc312fd24f0ee9374cca397344a564",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "hold-leverage-warning"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "chun-warning-understood",
+        "fang-leverage-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "5793f311e473ab4dcee4790617343a4a37f9a92fc17ebbe10fe86df9cbb5d20f",
+      "steps": 20
+    },
+    {
+      "frameId": "two-measures",
+      "momentId": "two-measures",
+      "tableauId": "substrate-study",
+      "reading": "base",
+      "file": "auto-dailies/two-measures.png",
+      "sha256": "1fb16da24a6ade391edefe55ab2e247dbbba66a3ac358f0f8b0114bcaf9f6231",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "hold-leverage-warning"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "fang-leverage-understood",
+        "chun-warning-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "d890506f87098e6a01a422e0b0c16931d36d9028910cd7ac85afcf56636bdc0e",
+      "steps": 21
+    },
+    {
+      "frameId": "moon-scar",
+      "momentId": "moon-scar",
+      "tableauId": "moon-scar-reveal",
+      "reading": "base",
+      "file": "auto-dailies/moon-scar.png",
+      "sha256": "97bbd7b01188d6e8316d59e3667bf4214ce55b98a9a2ab637cad606d0945e030",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "read-fang-calculation"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "fang-leverage-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "7f17382105ca9444a4976506f3a5db636c0cb4bb12dbac5226564f4b73011816",
+      "steps": 17
+    },
+    {
+      "frameId": "chun-hesitates",
+      "momentId": "chun-hesitates",
+      "tableauId": "moon-scar-aftermath",
+      "reading": "base",
+      "file": "auto-dailies/chun-hesitates.png",
+      "sha256": "35b344f30370987c5ac2e9bdc329dc1720ca38931a93933a3c63e3b5d0e5b998",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "read-fang-calculation"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "fang-leverage-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "6b5c731f714a94aea1b661d484ef0d5c389fb686cf61a4cf4b576253e79336f5",
+      "steps": 18
+    },
+    {
+      "frameId": "fang-conduct-forecast",
+      "momentId": "fang-conduct-forecast",
+      "tableauId": "moon-scar-reflection",
+      "reading": "base",
+      "file": "auto-dailies/fang-conduct-forecast.png",
+      "sha256": "333aa340374e467cf5af9f7812dfe952b8db7a2cfe87d1707b51b03549de0cb4",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "read-fang-calculation"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "fang-leverage-understood"
+      ],
+      "availableOptionIds": [
+        "expect-seize",
+        "expect-preserve"
+      ],
+      "textSha256": "16f70ebd8f1e5ef066e1c636f9126bb567c410ff554421058e561df69ee8de80",
+      "steps": 19
+    },
+    {
+      "frameId": "forecast-seize",
+      "momentId": "forecast-seize",
+      "tableauId": "substrate-fang-appraisal",
+      "reading": "base",
+      "file": "auto-dailies/forecast-seize.png",
+      "sha256": "563c6c3818e6d92719044a172b867d0f48342bb00c8f7dc7ae179473ab540737",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "read-fang-calculation"
+        },
+        {
+          "nodeId": "fang-conduct-forecast",
+          "optionId": "expect-seize"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "fang-leverage-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "c6a66488e130202db3595129142ff4f293ebd74d737709423e8a8f6b8371c6f8",
+      "steps": 20
+    },
+    {
+      "frameId": "forecast-preserve",
+      "momentId": "forecast-preserve",
+      "tableauId": "substrate-chun-appraisal",
+      "reading": "base",
+      "file": "auto-dailies/forecast-preserve.png",
+      "sha256": "b54c0ad82db8f677c51c66374cc676890fe3a7e3d548fc9080f145e636f4b9d8",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "read-fang-calculation"
+        },
+        {
+          "nodeId": "fang-conduct-forecast",
+          "optionId": "expect-preserve"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "fang-leverage-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "b2804ffa57fcc5514cccd5d3a6d9137ad5895a218a3b5188d2e2d42b802672f0",
+      "steps": 20
+    },
+    {
+      "frameId": "fang-does-not-touch--00b164",
+      "momentId": "fang-does-not-touch",
+      "tableauId": "moon-scar-restraint",
+      "reading": "variant",
+      "file": "auto-dailies/fang-does-not-touch--00b164.png",
+      "sha256": "ada0229a2202298e47cce93fbff852a2cf504468b53fef233f0f792a8c237670",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "read-fang-calculation"
+        },
+        {
+          "nodeId": "fang-conduct-forecast",
+          "optionId": "expect-seize"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "fang-leverage-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "c8e9cc847c48739522ae98c53e2897199448132eee0fb70dc8adee6cca77471b",
+      "steps": 21
+    },
+    {
+      "frameId": "fang-does-not-touch--430191",
+      "momentId": "fang-does-not-touch",
+      "tableauId": "moon-scar-restraint",
+      "reading": "variant",
+      "file": "auto-dailies/fang-does-not-touch--430191.png",
+      "sha256": "b72e8273afe704ac1dfa8495b145fdd91840721f56ead5c6cec5c1e07c0aac55",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "hold-leverage-warning"
+        },
+        {
+          "nodeId": "fang-conduct-forecast",
+          "optionId": "expect-seize"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "fang-leverage-understood",
+        "chun-warning-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "73a3269e90dd72af9d78eb0a3e3b8e06cfa264211ec488c491db9d4843f028f0",
+      "steps": 26
+    },
+    {
+      "frameId": "fang-does-not-touch--665093",
+      "momentId": "fang-does-not-touch",
+      "tableauId": "moon-scar-restraint",
+      "reading": "variant",
+      "file": "auto-dailies/fang-does-not-touch--665093.png",
+      "sha256": "bd5ca8e2abfa64978ae148508537e349218a110c7db044952c8b7261b047ee4c",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "read-chun-warning"
+        },
+        {
+          "nodeId": "fang-conduct-forecast",
+          "optionId": "expect-seize"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "chun-warning-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "571c0770220e25da9f405a5673674e49e484c979012685351acda624e441408a",
+      "steps": 21
+    },
+    {
+      "frameId": "conduct-prediction-settles--c20578",
+      "momentId": "conduct-prediction-settles",
+      "tableauId": "moon-scar-restraint",
+      "reading": "variant",
+      "file": "auto-dailies/conduct-prediction-settles--c20578.png",
+      "sha256": "5937fee4a74c3b37f0445c28b7cc9e63cce528115383a869d54f316944caba5e",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "read-fang-calculation"
+        },
+        {
+          "nodeId": "fang-conduct-forecast",
+          "optionId": "expect-preserve"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "fang-leverage-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "ee6a8ed3571bd78e6f6c5341bce5e0f1bfc4620551f39ea098b17dc0064e4c22",
+      "steps": 22
+    },
+    {
+      "frameId": "conduct-prediction-settles--d4a251",
+      "momentId": "conduct-prediction-settles",
+      "tableauId": "moon-scar-restraint",
+      "reading": "variant",
+      "file": "auto-dailies/conduct-prediction-settles--d4a251.png",
+      "sha256": "7381d202eb5c4a57e6b7e006840cebf86e15378e2ca75cf3b1ffda9f6b452b03",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "read-fang-calculation"
+        },
+        {
+          "nodeId": "fang-conduct-forecast",
+          "optionId": "expect-seize"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "fang-leverage-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "74f08b402b84784ea6ded4cebe8f194ecdf63a394990c5e7030d3440c4b59c05",
+      "steps": 22
+    },
+    {
+      "frameId": "trial-decision",
+      "momentId": "trial-decision",
+      "tableauId": "moon-scar-reflection",
+      "reading": "base",
+      "file": "auto-dailies/trial-decision.png",
+      "sha256": "7c40700c9e03351ede30d55671a8d2ba68abd81cd3ed10a243507f4803cd6f85",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "read-fang-calculation"
+        },
+        {
+          "nodeId": "fang-conduct-forecast",
+          "optionId": "expect-seize"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "fang-leverage-understood"
+      ],
+      "availableOptionIds": [
+        "choose-untouched-original",
+        "choose-split-custody"
+      ],
+      "textSha256": "ccddc6f32372ca98636cd4e95c63aa5f0a11c36a268294cb1e15fad50854275d",
+      "steps": 23
+    },
+    {
+      "frameId": "untouched-original-reading",
+      "momentId": "untouched-original-reading",
+      "tableauId": "substrate-fang-appraisal",
+      "reading": "base",
+      "file": "auto-dailies/untouched-original-reading.png",
+      "sha256": "7676c7e777cd3599fa51b0085a0b0b44728ca43ccc24032ffa74c2fb1c417595",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "read-fang-calculation"
+        },
+        {
+          "nodeId": "fang-conduct-forecast",
+          "optionId": "expect-seize"
+        },
+        {
+          "nodeId": "trial-decision",
+          "optionId": "choose-untouched-original"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "fang-leverage-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "2c4a84ad2de747e6f93479345f211adab572a71daec322cab44ae62c9200f4bb",
+      "steps": 24
+    },
+    {
+      "frameId": "split-custody-reading",
+      "momentId": "split-custody-reading",
+      "tableauId": "substrate-chun-appraisal",
+      "reading": "base",
+      "file": "auto-dailies/split-custody-reading.png",
+      "sha256": "86ae00c037b7c4e59d23e25b028fe46cd55dee75956f207a37bacdcc0e739cee",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "read-fang-calculation"
+        },
+        {
+          "nodeId": "fang-conduct-forecast",
+          "optionId": "expect-seize"
+        },
+        {
+          "nodeId": "trial-decision",
+          "optionId": "choose-split-custody"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "fang-leverage-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "7ccfc30c7ece5a6702fdece8abf101671be72ff2a50d93a0eb06f7893980d4f0",
+      "steps": 24
+    },
+    {
+      "frameId": "seal-order--775d26",
+      "momentId": "seal-order",
+      "tableauId": "moon-scar-reflection",
+      "reading": "variant",
+      "file": "auto-dailies/seal-order--775d26.png",
+      "sha256": "0a20f2aeaa12080bb6af05d9068964ab399e12b40fad69a7f9fa18bac5ada976",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "read-fang-calculation"
+        },
+        {
+          "nodeId": "fang-conduct-forecast",
+          "optionId": "expect-seize"
+        },
+        {
+          "nodeId": "trial-decision",
+          "optionId": "choose-untouched-original"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "fang-leverage-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "3e5a41571f4421b787c6b3373e5f6d16264bd8cd525e33b9c10192fd7fb03063",
+      "steps": 25
+    },
+    {
+      "frameId": "seal-order--e44fae",
+      "momentId": "seal-order",
+      "tableauId": "moon-scar-reflection",
+      "reading": "variant",
+      "file": "auto-dailies/seal-order--e44fae.png",
+      "sha256": "860572111672500e8ff1a29e3e8860bd20f6ddb519ff06c743c07acf8fe16811",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "read-fang-calculation"
+        },
+        {
+          "nodeId": "fang-conduct-forecast",
+          "optionId": "expect-seize"
+        },
+        {
+          "nodeId": "trial-decision",
+          "optionId": "choose-split-custody"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "fang-leverage-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "e56ffa1a05dfae35712c74462c0a5ce73f60b9324afdd172636f599aa8be72dc",
+      "steps": 25
+    },
+    {
+      "frameId": "chun-tests-order",
+      "momentId": "chun-tests-order",
+      "tableauId": "moon-scar-aftermath",
+      "reading": "base",
+      "file": "auto-dailies/chun-tests-order.png",
+      "sha256": "aa3f31ba7ca8aeac65286e10eaa696f64e8f4cfa2d09dd04945eea238fa3a3e5",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "read-fang-calculation"
+        },
+        {
+          "nodeId": "fang-conduct-forecast",
+          "optionId": "expect-seize"
+        },
+        {
+          "nodeId": "trial-decision",
+          "optionId": "choose-untouched-original"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "fang-leverage-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "d2edb2e8084c6067891622a6bf3f65b754a18c4fadb7373274a6fc01f3f14bf7",
+      "steps": 26
+    },
+    {
+      "frameId": "fang-keeps-failure",
+      "momentId": "fang-keeps-failure",
+      "tableauId": "moon-scar-restraint",
+      "reading": "base",
+      "file": "auto-dailies/fang-keeps-failure.png",
+      "sha256": "efb82d12bca3fb143cb76620d8d2925c11ba8e8e415d90081fee1cc0ded22eef",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "read-fang-calculation"
+        },
+        {
+          "nodeId": "fang-conduct-forecast",
+          "optionId": "expect-seize"
+        },
+        {
+          "nodeId": "trial-decision",
+          "optionId": "choose-untouched-original"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "fang-leverage-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "f2a8973159ce6f53af64141af04982f4ad1cf85d0f04d01ba3f1b8eba19a78dc",
+      "steps": 27
+    },
+    {
+      "frameId": "fang-answers-cost",
+      "momentId": "fang-answers-cost",
+      "tableauId": "moon-scar-reflection",
+      "reading": "base",
+      "file": "auto-dailies/fang-answers-cost.png",
+      "sha256": "417e4f5bdad4e92ca090131ff347c4a8cf3e54114add8d7e74c81dc572241763",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "read-fang-calculation"
+        },
+        {
+          "nodeId": "fang-conduct-forecast",
+          "optionId": "expect-seize"
+        },
+        {
+          "nodeId": "trial-decision",
+          "optionId": "choose-untouched-original"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "fang-leverage-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "9d4186adc60bee55cc2cb3742096a4e2998a2ce33535df8f612a6ab702880674",
+      "steps": 28
+    },
+    {
+      "frameId": "scar-closes",
+      "momentId": "scar-closes",
+      "tableauId": "substrate-held-warning",
+      "reading": "base",
+      "file": "auto-dailies/scar-closes.png",
+      "sha256": "25f0893920cdedb439ef6752764a29f25a95d9fb67b695b3153b7d41d7b1f155",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "read-fang-calculation"
+        },
+        {
+          "nodeId": "fang-conduct-forecast",
+          "optionId": "expect-seize"
+        },
+        {
+          "nodeId": "trial-decision",
+          "optionId": "choose-untouched-original"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "fang-leverage-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "57645eeaf44af18fafda798dfd60b30118f8e40ab305df1956dff6764a187165",
+      "steps": 29
+    },
+    {
+      "frameId": "key-remains",
+      "momentId": "key-remains",
+      "tableauId": "cellar-disclosure",
+      "reading": "base",
+      "file": "auto-dailies/key-remains.png",
+      "sha256": "35b6843531419dbbe4182db849d7f396290c692fd0ad790c3d1bf77f2c031b2d",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "read-fang-calculation"
+        },
+        {
+          "nodeId": "fang-conduct-forecast",
+          "optionId": "expect-seize"
+        },
+        {
+          "nodeId": "trial-decision",
+          "optionId": "choose-untouched-original"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "fang-leverage-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "008417734c615f6c93c7d0311e0e344b506cd59927eae0bbb3bc21eb03c05bd1",
+      "steps": 30
+    },
+    {
+      "frameId": "ending",
+      "momentId": "ending",
+      "tableauId": "moon-scar-reflection",
+      "reading": "base",
+      "file": "auto-dailies/ending.png",
+      "sha256": "65be8c5518118020e9f22ab07daf70c6374e377cfdf657f8a719cab5c0bc2416",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "read-fang-calculation"
+        },
+        {
+          "nodeId": "fang-conduct-forecast",
+          "optionId": "expect-seize"
+        },
+        {
+          "nodeId": "trial-decision",
+          "optionId": "choose-untouched-original"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "fang-leverage-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "28348521dc1b21d79966964a6b68f0867e3eaef820cb19ce71931343d4365d90",
+      "steps": 31
+    }
+  ]
+}
