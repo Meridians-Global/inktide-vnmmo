@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
 import { compileExperience } from '../src/core/compiler';
-import { availableChoiceOptions, currentMoment, hasInsightsInOrder, initialReaderState, initialReaderStateFromLink, reduceReader } from '../src/core/reader-state';
+import { availableChoiceOptions, currentMoment, hasInsightsInOrder, initialReaderState, initialReaderStateFromLink, reduceReader, resumeReaderState } from '../src/core/reader-state';
 import { moonScarExperience } from '../src/story/moon-scar';
 import { spiderMemoryExperience } from '../src/story/spider-memory';
 
@@ -27,6 +27,17 @@ describe('reader state', () => {
     assert.equal(initialReaderStateFromLink(spider, 'peter-restraint').currentNodeId, 'peter-restraint');
     assert.equal(initialReaderStateFromLink(spider, 'room-without-verdict').currentNodeId, spider.startNodeId);
     assert.equal(initialReaderStateFromLink(spider, 'missing').currentNodeId, spider.startNodeId);
+  });
+
+  it('resumes a persisted coordinate with its rebuilt legal path and keeps only the audio preferences', () => {
+    const resumed = resumeReaderState(experience, { currentNodeId: 'tally-bound', isMuted: false, isVoiceEnabled: true });
+    assert.equal(resumed.currentNodeId, 'tally-bound');
+    assert.deepEqual(resumed.history, initialReaderState(experience, 'tally-bound').history);
+    assert.equal(resumed.isMuted, false);
+    assert.equal(resumed.isVoiceEnabled, true);
+    assert.equal(resumed.isBacklogOpen, false);
+    assert.equal(resumeReaderState(experience, { currentNodeId: 'missing', isMuted: true, isVoiceEnabled: false }).currentNodeId, experience.startNodeId);
+    assert.equal(resumeReaderState(experience, null).currentNodeId, experience.startNodeId);
   });
 
   it('can go back from a deep-linked moment through a deterministic branch path', () => {
