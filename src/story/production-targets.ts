@@ -11,6 +11,7 @@ const readerLedBranching: ProductionTarget = {
 export const productionTargets: Readonly<Record<string, ProductionTarget>> = {
   'spider-memory-between-us-v1': readerLedBranching,
   'moon-scar-reading-v1': readerLedBranching,
+  'privet-drive-boy-who-lived-v1': readerLedBranching,
 };
 
 export function productionTargetFor(experienceId: string): ProductionTarget {

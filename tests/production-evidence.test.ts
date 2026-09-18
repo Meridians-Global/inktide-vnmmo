@@ -11,7 +11,7 @@ async function digest(path: string): Promise<string> {
 
 describe('production evidence', () => {
   it('pins every admitted acquisition byte', async () => {
-    for (const productionId of ['moon-scar-ledger-v2', 'spider-man-memory-between-us-v1']) {
+    for (const productionId of ['moon-scar-ledger-v2', 'spider-man-memory-between-us-v1', 'privet-drive-boy-who-lived-v1']) {
       const receipt = JSON.parse(await readFile(resolve(projectRoot, 'productions', productionId, 'evidence', 'acquisition.receipt.json'), 'utf8')) as {
         assets: Record<string, { sourcePath: string; sha256: string }>;
       };

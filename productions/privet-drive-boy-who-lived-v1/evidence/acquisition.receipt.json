@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 1,
+  "productionId": "privet-drive-boy-who-lived-v1",
+  "status": "candidate",
+  "techniqueTransfer": [
+    "manifest-driven acquisition: plates, isolated subjects and CGs declared as data, kit owns provider calls and evidence",
+    "identity references fed back from earlier requests in the same run",
+    "uniform chroma generation followed by dedicated matte provider and local refinement",
+    "provider events, inputs, outputs and byte digests retained before story admission"
+  ],
+  "models": {
+    "generation": "bytedance/seedream-4.5",
+    "matte": "851-labs/background-remover:a029dff38972b5fda4ec5d75d7d1cd25aeff621d2cf4946a41055d7db66b80bc"
+  },
+  "requestDigests": {
+    "privet-drive-morning-v1.generate": "316550c94703705049609d59ad8858d23b6db70d4c774c5938dc8a8cba38d9ad",
+    "privet-drive-night-lit-v1.generate": "4e8dd05ab88f4b5d5e21a6c9c569a06555e5f8f18d65e0660054387c24f447a6",
+    "privet-drive-night-dark-v1.generate": "af819e6b7e320c82f72fdf14c885ad55097208d653f99645b27de8e11cea371c",
+    "tabby-cat-map-v1.generate": "938dd5b66c5d0786ab7bb9f57d5813d9a80342e1125becdbc44b864a0f6e4f6d",
+    "tabby-cat-map-v1.matte": "185ad95eb94cd318ab29c9de469fa8c97acd2f79cc5f5c01a72d0b1673dc8d4f",
+    "put-outer-v1.generate": "f66c6afbc0248431de0fc96a805197d3bc98e6a1db3dcd9d41ba64a7012ff394",
+    "put-outer-v1.matte": "b258c9b2f321d942af2d18b81397d1cc88f7e285ea6500142b3f343e0726c6cd",
+    "sealed-letter-v1.generate": "e466a8994b28b2903808cc70c428cd20334f873c61fa59645445789e983acba0",
+    "sealed-letter-v1.matte": "8c5e94d29f3fb5d10c9f2c08c6317faa710e9c0c591e7053118ac2149d345663",
+    "vernon-briefcase-v1.generate": "16a33a3f837f530694e132470814fdcbb0df46251905d89279a78a28d77b5287",
+    "vernon-briefcase-v1.matte": "289ba0454bebc12c6ecc605c6183ac49be36e4ec05d88e5f022aca1ac66312ad",
+    "dumbledore-arrival-v1.generate": "571f47ca264fed0630c9d88d54aa2ae8e00af4f4b340823d16263c61cf4dd2b0",
+    "dumbledore-arrival-v1.matte": "a712c24678c5fa35a41d033fc3c8a8fda981779a73fe36c658282cb5f6434bfa",
+    "dumbledore-grave-v1.generate": "298c2141b26756872f6bb870c77093ff08b82eb5a637586f34b996e1e98631f1",
+    "dumbledore-grave-v1.matte": "f5711ee925fe9397326114b7bc1ad64dd449b44f5fd21ee5def980fad6f0826f",
+    "mcgonagall-stern-v1.generate": "0a9eec72b1d4ba76bc7768e95ba98e2b7cb9692f84ae0983f4e3a57fa5a87d1c",
+    "mcgonagall-stern-v1.matte": "e8211a8708cf892360c2f8fc268efe609c67fb59aef0f68a5077a1b43e4d4974",
+    "mcgonagall-grief-v1.generate": "eb5455890bf34aa8dd411c3fee1e07741d92e5878a248ca42d1d802a016d088c",
+    "mcgonagall-grief-v1.matte": "1435608d11a386360afa2a8219dfc7974f337323074013dac2e4db2f7ec987a7",
+    "hagrid-bundle-v1.generate": "2c10580419d454690a6de6ab931a604a998ecb3b6057f747712c171f44051abc",
+    "hagrid-bundle-v1.matte": "bdf6e44cf89f7e959c8247d047b8bb3601188beb3898ce6089e43c79e3f3bb87",
+    "hagrid-weeping-v1.generate": "91e70a9c025318b0223262b7dbb83a4b94936f5efbc24f67f0e76818f4185a4e",
+    "hagrid-weeping-v1.matte": "33e40389e04f71f91c376d448ca88600a8794f19f4982dc4344b870f7c19c7ff",
+    "doorstep-cg-v1.generate": "b6c79e5faa3a159c855337f56b076857d9e71aefed8949f4911bcf736193de57"
+  },
+  "assets": {
+    "privet-drive-morning-v1": {
+      "sourcePath": "assets/generated/privet-drive-boy-who-lived-v1/privet-drive-morning-v1.jpg",
+      "sha256": "756026571829c56db8f7bcaaebc4432ea0b9d5ce26ef1749ff19d2a86d8b6a00",
+      "provenance": "replicate",
+      "predictionIds": [
+        "dcsd2xh3hdrmt0d0p9hvf9hfqm"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/Q1HTiflygwzWY6ZpGyIXv9VExOwAcr3SqHolBsZkfQ9yalOXA/tmp_rz25oxv.jpg"
+    },
+    "privet-drive-night-lit-v1": {
+      "sourcePath": "assets/generated/privet-drive-boy-who-lived-v1/privet-drive-night-lit-v1.jpg",
+      "sha256": "d004a203117fcd8d2e9e57ad15edac5a877794123a16f9637f5443479ed1cf46",
+      "provenance": "replicate",
+      "predictionIds": [
+        "7ra3ff2tmnrmy0d0p9hv8z38k4"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/WPu0HeOcgITRZyNI2fI8Lx5yZ3NTxEFKECiSaZHnybge1KduA/tmpglcojdho.jpg"
+    },
+    "privet-drive-night-dark-v1": {
+      "sourcePath": "assets/generated/privet-drive-boy-who-lived-v1/privet-drive-night-dark-v1.jpg",
+      "sha256": "cc5cb0b7ea851df61559727b6f2ac91269ec031a21472fafb5fcc9ba22e5ba5d",
+      "provenance": "replicate",
+      "predictionIds": [
+        "kx5dk74d4nrmr0d0p9hs0a2xhc"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/zyuJ70Pu2C7uFRuSIBbYIbkttGQTmrwUcLgx7HiyonZzWpzF/tmpv8w1qa_q.jpg"
+    },
+    "tabby-cat-map-v1": {
+      "sourcePath": "assets/generated/privet-drive-boy-who-lived-v1/tabby-cat-map-v1.png",
+      "sha256": "7814ed85f357831ca982260118ad4313ce85517e12553a588c970540f0b761a5",
+      "provenance": "replicate",
+      "predictionIds": [
+        "c42ze0p80drmy0d0p9hshf4rn8",
+        "b1k8hr7hwsrge0d0p9hr4qf5yr"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/KWmAFsKvEBZiIhY529jEdidIeZoKJny9toAEo9cIhwVstSnLA/tmpc0svbqqe.jpg",
+      "transparentUrl": "https://replicate.delivery/czjl/b8YbbrtNZu6tGdJsRwsS6Tv8BUdemTluiZDFY7mEPu8ttSnLA/output.png"
+    },
+    "put-outer-v1": {
+      "sourcePath": "assets/generated/privet-drive-boy-who-lived-v1/put-outer-v1.png",
+      "sha256": "e0ca8c5f592294a786abd206705839ae0eb93d39d31cf48912c5b9d8bc671e05",
+      "provenance": "replicate",
+      "predictionIds": [
+        "3k3wf1hsd9rmw0d0p9jbb9f0qm",
+        "wwsms2335drg80d0p9j84t9h20"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/JGTUefvefqpOEQuW0Hz3WLhxSLKXeze2RTFhSSQO6z8b9WpzF/tmplsd8n01r.jpg",
+      "transparentUrl": "https://replicate.delivery/czjl/zFfDKSuWha3UC6NvdHfz7leZgIDgo98hISFTy4M5cSiy3KduA/output.png"
+    },
+    "sealed-letter-v1": {
+      "sourcePath": "assets/generated/privet-drive-boy-who-lived-v1/sealed-letter-v1.png",
+      "sha256": "73c8095519338f18304d785f3e3b39cdc7c6bacea20bb3d42e917c1f15308807",
+      "provenance": "replicate",
+      "predictionIds": [
+        "ktt86s4nvnrmt0d0p9j8y1av6g",
+        "4jga8f635srge0d0p9j92as7bm"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/JMiKxSuCCYJgDxHcp4Jor3G1DWMLqiCOnuiGQMc5SpgDXpzF/tmpcy1ks176.jpg",
+      "transparentUrl": "https://replicate.delivery/czjl/ffZ6sJVdbDmVcUvhVO40Av1fTeCnmeS7mvKDIxouGnoKir05C/output.png"
+    },
+    "vernon-briefcase-v1": {
+      "sourcePath": "assets/generated/privet-drive-boy-who-lived-v1/vernon-briefcase-v1.png",
+      "sha256": "8155cae6460b479b2dc86e7fd273a6610ed435f2b658d78ccae73e31b9c7ed65",
+      "provenance": "replicate",
+      "predictionIds": [
+        "kmfc27fjt1rmw0d0p9j9ynggj8",
+        "51788r1djhrge0d0p9jtb7np10"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/p1hZLlTjQdbQJdsXY2fLrn3EfJ2B7QaBYZycoi4ifa5Q5KduA/tmp7pnss9zi.jpg",
+      "transparentUrl": "https://replicate.delivery/czjl/V1BbOCqWXyrPFF3oCnMDj0D8E5q8OLEzaey8pDmT4k8WuSnLA/output.png"
+    },
+    "dumbledore-arrival-v1": {
+      "sourcePath": "assets/generated/privet-drive-boy-who-lived-v1/dumbledore-arrival-v1.png",
+      "sha256": "0fbe73f0964d6d12bf92c9f626c6c0f4c80712cd725ec185155aa1237bb3b737",
+      "provenance": "replicate",
+      "predictionIds": [
+        "dyz3hhjytdrmw0d0p9js6pv834",
+        "datt1e4mqnrga0d0p9jt05k788"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/2Mp2LBZe7A26H6Q3p33dN6ztltrFTBseqrtmfD7NeaRO0V6cB/tmpo977zuym.jpg",
+      "transparentUrl": "https://replicate.delivery/czjl/JDIfMFGCewtSKEWV0WKgQzEJZtoPWdtTOxdH7BKpZrOHdlOXA/output.png"
+    },
+    "dumbledore-grave-v1": {
+      "sourcePath": "assets/generated/privet-drive-boy-who-lived-v1/dumbledore-grave-v1.png",
+      "sha256": "9b594ac0ff041475bf3a6ded7f2204fa8b3c9a7f3374f0862938212920638783",
+      "provenance": "replicate",
+      "predictionIds": [
+        "s8cpd6e675rmy0d0p9jtr8w5hc",
+        "f7n25ba7y1rgc0d0p9k831tz5w"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/ZBSCL1PezNTenEXCnZQZfTeiT5VZXgsbkXuialQWSOFG3V6cB/tmpjhdkxcar.jpg",
+      "transparentUrl": "https://replicate.delivery/czjl/KOvM1VPNREaJKxAod5QgMETM46fWkzVoxDRgPPqRzBe0dlOXA/output.png"
+    },
+    "mcgonagall-stern-v1": {
+      "sourcePath": "assets/generated/privet-drive-boy-who-lived-v1/mcgonagall-stern-v1.png",
+      "sha256": "9c3056bd09ea0d783ee235f524e7d7e06797d86c3c54711981402a1c5c12340d",
+      "provenance": "replicate",
+      "predictionIds": [
+        "dr7363vsmhrmw0d0p9kaxw7qsg",
+        "b94a1hxs3xrg80d0p9ka1eec3c"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/KXuDmfRebeEXWIyoWW8xdPN5fe1Oi19TC7MMzl0eXCmijXpzF/tmpooylrf8j.jpg",
+      "transparentUrl": "https://replicate.delivery/czjl/Cmb5JzTfj1SMXiMMkQn5Jmbp3hK5lXiiljpwL3N8GbPJvSnLA/output.png"
+    },
+    "mcgonagall-grief-v1": {
+      "sourcePath": "assets/generated/privet-drive-boy-who-lived-v1/mcgonagall-grief-v1.png",
+      "sha256": "0acc0c59557edbd9ea88fc1b56b13568ec50c736e75f7ee37f9a7719ab80e4bd",
+      "provenance": "replicate",
+      "predictionIds": [
+        "cw2ge1zc0xrmw0d0p9kbnfdj2m",
+        "tgz8n5kkznrg80d0p9ktrjtav8"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/efi7lFI6hWpXAURLSzXfKGtBT8kiWYlqCMaPqVQLjtA89KduA/tmpc1cl507t.jpg",
+      "transparentUrl": "https://replicate.delivery/czjl/AahMKDMFc346Bdrfxe7SG3NFakQixpcauIwOMAByPHDBfKduA/output.png"
+    },
+    "hagrid-bundle-v1": {
+      "sourcePath": "assets/generated/privet-drive-boy-who-lived-v1/hagrid-bundle-v1.png",
+      "sha256": "1702b790ff090d44109bbb5b4587f19c4307716aeb985ce79dee8decb140a392",
+      "provenance": "replicate",
+      "predictionIds": [
+        "scfnejn5qnrmr0d0p9ks1tjzh8",
+        "2wp8jvz0j9rgc0d0p9ks1bxsxw"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/zzKGq05xjkYzItKufjP7Fg6tq4WzUUlecfuzqueGbzbr9V6cB/tmp5yfeqslo.jpg",
+      "transparentUrl": "https://replicate.delivery/czjl/4dxbtbfeEpvnJUHuDvkxa0qCe54NZfMjZ4UwIPpiefno3XpzF/output.png"
+    },
+    "hagrid-weeping-v1": {
+      "sourcePath": "assets/generated/privet-drive-boy-who-lived-v1/hagrid-weeping-v1.png",
+      "sha256": "60605abc48e2d521b32abf3e6174d7ce23124db3597949985bd3812426e6c60a",
+      "provenance": "replicate",
+      "predictionIds": [
+        "phkhzg98q5rmt0d0p9pb7a207w",
+        "1ry8hb6kfxrgc0d0p9p9apxn5c"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/BE4RPuA8sRazB9kOzDo4eYBi7IC5MKKN1fh7qHfWfa26RW6cB/tmpj1mwnyj0.jpg",
+      "transparentUrl": "https://replicate.delivery/czjl/1pb1rXRhe0z2Aq7ehQqh8csZjb7RDPgcDBuyT4lP1ZVhklOXA/output.png",
+      "matteInspection": {
+        "visiblePixels": 2093798,
+        "boundaryPixels": 21059,
+        "residualBoundaryFraction": 0.003751365212023363,
+        "transparentRgbPixels": 0
+      }
+    },
+    "doorstep-cg-v1": {
+      "sourcePath": "assets/generated/privet-drive-boy-who-lived-v1/doorstep-cg-v1.jpg",
+      "sha256": "078c908767ae4765a9c6f571c1d88b264aaa98cbb738391e57792bd3a49bfe3a",
+      "provenance": "replicate",
+      "predictionIds": [
+        "gp4q8k5jqsrmr0d0p9may7qn28"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/WsNYIB6hHJrJCpAf9WeFz7ihkyITQFseyG9SYTDAIBBHCLduA/tmpskaoayk2.jpg"
+    }
+  }
+}

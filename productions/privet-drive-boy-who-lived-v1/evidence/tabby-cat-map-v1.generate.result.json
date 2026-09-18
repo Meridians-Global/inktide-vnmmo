@@ -1,0 +1,35 @@
+{
+  "id": "c42ze0p80drmy0d0p9hshf4rn8",
+  "model": "bytedance/seedream-4.5",
+  "version": "hidden",
+  "input": {
+    "aspect_ratio": "1:1",
+    "image_input": [],
+    "max_images": 1,
+    "prompt": "Isolated anime game object, subject only, centered and fully visible: one tabby cat with square markings around its eyes sitting perfectly upright and still, seen in three-quarter view, staring intently ahead with an unnervingly intelligent expression. High-resolution crisp tapered linework, readable silhouette, generous empty padding. Uniform perfectly flat #00FF66 chroma field with generous padding around the complete subject, no floor, cast shadow, scenery, rim light or reflected chroma. Absolutely no person, room, street, wall, floor, map, text, label or second animal. No text, letters, numbers, captions, logos, border, interface, placement guides, anonymous silhouettes, duplicate objects, extra limbs, malformed hands, chibi anatomy, glossy 3D, photorealism, vector-flat rendering, painterly blur, coarse pixels, real actor likeness.",
+    "sequential_image_generation": "disabled",
+    "size": "2K"
+  },
+  "logs": "Generating 2048x2048 image with aspect ratio 1:1 at 2K resolution\nGenerating...\nGenerated in 9.8sec\n",
+  "output": [
+    "https://replicate.delivery/xezq/KWmAFsKvEBZiIhY529jEdidIeZoKJny9toAEo9cIhwVstSnLA/tmpc0svbqqe.jpg"
+  ],
+  "data_removed": false,
+  "error": null,
+  "source": "api",
+  "status": "succeeded",
+  "created_at": "2026-09-18T02:41:18.851Z",
+  "started_at": "2026-09-18T02:41:18.875564789Z",
+  "completed_at": "2026-09-18T02:41:28.974441724Z",
+  "urls": {
+    "cancel": "https://api.replicate.com/v1/predictions/c42ze0p80drmy0d0p9hshf4rn8/cancel",
+    "get": "https://api.replicate.com/v1/predictions/c42ze0p80drmy0d0p9hshf4rn8",
+    "stream": "https://stream.replicate.com/v1/files/jbxs-ygvarpksrbr7kkjqybzecumizjyp7oc2hmkpj774hvuweuyyizxa",
+    "web": "https://replicate.com/p/c42ze0p80drmy0d0p9hshf4rn8"
+  },
+  "metrics": {
+    "image_output_count": 1,
+    "predict_time": 10.098876925,
+    "total_time": 10.123441724
+  }
+}

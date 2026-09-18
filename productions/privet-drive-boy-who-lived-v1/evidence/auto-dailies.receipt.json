@@ -1,0 +1,1089 @@
+{
+  "schemaVersion": 1,
+  "productionId": "privet-drive-boy-who-lived-v1",
+  "experienceId": "privet-drive-boy-who-lived-v1",
+  "experienceSha256": "8f120bf47947ba7588895e9a8800685b7cd6a1be6edbc3a1cdefd55b9b54609e",
+  "viewport": {
+    "width": 1600,
+    "height": 900
+  },
+  "capturedAt": "2026-09-18T03:05:07.102Z",
+  "consoleErrors": [],
+  "frames": [
+    {
+      "frameId": "privet-morning",
+      "momentId": "privet-morning",
+      "tableauId": "morning-establishing",
+      "reading": "base",
+      "file": "auto-dailies/privet-morning.png",
+      "sha256": "c16339f54c90db9858002f71cd972837fb28447af1601fb313540c79a3dbbf16",
+      "route": [],
+      "insightIds": [],
+      "availableOptionIds": [],
+      "textSha256": "f4522c0c69ded5f42d54b0da5dbc7c94bfa3ff1aa38ff6f9610ca78152464762",
+      "steps": 0
+    },
+    {
+      "frameId": "normal-people",
+      "momentId": "normal-people",
+      "tableauId": "morning-establishing",
+      "reading": "base",
+      "file": "auto-dailies/normal-people.png",
+      "sha256": "f88549fb9d4de8cbd334b87c38869e9b417995fdffd446395fb899245ddf6219",
+      "route": [],
+      "insightIds": [],
+      "availableOptionIds": [],
+      "textSha256": "17c427904d5bad4c4c26e4c4c71b73b7b510346dffc28f4435f3528eb2dd4248",
+      "steps": 1
+    },
+    {
+      "frameId": "vernon-leaves",
+      "momentId": "vernon-leaves",
+      "tableauId": "morning-vernon",
+      "reading": "base",
+      "file": "auto-dailies/vernon-leaves.png",
+      "sha256": "70acc42caf3241b12f3179ebc4426402fe6c98ed232aeb32b9887b5069ad88e8",
+      "route": [],
+      "insightIds": [],
+      "availableOptionIds": [],
+      "textSha256": "17b9fd052a9740729df589d9cef8a742bfe24719710a2bee7ba8d605de350843",
+      "steps": 2
+    },
+    {
+      "frameId": "cat-on-wall",
+      "momentId": "cat-on-wall",
+      "tableauId": "morning-cat",
+      "reading": "base",
+      "file": "auto-dailies/cat-on-wall.png",
+      "sha256": "1b432c9f01987cdc1f6d724eeff6d755b50a34ed562462f6ae78a08f3aba4990",
+      "route": [],
+      "insightIds": [],
+      "availableOptionIds": [
+        "see-map",
+        "see-sign"
+      ],
+      "textSha256": "9538ff432f42dcc8848b724b7e5a6e5183793cb44aba181e8987db23ed44ab5d",
+      "steps": 3
+    },
+    {
+      "frameId": "vernon-blinks-map",
+      "momentId": "vernon-blinks-map",
+      "tableauId": "morning-cat",
+      "reading": "base",
+      "file": "auto-dailies/vernon-blinks-map.png",
+      "sha256": "9b791b48e9f07e52c99827053b4200451d0c81848ae684c9e27e520293446d72",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-map"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-map"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "f60643dc53eb9604a1f85bc3e69aa196b71eb5012b399029301202e324419176",
+      "steps": 4
+    },
+    {
+      "frameId": "vernon-blinks-sign",
+      "momentId": "vernon-blinks-sign",
+      "tableauId": "morning-cat",
+      "reading": "base",
+      "file": "auto-dailies/vernon-blinks-sign.png",
+      "sha256": "bd2e28dccdcca712140763fc387533236a6540abf14e3c33b43d0a0bcc55e580",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-sign"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-sign"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "61303f2ba1407edebfc65a63c507bfbb69e569a98aa18cd9af1905c33599446a",
+      "steps": 4
+    },
+    {
+      "frameId": "cloaks-in-town",
+      "momentId": "cloaks-in-town",
+      "tableauId": "morning-vernon",
+      "reading": "base",
+      "file": "auto-dailies/cloaks-in-town.png",
+      "sha256": "4f3336fb721a939eb46378dbdcb9583c9ec4dd67ca607fada07a821008867aab",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-map"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-map"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "4a4a4f30a0c7c4c627131f1483805b681e05601d3015f00831df2d34df267144",
+      "steps": 5
+    },
+    {
+      "frameId": "whispers",
+      "momentId": "whispers",
+      "tableauId": "morning-vernon",
+      "reading": "base",
+      "file": "auto-dailies/whispers.png",
+      "sha256": "6c9630f0ad0c2ca3516d8e0f8a2b121290ffb0aa2fced4c113825e5f09b4a03c",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-map"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-map"
+      ],
+      "availableOptionIds": [
+        "the-name",
+        "the-cloaks"
+      ],
+      "textSha256": "40ff8cfcd9060b9e88670b716c5859157640ddfbc77570a6138ba20550fdc983",
+      "steps": 6
+    },
+    {
+      "frameId": "vernon-stops-name",
+      "momentId": "vernon-stops-name",
+      "tableauId": "morning-vernon",
+      "reading": "base",
+      "file": "auto-dailies/vernon-stops-name.png",
+      "sha256": "6a3bbfae6c42c2cd913288cfe8609aa91ac4d3524c8d05208931ea422de4728d",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-map"
+        },
+        {
+          "nodeId": "whispers",
+          "optionId": "the-name"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-map",
+        "potters-named"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "8f14e8796b58986b0dbfa4850222a6c5a6b24cfd58ec5e5476fba937da4dea4a",
+      "steps": 7
+    },
+    {
+      "frameId": "vernon-stops-cloaks",
+      "momentId": "vernon-stops-cloaks",
+      "tableauId": "morning-vernon",
+      "reading": "base",
+      "file": "auto-dailies/vernon-stops-cloaks.png",
+      "sha256": "eeb9b982aaabd97d22e161669e6c6736a53c2d614c424be8ef45b62fdbec0df6",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-map"
+        },
+        {
+          "nodeId": "whispers",
+          "optionId": "the-cloaks"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-map",
+        "cloaks-noticed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "c26f6a8665f8d674e9a21603f484b46155d51fdd8e08db76a80fe086b3790325",
+      "steps": 7
+    },
+    {
+      "frameId": "vernon-returns",
+      "momentId": "vernon-returns",
+      "tableauId": "morning-cat-watching",
+      "reading": "base",
+      "file": "auto-dailies/vernon-returns.png",
+      "sha256": "7da0520951418e5edc0241e6806c6e9217dff60a6125037fd96e599296ce0820",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-sign"
+        },
+        {
+          "nodeId": "whispers",
+          "optionId": "the-cloaks"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-sign",
+        "cloaks-noticed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "3a8867f96ca4959b860b7633f56468d9a3a3d2b86936a6b9eeb8b7b82a240f23",
+      "steps": 8
+    },
+    {
+      "frameId": "vernon-returns--7a3bd6",
+      "momentId": "vernon-returns",
+      "tableauId": "morning-cat-watching",
+      "reading": "variant",
+      "file": "auto-dailies/vernon-returns--7a3bd6.png",
+      "sha256": "cbe560adb32c2d76ac6b6a15386cb174de1a2e6a2e33a0e31d37a1d31a26d1dd",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-map"
+        },
+        {
+          "nodeId": "whispers",
+          "optionId": "the-cloaks"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-map",
+        "cloaks-noticed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "eb18d62085671933daf8553ce10f1cd1880c426d4e751b3014000715dce0f04f",
+      "steps": 8
+    },
+    {
+      "frameId": "vernon-returns--bf0106",
+      "momentId": "vernon-returns",
+      "tableauId": "morning-cat-watching",
+      "reading": "variant",
+      "file": "auto-dailies/vernon-returns--bf0106.png",
+      "sha256": "f82e0c94273f4fdcb764bd3286f1f5b3e9804539b34babff8b26041192a13df8",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-map"
+        },
+        {
+          "nodeId": "whispers",
+          "optionId": "the-name"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-map",
+        "potters-named"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "929e45d5f4e4d44a9c763c2771e3c206f715c210afbdb17d8d164538d7116a75",
+      "steps": 8
+    },
+    {
+      "frameId": "vernon-returns--d8f2e3",
+      "momentId": "vernon-returns",
+      "tableauId": "morning-cat-watching",
+      "reading": "variant",
+      "file": "auto-dailies/vernon-returns--d8f2e3.png",
+      "sha256": "d7e6fd76533919df8e6c728dccfcbe0ae128d964ca2361fc6ac339696a673692",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-sign"
+        },
+        {
+          "nodeId": "whispers",
+          "optionId": "the-name"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-sign",
+        "potters-named"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "683d832ecd3ea0bf01342a49579f5bcf24f42ec9eaf692e80f8037b2c9bf53ef",
+      "steps": 8
+    },
+    {
+      "frameId": "privet-night",
+      "momentId": "privet-night",
+      "tableauId": "night-establishing",
+      "reading": "base",
+      "file": "auto-dailies/privet-night.png",
+      "sha256": "445bfe029e546b3de26c989cd5688acb861309f49d0adc662db42524aaf0bc5b",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-map"
+        },
+        {
+          "nodeId": "whispers",
+          "optionId": "the-name"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-map",
+        "potters-named"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "f9529b50c9c8c6415e6d31782a128f81aa28f943356087eee7a77852c9433e90",
+      "steps": 9
+    },
+    {
+      "frameId": "cat-waits",
+      "momentId": "cat-waits",
+      "tableauId": "night-cat",
+      "reading": "base",
+      "file": "auto-dailies/cat-waits.png",
+      "sha256": "49c1b5b404a4b508066262793926d179d7d3e8ac27c22ac1ba43544b3c6f0de8",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-map"
+        },
+        {
+          "nodeId": "whispers",
+          "optionId": "the-name"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-map",
+        "potters-named"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "7156bb16965a17315dd6eaa772c7572a254c558e986bdd2402239a229a913cb1",
+      "steps": 10
+    },
+    {
+      "frameId": "cat-waits--2d8cc8",
+      "momentId": "cat-waits",
+      "tableauId": "night-cat",
+      "reading": "variant",
+      "file": "auto-dailies/cat-waits--2d8cc8.png",
+      "sha256": "000b7c6102b628dbb0b7fd994301bbd83b2d19c4a49400fe5878e3c2b475ada2",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-sign"
+        },
+        {
+          "nodeId": "whispers",
+          "optionId": "the-name"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-sign",
+        "potters-named"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "332f55639c19f3f1652a58e5d2a2f6d0648a8bfd09146e4d612442fd3ae04217",
+      "steps": 10
+    },
+    {
+      "frameId": "man-appears",
+      "momentId": "man-appears",
+      "tableauId": "night-arrival",
+      "reading": "base",
+      "file": "auto-dailies/man-appears.png",
+      "sha256": "608a482086b047c2113e7e87aca0fd05a7509895992548db03e4c565e2d00d55",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-map"
+        },
+        {
+          "nodeId": "whispers",
+          "optionId": "the-name"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-map",
+        "potters-named"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "08799678889e22b8308cbfad7dd4e6a3137cdebe32684795cec0cefc1b29bfb7",
+      "steps": 11
+    },
+    {
+      "frameId": "put-outer",
+      "momentId": "put-outer",
+      "tableauId": "night-put-outer",
+      "reading": "base",
+      "file": "auto-dailies/put-outer.png",
+      "sha256": "aaff845177583d9c43db904304ace1b744d1d2090084074ca16650d5a0233400",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-map"
+        },
+        {
+          "nodeId": "whispers",
+          "optionId": "the-name"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-map",
+        "potters-named"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "2bb612d0ae0a2b12702091ecadc143344952a03b6d12c72ee6908c1a4220e893",
+      "steps": 12
+    },
+    {
+      "frameId": "greets-cat",
+      "momentId": "greets-cat",
+      "tableauId": "dark-dumbledore-cat",
+      "reading": "base",
+      "file": "auto-dailies/greets-cat.png",
+      "sha256": "4d1e186144e31ca5fa8a660e5537662abfafe49cf2f8ee7b1ebe3046ecc0cdeb",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-map"
+        },
+        {
+          "nodeId": "whispers",
+          "optionId": "the-name"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-map",
+        "potters-named"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "e6f80daacad95e0f44b114c86dc664aa663f7eaa1f4fc0e46d830b3684cd0d3f",
+      "steps": 13
+    },
+    {
+      "frameId": "cat-becomes-woman",
+      "momentId": "cat-becomes-woman",
+      "tableauId": "dark-mcgonagall-active",
+      "reading": "base",
+      "file": "auto-dailies/cat-becomes-woman.png",
+      "sha256": "d15bd378178ffe7faf95e580d55f4099e9d79ae77547f9fce9546926a6d42350",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-map"
+        },
+        {
+          "nodeId": "whispers",
+          "optionId": "the-name"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-map",
+        "potters-named"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "ca38f382ee99e17e1d3989cb6f180c4351ccefe29aaabeed084f9e2bb98ebe96",
+      "steps": 14
+    },
+    {
+      "frameId": "mcgonagall-scolds",
+      "momentId": "mcgonagall-scolds",
+      "tableauId": "dark-mcgonagall-active",
+      "reading": "base",
+      "file": "auto-dailies/mcgonagall-scolds.png",
+      "sha256": "02cdacd75641e876746d42c67a043f868ed32e7daea8dbda5fa979e3a910e81d",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-map"
+        },
+        {
+          "nodeId": "whispers",
+          "optionId": "the-name"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-map",
+        "potters-named"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "4950baaac355245c9fe3760697fc8ed4b097bc7edee7847b1a6e43dc5b2c5a78",
+      "steps": 15
+    },
+    {
+      "frameId": "dumbledore-celebrate",
+      "momentId": "dumbledore-celebrate",
+      "tableauId": "dark-dumbledore-active",
+      "reading": "base",
+      "file": "auto-dailies/dumbledore-celebrate.png",
+      "sha256": "32d9f4d23586aa732c432764bcd86f81377433275b9169fa30046b1edf17a008",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-map"
+        },
+        {
+          "nodeId": "whispers",
+          "optionId": "the-name"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-map",
+        "potters-named"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "04238ac19640c2bf91d4b0c907e7963eecff75cd3ebbd960580eea231c09f1e1",
+      "steps": 16
+    },
+    {
+      "frameId": "mcgonagall-asks",
+      "momentId": "mcgonagall-asks",
+      "tableauId": "dark-mcgonagall-active",
+      "reading": "base",
+      "file": "auto-dailies/mcgonagall-asks.png",
+      "sha256": "f86dda16c03c76e2dc4aa80fcd8ea0c69539eb4cab976d24ca3d4a6bf5b6c08f",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-map"
+        },
+        {
+          "nodeId": "whispers",
+          "optionId": "the-name"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-map",
+        "potters-named"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "f51c7a43cdae9e76ed5cebcc03d69d3ce658f4715a1deac921a9bfbd0dc48603",
+      "steps": 17
+    },
+    {
+      "frameId": "mcgonagall-private",
+      "momentId": "mcgonagall-private",
+      "tableauId": "dark-mcgonagall-active",
+      "reading": "base",
+      "file": "auto-dailies/mcgonagall-private.png",
+      "sha256": "4e89cfa1c6fbacf6cd2c3eb48995905f61a049b56fcfe54aa2f2dad1ddfdb18d",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-map"
+        },
+        {
+          "nodeId": "whispers",
+          "optionId": "the-name"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-map",
+        "potters-named"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "d7328cc81cc0c2719416ebf2606f2ed2441b66245386fcc9f85e0795ddb0f08e",
+      "steps": 18
+    },
+    {
+      "frameId": "dumbledore-confirms",
+      "momentId": "dumbledore-confirms",
+      "tableauId": "dark-dumbledore-grave",
+      "reading": "base",
+      "file": "auto-dailies/dumbledore-confirms.png",
+      "sha256": "e364e810fe318523666afe335bbfcc9435710a4b0a52343e1ace8545da264ff1",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-map"
+        },
+        {
+          "nodeId": "whispers",
+          "optionId": "the-name"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-map",
+        "potters-named"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "e367b9d3129a2b2dfe5dc9d2948f92e575f9a9d03e139fc501b6990d2b15bee6",
+      "steps": 19
+    },
+    {
+      "frameId": "mcgonagall-breaks",
+      "momentId": "mcgonagall-breaks",
+      "tableauId": "dark-mcgonagall-grief",
+      "reading": "base",
+      "file": "auto-dailies/mcgonagall-breaks.png",
+      "sha256": "fe6d46db0993528e83efe29c662e805803c9b8202a6ea6251f6d388f5c2b1d4f",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-map"
+        },
+        {
+          "nodeId": "whispers",
+          "optionId": "the-name"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-map",
+        "potters-named"
+      ],
+      "availableOptionIds": [
+        "something-in-boy",
+        "his-power-broke",
+        "nobody-knows"
+      ],
+      "textSha256": "8a9c1269de0a43ea6d5a02c02a17a88bedb42fd29be3429a7f6e771bdf9d0356",
+      "steps": 20
+    },
+    {
+      "frameId": "dumbledore-guess--48b31e",
+      "momentId": "dumbledore-guess",
+      "tableauId": "dark-dumbledore-grave",
+      "reading": "variant",
+      "file": "auto-dailies/dumbledore-guess--48b31e.png",
+      "sha256": "9fead11cb9d972fddc3222e93c100198336bd7824921698024eb251f59bcc371",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-map"
+        },
+        {
+          "nodeId": "whispers",
+          "optionId": "the-name"
+        },
+        {
+          "nodeId": "mcgonagall-breaks",
+          "optionId": "nobody-knows"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-map",
+        "potters-named"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "88bf2e7e5e6902f13a9ccce69657c345a547d3305e46d81e7dca2995b0743524",
+      "steps": 21
+    },
+    {
+      "frameId": "dumbledore-guess--4ecb69",
+      "momentId": "dumbledore-guess",
+      "tableauId": "dark-dumbledore-grave",
+      "reading": "variant",
+      "file": "auto-dailies/dumbledore-guess--4ecb69.png",
+      "sha256": "6e57cacc25d9e9d0a3bad2ca4ec29d48aabea5f195953efdf6e03c8a1d02bbb2",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-map"
+        },
+        {
+          "nodeId": "whispers",
+          "optionId": "the-name"
+        },
+        {
+          "nodeId": "mcgonagall-breaks",
+          "optionId": "something-in-boy"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-map",
+        "potters-named"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "8a7fd8b49160f44f6e6bde7e7041343cec69d8adad00c920d3295685df05ae41",
+      "steps": 21
+    },
+    {
+      "frameId": "dumbledore-guess--e029ff",
+      "momentId": "dumbledore-guess",
+      "tableauId": "dark-dumbledore-grave",
+      "reading": "variant",
+      "file": "auto-dailies/dumbledore-guess--e029ff.png",
+      "sha256": "0690d4ccac291c0c8dfafa8004b4e0db45d4ea2c3383b16acb5f310d2507f114",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-map"
+        },
+        {
+          "nodeId": "whispers",
+          "optionId": "the-name"
+        },
+        {
+          "nodeId": "mcgonagall-breaks",
+          "optionId": "his-power-broke"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-map",
+        "potters-named"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "14b374eb69b88fdd68e1a630c22b2944d1a0a3c41505b37e18ea2d7bb17bd695",
+      "steps": 21
+    },
+    {
+      "frameId": "hagrid-arrives",
+      "momentId": "hagrid-arrives",
+      "tableauId": "dark-hagrid-arrives",
+      "reading": "base",
+      "file": "auto-dailies/hagrid-arrives.png",
+      "sha256": "40ed3ca9a3e4502ad831fc112c1f0d19441411068c86f002c72ff37440492cad",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-map"
+        },
+        {
+          "nodeId": "whispers",
+          "optionId": "the-name"
+        },
+        {
+          "nodeId": "mcgonagall-breaks",
+          "optionId": "something-in-boy"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-map",
+        "potters-named"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "a4b1c9046fef8baae18bd670cf81291d8fce1b4e8f2cfe51eec441230cca1c4d",
+      "steps": 22
+    },
+    {
+      "frameId": "hagrid-reports",
+      "momentId": "hagrid-reports",
+      "tableauId": "dark-hagrid-arrives",
+      "reading": "base",
+      "file": "auto-dailies/hagrid-reports.png",
+      "sha256": "4e963c9a30b806511301e401c190ada1a989cfdb8be9c9891f324e1e8204bb44",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-map"
+        },
+        {
+          "nodeId": "whispers",
+          "optionId": "the-name"
+        },
+        {
+          "nodeId": "mcgonagall-breaks",
+          "optionId": "something-in-boy"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-map",
+        "potters-named"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "4c62d4a2e12c62980f0afa1b442e4331df3539f14aa8a856bd0c190b1e5cb85d",
+      "steps": 23
+    },
+    {
+      "frameId": "doorstep",
+      "momentId": "doorstep",
+      "tableauId": "doorstep-reveal",
+      "reading": "base",
+      "file": "auto-dailies/doorstep.png",
+      "sha256": "8227b64de07eb7cf4ea19d653feb888a8f7afd6a689440cbe24ace7427b95e80",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-map"
+        },
+        {
+          "nodeId": "whispers",
+          "optionId": "the-name"
+        },
+        {
+          "nodeId": "mcgonagall-breaks",
+          "optionId": "something-in-boy"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-map",
+        "potters-named"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "4fff0434feb4b86d6b2896a1250bd74181cc373b3fe9564ed7bc38eca603b616",
+      "steps": 24
+    },
+    {
+      "frameId": "scar-question",
+      "momentId": "scar-question",
+      "tableauId": "dark-trio-mcgonagall",
+      "reading": "base",
+      "file": "auto-dailies/scar-question.png",
+      "sha256": "3a4683821181f98041f54bbafb16c3fbe9709fa9341c6cc2d06e03057f661610",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-map"
+        },
+        {
+          "nodeId": "whispers",
+          "optionId": "the-name"
+        },
+        {
+          "nodeId": "mcgonagall-breaks",
+          "optionId": "something-in-boy"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-map",
+        "potters-named"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "83f11ec5ff50f7c6227c45f59f7847da0b452aa976a4cae31a68117028cbc806",
+      "steps": 25
+    },
+    {
+      "frameId": "scars-handy",
+      "momentId": "scars-handy",
+      "tableauId": "dark-trio-dumbledore",
+      "reading": "base",
+      "file": "auto-dailies/scars-handy.png",
+      "sha256": "90a18f0d3b550e6f4240231c38692349bd08e646409fcef89e8328464e64b37f",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-map"
+        },
+        {
+          "nodeId": "whispers",
+          "optionId": "the-name"
+        },
+        {
+          "nodeId": "mcgonagall-breaks",
+          "optionId": "something-in-boy"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-map",
+        "potters-named"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "1f9c377d1e23aed41e38f887204d4ec4a9ba22047ae73e2c7984c6a54e0bb761",
+      "steps": 26
+    },
+    {
+      "frameId": "letter-decision",
+      "momentId": "letter-decision",
+      "tableauId": "dark-letter",
+      "reading": "base",
+      "file": "auto-dailies/letter-decision.png",
+      "sha256": "689ff1c88325e118fa1140fa989db289fc061fb02db6e50346981855d34a33d8",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-map"
+        },
+        {
+          "nodeId": "whispers",
+          "optionId": "the-name"
+        },
+        {
+          "nodeId": "mcgonagall-breaks",
+          "optionId": "something-in-boy"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-map",
+        "potters-named"
+      ],
+      "availableOptionIds": [
+        "letter-alone",
+        "a-word-tomorrow"
+      ],
+      "textSha256": "aec127d32ba948d858a1be798bef7497503d43400be525547299d6136a44b8ed",
+      "steps": 28
+    },
+    {
+      "frameId": "letter-placed--ba92eb",
+      "momentId": "letter-placed",
+      "tableauId": "dark-letter",
+      "reading": "variant",
+      "file": "auto-dailies/letter-placed--ba92eb.png",
+      "sha256": "994bc262511196776b855b15b60b9fdedfa483035e02ffc8389672eae2d6df6d",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-map"
+        },
+        {
+          "nodeId": "whispers",
+          "optionId": "the-name"
+        },
+        {
+          "nodeId": "mcgonagall-breaks",
+          "optionId": "something-in-boy"
+        },
+        {
+          "nodeId": "letter-decision",
+          "optionId": "a-word-tomorrow"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-map",
+        "potters-named"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "4d27e97ac3ffb182dcd3e54fa90e6af59f5126a4afc93e7b6e98b12fb1206ab5",
+      "steps": 29
+    },
+    {
+      "frameId": "letter-placed--eedc31",
+      "momentId": "letter-placed",
+      "tableauId": "dark-letter",
+      "reading": "variant",
+      "file": "auto-dailies/letter-placed--eedc31.png",
+      "sha256": "9ee3a85697b8d1ddc4f7bb0111e8ff09e18ed58a0ff4757fc69eb1d86f51ce8b",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-map"
+        },
+        {
+          "nodeId": "whispers",
+          "optionId": "the-name"
+        },
+        {
+          "nodeId": "mcgonagall-breaks",
+          "optionId": "something-in-boy"
+        },
+        {
+          "nodeId": "letter-decision",
+          "optionId": "letter-alone"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-map",
+        "potters-named"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "a589f5f137e6a83db43edbd3bfe05169bfbc034cba13cd9387ce3e46df4502d4",
+      "steps": 29
+    },
+    {
+      "frameId": "hagrid-weeps",
+      "momentId": "hagrid-weeps",
+      "tableauId": "dark-hagrid-weeps",
+      "reading": "base",
+      "file": "auto-dailies/hagrid-weeps.png",
+      "sha256": "2f392fd6047863d1d56410a611b486364ea5f0d6cc297f30613900b9f090e84d",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-map"
+        },
+        {
+          "nodeId": "whispers",
+          "optionId": "the-name"
+        },
+        {
+          "nodeId": "mcgonagall-breaks",
+          "optionId": "something-in-boy"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-map",
+        "potters-named"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "f904943ce8a217a5d4791b4c50e5ce86057d4ceac0cb8a8340c4529764dca9f2",
+      "steps": 27
+    },
+    {
+      "frameId": "they-leave",
+      "momentId": "they-leave",
+      "tableauId": "night-relit",
+      "reading": "base",
+      "file": "auto-dailies/they-leave.png",
+      "sha256": "99b04e534b487d8de70380326c6e35df044b739e76eddd435d020f739a26fb73",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-map"
+        },
+        {
+          "nodeId": "whispers",
+          "optionId": "the-name"
+        },
+        {
+          "nodeId": "mcgonagall-breaks",
+          "optionId": "something-in-boy"
+        },
+        {
+          "nodeId": "letter-decision",
+          "optionId": "letter-alone"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-map",
+        "potters-named"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "f4833932bbe73f7c7d85a8867ed822b022704c4f7372543d9ae3fd4eee39940e",
+      "steps": 30
+    },
+    {
+      "frameId": "they-leave--0b0d98",
+      "momentId": "they-leave",
+      "tableauId": "night-relit",
+      "reading": "variant",
+      "file": "auto-dailies/they-leave--0b0d98.png",
+      "sha256": "d80b5d9c3ae16354149dd18805bf953132907581c1d737e1e4530ead21e23e86",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-map"
+        },
+        {
+          "nodeId": "whispers",
+          "optionId": "the-cloaks"
+        },
+        {
+          "nodeId": "mcgonagall-breaks",
+          "optionId": "something-in-boy"
+        },
+        {
+          "nodeId": "letter-decision",
+          "optionId": "letter-alone"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-map",
+        "cloaks-noticed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "b8aeca89e347dfe8aeefa92ee4c1e90b918f83ef616ab95bb369d11b2058add8",
+      "steps": 30
+    },
+    {
+      "frameId": "ending",
+      "momentId": "ending",
+      "tableauId": "night-relit",
+      "reading": "base",
+      "file": "auto-dailies/ending.png",
+      "sha256": "ed09a554750307803f39d8d58dfafe9372e2dc5dc4f9d782a2a03b8d551921e8",
+      "route": [
+        {
+          "nodeId": "cat-on-wall",
+          "optionId": "see-map"
+        },
+        {
+          "nodeId": "whispers",
+          "optionId": "the-name"
+        },
+        {
+          "nodeId": "mcgonagall-breaks",
+          "optionId": "something-in-boy"
+        },
+        {
+          "nodeId": "letter-decision",
+          "optionId": "letter-alone"
+        }
+      ],
+      "insightIds": [
+        "cat-reads-map",
+        "potters-named"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "2818aa2181e85a41aef835026347046266eefb90d86185cd77efd43344763f9b",
+      "steps": 31
+    }
+  ]
+}
