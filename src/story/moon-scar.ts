@@ -1,11 +1,13 @@
 import type { Experience } from '../core/contracts';
+import { withVoiceLines } from '../core/voice-cast';
+import { moonScarVoiceLines } from './generated/moon-scar.voices';
 
 const base = 'assets/stage-kit';
 const generated = 'assets/generated/moon-scar-ledger-v2';
 const normalize = { kind: 'figure-normalize' as const, recipeVersion: 1 as const, canvas: { width: 896, height: 1024 }, subjectBox: { width: 850, height: 960 }, bottomPadding: 24 };
 const snowBeyondCleft = { kind: 'snow' as const, layer: 'back' as const, region: { left: 24, top: 14, width: 52, height: 58 }, intensity: 18, seed: 1111 };
 
-export const moonScarExperience: Experience = {
+const authored: Experience = {
   schemaVersion: 2,
   id: 'moon-scar-reading-v1',
   title: 'Moon-Scar Ledger',
@@ -42,6 +44,9 @@ export const moonScarExperience: Experience = {
     { id: 'cloth-shift', kind: 'cue', sourcePath: `${base}/audio/foley/cloth-shift-v1.wav`, sha256: 'b2c9deb349f3843b222b5365bb5e131a8974a4c1271846b3f517c43d96b70591' },
     { id: 'stone-collection', kind: 'cue', sourcePath: `${base}/audio/foley/small-stone-collection-v1.wav`, sha256: '43ecf5b25a16244110b48185c95e14b7b0f6a90feb101e064a9d2e37a00c0790' },
     { id: 'moon-resonance', kind: 'cue', sourcePath: `${generated}/moon-resonance-v1.wav`, sha256: 'aa425701bc5636c044e04893ce411fda0f418accc9f4ce4bf62f66d88de0b9a1' },
+    { id: 'cleft-winter-theme', kind: 'music', sourcePath: `${generated}/score/cleft-winter-theme.mp3`, sha256: '330d88e053a758c305cee12ddb3d5db025053c9083e5ba3f5d41ce65f67c17b4' },
+    { id: 'moon-scar-revelation', kind: 'music', sourcePath: `${generated}/score/moon-scar-revelation.mp3`, sha256: '9886bf368a6d7311b61ffc30fb31c08baf9bc41215d132247c676c8742a7f148' },
+    { id: 'seal-stone', kind: 'cue', sourcePath: `${generated}/score/seal-stone.wav`, sha256: 'd0f26127957be6814cbfa36739f05d66fd5f0e681cd0d6fdd797ae66fabd7333' },
   ],
   actors: [
     { id: 'fang-yuan', name: 'Fang Yuan', identityVersion: 'fang-yuan-v2', defaultAppearanceId: 'field-neutral', stageHeightPercent: 88, appearances: [
@@ -58,16 +63,16 @@ export const moonScarExperience: Experience = {
   ],
   tableaux: [
     {
-      id: 'cleft-establishing', location: 'Mountain Cleft · Unregistered Harvest', backgroundAssetId: 'cleft-bg', ambienceAssetId: 'winter-wind', shot: 'wide', tone: 'cold', atmosphere: [snowBeyondCleft], figures: [],
+      id: 'cleft-establishing', location: 'Mountain Cleft · Unregistered Harvest', backgroundAssetId: 'cleft-bg', musicAssetId: 'cleft-winter-theme', ambienceAssetId: 'winter-wind', shot: 'wide', tone: 'cold', atmosphere: [snowBeyondCleft], figures: [],
     },
     {
-      id: 'cleft-chun-active', location: 'Mountain Cleft · Unregistered Harvest', backgroundAssetId: 'cleft-bg', ambienceAssetId: 'winter-wind', shot: 'conversation', tone: 'cold', atmosphere: [snowBeyondCleft], figures: [
+      id: 'cleft-chun-active', location: 'Mountain Cleft · Unregistered Harvest', backgroundAssetId: 'cleft-bg', musicAssetId: 'cleft-winter-theme', ambienceAssetId: 'winter-wind', shot: 'conversation', tone: 'cold', atmosphere: [snowBeyondCleft], figures: [
         { actorId: 'fang-yuan', slot: 'left', facing: 'right', emphasis: 'supporting' },
         { actorId: 'gu-yue-chun', slot: 'right', facing: 'left', emphasis: 'active' },
       ],
     },
     {
-      id: 'cleft-fang-active', location: 'Mountain Cleft · Unregistered Harvest', backgroundAssetId: 'cleft-bg', ambienceAssetId: 'winter-wind', shot: 'conversation', tone: 'cold', atmosphere: [snowBeyondCleft], figures: [
+      id: 'cleft-fang-active', location: 'Mountain Cleft · Unregistered Harvest', backgroundAssetId: 'cleft-bg', musicAssetId: 'cleft-winter-theme', ambienceAssetId: 'winter-wind', shot: 'conversation', tone: 'cold', atmosphere: [snowBeyondCleft], figures: [
         { actorId: 'fang-yuan', appearanceId: 'field-neutral', slot: 'left', facing: 'right', emphasis: 'active' },
         { actorId: 'gu-yue-chun', slot: 'right', facing: 'left', emphasis: 'supporting' },
       ],
@@ -124,23 +129,23 @@ export const moonScarExperience: Experience = {
       ],
     },
     {
-      id: 'moon-scar-reveal', location: 'Gu Yue Clan · Chun’s Cellar', backgroundAssetId: 'cellar-bg', ambienceAssetId: 'interior-room', musicAssetId: 'tension-drone', shot: 'artifact', tone: 'ominous', figures: [],
+      id: 'moon-scar-reveal', location: 'Gu Yue Clan · Chun’s Cellar', backgroundAssetId: 'cellar-bg', ambienceAssetId: 'interior-room', musicAssetId: 'moon-scar-revelation', shot: 'artifact', tone: 'ominous', figures: [],
       cutIn: { assetId: 'moon-scar-cg', framing: 'location-match', representedActorIds: ['fang-yuan', 'gu-yue-chun'], representedArtifactId: 'moon-scar-gu' },
     },
     {
-      id: 'moon-scar-aftermath', location: 'Gu Yue Clan · Chun’s Cellar', backgroundAssetId: 'cellar-bg', ambienceAssetId: 'interior-room', musicAssetId: 'tension-drone', shot: 'artifact', tone: 'ominous', figures: [
+      id: 'moon-scar-aftermath', location: 'Gu Yue Clan · Chun’s Cellar', backgroundAssetId: 'cellar-bg', ambienceAssetId: 'interior-room', musicAssetId: 'moon-scar-revelation', shot: 'artifact', tone: 'ominous', figures: [
         { actorId: 'fang-yuan', slot: 'far-left', facing: 'right', emphasis: 'supporting' },
         { actorId: 'gu-yue-chun', appearanceId: 'restrained-disclosure', slot: 'far-right', facing: 'left', emphasis: 'active' },
       ], artifact: { assetId: 'moon-scar-gu', slot: 'center', footprint: 'large' },
     },
     {
-      id: 'moon-scar-reflection', location: 'Gu Yue Clan · Chun’s Cellar', backgroundAssetId: 'cellar-bg', ambienceAssetId: 'interior-room', musicAssetId: 'tension-drone', shot: 'artifact', tone: 'ominous', figures: [
+      id: 'moon-scar-reflection', location: 'Gu Yue Clan · Chun’s Cellar', backgroundAssetId: 'cellar-bg', ambienceAssetId: 'interior-room', musicAssetId: 'moon-scar-revelation', shot: 'artifact', tone: 'ominous', figures: [
         { actorId: 'fang-yuan', slot: 'far-left', facing: 'right', emphasis: 'active' },
         { actorId: 'gu-yue-chun', appearanceId: 'held-warning', slot: 'far-right', facing: 'left', emphasis: 'supporting' },
       ], artifact: { assetId: 'moon-scar-gu', slot: 'center', footprint: 'large' },
     },
     {
-      id: 'moon-scar-restraint', location: 'Gu Yue Clan · Chun’s Cellar', backgroundAssetId: 'cellar-bg', ambienceAssetId: 'interior-room', musicAssetId: 'tension-drone', shot: 'artifact', tone: 'ominous', figures: [
+      id: 'moon-scar-restraint', location: 'Gu Yue Clan · Chun’s Cellar', backgroundAssetId: 'cellar-bg', ambienceAssetId: 'interior-room', musicAssetId: 'moon-scar-revelation', shot: 'artifact', tone: 'ominous', figures: [
         { actorId: 'fang-yuan', appearanceId: 'withheld-touch', slot: 'far-left', facing: 'right', emphasis: 'active' },
         { actorId: 'gu-yue-chun', appearanceId: 'held-warning', slot: 'far-right', facing: 'left', emphasis: 'supporting' },
       ], artifact: { assetId: 'moon-scar-gu', slot: 'center', footprint: 'large' },
@@ -216,7 +221,7 @@ export const moonScarExperience: Experience = {
     { id: 'seal-order', chapter: 'Chapter 11 · The Result', tableauId: 'moon-scar-reflection', viewpoint: { kind: 'public' }, mode: 'dialogue', speakerId: 'fang-yuan', text: 'Seal the original. You keep the key. Tomorrow, show me the first failed core—and we work from a copy.', readingVariants: [
       { when: { kind: 'active-choice', choiceNodeId: 'trial-decision', optionId: 'choose-untouched-original' }, text: '“Seal the original,” Fang said. “You keep the key. Tomorrow, show me the first failed core—and we work from a copy.” The failure would remain capable of contradicting them.' },
       { when: { kind: 'active-choice', choiceNodeId: 'trial-decision', optionId: 'choose-split-custody' }, text: '“Seal the original. You keep the key,” Fang said. “Tomorrow, show me the first failed core—and we work from a copy.” He kept command without taking custody.' },
-    ], cueAssetIds: [], next: { type: 'goto', nodeId: 'chun-tests-order' } },
+    ], cueAssetIds: ['seal-stone'], next: { type: 'goto', nodeId: 'chun-tests-order' } },
     { id: 'chun-tests-order', chapter: 'Chapter 11 · The Result', tableauId: 'moon-scar-aftermath', viewpoint: { kind: 'public' }, mode: 'dialogue', speakerId: 'gu-yue-chun', text: 'And if the copy learns faster than the original?', cueAssetIds: [], next: { type: 'goto', nodeId: 'fang-keeps-failure' } },
     { id: 'fang-keeps-failure', chapter: 'Chapter 11 · The Result', tableauId: 'moon-scar-restraint', viewpoint: { kind: 'private', holderId: 'fang-yuan' }, mode: 'thought', speakerId: 'fang-yuan', text: 'She was not asking about moss. She wanted to know whether his restraint survived the moment restraint became expensive.', cueAssetIds: [], next: { type: 'goto', nodeId: 'fang-answers-cost' } },
     { id: 'fang-answers-cost', chapter: 'Chapter 11 · The Result', tableauId: 'moon-scar-reflection', viewpoint: { kind: 'public' }, mode: 'dialogue', speakerId: 'fang-yuan', text: 'Then the difference becomes the result. We record it before we use it.', cueAssetIds: [], next: { type: 'goto', nodeId: 'scar-closes' } },
@@ -225,3 +230,5 @@ export const moonScarExperience: Experience = {
     { id: 'ending', chapter: 'Chapter 11 · The Result', tableauId: 'moon-scar-reflection', viewpoint: { kind: 'private', holderId: 'fang-yuan' }, mode: 'ending', speakerId: 'fang-yuan', label: 'Fate remains open', text: 'A seventy-percent technique was ordinary. A material that learned from failure could change who owned the next winter. More useful still was a witness another hand could keep.', cueAssetIds: [], next: { type: 'end' } },
   ],
 };
+
+export const moonScarExperience: Experience = withVoiceLines(authored, moonScarVoiceLines);

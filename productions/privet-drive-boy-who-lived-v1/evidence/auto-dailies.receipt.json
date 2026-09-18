@@ -2,12 +2,12 @@
   "schemaVersion": 1,
   "productionId": "privet-drive-boy-who-lived-v1",
   "experienceId": "privet-drive-boy-who-lived-v1",
-  "experienceSha256": "8f120bf47947ba7588895e9a8800685b7cd6a1be6edbc3a1cdefd55b9b54609e",
+  "experienceSha256": "1ef77e5afa66e101a95271d5afc2faa2a486f01f54e94a79d0a80d43f103fa96",
   "viewport": {
     "width": 1600,
     "height": 900
   },
-  "capturedAt": "2026-09-18T06:30:21.637Z",
+  "capturedAt": "2026-09-18T09:04:07.484Z",
   "consoleErrors": [],
   "frames": [
     {
@@ -42,7 +42,7 @@
       "tableauId": "morning-vernon",
       "reading": "base",
       "file": "auto-dailies/vernon-leaves.png",
-      "sha256": "0a2828c4b1e7e1e6a2f4ed95bb922ee542a1db0b1bc491c694f97c032b0fad32",
+      "sha256": "0a41c488929defcf704d0420f851f3415acc06f4ec8f9f07cc09b481205ede4c",
       "route": [],
       "insightIds": [],
       "availableOptionIds": [],
@@ -111,7 +111,7 @@
       "tableauId": "morning-vernon",
       "reading": "base",
       "file": "auto-dailies/cloaks-in-town.png",
-      "sha256": "ea7212c636cfcb8046ec2ec9c8fb5a33f199c3a26178383049aec23c8c8745e9",
+      "sha256": "769c6e28638ab8219ba9ce0ba50302f764643f8631cb3e2532372575642cf206",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -329,7 +329,7 @@
       "tableauId": "night-cat",
       "reading": "base",
       "file": "auto-dailies/cat-waits.png",
-      "sha256": "a0bf5a38e949e365b0494414682165b989ff042996030d8c65d0d081ecd339d3",
+      "sha256": "9ef948cf6139cef9d747a16de2b33bbc99c177dbb5f48e115808c3f6e52d3eee",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -354,7 +354,7 @@
       "tableauId": "night-cat",
       "reading": "variant",
       "file": "auto-dailies/cat-waits--2d8cc8.png",
-      "sha256": "4b8711de21f1e9330f6a1fcc2f0e7b8558084ca43d36d69bb7f9b747e6d0389e",
+      "sha256": "d6bb380e2e0265a57e19fe7fb440dd713cdc41a0bb14ad8c0be0c023ba201d13",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -404,7 +404,7 @@
       "tableauId": "night-put-outer",
       "reading": "base",
       "file": "auto-dailies/put-outer.png",
-      "sha256": "1aef353a566860c21edb1444ef59262e678916d9f39b966480f33cb2b50f8a13",
+      "sha256": "08737252a0275a0c655c2f8e59808878587518693e8f6c281885ad5bbc6f1be5",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -454,7 +454,7 @@
       "tableauId": "dark-mcgonagall-active",
       "reading": "base",
       "file": "auto-dailies/cat-becomes-woman.png",
-      "sha256": "55373b56f86ea710d095575df9340e79b453b8ee380c4ed3cb3f1834f8cb3565",
+      "sha256": "0379a4b646ce00b87e93be7793d5723f4c14471a23b9d77c3c867154dfd5923f",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -479,7 +479,7 @@
       "tableauId": "dark-mcgonagall-active",
       "reading": "base",
       "file": "auto-dailies/mcgonagall-scolds.png",
-      "sha256": "adb08573b78e1ffc4575108c906574708b06444abcf0c274a2b2ba075fb32ba4",
+      "sha256": "0e8edb2a0b243857d30d96e1694c93675b45c21858db6ee7b80de3ec3c1e2989",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -554,7 +554,7 @@
       "tableauId": "dark-mcgonagall-active",
       "reading": "base",
       "file": "auto-dailies/mcgonagall-private.png",
-      "sha256": "a6e4e5bc901142148b83c301b2acd8f2a399e0eb13a5b03f93fa991ecf842f89",
+      "sha256": "b08cd01c0ae31df143ee99b004d271bbb19564ff032f147697c6a3fabf1da1e4",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -579,7 +579,7 @@
       "tableauId": "dark-dumbledore-grave",
       "reading": "base",
       "file": "auto-dailies/dumbledore-confirms.png",
-      "sha256": "026c88a8bd28caa29f7807869ee931a6c105e8d5f19ce521bef593d7ca495f43",
+      "sha256": "ba06e30fd3c9dba5603cb8e06315489baa1e72ffc01362e95bc32ae3b7f92f28",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -633,7 +633,7 @@
       "tableauId": "dark-dumbledore-grave",
       "reading": "variant",
       "file": "auto-dailies/dumbledore-guess--48b31e.png",
-      "sha256": "64c7c7f0538d2867dc723070c21bec180560e4476f5a9806d8a74a845d59f618",
+      "sha256": "0155eb919b60e93916359ea66a6499c24406296b9725322c386ba60296edd868",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -662,7 +662,7 @@
       "tableauId": "dark-dumbledore-grave",
       "reading": "variant",
       "file": "auto-dailies/dumbledore-guess--4ecb69.png",
-      "sha256": "61e5fdb0f17c8610ac9ea70e0f885943e1e20b30fc267813868107f77ee49dca",
+      "sha256": "c6c0f9b29fdf15040c422f763516c848d428d55c774f5bb189f6365ccdba515e",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -720,7 +720,7 @@
       "tableauId": "dark-hagrid-arrives",
       "reading": "base",
       "file": "auto-dailies/hagrid-arrives.png",
-      "sha256": "10434958c2335e1062ac71ffc9709ebc712b0ffb462421a80a22652116a92e3d",
+      "sha256": "05686d76c32a1dd7df542d6ad6b1436276b1a02fd7828447555771e6e58c5a59",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -778,7 +778,7 @@
       "tableauId": "doorstep-reveal",
       "reading": "base",
       "file": "auto-dailies/doorstep.png",
-      "sha256": "bd14f3228c5796a8e66b5b39199ad98a70c21eda1aa5c5c781720be84d05b352",
+      "sha256": "34743d78f7e939966015078971da3f007d229031cb543d314b76e63f7b5a8e7c",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -865,7 +865,7 @@
       "tableauId": "dark-letter",
       "reading": "base",
       "file": "auto-dailies/letter-decision.png",
-      "sha256": "964e3fda53c6aa212cc4d92173a9ff8c7a488005e741805ee5f1c6cc30d051ab",
+      "sha256": "bac0205e4000d4c01df954c8c6457df55d9f651513b557f8ccb7e4d269b8acbe",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -897,7 +897,7 @@
       "tableauId": "dark-letter",
       "reading": "variant",
       "file": "auto-dailies/letter-placed--ba92eb.png",
-      "sha256": "23e5ecc8dc6d4e9aba8efaca27b9eadf8ae3261d8cacc3a1b52d9c74245792c4",
+      "sha256": "2e0db159ca79a5342db6bd8555459b016056326c192833f03730cda6b0c62af8",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -930,7 +930,7 @@
       "tableauId": "dark-letter",
       "reading": "variant",
       "file": "auto-dailies/letter-placed--eedc31.png",
-      "sha256": "b1ce634484c2955923477143f5371d108b16f0a61679f0c924f6d4e8d48f7cb6",
+      "sha256": "59f657c51408f4968ab6ab800f61fcad22d43ec0588c051ced3cac5d65b3e227",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -963,7 +963,7 @@
       "tableauId": "dark-hagrid-weeps",
       "reading": "base",
       "file": "auto-dailies/hagrid-weeps.png",
-      "sha256": "b8083f45f64054c240292f54e2777d702df141b1631a631ed53bd2719555aa1a",
+      "sha256": "8ee5d591f59773374f521d68af0ef36d811a4a3ce9f4421e23a0c24e3e3d24f2",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -1058,7 +1058,7 @@
       "tableauId": "night-relit",
       "reading": "base",
       "file": "auto-dailies/ending.png",
-      "sha256": "c9657e93c6dbf4ae0912f9ad2545c9700fa47d0a318ff9c6c1a9d49628c33ce1",
+      "sha256": "b48141d42c065651aaf03c5d2f8367f215fde89a0975cc5348a5e47832f40535",
       "route": [
         {
           "nodeId": "cat-on-wall",

@@ -14,8 +14,6 @@ describe('reader state', () => {
     const state = initialReaderState(experience, 'tally-bound');
     assert.equal(state.currentNodeId, 'tally-bound');
     assert.equal(state.history.at(-1), 'crescent-reading');
-    assert.equal(state.isMuted, true);
-    assert.equal(state.isVoiceEnabled, false);
     assert.throws(() => initialReaderState(experience, 'missing'), /Cannot start reader at missing moment missing/);
   });
 
@@ -29,14 +27,12 @@ describe('reader state', () => {
     assert.equal(initialReaderStateFromLink(spider, 'missing').currentNodeId, spider.startNodeId);
   });
 
-  it('resumes a persisted coordinate with its rebuilt legal path and keeps only the audio preferences', () => {
-    const resumed = resumeReaderState(experience, { currentNodeId: 'tally-bound', isMuted: false, isVoiceEnabled: true });
+  it('resumes a persisted coordinate with its rebuilt legal path', () => {
+    const resumed = resumeReaderState(experience, { currentNodeId: 'tally-bound' });
     assert.equal(resumed.currentNodeId, 'tally-bound');
     assert.deepEqual(resumed.history, initialReaderState(experience, 'tally-bound').history);
-    assert.equal(resumed.isMuted, false);
-    assert.equal(resumed.isVoiceEnabled, true);
     assert.equal(resumed.isBacklogOpen, false);
-    assert.equal(resumeReaderState(experience, { currentNodeId: 'missing', isMuted: true, isVoiceEnabled: false }).currentNodeId, experience.startNodeId);
+    assert.equal(resumeReaderState(experience, { currentNodeId: 'missing' }).currentNodeId, experience.startNodeId);
     assert.equal(resumeReaderState(experience, null).currentNodeId, experience.startNodeId);
   });
 
@@ -51,14 +47,12 @@ describe('reader state', () => {
     assert.equal(choice.currentNodeId, 'question-choice');
   });
 
-  it('keeps sound preferences explicit and overlays mutually exclusive', () => {
+  it('keeps overlays mutually exclusive', () => {
     const start = initialReaderState(experience);
     const settings = reduceReader(experience, start, { type: 'toggle-settings' });
     assert.equal(settings.isSettingsOpen, true);
     assert.equal(settings.isBacklogOpen, false);
-    const voiced = reduceReader(experience, settings, { type: 'toggle-voice' });
-    assert.equal(voiced.isVoiceEnabled, true);
-    const backlogOpen = reduceReader(experience, voiced, { type: 'toggle-backlog' });
+    const backlogOpen = reduceReader(experience, settings, { type: 'toggle-backlog' });
     assert.equal(backlogOpen.isBacklogOpen, true);
     assert.equal(backlogOpen.isSettingsOpen, false);
   });

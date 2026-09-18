@@ -1,6 +1,6 @@
 import './styles.css';
 import { CompiledExperience, type Actor, type Appearance, type CompiledAsset, type Moment, type Tableau } from '../core/contracts';
-import { DEFAULT_PREFS, PREF_OPTIONS, autoAdvanceMs, canPlayThrough, cyclePref, revealMsPerChar, SKIP_HOLD_MS, type Playback, type ReaderPrefs } from '../core/reader-prefs';
+import { DEFAULT_PREFS, PREF_OPTIONS, audioChannels, autoAdvanceMs, canPlayThrough, cyclePref, masterLevel, revealMsPerChar, SKIP_HOLD_MS, type Playback, type ReaderPrefs } from '../core/reader-prefs';
 import { availableChoiceOptions, backlog, currentMoment, initialReaderStateFromLink, reduceReader, resumeReaderState, type ReaderAction, type ReaderState } from '../core/reader-state';
 import { AudioDirector } from './audio-director';
 import { ProgressStore, type ProgressRecord } from './progress-store';
@@ -72,15 +72,23 @@ root.innerHTML = `
           <b data-pref-value="autoDelay"></b>
         </button>
         <span class="settings-group">Sound</span>
-        <button type="button" class="setting-row" data-action="audio">
-          <span><strong>Physical sound</strong><small>Ambience, music and material cues</small></span>
-          <b class="sound-setting-value">OFF</b>
+        <button type="button" class="setting-row" data-pref="volume">
+          <span><strong>Volume</strong><small>Master level for every sound</small></span>
+          <b data-pref-value="volume"></b>
         </button>
-        <button type="button" class="setting-row" data-action="voice">
-          <span><strong>Voice-over</strong><small class="voice-setting-note">Optional spoken rendition</small></span>
-          <b class="voice-setting-value">OFF</b>
+        <button type="button" class="setting-row" data-pref="music">
+          <span><strong>Music</strong><small>Background score per scene</small></span>
+          <b data-pref-value="music"></b>
         </button>
-        <p>Silence is authored. Voice begins off. Preferences are kept on this device.</p>
+        <button type="button" class="setting-row" data-pref="sfx">
+          <span><strong>Sound effects</strong><small>Ambience beds and material cues</small></span>
+          <b data-pref-value="sfx"></b>
+        </button>
+        <button type="button" class="setting-row" data-pref="voice">
+          <span><strong>Voice-over</strong><small class="voice-setting-note">Cast voices and narrator</small></span>
+          <b data-pref-value="voice"></b>
+        </button>
+        <p>Beds duck under spoken lines; AUTO waits for the line to finish. Preferences are kept on this device.</p>
       </aside>
       <footer class="text-rail">
         <div class="text-copy">
@@ -148,10 +156,7 @@ const viewpointLabel = root.querySelector<HTMLElement>('.viewpoint')!;
 const progress = root.querySelector<HTMLElement>('.progress')!;
 const sourceNote = root.querySelector<HTMLElement>('.source-note')!;
 const settingsButton = root.querySelector<HTMLButtonElement>('[data-action="settings"]')!;
-const audioButton = root.querySelector<HTMLButtonElement>('[data-action="audio"]')!;
-const voiceButton = root.querySelector<HTMLButtonElement>('[data-action="voice"]')!;
-const soundSettingValue = root.querySelector<HTMLElement>('.sound-setting-value')!;
-const voiceSettingValue = root.querySelector<HTMLElement>('.voice-setting-value')!;
+const voiceButton = root.querySelector<HTMLButtonElement>('[data-pref="voice"]')!;
 const voiceSettingNote = root.querySelector<HTMLElement>('.voice-setting-note')!;
 
 let catalog: Catalog;
@@ -218,8 +223,14 @@ function schedulePlayback(): void {
     if (playback === 'skip') setPlayback('manual');
     return;
   }
-  const delay = playback === 'skip' ? SKIP_HOLD_MS : autoAdvanceMs(prefs, reveal.text);
+  if (playback === 'auto' && audio.isSpeaking) return;
+  const delay = playback === 'skip' ? SKIP_HOLD_MS : autoAdvanceMs(prefs, reveal.text, spokenCurrentLine);
   reveal.timer = window.setTimeout(() => dispatch({ type: 'advance' }), delay);
+}
+
+/** AUTO/SKIP idle at a fork rather than dropping to manual; the reader's pick resumes them. */
+function isAwaitingChoice(): boolean {
+  return shell.dataset.view === 'reading' && currentMoment(experience, state).next.type === 'choice';
 }
 
 function setPlayback(next: Playback): void {
@@ -234,6 +245,8 @@ function setPlayback(next: Playback): void {
 function applyPrefs(): void {
   shell.dataset.textSize = prefs.textSize;
   shell.dataset.boxOpacity = prefs.boxOpacity;
+  audio?.setMasterLevel(masterLevel(prefs));
+  audio?.setChannels(audioChannels(prefs));
   for (const key of Object.keys(PREF_OPTIONS) as (keyof ReaderPrefs)[]) {
     const value = settingsLayer.querySelector<HTMLElement>(`[data-pref-value="${key}"]`);
     if (value) value.textContent = prefs[key].toUpperCase();
@@ -246,6 +259,7 @@ function setPref(key: keyof ReaderPrefs): void {
   void progressStore.putPrefs(prefs);
   if (key === 'textSpeed' && !reveal.complete) startReveal(reveal.text);
   if (key === 'autoDelay') schedulePlayback();
+  if (key === 'voice' && shell.dataset.view === 'reading') speak(prefs.voice === 'on' ? currentMoment(experience, state).voiceAssetId : undefined);
 }
 
 function byId<T extends { id: string }>(items: T[], id: string): T {
@@ -527,10 +541,8 @@ function renderSettings(): void {
   const hasVoice = experience.moments.some((moment) => Boolean(moment.voiceAssetId));
   settingsLayer.hidden = !state.isSettingsOpen;
   settingsButton.setAttribute('aria-expanded', String(state.isSettingsOpen));
-  soundSettingValue.textContent = state.isMuted ? 'OFF' : 'ON';
-  voiceSettingValue.textContent = state.isVoiceEnabled ? 'ON' : 'OFF';
   voiceButton.disabled = !hasVoice;
-  voiceSettingNote.textContent = hasVoice ? 'Optional spoken rendition' : 'Not present in this Experience';
+  voiceSettingNote.textContent = hasVoice ? 'Cast voices and narrator' : 'Not present in this Experience';
 }
 
 function render(): void {
@@ -571,8 +583,6 @@ function render(): void {
   renderEnding(moment);
   renderBacklog();
   renderSettings();
-  audio.setPhysicalSoundEnabled(!state.isMuted);
-  audio.setVoiceEnabled(state.isVoiceEnabled);
   audio.sync(tableau);
 }
 
@@ -593,11 +603,17 @@ function dispatch(action: ReaderAction): void {
   if (didMove) {
     const current = currentMoment(experience, state);
     audio.playCues(current.cueAssetIds);
-    audio.playVoice(current.voiceAssetId);
+    speak(current.voiceAssetId);
     showInsights(gainedInsights);
   }
-  if (action.type === 'toggle-muted' && !state.isMuted) audio.playCues(before.cueAssetIds);
-  if (action.type === 'toggle-voice' && state.isVoiceEnabled) audio.playVoice(before.voiceAssetId);
+}
+
+/** Whether the line on screen has a spoken rendition playing; AUTO paces off it instead of text length. */
+let spokenCurrentLine = false;
+
+function speak(voiceAssetId: string | undefined): void {
+  audio.playVoice(voiceAssetId);
+  spokenCurrentLine = audio.isSpeaking;
 }
 
 async function openExperience(entry: CatalogEntry, entryPoint: { momentId?: string; resume: boolean }): Promise<void> {
@@ -605,7 +621,11 @@ async function openExperience(entry: CatalogEntry, entryPoint: { momentId?: stri
   if (!response.ok) throw new Error('Prepared experience is missing. Run npm run build:experience.');
   experience = await response.json() as CompiledExperience;
   state = entryPoint.momentId ? initialReaderStateFromLink(experience, entryPoint.momentId) : resumeReaderState(experience, saved?.state);
+  audio?.stop();
   audio = new AudioDirector(new Map(experience.assets.map((asset) => [asset.id, asset])));
+  audio.setMasterLevel(masterLevel(prefs));
+  audio.setChannels(audioChannels(prefs));
+  audio.onVoiceEnd = () => schedulePlayback();
   sourceNote.textContent = `${experience.title} · ${experience.source.note}`;
   reveal.text = '';
   backdrop.dataset.url = '';
@@ -615,15 +635,19 @@ async function openExperience(entry: CatalogEntry, entryPoint: { momentId?: stri
   void shell.offsetWidth;
   shell.classList.add('shell-opening');
   render();
+  speak(currentMoment(experience, state).voiceAssetId);
   stage.focus();
 }
 
 async function goHome(): Promise<void> {
   cancelReveal();
   if (playback !== 'manual') setPlayback(playback);
-  audio?.setPhysicalSoundEnabled(false);
-  audio?.setVoiceEnabled(false);
+  audio?.stop();
   renderHome(await progressStore.all());
+}
+
+for (const gesture of ['pointerdown', 'keydown'] as const) {
+  window.addEventListener(gesture, () => audio?.unlock(), { passive: true });
 }
 
 root.addEventListener('click', (event) => {
@@ -644,14 +668,13 @@ root.addEventListener('click', (event) => {
   if (action === 'back') return dispatch({ type: 'back' });
   if (action === 'backlog') return dispatch({ type: 'toggle-backlog' });
   if (action === 'settings') return dispatch({ type: 'toggle-settings' });
-  if (action === 'audio') return dispatch({ type: 'toggle-muted' });
-  if (action === 'voice') return dispatch({ type: 'toggle-voice' });
   if (action === 'auto') return setPlayback('auto');
   if (action === 'skip') return setPlayback('skip');
   if (action === 'next') return advance();
   const pref = target.closest<HTMLButtonElement>('[data-pref]')?.dataset.pref as keyof ReaderPrefs | undefined;
   if (pref) return setPref(pref);
   if (target.closest('.context-rail') || target.closest('.settings-layer') || target.closest('.transport')) return;
+  if (isAwaitingChoice()) return void (reveal.complete || finishReveal());
   if (playback !== 'manual') return setPlayback(playback);
   advance();
 });
@@ -675,6 +698,7 @@ window.addEventListener('keydown', (event) => {
   }
   if ([' ', 'Enter', 'ArrowDown'].includes(event.key)) {
     event.preventDefault();
+    if (isAwaitingChoice()) return void (reveal.complete || finishReveal());
     if (playback !== 'manual') return setPlayback(playback);
     advance();
   }

@@ -2,12 +2,12 @@
   "schemaVersion": 1,
   "productionId": "spider-man-memory-between-us-v1",
   "experienceId": "spider-memory-between-us-v1",
-  "experienceSha256": "f6429adbcdb9b17d3f4e2c820074e668680d6bf62bd2ed859515f588cd11632d",
+  "experienceSha256": "e2d7426ebd73e90f8f00443242cf9590d0753cadf4643246ce84f02a2efd89b0",
   "viewport": {
     "width": 1600,
     "height": 900
   },
-  "capturedAt": "2026-09-18T06:28:23.910Z",
+  "capturedAt": "2026-09-18T09:02:14.419Z",
   "consoleErrors": [],
   "frames": [
     {
@@ -16,7 +16,7 @@
       "tableauId": "apartment-empty",
       "reading": "base",
       "file": "auto-dailies/rain-location.png",
-      "sha256": "6227730b0932e289ca5f2582c297dbcd55ad41bdb0330f4b59bca7d14e9c7a7d",
+      "sha256": "4f949bc6bc523042c80f5ce3eb392ad0d514578dddd30b4c74597df5d6ae12c5",
       "route": [],
       "insightIds": [],
       "availableOptionIds": [],
@@ -29,7 +29,7 @@
       "tableauId": "masked-two-shot",
       "reading": "base",
       "file": "auto-dailies/distance.png",
-      "sha256": "aa3d88969aa173c497726f77352cda5ce28767b2474c9b1b2836aa32075b32e6",
+      "sha256": "6f94cec6b6f0b7867fe6582f7db76900107df245bc2447ea4e0e3910e0e64b88",
       "route": [],
       "insightIds": [],
       "availableOptionIds": [],
@@ -98,7 +98,7 @@
       "tableauId": "masked-two-shot",
       "reading": "base",
       "file": "auto-dailies/mj-boundary.png",
-      "sha256": "e0cd3c7caf82fbb10bef3598ed91a48477aadf9dedba07a1c4d83b02a0435566",
+      "sha256": "674d04d589fdb7675079b7f8da78bf8d442491992c56176eda4ab68aa841f0f9",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -118,7 +118,7 @@
       "tableauId": "masked-peter-active",
       "reading": "base",
       "file": "auto-dailies/peter-mask-thought.png",
-      "sha256": "93f1ee2d8b8121ce435c68b249bbf0f6e20cfeee27da027463430d6438d679f1",
+      "sha256": "c82bbb3014732ad417e73e5386df7f50430b2249d73e9a8ae2402b7405191f4f",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -198,7 +198,7 @@
       "tableauId": "revealed-shared-silence",
       "reading": "base",
       "file": "auto-dailies/name-reading-choice.png",
-      "sha256": "e6d15cf87f99523ed7954bf8645850d0f8d13a065efb0e78a34af44de136a62f",
+      "sha256": "b87f4714200af20ec560273a80c49577d560f54bded9a8ad847021db4a555e01",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -293,7 +293,7 @@
       "tableauId": "revealed-name-settles",
       "reading": "variant",
       "file": "auto-dailies/name-settles--66ee32.png",
-      "sha256": "e53b9ffa137c54462ee8814a0df4b3984da00c588040569c2a5b5d00d924c7d3",
+      "sha256": "c43f8e2df165200b4128893f2608264b5789e082d0e2a0200158c41d80481c61",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -341,7 +341,7 @@
       "tableauId": "revealed-mj-active",
       "reading": "base",
       "file": "auto-dailies/mj-answer.png",
-      "sha256": "5b627f7cd2cdf96c94843b0bc8e0a8552f5c2413378b03866e673659f1ecc870",
+      "sha256": "abe6da53a9789724fa4bbf8a62684097cd01627f26f18a3afabd61cd915a7b06",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -365,7 +365,7 @@
       "tableauId": "revealed-mj-active",
       "reading": "base",
       "file": "auto-dailies/perspective-choice.png",
-      "sha256": "bf4f4208ca4457d2fb67dabe89a0a53599dfe161d498c9aeb374935484cff2eb",
+      "sha256": "fca8fdd37dd147f603e820884aa916c6c040fd02e90b0617c03220c56db110c6",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -392,7 +392,7 @@
       "tableauId": "revealed-mj-active",
       "reading": "variant",
       "file": "auto-dailies/perspective-choice--6d906c.png",
-      "sha256": "a62bd45d34bc01df8385c3d4e5b6ef34cb7d6e54d135659e3151e02a15414797",
+      "sha256": "06f89f8cbf196144e065747ddba5acb295d56bdfce3dbe3b5219364937b7f6b3",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -451,7 +451,7 @@
       "tableauId": "revealed-mj-appraisal",
       "reading": "base",
       "file": "auto-dailies/mj-boundary-private.png",
-      "sha256": "3664bb33ae7b19b991143404a44a930886afb4cb4fad76bdf5d5867416eaf368",
+      "sha256": "5291838f10cfe5dbf7e2eff1e06552f952386f101c903a3840ad8fa0f33a3dd7",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -570,7 +570,7 @@
       "tableauId": "revealed-shared-silence",
       "reading": "variant",
       "file": "auto-dailies/shared-silence--091ec5.png",
-      "sha256": "cb3b82439fc522bd516e0a63e96409aaa1436586c83242a5ba706d7a7c002df7",
+      "sha256": "140f3a8a0783ee02f4cf1002880762e4abce6ebc1aa7dd830deee04608468f03",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -599,7 +599,7 @@
       "tableauId": "revealed-shared-silence",
       "reading": "variant",
       "file": "auto-dailies/shared-silence--afa097.png",
-      "sha256": "5fc4b4bac9b247230037882e09545018e8dd38a463ad974806575efa98efb550",
+      "sha256": "d86f5e69da6bf12da8b4cce2a2f7a12273dc3905642c960d7c5fb1b1c7d86aaa",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -688,7 +688,7 @@
       "tableauId": "revealed-small-defences",
       "reading": "variant",
       "file": "auto-dailies/small-defence-returns--63cd71.png",
-      "sha256": "407249697f1e1cbac41bba9f812ca199074c69de4a137aa34e648b73e5237a49",
+      "sha256": "fb6fe24c13a284f19d79ba8e0f406de353e3b66d1294665c8de06d19290a5886",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -746,7 +746,7 @@
       "tableauId": "revealed-shared-silence",
       "reading": "base",
       "file": "auto-dailies/restraint-forecast.png",
-      "sha256": "b4e57fae945aa51b792dcbc5edfa5c38fda4cf62a2b8b0a1b7c0973d41ef23ab",
+      "sha256": "98518e2b7d9c5d12fea6c9f09e7a19b12e3f07e09ad1a2121ba8b813a09b8922",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -877,7 +877,7 @@
       "tableauId": "revealed-choice-returned",
       "reading": "variant",
       "file": "auto-dailies/peter-offers-distance--cb2784.png",
-      "sha256": "6a0c9a85a988e25e62373cc5ac33716d1dc944d531876e764ed3c90500e21fda",
+      "sha256": "1f0f6530cbc88397dc4efc60083e9ca66501385928d6285c44f22048e843d05f",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -910,7 +910,7 @@
       "tableauId": "revealed-mj-trust",
       "reading": "base",
       "file": "auto-dailies/ride-home.png",
-      "sha256": "502474e29945cd2fabdb30ab080ef1597670ed766dbb0106ef445e0b4ec478ff",
+      "sha256": "b912f82a16e05752ea976700e37ace76e01d9911db8e3c457fa22d59b7800260",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -943,7 +943,7 @@
       "tableauId": "revealed-shared-silence",
       "reading": "base",
       "file": "auto-dailies/departure-decision.png",
-      "sha256": "9fa1c575e18cee1369f72cdfc234c3aa6025093f5cf12bf9b5ac123ff68511fd",
+      "sha256": "9b37bfc0f23eab4d59af9ce24f3222b9c1d2c90e9f88ad9f24eb7234b5cb77af",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -979,7 +979,7 @@
       "tableauId": "revealed-mj-trust",
       "reading": "base",
       "file": "auto-dailies/ordinary-route-reading.png",
-      "sha256": "e03ae00260617c5f9d11201277ac9bfe8b2d4073b7cb7fee5b41690002307c36",
+      "sha256": "b4128448d603b3848bda5eff5952888e54f0f87207716d20fe414616d688264b",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1053,7 +1053,7 @@
       "tableauId": "revealed-mj-trust",
       "reading": "base",
       "file": "auto-dailies/mj-names-route.png",
-      "sha256": "253cf0124c0488050cbc755c42db015c0f51f53ec2dc19ac54f5c4947b6e05e6",
+      "sha256": "97d9a57928a2d773fae50d5c393cf31a2a7819a8a9543d762b5c81fa9873d932",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1090,7 +1090,7 @@
       "tableauId": "hallway-empty",
       "reading": "base",
       "file": "auto-dailies/door-opens.png",
-      "sha256": "a2c5e6e34e65f08ad6578e7ccdb99bcee78b0983b77273e2716687a6b136186a",
+      "sha256": "76af7241a48b513720dfbac2f22cb19b5986fe5e5bad2ff8ac4efc0fd5173918",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1201,7 +1201,7 @@
       "tableauId": "hallway-mj-active",
       "reading": "base",
       "file": "auto-dailies/mj-corrects-promise.png",
-      "sha256": "76d3afad4407a12c754f2f5b1874b19e710555c92b5bee8714f542e04970fda6",
+      "sha256": "fe3e816fce9377fd79d4a6f6ed454a90d18f5fcf2d9b4347743cf5968e9c29ae",
       "route": [
         {
           "nodeId": "room-reading-choice",

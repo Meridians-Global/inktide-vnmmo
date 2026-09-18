@@ -59,7 +59,7 @@ export async function runReplicatePrediction(options: {
   let prediction = await create.json() as ReplicatePrediction;
   const eventsPath = join(options.evidenceDirectory, `${options.evidenceName}.events.ndjson`);
   await appendFile(eventsPath, `${JSON.stringify(prediction)}\n`);
-  for (let attempt = 0; !terminal.has(prediction.status) && attempt < 120; attempt += 1) {
+  for (let attempt = 0; !terminal.has(prediction.status) && attempt < 300; attempt += 1) {
     await new Promise((resolve) => setTimeout(resolve, 1_000));
     const response = await fetch(prediction.urls?.get ?? `https://api.replicate.com/v1/predictions/${prediction.id}`, {
       headers: { Authorization: `Bearer ${options.token}` },

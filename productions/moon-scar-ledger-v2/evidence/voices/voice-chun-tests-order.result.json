@@ -1,0 +1,42 @@
+{
+  "id": "fcqesg3gcxrmt0d0pek87eyqxr",
+  "model": "minimax/speech-02-turbo",
+  "version": "hidden",
+  "input": {
+    "audio_format": "mp3",
+    "bitrate": 128000,
+    "channel": "mono",
+    "emotion": "auto",
+    "english_normalization": true,
+    "language_boost": "English",
+    "pitch": 0,
+    "sample_rate": 32000,
+    "speed": 0.98,
+    "text": "And if the copy learns faster than the original?",
+    "voice_id": "English_Graceful_Lady"
+  },
+  "logs": "Generating speech with model speech-02-turbo\nGenerated speech in 1.29sec\nEach character is 1 token\nTokens: 48\n",
+  "output": "https://replicate.delivery/xezq/FCQQXwsee2l6UUBkJZ2JPExM1f3oQR9GcCQY123XhvqTLVduA/tmphirzaodh.mp3",
+  "data_removed": false,
+  "error": null,
+  "source": "api",
+  "status": "succeeded",
+  "created_at": "2026-09-18T08:33:44.551Z",
+  "started_at": "2026-09-18T08:33:44.568369161Z",
+  "completed_at": "2026-09-18T08:33:45.965457416Z",
+  "urls": {
+    "cancel": "https://api.replicate.com/v1/predictions/fcqesg3gcxrmt0d0pek87eyqxr/cancel",
+    "get": "https://api.replicate.com/v1/predictions/fcqesg3gcxrmt0d0pek87eyqxr",
+    "stream": "https://stream.replicate.com/v1/files/jbxs-f3mdydcgicarkvbtqngfymdc2rpehez2ixzaor2a22igetbmy6fa",
+    "web": "https://replicate.com/p/fcqesg3gcxrmt0d0pek87eyqxr"
+  },
+  "metrics": {
+    "input_token_count": 48,
+    "output_token_count": 1,
+    "predict_time": 1.397088265,
+    "time_to_first_token": 0.000471745,
+    "token_input_count": 48,
+    "tokens_per_second": 0.7160161616876765,
+    "total_time": 1.414457416
+  }
+}

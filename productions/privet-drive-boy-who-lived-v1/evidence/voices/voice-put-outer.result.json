@@ -1,0 +1,42 @@
+{
+  "id": "q6qpx813gnrmy0d0pem9vdr1w8",
+  "model": "minimax/speech-02-turbo",
+  "version": "hidden",
+  "input": {
+    "audio_format": "mp3",
+    "bitrate": 128000,
+    "channel": "mono",
+    "emotion": "auto",
+    "english_normalization": true,
+    "language_boost": "English",
+    "pitch": 0,
+    "sample_rate": 32000,
+    "speed": 0.96,
+    "text": "He found what he was looking for in an inside pocket: something like a silver cigarette lighter. He flicked it open, held it up, and clicked. The nearest streetlamp went out with a little pop. Twelve clicks later the only lights left on the whole street were two tiny pinpricks in the distance—the eyes of the cat.",
+    "voice_id": "English_CaptivatingStoryteller"
+  },
+  "logs": "Generating speech with model speech-02-turbo\nGenerated speech in 4.32sec\nEach character is 1 token\nTokens: 314\n",
+  "output": "https://replicate.delivery/xezq/etVFUn0OeYp9sUNFrU3US3g9ii4y7JOoxPTwue1uL1A5OVduA/tmp7rwkwx5v.mp3",
+  "data_removed": false,
+  "error": null,
+  "source": "api",
+  "status": "succeeded",
+  "created_at": "2026-09-18T08:35:35.941Z",
+  "started_at": "2026-09-18T08:35:35.958903045Z",
+  "completed_at": "2026-09-18T08:35:40.38342627Z",
+  "urls": {
+    "cancel": "https://api.replicate.com/v1/predictions/q6qpx813gnrmy0d0pem9vdr1w8/cancel",
+    "get": "https://api.replicate.com/v1/predictions/q6qpx813gnrmy0d0pem9vdr1w8",
+    "stream": "https://stream.replicate.com/v1/files/jbxs-lauxfj4xvkyxf6ogren2tgu7lr2csyubyv7ihbu35zvu5dfr2akq",
+    "web": "https://replicate.com/p/q6qpx813gnrmy0d0pem9vdr1w8"
+  },
+  "metrics": {
+    "input_token_count": 314,
+    "output_token_count": 1,
+    "predict_time": 4.424523225,
+    "time_to_first_token": 0.000458736,
+    "token_input_count": 314,
+    "tokens_per_second": 0.2260364880499372,
+    "total_time": 4.44242627
+  }
+}

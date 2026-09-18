@@ -1,0 +1,42 @@
+{
+  "id": "xavp4ngbvsrmy0d0pem9j6adxc",
+  "model": "minimax/speech-02-turbo",
+  "version": "hidden",
+  "input": {
+    "audio_format": "mp3",
+    "bitrate": 128000,
+    "channel": "mono",
+    "emotion": "auto",
+    "english_normalization": true,
+    "language_boost": "English",
+    "pitch": 0,
+    "sample_rate": 32000,
+    "speed": 0.96,
+    "text": "A man appeared on the corner the cat had been watching—appeared so suddenly and silently you would have thought he had popped out of the ground. He was tall, thin and very old, with silver hair and a beard long enough to tuck into his belt. Nothing like him had ever been seen on Privet Drive.",
+    "voice_id": "English_CaptivatingStoryteller"
+  },
+  "logs": "Generating speech with model speech-02-turbo\nGenerated speech in 4.18sec\nEach character is 1 token\nTokens: 293\n",
+  "output": "https://replicate.delivery/xezq/AIJpFc0fFJ1KYqJjLt9sR5cQhMWZCd7U4sIPimqyncArTVnLA/tmpyjpbaud8.mp3",
+  "data_removed": false,
+  "error": null,
+  "source": "api",
+  "status": "succeeded",
+  "created_at": "2026-09-18T08:35:29.886Z",
+  "started_at": "2026-09-18T08:35:29.912130746Z",
+  "completed_at": "2026-09-18T08:35:34.208206051Z",
+  "urls": {
+    "cancel": "https://api.replicate.com/v1/predictions/xavp4ngbvsrmy0d0pem9j6adxc/cancel",
+    "get": "https://api.replicate.com/v1/predictions/xavp4ngbvsrmy0d0pem9j6adxc",
+    "stream": "https://stream.replicate.com/v1/files/jbxs-ot4wxju63jzsknpckc7gqsrx56wwqnios4nzsvbtocjofmwadn4a",
+    "web": "https://replicate.com/p/xavp4ngbvsrmy0d0pem9j6adxc"
+  },
+  "metrics": {
+    "input_token_count": 293,
+    "output_token_count": 1,
+    "predict_time": 4.296075335,
+    "time_to_first_token": 0.000472306,
+    "token_input_count": 293,
+    "tokens_per_second": 0.23279618559930015,
+    "total_time": 4.322206051
+  }
+}

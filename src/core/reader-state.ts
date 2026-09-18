@@ -10,8 +10,6 @@ export type ReaderState = {
   insightIds: string[];
   isBacklogOpen: boolean;
   isSettingsOpen: boolean;
-  isMuted: boolean;
-  isVoiceEnabled: boolean;
 };
 
 export type ReaderAction =
@@ -20,8 +18,6 @@ export type ReaderAction =
   | { type: 'back' }
   | { type: 'toggle-backlog' }
   | { type: 'toggle-settings' }
-  | { type: 'toggle-muted' }
-  | { type: 'toggle-voice' }
   | { type: 'restart' };
 
 function unique(values: string[]): string[] {
@@ -63,6 +59,7 @@ export function resolveReadingMoment(moment: Moment, state: Pick<ReaderState, 'r
     ...moment,
     text: variant.text,
     ...(variant.tableauId ? { tableauId: variant.tableauId } : {}),
+    voiceAssetId: variant.voiceAssetId ?? moment.voiceAssetId,
   } : moment;
 }
 
@@ -117,8 +114,6 @@ export function initialReaderState(experience: CompiledExperience, startNodeId =
     insightIds: seeded.insightIds,
     isBacklogOpen: false,
     isSettingsOpen: false,
-    isMuted: true,
-    isVoiceEnabled: false,
   };
 }
 
@@ -140,10 +135,8 @@ export function initialReaderStateFromLink(experience: CompiledExperience, reque
  * Resume a persisted reader state. Only the moment coordinate is trusted; the legal path, route and insights
  * are rebuilt by the strict initializer so a stale save from an older compile can never grant unearned knowledge.
  */
-export function resumeReaderState(experience: CompiledExperience, saved: Pick<ReaderState, 'currentNodeId' | 'isMuted' | 'isVoiceEnabled'> | null | undefined): ReaderState {
-  const state = initialReaderStateFromLink(experience, saved?.currentNodeId);
-  if (!saved) return state;
-  return { ...state, isMuted: saved.isMuted, isVoiceEnabled: saved.isVoiceEnabled };
+export function resumeReaderState(experience: CompiledExperience, saved: Pick<ReaderState, 'currentNodeId'> | null | undefined): ReaderState {
+  return initialReaderStateFromLink(experience, saved?.currentNodeId);
 }
 
 export function currentMoment(experience: CompiledExperience, state: ReaderState): Moment {
@@ -170,8 +163,6 @@ export function reduceReader(
 ): ReaderState {
   if (action.type === 'toggle-backlog') return { ...state, isBacklogOpen: !state.isBacklogOpen, isSettingsOpen: false };
   if (action.type === 'toggle-settings') return { ...state, isSettingsOpen: !state.isSettingsOpen, isBacklogOpen: false };
-  if (action.type === 'toggle-muted') return { ...state, isMuted: !state.isMuted };
-  if (action.type === 'toggle-voice') return { ...state, isVoiceEnabled: !state.isVoiceEnabled };
   if (action.type === 'restart') return initialReaderState(experience);
   if (action.type === 'back') {
     const previous = state.history.at(-1);

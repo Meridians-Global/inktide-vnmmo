@@ -1,0 +1,42 @@
+{
+  "id": "2rhatrzyq5rmw0d0pem9rejmxw",
+  "model": "minimax/speech-02-turbo",
+  "version": "hidden",
+  "input": {
+    "audio_format": "mp3",
+    "bitrate": 128000,
+    "channel": "mono",
+    "emotion": "auto",
+    "english_normalization": true,
+    "language_boost": "English",
+    "pitch": 0,
+    "sample_rate": 32000,
+    "speed": 0.96,
+    "text": "A low rumbling broke the silence, grew to a roar, and a huge motorbike fell out of the air and landed on the road in front of them. If the motorbike was huge, it was nothing to the man sitting astride it. In his vast, muscular arms he was holding a bundle of blankets.",
+    "voice_id": "English_CaptivatingStoryteller"
+  },
+  "logs": "Generating speech with model speech-02-turbo\nGenerated speech in 4.50sec\nEach character is 1 token\nTokens: 268\n",
+  "output": "https://replicate.delivery/xezq/lTPfKgtbKb1YfktaHw48njo6T3PQSIWL8KJwfCARANyoQVduA/tmpu42zj2n5.mp3",
+  "data_removed": false,
+  "error": null,
+  "source": "api",
+  "status": "succeeded",
+  "created_at": "2026-09-18T08:36:32.057Z",
+  "started_at": "2026-09-18T08:36:32.072851432Z",
+  "completed_at": "2026-09-18T08:36:36.699482741Z",
+  "urls": {
+    "cancel": "https://api.replicate.com/v1/predictions/2rhatrzyq5rmw0d0pem9rejmxw/cancel",
+    "get": "https://api.replicate.com/v1/predictions/2rhatrzyq5rmw0d0pem9rejmxw",
+    "stream": "https://stream.replicate.com/v1/files/jbxs-tccm4e5xmss3n7kswhmo65dv63jqwbmafdi42yn2dqv3i5aexhsq",
+    "web": "https://replicate.com/p/2rhatrzyq5rmw0d0pem9rejmxw"
+  },
+  "metrics": {
+    "input_token_count": 268,
+    "output_token_count": 1,
+    "predict_time": 4.626631309,
+    "time_to_first_token": 0.000478796,
+    "token_input_count": 268,
+    "tokens_per_second": 0.2161623502878233,
+    "total_time": 4.642482741
+  }
+}

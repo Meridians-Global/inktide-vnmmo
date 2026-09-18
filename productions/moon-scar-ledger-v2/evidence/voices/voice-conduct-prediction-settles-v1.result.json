@@ -1,0 +1,42 @@
+{
+  "id": "18rq4h780nrmt0d0pejt1teayg",
+  "model": "minimax/speech-02-turbo",
+  "version": "hidden",
+  "input": {
+    "audio_format": "mp3",
+    "bitrate": 128000,
+    "channel": "mono",
+    "emotion": "neutral",
+    "english_normalization": true,
+    "language_boost": "English",
+    "pitch": -1,
+    "sample_rate": 32000,
+    "speed": 0.93,
+    "text": "You had expected Fang to seize the advantage. His still hand revised the reading: possession could begin by preserving the only failed trial that could teach him more.",
+    "voice_id": "English_Insightful_Speaker"
+  },
+  "logs": "Generating speech with model speech-02-turbo\nGenerated speech in 2.88sec\nEach character is 1 token\nTokens: 167\n",
+  "output": "https://replicate.delivery/xezq/vTxYgNOGhRKJNNcPxG1txjQeqULDf0Is2SXnZLjGR0UIlqOXA/tmpjqsh3o86.mp3",
+  "data_removed": false,
+  "error": null,
+  "source": "api",
+  "status": "succeeded",
+  "created_at": "2026-09-18T08:33:09.637Z",
+  "started_at": "2026-09-18T08:33:09.656098956Z",
+  "completed_at": "2026-09-18T08:33:12.639894617Z",
+  "urls": {
+    "cancel": "https://api.replicate.com/v1/predictions/18rq4h780nrmt0d0pejt1teayg/cancel",
+    "get": "https://api.replicate.com/v1/predictions/18rq4h780nrmt0d0pejt1teayg",
+    "stream": "https://stream.replicate.com/v1/files/jbxs-3ry4ehrc7qjidjh6p7ihcaqxbq64yblq6iiu7vxw7tvfzg757boa",
+    "web": "https://replicate.com/p/18rq4h780nrmt0d0pejt1teayg"
+  },
+  "metrics": {
+    "input_token_count": 167,
+    "output_token_count": 1,
+    "predict_time": 2.9837956610000003,
+    "time_to_first_token": 0.000436131,
+    "token_input_count": 167,
+    "tokens_per_second": 0.33519258739827446,
+    "total_time": 3.002894617
+  }
+}

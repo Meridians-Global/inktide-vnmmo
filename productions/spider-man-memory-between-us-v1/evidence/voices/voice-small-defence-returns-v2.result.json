@@ -1,0 +1,42 @@
+{
+  "id": "stj0dxrqgnrmy0d0peh9cx8g2g",
+  "model": "minimax/speech-02-turbo",
+  "version": "hidden",
+  "input": {
+    "audio_format": "mp3",
+    "bitrate": 128000,
+    "channel": "mono",
+    "emotion": "calm",
+    "english_normalization": true,
+    "language_boost": "English",
+    "pitch": -1,
+    "sample_rate": 32000,
+    "speed": 0.94,
+    "text": "MJ’s hand loosened at her jacket seam. The movement was not forgiveness; it was one defence becoming unnecessary.",
+    "voice_id": "English_expressive_narrator"
+  },
+  "logs": "Generating speech with model speech-02-turbo\nGenerated speech in 2.43sec\nEach character is 1 token\nTokens: 113\n",
+  "output": "https://replicate.delivery/xezq/lr57ugwedflhZ0TcPhfLXIYgi3RCK3r1ffAHGr0ulfOtToqzF/tmpm_cygz_p.mp3",
+  "data_removed": false,
+  "error": null,
+  "source": "api",
+  "status": "succeeded",
+  "created_at": "2026-09-18T08:28:59.653Z",
+  "started_at": "2026-09-18T08:28:59.668852551Z",
+  "completed_at": "2026-09-18T08:29:02.209877822Z",
+  "urls": {
+    "cancel": "https://api.replicate.com/v1/predictions/stj0dxrqgnrmy0d0peh9cx8g2g/cancel",
+    "get": "https://api.replicate.com/v1/predictions/stj0dxrqgnrmy0d0peh9cx8g2g",
+    "stream": "https://stream.replicate.com/v1/files/jbxs-wg63xg3zgjrvg3lvhqcc6u7c6cifkfe2cvsf7hxpgo3m4atu6aaq",
+    "web": "https://replicate.com/p/stj0dxrqgnrmy0d0peh9cx8g2g"
+  },
+  "metrics": {
+    "input_token_count": 113,
+    "output_token_count": 1,
+    "predict_time": 2.541025271,
+    "time_to_first_token": 0.000450654,
+    "token_input_count": 113,
+    "tokens_per_second": 0.3936117417329924,
+    "total_time": 2.556877822
+  }
+}

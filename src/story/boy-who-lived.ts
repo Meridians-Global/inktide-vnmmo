@@ -1,5 +1,7 @@
 // @jasonyu0100
 import type { Experience } from '../core/contracts';
+import { withVoiceLines } from '../core/voice-cast';
+import { boyWhoLivedVoiceLines } from './generated/boy-who-lived.voices';
 
 const generated = 'assets/generated/privet-drive-boy-who-lived-v1';
 const normalize = { kind: 'figure-normalize' as const, recipeVersion: 1 as const, canvas: { width: 896, height: 1024 }, subjectBox: { width: 850, height: 960 }, bottomPadding: 24 };
@@ -8,7 +10,7 @@ const chapter = 'Chapter 1 · The Boy Who Lived';
 const morning = 'Privet Drive · Number Four · A dull grey Tuesday';
 const night = 'Privet Drive · Number Four · Nightfall';
 
-export const boyWhoLivedExperience: Experience = {
+const authored: Experience = {
   schemaVersion: 2,
   id: 'privet-drive-boy-who-lived-v1',
   title: 'The Boy Who Lived',
@@ -46,6 +48,11 @@ export const boyWhoLivedExperience: Experience = {
     { id: 'suburban-night', kind: 'ambience', sourcePath: `${generated}/suburban-night-v1.wav`, sha256: '6622538b6ccc1f787dbb782597e94a8ac2451484b466415bc6aa928eb2decf3b' },
     { id: 'put-outer-click', kind: 'cue', sourcePath: `${generated}/put-outer-click-v1.wav`, sha256: '4da2a4ed6c6c95306c37513fa66a6dfb40ac2c1ab398451a51a7b83f23ad4e77' },
     { id: 'motorcycle-descent', kind: 'cue', sourcePath: `${generated}/motorcycle-descent-v1.wav`, sha256: '1b412a7101fadeb9084221ecd62689d7a17e372465603a93d84a15b32a1db00f' },
+    { id: 'privet-morning-theme', kind: 'music', sourcePath: `${generated}/score/privet-morning-theme.mp3`, sha256: 'cb3a70ffe89e9a5d32fa99f99936aa9109a2040051e06edc0ab27a4c23f1fe56' },
+    { id: 'privet-nocturne', kind: 'music', sourcePath: `${generated}/score/privet-nocturne.mp3`, sha256: '4e35b7a7fcf7602d9e6eaf9277567ae5e0096198fab7ad3d1ec4f688b23e0180' },
+    { id: 'doorstep-lullaby', kind: 'music', sourcePath: `${generated}/score/doorstep-lullaby.mp3`, sha256: '7c2f60036da1bd0ec40a941e85360fdd0129bf52e1d69f6a54f742bbad9a89a9' },
+    { id: 'cat-transfiguration', kind: 'cue', sourcePath: `${generated}/score/cat-transfiguration.wav`, sha256: '5bf1313139a32db5ff0e6cd01b799b0daa4718920ac105cef2a5b55a2d3c4205' },
+    { id: 'letter-placed-cue', kind: 'cue', sourcePath: `${generated}/score/letter-placed.wav`, sha256: 'dd16d7ddf811b343e105a762038f01496a67c4677cd5aae0d88eaf0379a43946' },
   ],
   actors: [
     { id: 'vernon', name: 'Vernon Dursley', identityVersion: 'vernon-dursley-v1', defaultAppearanceId: 'briefcase', stageHeightPercent: 84, appearances: [
@@ -66,71 +73,71 @@ export const boyWhoLivedExperience: Experience = {
     ] },
   ],
   tableaux: [
-    { id: 'morning-establishing', location: morning, backgroundAssetId: 'street-morning', shot: 'wide', tone: 'neutral', figures: [] },
-    { id: 'morning-vernon', location: morning, backgroundAssetId: 'street-morning', shot: 'conversation', tone: 'neutral', figures: [
+    { id: 'morning-establishing', location: morning, backgroundAssetId: 'street-morning', musicAssetId: 'privet-morning-theme', shot: 'wide', tone: 'neutral', figures: [] },
+    { id: 'morning-vernon', location: morning, backgroundAssetId: 'street-morning', musicAssetId: 'privet-morning-theme', shot: 'conversation', tone: 'neutral', figures: [
       { actorId: 'vernon', slot: 'left', facing: 'right', emphasis: 'active' },
     ] },
-    { id: 'morning-cat', location: morning, backgroundAssetId: 'street-morning', shot: 'artifact', tone: 'neutral', figures: [
+    { id: 'morning-cat', location: morning, backgroundAssetId: 'street-morning', musicAssetId: 'privet-morning-theme', shot: 'artifact', tone: 'neutral', figures: [
       { actorId: 'vernon', slot: 'far-left', facing: 'right', emphasis: 'active' },
     ], artifact: { assetId: 'tabby-cat', slot: 'right', footprint: 'study' } },
-    { id: 'morning-cat-watching', location: morning, backgroundAssetId: 'street-morning', shot: 'artifact', tone: 'cold', figures: [
+    { id: 'morning-cat-watching', location: morning, backgroundAssetId: 'street-morning', musicAssetId: 'privet-morning-theme', shot: 'artifact', tone: 'cold', figures: [
       { actorId: 'vernon', slot: 'far-left', facing: 'right', emphasis: 'recessed' },
     ], artifact: { assetId: 'tabby-cat', slot: 'right', footprint: 'study' } },
-    { id: 'night-establishing', location: night, backgroundAssetId: 'street-night-lit', ambienceAssetId: 'suburban-night', shot: 'wide', tone: 'cold', figures: [] },
-    { id: 'night-cat', location: night, backgroundAssetId: 'street-night-lit', ambienceAssetId: 'suburban-night', shot: 'artifact', tone: 'cold', figures: [], artifact: { assetId: 'tabby-cat', slot: 'right', footprint: 'study' } },
-    { id: 'night-arrival', location: night, backgroundAssetId: 'street-night-lit', ambienceAssetId: 'suburban-night', shot: 'artifact', tone: 'cold', figures: [
+    { id: 'night-establishing', location: night, backgroundAssetId: 'street-night-lit', musicAssetId: 'privet-nocturne', ambienceAssetId: 'suburban-night', shot: 'wide', tone: 'cold', figures: [] },
+    { id: 'night-cat', location: night, backgroundAssetId: 'street-night-lit', musicAssetId: 'privet-nocturne', ambienceAssetId: 'suburban-night', shot: 'artifact', tone: 'cold', figures: [], artifact: { assetId: 'tabby-cat', slot: 'right', footprint: 'study' } },
+    { id: 'night-arrival', location: night, backgroundAssetId: 'street-night-lit', musicAssetId: 'privet-nocturne', ambienceAssetId: 'suburban-night', shot: 'artifact', tone: 'cold', figures: [
       { actorId: 'dumbledore', appearanceId: 'arrival', slot: 'right', facing: 'left', emphasis: 'active' },
     ], artifact: { assetId: 'tabby-cat', slot: 'far-left', footprint: 'study' } },
-    { id: 'night-put-outer', location: night, backgroundAssetId: 'street-night-dark', ambienceAssetId: 'suburban-night', shot: 'artifact', tone: 'ominous', figures: [
+    { id: 'night-put-outer', location: night, backgroundAssetId: 'street-night-dark', musicAssetId: 'privet-nocturne', ambienceAssetId: 'suburban-night', shot: 'artifact', tone: 'ominous', figures: [
       { actorId: 'dumbledore', appearanceId: 'arrival', slot: 'far-right', facing: 'left', emphasis: 'supporting' },
     ], artifact: { assetId: 'put-outer', slot: 'center', footprint: 'study' } },
-    { id: 'dark-dumbledore-cat', location: night, backgroundAssetId: 'street-night-dark', ambienceAssetId: 'suburban-night', shot: 'artifact', tone: 'intimate', figures: [
+    { id: 'dark-dumbledore-cat', location: night, backgroundAssetId: 'street-night-dark', musicAssetId: 'privet-nocturne', ambienceAssetId: 'suburban-night', shot: 'artifact', tone: 'intimate', figures: [
       { actorId: 'dumbledore', appearanceId: 'named', slot: 'right', facing: 'left', emphasis: 'active' },
     ], artifact: { assetId: 'tabby-cat', slot: 'far-left', footprint: 'study' } },
-    { id: 'dark-mcgonagall-active', location: night, backgroundAssetId: 'street-night-dark', ambienceAssetId: 'suburban-night', shot: 'conversation', tone: 'intimate', figures: [
+    { id: 'dark-mcgonagall-active', location: night, backgroundAssetId: 'street-night-dark', musicAssetId: 'privet-nocturne', ambienceAssetId: 'suburban-night', shot: 'conversation', tone: 'intimate', figures: [
       { actorId: 'mcgonagall', appearanceId: 'stern', slot: 'left', facing: 'right', emphasis: 'active' },
       { actorId: 'dumbledore', appearanceId: 'named', slot: 'right', facing: 'left', emphasis: 'supporting' },
     ] },
-    { id: 'dark-dumbledore-active', location: night, backgroundAssetId: 'street-night-dark', ambienceAssetId: 'suburban-night', shot: 'conversation', tone: 'intimate', figures: [
+    { id: 'dark-dumbledore-active', location: night, backgroundAssetId: 'street-night-dark', musicAssetId: 'privet-nocturne', ambienceAssetId: 'suburban-night', shot: 'conversation', tone: 'intimate', figures: [
       { actorId: 'mcgonagall', slot: 'left', facing: 'right', emphasis: 'supporting' },
       { actorId: 'dumbledore', appearanceId: 'named', slot: 'right', facing: 'left', emphasis: 'active' },
     ] },
-    { id: 'dark-dumbledore-grave', location: night, backgroundAssetId: 'street-night-dark', ambienceAssetId: 'suburban-night', shot: 'conversation', tone: 'ominous', figures: [
+    { id: 'dark-dumbledore-grave', location: night, backgroundAssetId: 'street-night-dark', musicAssetId: 'privet-nocturne', ambienceAssetId: 'suburban-night', shot: 'conversation', tone: 'ominous', figures: [
       { actorId: 'mcgonagall', slot: 'left', facing: 'right', emphasis: 'supporting' },
       { actorId: 'dumbledore', appearanceId: 'grave', slot: 'right', facing: 'left', emphasis: 'active' },
     ] },
-    { id: 'dark-mcgonagall-grief', location: night, backgroundAssetId: 'street-night-dark', ambienceAssetId: 'suburban-night', shot: 'conversation', tone: 'ominous', figures: [
+    { id: 'dark-mcgonagall-grief', location: night, backgroundAssetId: 'street-night-dark', musicAssetId: 'privet-nocturne', ambienceAssetId: 'suburban-night', shot: 'conversation', tone: 'ominous', figures: [
       { actorId: 'mcgonagall', appearanceId: 'grief', slot: 'left', facing: 'right', emphasis: 'active' },
       { actorId: 'dumbledore', appearanceId: 'grave', slot: 'right', facing: 'left', emphasis: 'supporting' },
     ] },
-    { id: 'dark-hagrid-arrives', location: night, backgroundAssetId: 'street-night-dark', ambienceAssetId: 'suburban-night', shot: 'conversation', tone: 'ominous', figures: [
+    { id: 'dark-hagrid-arrives', location: night, backgroundAssetId: 'street-night-dark', musicAssetId: 'privet-nocturne', ambienceAssetId: 'suburban-night', shot: 'conversation', tone: 'ominous', figures: [
       { actorId: 'mcgonagall', appearanceId: 'grief', slot: 'far-left', facing: 'right', emphasis: 'recessed' },
       { actorId: 'dumbledore', appearanceId: 'grave', slot: 'left', facing: 'right', emphasis: 'supporting' },
       { actorId: 'hagrid', appearanceId: 'bundle', slot: 'far-right', facing: 'left', emphasis: 'active' },
     ] },
-    { id: 'dark-trio-dumbledore', location: night, backgroundAssetId: 'street-night-dark', ambienceAssetId: 'suburban-night', shot: 'conversation', tone: 'intimate', figures: [
+    { id: 'dark-trio-dumbledore', location: night, backgroundAssetId: 'street-night-dark', musicAssetId: 'privet-nocturne', ambienceAssetId: 'suburban-night', shot: 'conversation', tone: 'intimate', figures: [
       { actorId: 'mcgonagall', appearanceId: 'grief', slot: 'far-left', facing: 'right', emphasis: 'supporting' },
       { actorId: 'dumbledore', appearanceId: 'grave', slot: 'left', facing: 'right', emphasis: 'active' },
       { actorId: 'hagrid', appearanceId: 'bundle', slot: 'far-right', facing: 'left', emphasis: 'supporting' },
     ] },
-    { id: 'dark-trio-mcgonagall', location: night, backgroundAssetId: 'street-night-dark', ambienceAssetId: 'suburban-night', shot: 'conversation', tone: 'intimate', figures: [
+    { id: 'dark-trio-mcgonagall', location: night, backgroundAssetId: 'street-night-dark', musicAssetId: 'privet-nocturne', ambienceAssetId: 'suburban-night', shot: 'conversation', tone: 'intimate', figures: [
       { actorId: 'mcgonagall', appearanceId: 'grief', slot: 'far-left', facing: 'right', emphasis: 'active' },
       { actorId: 'dumbledore', appearanceId: 'grave', slot: 'left', facing: 'right', emphasis: 'supporting' },
       { actorId: 'hagrid', appearanceId: 'bundle', slot: 'far-right', facing: 'left', emphasis: 'supporting' },
     ] },
-    { id: 'doorstep-reveal', location: night, backgroundAssetId: 'street-night-dark', ambienceAssetId: 'suburban-night', shot: 'artifact', tone: 'intimate', figures: [],
+    { id: 'doorstep-reveal', location: night, backgroundAssetId: 'street-night-dark', musicAssetId: 'doorstep-lullaby', ambienceAssetId: 'suburban-night', shot: 'artifact', tone: 'intimate', figures: [],
       cutIn: { assetId: 'doorstep-cg', framing: 'location-match', representedActorIds: ['dumbledore', 'mcgonagall', 'hagrid'], representedArtifactId: 'sealed-letter' } },
-    { id: 'dark-letter', location: night, backgroundAssetId: 'street-night-dark', ambienceAssetId: 'suburban-night', shot: 'artifact', tone: 'intimate', figures: [
+    { id: 'dark-letter', location: night, backgroundAssetId: 'street-night-dark', musicAssetId: 'doorstep-lullaby', ambienceAssetId: 'suburban-night', shot: 'artifact', tone: 'intimate', figures: [
       { actorId: 'mcgonagall', appearanceId: 'grief', slot: 'far-left', facing: 'right', emphasis: 'supporting' },
       { actorId: 'dumbledore', appearanceId: 'grave', slot: 'left', facing: 'right', emphasis: 'active' },
       { actorId: 'hagrid', appearanceId: 'weeping', slot: 'far-right', facing: 'left', emphasis: 'supporting' },
     ], artifact: { assetId: 'sealed-letter', slot: 'center', footprint: 'study' } },
-    { id: 'dark-hagrid-weeps', location: night, backgroundAssetId: 'street-night-dark', ambienceAssetId: 'suburban-night', shot: 'conversation', tone: 'intimate', figures: [
+    { id: 'dark-hagrid-weeps', location: night, backgroundAssetId: 'street-night-dark', musicAssetId: 'doorstep-lullaby', ambienceAssetId: 'suburban-night', shot: 'conversation', tone: 'intimate', figures: [
       { actorId: 'mcgonagall', appearanceId: 'grief', slot: 'far-left', facing: 'right', emphasis: 'supporting' },
       { actorId: 'dumbledore', appearanceId: 'grave', slot: 'left', facing: 'right', emphasis: 'supporting' },
       { actorId: 'hagrid', appearanceId: 'weeping', slot: 'far-right', facing: 'left', emphasis: 'active' },
     ] },
-    { id: 'night-relit', location: night, backgroundAssetId: 'street-night-lit', ambienceAssetId: 'suburban-night', shot: 'artifact', tone: 'cold', figures: [], artifact: { assetId: 'sealed-letter', slot: 'center', footprint: 'study' } },
+    { id: 'night-relit', location: night, backgroundAssetId: 'street-night-lit', musicAssetId: 'doorstep-lullaby', ambienceAssetId: 'suburban-night', shot: 'artifact', tone: 'cold', figures: [], artifact: { assetId: 'sealed-letter', slot: 'center', footprint: 'study' } },
   ],
   moments: [
     { id: 'privet-morning', chapter, tableauId: 'morning-establishing', viewpoint: { kind: 'public' }, mode: 'location', text: 'Number four, Privet Drive. The residents were proud to say that they were perfectly normal, thank you very much.', cueAssetIds: [], next: { type: 'goto', nodeId: 'normal-people' } },
@@ -161,7 +168,7 @@ export const boyWhoLivedExperience: Experience = {
     { id: 'man-appears', chapter, tableauId: 'night-arrival', viewpoint: { kind: 'public' }, mode: 'action', label: 'The corner', text: 'A man appeared on the corner the cat had been watching—appeared so suddenly and silently you would have thought he had popped out of the ground. He was tall, thin and very old, with silver hair and a beard long enough to tuck into his belt. Nothing like him had ever been seen on Privet Drive.', cueAssetIds: [], performanceBeat: { actorId: 'dumbledore', phase: 'baseline', importance: 'supporting' }, next: { type: 'goto', nodeId: 'put-outer' } },
     { id: 'put-outer', chapter, tableauId: 'night-put-outer', viewpoint: { kind: 'public' }, mode: 'artifact', label: 'The Put-Outer', text: 'He found what he was looking for in an inside pocket: something like a silver cigarette lighter. He flicked it open, held it up, and clicked. The nearest streetlamp went out with a little pop. Twelve clicks later the only lights left on the whole street were two tiny pinpricks in the distance—the eyes of the cat.', cueAssetIds: ['put-outer-click'], next: { type: 'goto', nodeId: 'greets-cat' } },
     { id: 'greets-cat', chapter, tableauId: 'dark-dumbledore-cat', viewpoint: { kind: 'public' }, mode: 'dialogue', speakerId: 'dumbledore', text: 'Fancy seeing you here, Professor McGonagall.', cueAssetIds: [], next: { type: 'goto', nodeId: 'cat-becomes-woman' } },
-    { id: 'cat-becomes-woman', chapter, tableauId: 'dark-mcgonagall-active', viewpoint: { kind: 'public' }, mode: 'action', label: 'Animagus', text: 'He turned to smile at the tabby, but it had gone. Instead he was smiling at a rather severe-looking woman in square spectacles exactly the shape of the markings the cat had had around its eyes. She, too, was wearing a cloak, an emerald one, and she looked distinctly ruffled.', cueAssetIds: [], performanceBeat: { actorId: 'mcgonagall', phase: 'baseline', importance: 'supporting' }, next: { type: 'goto', nodeId: 'mcgonagall-scolds' } },
+    { id: 'cat-becomes-woman', chapter, tableauId: 'dark-mcgonagall-active', viewpoint: { kind: 'public' }, mode: 'action', label: 'Animagus', text: 'He turned to smile at the tabby, but it had gone. Instead he was smiling at a rather severe-looking woman in square spectacles exactly the shape of the markings the cat had had around its eyes. She, too, was wearing a cloak, an emerald one, and she looked distinctly ruffled.', cueAssetIds: ['cat-transfiguration'], performanceBeat: { actorId: 'mcgonagall', phase: 'baseline', importance: 'supporting' }, next: { type: 'goto', nodeId: 'mcgonagall-scolds' } },
     { id: 'mcgonagall-scolds', chapter, tableauId: 'dark-mcgonagall-active', viewpoint: { kind: 'public' }, mode: 'dialogue', speakerId: 'mcgonagall', text: 'How did you know it was me? I’ve been sitting on that wall all day. And you’d think they’d be a bit more careful—owls in broad daylight, shooting stars in Kent. Even the Muggles have noticed something’s going on.', cueAssetIds: [], next: { type: 'goto', nodeId: 'dumbledore-celebrate' } },
     { id: 'dumbledore-celebrate', chapter, tableauId: 'dark-dumbledore-active', viewpoint: { kind: 'public' }, mode: 'dialogue', speakerId: 'dumbledore', text: 'You can’t blame them. We’ve had precious little to celebrate for eleven years. Would you care for a sherbet lemon? It’s a kind of Muggle sweet I’m rather fond of.', cueAssetIds: [], next: { type: 'goto', nodeId: 'mcgonagall-asks' } },
     { id: 'mcgonagall-asks', chapter, tableauId: 'dark-mcgonagall-active', viewpoint: { kind: 'public' }, mode: 'dialogue', speakerId: 'mcgonagall', text: 'No, thank you. Albus—everyone is saying he has gone. You-Know-Who. That he turned up in Godric’s Hollow last night, looking for the Potters. The rumour is that Lily and James are… that they’re… dead.', cueAssetIds: [], performanceBeat: { actorId: 'mcgonagall', phase: 'appraisal', importance: 'supporting' }, next: { type: 'goto', nodeId: 'mcgonagall-private' } },
@@ -189,7 +196,7 @@ export const boyWhoLivedExperience: Experience = {
     { id: 'letter-placed', chapter, tableauId: 'dark-letter', viewpoint: { kind: 'public' }, mode: 'dialogue', speakerId: 'dumbledore', text: 'I’ve explained everything in the letter. They are the only family he has left. It is the best place for him. Dry your eyes, Hagrid.', readingVariants: [
       { when: { kind: 'active-choice', choiceNodeId: 'letter-decision', optionId: 'letter-alone' }, text: 'I’ve explained everything in the letter. It will be quite enough, Professor. They are the only family he has left, and however they receive him, this is the best place for him.' },
       { when: { kind: 'active-choice', choiceNodeId: 'letter-decision', optionId: 'a-word-tomorrow' }, text: 'I’ve explained everything in the letter. No—I shall not come back tomorrow. He must be where I am not, and they are the only family he has left. It is the best place for him. Dry your eyes, Hagrid.' },
-    ], cueAssetIds: [], next: { type: 'goto', nodeId: 'they-leave' } },
+    ], cueAssetIds: ['letter-placed-cue'], next: { type: 'goto', nodeId: 'they-leave' } },
     { id: 'hagrid-weeps', chapter, tableauId: 'dark-hagrid-weeps', viewpoint: { kind: 'public' }, mode: 'dialogue', speakerId: 'hagrid', text: 'S-s-sorry. But I c-c-can’t stand it—Lily an’ James dead—an’ poor little Harry off ter live with Muggles—', cueAssetIds: [], performanceBeat: { actorId: 'hagrid', phase: 'after-state', importance: 'pivotal' }, next: { type: 'goto', nodeId: 'letter-decision' } },
     { id: 'they-leave', chapter, tableauId: 'night-relit', viewpoint: { kind: 'public' }, mode: 'action', label: 'Departure', text: 'A breeze ruffled the hedges of Privet Drive. Hagrid’s motorbike roared into the sky, a cat slipped round the corner, and the old man clicked the Put-Outer once. Twelve balls of light sped back to their lamps, and by their glow, the small bundle on the step of number four stirred in its blankets but did not wake.', readingVariants: [
       { when: { kind: 'reader-insights', insightIds: ['cloaks-noticed'] }, text: 'A breeze ruffled the hedges of Privet Drive. Hagrid’s motorbike roared into the sky, a cat slipped round the corner, and the last cloak Mr Dursley would have glared at that day clicked the Put-Outer once. Twelve balls of light sped back to their lamps, and the small bundle on the step of number four stirred in its blankets but did not wake.' },
@@ -197,3 +204,5 @@ export const boyWhoLivedExperience: Experience = {
     { id: 'ending', chapter, tableauId: 'night-relit', viewpoint: { kind: 'public' }, mode: 'ending', label: 'The boy who lived', text: 'He could not know that at this very moment people meeting in secret all over the country were holding up their glasses and saying in hushed voices: “To Harry Potter—the boy who lived!”', cueAssetIds: [], next: { type: 'end' } },
   ],
 };
+
+export const boyWhoLivedExperience: Experience = withVoiceLines(authored, boyWhoLivedVoiceLines);

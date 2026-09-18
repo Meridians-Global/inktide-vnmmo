@@ -163,6 +163,11 @@ export function compileExperience(input: unknown, options: { assetUrlBase?: stri
       const voice = assetsById.get(moment.voiceAssetId);
       if (!voice || voice.kind !== 'voice') errors.push(`Moment ${moment.id} references invalid voice ${moment.voiceAssetId}`);
     }
+    for (const variant of moment.readingVariants ?? []) {
+      if (!variant.voiceAssetId) continue;
+      const voice = assetsById.get(variant.voiceAssetId);
+      if (!voice || voice.kind !== 'voice') errors.push(`Moment ${moment.id} references invalid voice ${variant.voiceAssetId}`);
+    }
     if (moment.mode === 'dialogue' && !moment.speakerId) errors.push(`Dialogue moment ${moment.id} needs a speaker`);
     if (moment.mode === 'thought') {
       if (!moment.speakerId) errors.push(`Thought moment ${moment.id} needs a speaker`);

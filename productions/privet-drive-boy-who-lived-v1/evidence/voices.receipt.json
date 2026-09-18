@@ -1,0 +1,313 @@
+{
+  "model": "minimax/speech-02-turbo",
+  "lines": {
+    "voice-privet-morning": {
+      "inputDigest": "7b337cada9c0fc65c44bcc92b938c69c3cd58d1a97f9ab9f887fe5b8f2df9f03",
+      "sha256": "ce10f59abd4b914c52ae4024095d2cb48d40185c832edc286739439062bf5c2a",
+      "predictionId": "azjtdxpd5srmw0d0pekb6wn41m",
+      "text": "Number four, Privet Drive. The residents were proud to say that they were perfectly normal, thank you very much.",
+      "voiceId": "English_CaptivatingStoryteller"
+    },
+    "voice-normal-people": {
+      "inputDigest": "6b89eb181ac777ccb9e11199ec6aa141c07bd423be99c671a86d7b6b73fc8985",
+      "sha256": "37d982ce958e7f4fa077f8b9ba5eaacab6fe1058f25df267cf8d8e093e170d52",
+      "predictionId": "87n5x86vwsrmr0d0pekbk99z90",
+      "text": "Mr and Mrs Dursley had everything they wanted, and one secret they wanted less than anything: Mrs Dursley’s sister, and the sister’s family. They did not think they could bear it if anyone found out about the Potters.",
+      "voiceId": "English_CaptivatingStoryteller"
+    },
+    "voice-vernon-leaves": {
+      "inputDigest": "4932d64276718844a30d989b033117ac7eba7c30ec2a2694dcc12409ca21af0c",
+      "sha256": "68a17b3a155096c51fafd3235f0dcdf17375e56403e324f2a6eaa53012d6589d",
+      "predictionId": "kv6daczf4hrmy0d0pekbac8pg4",
+      "text": "Mr Dursley hummed as he picked out his most boring tie and backed his car out of the drive. The sky was dull and grey. Nothing about it suggested that strange and mysterious things would soon be happening all over the country.",
+      "voiceId": "English_CaptivatingStoryteller"
+    },
+    "voice-cat-on-wall": {
+      "inputDigest": "27726a4472aa7c0900fc44f20b33497ac3395ac6ffabc302e8d7393ab5795e95",
+      "sha256": "5ed8f6d0beebfd5c1217f3893fbb007135067c46ef06702766b99b25d57ac915",
+      "predictionId": "1rk5y3g2a1rmt0d0pekv50bym8",
+      "text": "At the corner of the street he noticed the first sign of something peculiar: a tabby cat on the garden wall. It stared back at him. It had square markings around its eyes.",
+      "voiceId": "English_CaptivatingStoryteller"
+    },
+    "voice-vernon-blinks-map": {
+      "inputDigest": "562ca0003d3e2b8f7fa435868be24ca7967e8014db77bd621668b5670e5b66db",
+      "sha256": "b02e3ab272572dcba135df416c6f2a61cde0b93c80ff2dc521a0d88b0e5c62e9",
+      "predictionId": "kbynhw0nh5rmr0d0peksrsmyj8",
+      "text": "A cat reading a map. He blinked and looked again. It was only staring at the sign that said Privet Drive—no, at him. Cats could not read maps. Cats could not read anything.",
+      "voiceId": "English_MatureBoss"
+    },
+    "voice-vernon-blinks-sign": {
+      "inputDigest": "54db4f95e30e745719afdd07e322126bc3c5081ea174adf4dda4ba2c37b3c7b7",
+      "sha256": "04688c31e6b2e5e59f22c60e706d3b16703e1cc3d180696ebab926d00d134d83",
+      "predictionId": "s61yyph4c5rmt0d0pekrcxjbr0",
+      "text": "A cat, looking at the sign that said Privet Drive. That was all it was. There had been no map. Cats did not read signs either, but that was a smaller thing to not think about.",
+      "voiceId": "English_MatureBoss"
+    },
+    "voice-cloaks-in-town": {
+      "inputDigest": "342813ff37d51d2633b6af0173f6db3b079b64c25b542b307ffd2ac6b939a157",
+      "sha256": "6e41d297f894138cbd3ec2dc220ef9955d0cdba969cfd449936414c4035c7709",
+      "predictionId": "hf3a9zhqkhrmy0d0pekvsd4p18",
+      "text": "By the time he reached the traffic jam, the cat was forgotten. In its place were people in cloaks: a whole huddle of them, whispering excitedly, and not one of them looked young enough to be dressing up for a collection stunt.",
+      "voiceId": "English_CaptivatingStoryteller"
+    },
+    "voice-whispers": {
+      "inputDigest": "22ea5cf83381a1502f67f1a3a7808adbced8280b69e558ef05d689dbac96eb8f",
+      "sha256": "337bf0e7bc504f871d54380ccd63c93dc87e7d3bfdd5ac215a2381a1c29c6613",
+      "predictionId": "pgj2a0jat5rmt0d0pekrfy6ph0",
+      "text": "On his way to buy a doughnut he passed the huddle and caught a few words. “The Potters, that’s right, that’s what I heard—” “—yes, their son, Harry—”",
+      "voiceId": "English_CaptivatingStoryteller"
+    },
+    "voice-vernon-stops-name": {
+      "inputDigest": "49bd2cd2a6a46be73f7f81b2ed8cb120413715d2c43c56c9b81c2590e94bffbf",
+      "sha256": "2e00d8f6bf358de88a3f83dfe5b7e0e440b1be4133ac6eba65f01f8541212660",
+      "predictionId": "sampf3axz1rmt0d0pekve6jm7g",
+      "text": "Potter. He stopped dead. Fear flooded him. Then he told himself Potter was not an unusual name, there were plenty of Potters, and he was not even sure the nephew was called Harry. It might have been Harvey. Or Harold.",
+      "voiceId": "English_MatureBoss"
+    },
+    "voice-vernon-stops-cloaks": {
+      "inputDigest": "0bf8a6e91ca1fcab20d2fdd13f1bc93d51ce5039f1563c5e8411182d7204a250",
+      "sha256": "0230db39969890f8feeae7c1225e06ee9f1fe3715811349c4a15e9b2b1e76271",
+      "predictionId": "cydd2e3h6srmr0d0pektv49cn8",
+      "text": "Cloaks. Emerald green, in the middle of the working day. He glared at them so hard that he nearly missed the word Potter altogether—and decided, on balance, that he had.",
+      "voiceId": "English_MatureBoss"
+    },
+    "voice-vernon-returns": {
+      "inputDigest": "5f562c68ffa529f007e74b093498b5bfc8bbac0999f5d591d71ff72f0cc4b0a8",
+      "sha256": "36ea1ba7cacefe8739757083cefd95006253b7cf2847c195d3c08e7ef62dea0c",
+      "predictionId": "7s3dy544dxrmr0d0pekv7ndz9g",
+      "text": "When he pulled into the drive at five o’clock, the tabby cat was still sitting on the garden wall. “Shoo!” said Mr Dursley. The cat did not move. It gave him a stern look.",
+      "voiceId": "English_CaptivatingStoryteller"
+    },
+    "voice-vernon-returns-v1": {
+      "inputDigest": "909cf279b1e691576811da08f39e3ba8d8f034e3de14cd0640bb45487e4814be",
+      "sha256": "f1d2cf72232d311e97be94d610c949b39b08626c021f200018d1052bb87cfe81",
+      "predictionId": "xam4jpcqmxrmw0d0peksneaaww",
+      "text": "The tabby cat was still on the garden wall at five o’clock. It gave him a stern look, and for one second the map and the name Potter arrived together in his head. He said “Shoo!” to both of them. Neither moved.",
+      "voiceId": "English_CaptivatingStoryteller"
+    },
+    "voice-vernon-returns-v2": {
+      "inputDigest": "48395e7bea1bda5a058541177ac114baf509548aaaf125329d633b19b981cd4b",
+      "sha256": "715c6d8a4725a2d35354c296b71829a9d4194ce654db41cbf7a3fff700960cc2",
+      "predictionId": "w5tk5nnb19rmw0d0peksxpt84w",
+      "text": "The tabby cat was still on the garden wall at five o’clock. There was no map now. “Shoo!” said Mr Dursley. The cat gave him a stern look, as though it remembered that he had seen.",
+      "voiceId": "English_CaptivatingStoryteller"
+    },
+    "voice-vernon-returns-v3": {
+      "inputDigest": "99fa12ded85432600853bc8f356340564727896f23c8270fdc5c442da78133f6",
+      "sha256": "7f2b13d5ae0e75111dc8a7d0716d9b8ec87379879233ade485e2e93efda500e7",
+      "predictionId": "6a83bpxy7drmy0d0peksbx9vxm",
+      "text": "The tabby cat was still on the garden wall at five o’clock. “Shoo!” said Mr Dursley. It did not move. He decided he would not mention the Potters to Petunia. He would not mention anything at all.",
+      "voiceId": "English_CaptivatingStoryteller"
+    },
+    "voice-privet-night": {
+      "inputDigest": "cf6cec8da68665fa366eadd6169da1b2c98aea30b1c880e9d0573f181be4c710",
+      "sha256": "974daadcee63b4f57a30f401df62281bc7db61a4854a08fe4f9c23e89310df7e",
+      "predictionId": "65h858phgnrmw0d0pekvjpn71m",
+      "text": "Privet Drive, near midnight. The Dursleys slept. Nothing on the street looked as if it had ever been anything other than ordinary.",
+      "voiceId": "English_CaptivatingStoryteller"
+    },
+    "voice-cat-waits": {
+      "inputDigest": "bb1dc5edea8e5d9339faa62ddadae29fcad5532f1c25187e4d2e11d6700c6a23",
+      "sha256": "1a9d016a986fa5c7020cb53711dc23b1fb6499d811b5d6995759e91138843594",
+      "predictionId": "m5ynzw74qdrmt0d0pekty40xn4",
+      "text": "The cat on the wall had not moved. It sat as still as a statue, eyes fixed unblinkingly on the far corner of the street. It did not so much as quiver when a car door slammed in the next road.",
+      "voiceId": "English_CaptivatingStoryteller"
+    },
+    "voice-cat-waits-v1": {
+      "inputDigest": "88fd642081d16c9517759a56c008537d41b645f671d83957735eba7d735a85ab",
+      "sha256": "e3f2bca6179af5c96fd428a3538320b6a7f8e7a4574d77c1f9fe9abbd2e5fc54",
+      "predictionId": "0ydy8zzqxxrmt0d0pekts09jg0",
+      "text": "The cat on the wall had not moved. Whatever Mr Dursley had decided it was looking at that morning, it was looking at the far corner of the street now, and had been for hours, as still as a statue.",
+      "voiceId": "English_CaptivatingStoryteller"
+    },
+    "voice-man-appears": {
+      "inputDigest": "b92ddf5599a17c61d1f4ceb11d9063b5004be8baf3fda340a1fc23d6fda56c6e",
+      "sha256": "41c87cd7f573fc2ce7d07db3861d255059ea42e16ebcf68f265ca728233e557f",
+      "predictionId": "xavp4ngbvsrmy0d0pem9j6adxc",
+      "text": "A man appeared on the corner the cat had been watching—appeared so suddenly and silently you would have thought he had popped out of the ground. He was tall, thin and very old, with silver hair and a beard long enough to tuck into his belt. Nothing like him had ever been seen on Privet Drive.",
+      "voiceId": "English_CaptivatingStoryteller"
+    },
+    "voice-put-outer": {
+      "inputDigest": "42395957d11de7fd6d63734cd50545161a68442eb9ff67d11bb37b3dab5a20c4",
+      "sha256": "0a5987a3a2d8a95aa0f84adce1dc42566615d15bf9d452b85c8f3b3ddda9e8b8",
+      "predictionId": "q6qpx813gnrmy0d0pem9vdr1w8",
+      "text": "He found what he was looking for in an inside pocket: something like a silver cigarette lighter. He flicked it open, held it up, and clicked. The nearest streetlamp went out with a little pop. Twelve clicks later the only lights left on the whole street were two tiny pinpricks in the distance—the eyes of the cat.",
+      "voiceId": "English_CaptivatingStoryteller"
+    },
+    "voice-greets-cat": {
+      "inputDigest": "169301ba128243af8df4b91db79283157d2865bdbeac731f4ea703296934d59e",
+      "sha256": "69d11096cde9e0df9decc50717618ac12df22a6920cdb593a59f235c870b5ef1",
+      "predictionId": "r03c39svesrmr0d0pem96qv3nw",
+      "text": "Fancy seeing you here, Professor McGonagall.",
+      "voiceId": "English_Steadymentor"
+    },
+    "voice-cat-becomes-woman": {
+      "inputDigest": "47065f56194fea02c153225a12eae4ae17c05dc6a98e72ca34847d6eec38c71c",
+      "sha256": "19644aaaee16544182a48b750fbeece3608e78b8b0451750ac7337533da26b2d",
+      "predictionId": "dssrcnaa39rmr0d0pem9r1g3ec",
+      "text": "He turned to smile at the tabby, but it had gone. Instead he was smiling at a rather severe-looking woman in square spectacles exactly the shape of the markings the cat had had around its eyes. She, too, was wearing a cloak, an emerald one, and she looked distinctly ruffled.",
+      "voiceId": "English_CaptivatingStoryteller"
+    },
+    "voice-mcgonagall-scolds": {
+      "inputDigest": "08cdf9375b5d3b8dc4b8ca710f50d307cb9e0ac825196a98998a17ec07b6c5a3",
+      "sha256": "5bb04bc7be5f2f74af80a808739c537c9f788177f19af18c268ee08fd34e5e59",
+      "predictionId": "19g8zkv1ssrmr0d0pemagp0h28",
+      "text": "How did you know it was me? I’ve been sitting on that wall all day. And you’d think they’d be a bit more careful—owls in broad daylight, shooting stars in Kent. Even the Muggles have noticed something’s going on.",
+      "voiceId": "English_AssertiveQueen"
+    },
+    "voice-dumbledore-celebrate": {
+      "inputDigest": "3a26959c59af399f8e99c724c6e1f79de493141643fef487a1aec8f6c576433a",
+      "sha256": "cc42614815e7ab91e81888a14bb12568039d7475174c4fd78671060763a370b6",
+      "predictionId": "c6j50x3gm5rmr0d0pem9hhxbpw",
+      "text": "You can’t blame them. We’ve had precious little to celebrate for eleven years. Would you care for a sherbet lemon? It’s a kind of Muggle sweet I’m rather fond of.",
+      "voiceId": "English_Steadymentor"
+    },
+    "voice-mcgonagall-asks": {
+      "inputDigest": "741179f5c71ffb93780a05fc4090b3d673879fc73a5e417e21968a5608690e66",
+      "sha256": "0aa5923cf7edcbfeb29c156c3b839d9b048c28d5b871ea734f5af45576ed584d",
+      "predictionId": "avv951kzcdrmr0d0pembqe19k4",
+      "text": "No, thank you. Albus—everyone is saying he has gone. You-Know-Who. That he turned up in Godric’s Hollow last night, looking for the Potters. The rumour is that Lily and James are… that they’re… dead.",
+      "voiceId": "English_AssertiveQueen"
+    },
+    "voice-mcgonagall-private": {
+      "inputDigest": "f8f2f59b3ac7cba0304c39923b2bd6dbb53a28663d8697ab4ef130efcc6d399c",
+      "sha256": "12339e470806f72f18e99d57f435e9babfd076c039725aeb156ad6c0cb4e3daa",
+      "predictionId": "jhd6rwmjk9rmw0d0pem8nn9c54",
+      "text": "Say it is a rumour. Say it. She had sat on a cold wall for a whole day so that she could hear him say it before anyone else did.",
+      "voiceId": "English_AssertiveQueen"
+    },
+    "voice-dumbledore-confirms": {
+      "inputDigest": "23fc40c45c5d532bc048b7774a37dc4c59f6f073d60a5232e065e322e5b085ae",
+      "sha256": "54b9011f095f71f71a67bda264bc9b44c7df41ac70c0c9706bfaea25fb7e7e88",
+      "predictionId": "r5a67dd1dhrmw0d0pem8erzvw8",
+      "text": "I’m afraid so, Professor. Lily and James. I know. I know.",
+      "voiceId": "English_Steadymentor"
+    },
+    "voice-mcgonagall-breaks": {
+      "inputDigest": "64e0971157ec673c62a4bcf285cb81c25041dfd3376ce296e40c6d80a9b10939",
+      "sha256": "7d9b10f221d1fbcf21693dc541641d5b8dfe429c487f8c975e2f584d4e8e46e7",
+      "predictionId": "hwhbm6dg45rmt0d0pemby3hhg0",
+      "text": "Professor McGonagall’s voice trembled. She had to sit for a moment. “That’s not all. They’re saying he tried to kill the Potters’ son, Harry. And that he couldn’t. That he couldn’t kill a little boy.”",
+      "voiceId": "English_CaptivatingStoryteller"
+    },
+    "voice-dumbledore-guess": {
+      "inputDigest": "d10ddb1d228621a2f32ba6a51d5de830b125b874b9b01ef71f58486cfdde2db7",
+      "sha256": "a9f222a1019af0b4e6508c6f0508d1c2e270f26f9c30a33f19bc5ca07b5a8be5",
+      "predictionId": "0g4a7cy3rnrmw0d0pem8js0tdm",
+      "text": "We can only guess. We may never know.",
+      "voiceId": "English_Steadymentor"
+    },
+    "voice-dumbledore-guess-v1": {
+      "inputDigest": "61c21ec83dfcfccd9f6595618ab2c71aa24618d5f1b3551229bea2d638db9a8f",
+      "sha256": "940754bef50d543655e76f9f34348deaaf68eb5dfbaa7743163dc78c8b60981a",
+      "predictionId": "4877cyejf5rmw0d0pem8e6mwsr",
+      "text": "We can only guess. Something in that boy stopped him where nothing else could—but as to what, we may never know.",
+      "voiceId": "English_Steadymentor"
+    },
+    "voice-dumbledore-guess-v2": {
+      "inputDigest": "5fa88b0a95cc5fa221ace7c1508174c752f61abd66d93ee663c31b616b5501f6",
+      "sha256": "20e027f0e26325e5442b9fbbcce4bb1e8fcb0142a4ec2868596632319568f938",
+      "predictionId": "vmr6awz19nrmt0d0pem9p1qca8",
+      "text": "We can only guess. Perhaps his power broke, and that is why he has gone. But we may never know.",
+      "voiceId": "English_Steadymentor"
+    },
+    "voice-dumbledore-guess-v3": {
+      "inputDigest": "2480d0901700c3f2a51e55f50e5cb847a17880388b9c16638d248fb61608c88e",
+      "sha256": "777c75811715c836bcbca5171966b4b03d88ada8bb9df7055755c3312bddee1f",
+      "predictionId": "v7y2qhfg15rmw0d0pembbpsyc8",
+      "text": "We can only guess. I do not know either, Professor, and I am not ashamed to say it tonight. We may never know.",
+      "voiceId": "English_Steadymentor"
+    },
+    "voice-hagrid-arrives": {
+      "inputDigest": "3ff1fb49bea3f604a56ba41bb82add58781ed590d8ca54ac1a82c2b8b3ce7a81",
+      "sha256": "0cbde3856258d7ee8435940f065654307dd0dfde3d872ba81d64a66ba6537c8d",
+      "predictionId": "2rhatrzyq5rmw0d0pem9rejmxw",
+      "text": "A low rumbling broke the silence, grew to a roar, and a huge motorbike fell out of the air and landed on the road in front of them. If the motorbike was huge, it was nothing to the man sitting astride it. In his vast, muscular arms he was holding a bundle of blankets.",
+      "voiceId": "English_CaptivatingStoryteller"
+    },
+    "voice-hagrid-reports": {
+      "inputDigest": "60506855b633266472c32f395fbab8da1d1a6234fd78491164cfe86f64989249",
+      "sha256": "62b4bf0eba32c64470caa8966c22ac5bbe59bdce788182a2a6598d3758efae66",
+      "predictionId": "6z9w740v2hrmy0d0pemt93shcg",
+      "text": "No problems, sir. House was almost destroyed but I got him out all right before the Muggles started swarmin’ around. He fell asleep as we was flyin’ over Bristol.",
+      "voiceId": "English_ManWithDeepVoice"
+    },
+    "voice-doorstep": {
+      "inputDigest": "1eec38e2633cf2801587d73c09c31b79e563eddc839dbdb4947c52d04091c6d0",
+      "sha256": "35de273a6cc67cfdc993d0182c47e7df79a4f155f4089a76a4c88e0543ff28a2",
+      "predictionId": "xcf5j09e8srmw0d0pemtd188sg",
+      "text": "Under the blankets a baby boy was fast asleep. Beneath a tuft of jet-black hair, on his forehead, they could see a curiously shaped cut, like a bolt of lightning. Dumbledore stepped over the low garden wall and laid him gently on the doorstep of number four.",
+      "voiceId": "English_CaptivatingStoryteller"
+    },
+    "voice-scar-question": {
+      "inputDigest": "a98390eff519090b1faf6e84d9d29736af49df335fde1edc21a469f418cb4625",
+      "sha256": "244fa872c822032b2e2709dad64410bac66e1c2a31c62ba7c18652e4904f7308",
+      "predictionId": "nsez0rj1f1rmr0d0pemr97j4w8",
+      "text": "Is that where—? Couldn’t you do something about it, Albus?",
+      "voiceId": "English_AssertiveQueen"
+    },
+    "voice-scars-handy": {
+      "inputDigest": "ff9b0bd1074a71e88b87676f02a8f321647136782416e79c980e04f2232c788f",
+      "sha256": "618a50a1bff37e9ffafdb3ebf6ebf358d9febd6bb2a809dca0f047cd06a348f2",
+      "predictionId": "g2rh6zagghrmw0d0pemttxmyhr",
+      "text": "Even if I could, I wouldn’t. Scars can come in handy. I have one above my left knee which is a perfect map of the London Underground.",
+      "voiceId": "English_Steadymentor"
+    },
+    "voice-letter-decision": {
+      "inputDigest": "1744867d27dbac616fa08d928ea2da0bcbc11902c20276eaded8e91c058f2cad",
+      "sha256": "2acd9a1752e8b4f8006e6606ac3fb1fbaac379532b18cb58a51217ccb1764648",
+      "predictionId": "242xqhtz69rmy0d0pemv2yvnhr",
+      "text": "Dumbledore took a letter out of his cloak and tucked it inside the blankets. Professor McGonagall looked at the dark, sleeping house and then at him.",
+      "voiceId": "English_CaptivatingStoryteller"
+    },
+    "voice-letter-placed": {
+      "inputDigest": "82ed0de57e0776bd70c7738be680641806d9248dfd282170e2564c87ba8aeed0",
+      "sha256": "e505aa3d0f413ddce87d796da56575f208b44ac83d9014daac8504cec9fbfb1d",
+      "predictionId": "qr04ckbdvnrmw0d0pems2bseng",
+      "text": "I’ve explained everything in the letter. They are the only family he has left. It is the best place for him. Dry your eyes, Hagrid.",
+      "voiceId": "English_Steadymentor"
+    },
+    "voice-letter-placed-v1": {
+      "inputDigest": "3ece355980df4aa56f8db5dc64121fff558a6404af6465b8464380af7a9986b2",
+      "sha256": "68cfd47cf526e9e39a9d03f52c8afe702cab3acdcd4f156c223006b2da96a54b",
+      "predictionId": "427mrxw199rmr0d0pemt2w53eg",
+      "text": "I’ve explained everything in the letter. It will be quite enough, Professor. They are the only family he has left, and however they receive him, this is the best place for him.",
+      "voiceId": "English_Steadymentor"
+    },
+    "voice-letter-placed-v2": {
+      "inputDigest": "a41c1774d37440eecfdbb99bc8f632c286c8c9fd9fbc75cbd015ad6f25b48727",
+      "sha256": "7ed0a7fbb7c027f495fd948e978c36d5f581fdf99f3733c4d8285ff2e3734565",
+      "predictionId": "jrzhd9cn8srmw0d0pemrx2akeg",
+      "text": "I’ve explained everything in the letter. No—I shall not come back tomorrow. He must be where I am not, and they are the only family he has left. It is the best place for him. Dry your eyes, Hagrid.",
+      "voiceId": "English_Steadymentor"
+    },
+    "voice-hagrid-weeps": {
+      "inputDigest": "6cbd4ce947f95a566711e0b609617ffa1b26ff55ef809f4b041f24e59c64a652",
+      "sha256": "85374270f122856ee709bff8d42194f3601a4de3910af94ac197e2aa0a5aa662",
+      "predictionId": "gp9yczx8gdrmw0d0pemttmkdy8",
+      "text": "S-s-sorry. But I c-c-can’t stand it—Lily an’ James dead—an’ poor little Harry off ter live with Muggles—",
+      "voiceId": "English_ManWithDeepVoice"
+    },
+    "voice-they-leave": {
+      "inputDigest": "c8e56e98db2d6d078d7030f8c54f1b6b522483b67ada2a856587459461b273ca",
+      "sha256": "82e6a823261c87357584393804f1570f7cb583d4b03b3c3757c4d86f5e23d88e",
+      "predictionId": "ff8myw5q9drmr0d0pems1gvdgc",
+      "text": "A breeze ruffled the hedges of Privet Drive. Hagrid’s motorbike roared into the sky, a cat slipped round the corner, and the old man clicked the Put-Outer once. Twelve balls of light sped back to their lamps, and by their glow, the small bundle on the step of number four stirred in its blankets but did not wake.",
+      "voiceId": "English_CaptivatingStoryteller"
+    },
+    "voice-they-leave-v1": {
+      "inputDigest": "de5ac96b2d3f852f761058128ef01445b4542e2629eeb29201cfb80b4b6960eb",
+      "sha256": "3ff53b41804e2030efee7eaf14b60c3e60a6cc5fdd4adabee9fb5594b44947ea",
+      "predictionId": "fj4ffj6eyhrmy0d0pemvtns19c",
+      "text": "A breeze ruffled the hedges of Privet Drive. Hagrid’s motorbike roared into the sky, a cat slipped round the corner, and the last cloak Mr Dursley would have glared at that day clicked the Put-Outer once. Twelve balls of light sped back to their lamps, and the small bundle on the step of number four stirred in its blankets but did not wake.",
+      "voiceId": "English_CaptivatingStoryteller"
+    },
+    "voice-ending": {
+      "inputDigest": "bf6819fae8906832b23b738efbde275bea8977235f63b05c60e760a913494977",
+      "sha256": "cf0617c7e80ce6849e7c2226af0a776e1716ea61141db31f2c453134646f4ee8",
+      "predictionId": "80b34cz6gsrmw0d0pemtm2c04m",
+      "text": "He could not know that at this very moment people meeting in secret all over the country were holding up their glasses and saying in hushed voices: “To Harry Potter—the boy who lived!”",
+      "voiceId": "English_CaptivatingStoryteller"
+    }
+  }
+}

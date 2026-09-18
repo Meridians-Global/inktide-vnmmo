@@ -1,0 +1,42 @@
+{
+  "id": "v28dq6mrh1rmr0d0pegvkr70p0",
+  "model": "minimax/speech-02-turbo",
+  "version": "hidden",
+  "input": {
+    "audio_format": "mp3",
+    "bitrate": 128000,
+    "channel": "mono",
+    "emotion": "calm",
+    "english_normalization": true,
+    "language_boost": "English",
+    "pitch": -1,
+    "sample_rate": 32000,
+    "speed": 0.94,
+    "text": "MJ’s boundary had made memory’s absence decisive. Peter’s restraint then revealed love learning not to overrule it. Holding both truths made neither disappear.",
+    "voice_id": "English_expressive_narrator"
+  },
+  "logs": "Generating speech with model speech-02-turbo\nGenerated speech in 2.07sec\nEach character is 1 token\nTokens: 159\n",
+  "output": "https://replicate.delivery/xezq/lE6dYvFT3aZwK9tYZY3lmer2nv3YBhoLKuyRw264cUyWQVnLA/tmpmn_8br1_.mp3",
+  "data_removed": false,
+  "error": null,
+  "source": "api",
+  "status": "succeeded",
+  "created_at": "2026-09-18T08:28:27.144Z",
+  "started_at": "2026-09-18T08:28:27.159574832Z",
+  "completed_at": "2026-09-18T08:28:29.345022906Z",
+  "urls": {
+    "cancel": "https://api.replicate.com/v1/predictions/v28dq6mrh1rmr0d0pegvkr70p0/cancel",
+    "get": "https://api.replicate.com/v1/predictions/v28dq6mrh1rmr0d0pegvkr70p0",
+    "stream": "https://stream.replicate.com/v1/files/jbxs-djlmj72frh4ox2znfo24ono7j2tb5aujobyhasloqnj65b74vbdq",
+    "web": "https://replicate.com/p/v28dq6mrh1rmr0d0pegvkr70p0"
+  },
+  "metrics": {
+    "input_token_count": 159,
+    "output_token_count": 1,
+    "predict_time": 2.185448084,
+    "time_to_first_token": 0.000469211,
+    "token_input_count": 159,
+    "tokens_per_second": 0.4576703291537959,
+    "total_time": 2.201022906
+  }
+}

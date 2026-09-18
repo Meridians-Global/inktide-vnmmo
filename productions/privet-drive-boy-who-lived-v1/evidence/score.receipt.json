@@ -1,0 +1,39 @@
+{
+  "requests": {
+    "privet-morning-theme": {
+      "model": "meta/musicgen:671ac645ce5e552cc63a54a2bbff63fcf798043055d2dac5fc9e36a837eedcfb",
+      "inputDigest": "5ed12fbd0e328fd37dfbc4571df9fe1ac819bc0ac6517ee4b711729756720e36",
+      "sha256": "cb3a70ffe89e9a5d32fa99f99936aa9109a2040051e06edc0ab27a4c23f1fe56",
+      "predictionId": "rnz3a78kj1rn80d0pej8s6jwmw",
+      "prompt": "Whimsical light orchestral loop: pizzicato strings, bassoon, glockenspiel, tidy English suburban morning, dry mischievous humour, gentle, no drums, storybook"
+    },
+    "privet-nocturne": {
+      "model": "meta/musicgen:671ac645ce5e552cc63a54a2bbff63fcf798043055d2dac5fc9e36a837eedcfb",
+      "inputDigest": "66c39c625541dbd5da569fe039f983f344af03c6c1538103e7ac6d49333bb45c",
+      "sha256": "4e35b7a7fcf7602d9e6eaf9277567ae5e0096198fab7ad3d1ec4f688b23e0180",
+      "predictionId": "51gx6gsg4nrnc0d0pejt0e3yzm",
+      "prompt": "Hushed nocturne: celesta, soft low strings, distant harp, quiet suburban street at midnight, mystery and wonder, very slow, no drums, film score"
+    },
+    "doorstep-lullaby": {
+      "model": "meta/musicgen:671ac645ce5e552cc63a54a2bbff63fcf798043055d2dac5fc9e36a837eedcfb",
+      "inputDigest": "194a6b80a249f2d5c59bfba173abf8b3184772816fb35a59ecd05808581c17aa",
+      "sha256": "7c2f60036da1bd0ec40a941e85360fdd0129bf52e1d69f6a54f742bbad9a89a9",
+      "predictionId": "qak4ntjgr9rna0d0pek8td134c",
+      "prompt": "Tender solo piano lullaby with warm sustained strings, bittersweet farewell, a baby left on a doorstep, slow, intimate, no drums, film score"
+    },
+    "cat-transfiguration": {
+      "model": "stackadoc/stable-audio-open-1.0:9aff84a639f96d0f7e6081cdea002d15133d0043727f849c40abdd166b7c75a8",
+      "inputDigest": "504618f0887fc63e26e5a19601b62cd0108ea72cc66be017d4e33783be5fa27d",
+      "sha256": "5bf1313139a32db5ff0e6cd01b799b0daa4718920ac105cef2a5b55a2d3c4205",
+      "predictionId": "5j1904w32drmt0d0pensj91hx8",
+      "prompt": "Magical shimmering transformation whoosh, soft sparkle glissando, brief, clean, no music"
+    },
+    "letter-placed": {
+      "model": "stackadoc/stable-audio-open-1.0:9aff84a639f96d0f7e6081cdea002d15133d0043727f849c40abdd166b7c75a8",
+      "inputDigest": "4747a5904b22ff48347330965575ecfb53f203ea95178124a636154dea2e0e92",
+      "sha256": "dd16d7ddf811b343e105a762038f01496a67c4677cd5aae0d88eaf0379a43946",
+      "predictionId": "pzscmxwzrnrmy0d0penrkaxw7r",
+      "prompt": "A folded paper letter tucked gently into wool blankets, close quiet cloth and paper rustle, no music"
+    }
+  }
+}

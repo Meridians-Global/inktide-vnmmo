@@ -154,6 +154,7 @@ const ReadingVariantSchema = z.object({
   when: ReadingVariantWhenSchema,
   text: z.string().min(1),
   tableauId: z.string().min(1).optional(),
+  voiceAssetId: z.string().min(1).optional(),
 }).strict();
 
 export const MomentSchema = z.object({
