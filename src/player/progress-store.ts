@@ -1,3 +1,4 @@
+import { coercePrefs, type ReaderPrefs } from '../core/reader-prefs';
 import type { ReaderState } from '../core/reader-state';
 
 export type ProgressRecord = {
@@ -7,8 +8,10 @@ export type ProgressRecord = {
 };
 
 const DB_NAME = 'vnmmo';
-const DB_VERSION = 1;
+const DB_VERSION = 2;
 const STORE = 'progress';
+const PREFS_STORE = 'prefs';
+const PREFS_KEY = 'reader';
 
 function request<T>(req: IDBRequest<T>): Promise<T> {
   return new Promise((resolve, reject) => {
@@ -32,6 +35,7 @@ export class ProgressStore {
         const req = indexedDB.open(DB_NAME, DB_VERSION);
         req.onupgradeneeded = () => {
           if (!req.result.objectStoreNames.contains(STORE)) req.result.createObjectStore(STORE, { keyPath: 'experienceId' });
+          if (!req.result.objectStoreNames.contains(PREFS_STORE)) req.result.createObjectStore(PREFS_STORE);
         };
         req.onsuccess = () => resolve(req.result);
         req.onerror = () => resolve(null);
@@ -70,6 +74,26 @@ export class ProgressStore {
       await request(db.transaction(STORE, 'readwrite').objectStore(STORE).put({ ...record, savedAt: new Date().toISOString() } satisfies ProgressRecord));
     } catch {
       // Progress is a convenience; a blocked store never blocks reading.
+    }
+  }
+
+  async prefs(): Promise<ReaderPrefs> {
+    const db = await this.db;
+    if (!db) return coercePrefs(undefined);
+    try {
+      return coercePrefs(await request(db.transaction(PREFS_STORE, 'readonly').objectStore(PREFS_STORE).get(PREFS_KEY)));
+    } catch {
+      return coercePrefs(undefined);
+    }
+  }
+
+  async putPrefs(prefs: ReaderPrefs): Promise<void> {
+    const db = await this.db;
+    if (!db) return;
+    try {
+      await request(db.transaction(PREFS_STORE, 'readwrite').objectStore(PREFS_STORE).put(prefs, PREFS_KEY));
+    } catch {
+      // see put
     }
   }
 

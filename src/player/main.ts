@@ -1,5 +1,6 @@
 import './styles.css';
 import { CompiledExperience, type Actor, type Appearance, type CompiledAsset, type Moment, type Tableau } from '../core/contracts';
+import { DEFAULT_PREFS, PREF_OPTIONS, autoAdvanceMs, canPlayThrough, cyclePref, revealMsPerChar, SKIP_HOLD_MS, type Playback, type ReaderPrefs } from '../core/reader-prefs';
 import { availableChoiceOptions, backlog, currentMoment, initialReaderStateFromLink, reduceReader, resumeReaderState, type ReaderAction, type ReaderState } from '../core/reader-state';
 import { AudioDirector } from './audio-director';
 import { ProgressStore, type ProgressRecord } from './progress-store';
@@ -27,6 +28,7 @@ if (!root) throw new Error('Missing app root');
 root.innerHTML = `
   <section class="reader-shell" data-tone="neutral">
     <div class="stage" tabindex="0" aria-label="Advance story">
+      <img class="backdrop backdrop-previous" alt="" aria-hidden="true" />
       <img class="backdrop" alt="" />
       <div class="plate-scrim"></div>
       <div class="cut-in-wrap" aria-hidden="true"><img class="cut-in" alt="" /></div>
@@ -48,8 +50,28 @@ root.innerHTML = `
         </div>
       </div>
       <div class="backlog-layer" hidden></div>
+      <div class="insight-toast" role="status" aria-live="polite" hidden><span class="insight-eyebrow">INSIGHT</span><strong class="insight-title"></strong></div>
       <aside class="settings-layer" aria-label="Reader settings" hidden>
         <span class="settings-eyebrow">READER SETTINGS</span>
+        <span class="settings-group">Text</span>
+        <button type="button" class="setting-row" data-pref="textSpeed">
+          <span><strong>Text speed</strong><small>How lines are revealed</small></span>
+          <b data-pref-value="textSpeed"></b>
+        </button>
+        <button type="button" class="setting-row" data-pref="textSize">
+          <span><strong>Text size</strong><small>Dialogue and narration</small></span>
+          <b data-pref-value="textSize"></b>
+        </button>
+        <button type="button" class="setting-row" data-pref="boxOpacity">
+          <span><strong>Text box</strong><small>How much stage shows through</small></span>
+          <b data-pref-value="boxOpacity"></b>
+        </button>
+        <span class="settings-group">Playback</span>
+        <button type="button" class="setting-row" data-pref="autoDelay">
+          <span><strong>Auto pace</strong><small>Pause after each line in AUTO</small></span>
+          <b data-pref-value="autoDelay"></b>
+        </button>
+        <span class="settings-group">Sound</span>
         <button type="button" class="setting-row" data-action="audio">
           <span><strong>Physical sound</strong><small>Ambience, music and material cues</small></span>
           <b class="sound-setting-value">OFF</b>
@@ -58,7 +80,7 @@ root.innerHTML = `
           <span><strong>Voice-over</strong><small class="voice-setting-note">Optional spoken rendition</small></span>
           <b class="voice-setting-value">OFF</b>
         </button>
-        <p>Silence is authored. Voice begins off.</p>
+        <p>Silence is authored. Voice begins off. Preferences are kept on this device.</p>
       </aside>
       <footer class="text-rail">
         <div class="text-copy">
@@ -66,15 +88,18 @@ root.innerHTML = `
           <strong class="speaker"></strong>
           <p class="line"></p>
         </div>
-        <nav class="transport" aria-label="Reading controls">
-          <button type="button" data-action="home"><img class="transport-logo" src="/icon-192.png" alt="" />MENU</button>
-          <button type="button" data-action="back">BACK</button>
-          <button type="button" data-action="backlog">LOG</button>
-          <button type="button" data-action="settings" aria-expanded="false">SETTINGS</button>
-          <span class="progress"></span>
-          <button type="button" data-action="next">NEXT</button>
-        </nav>
+        <span class="advance-cue" aria-hidden="true"></span>
       </footer>
+      <nav class="transport" aria-label="Reading controls">
+        <button type="button" data-action="home"><img class="transport-logo" src="/icon-192.png" alt="" />MENU</button>
+        <button type="button" data-action="back">BACK</button>
+        <button type="button" data-action="backlog">LOG</button>
+        <button type="button" data-action="auto" aria-pressed="false">AUTO</button>
+        <button type="button" data-action="skip" aria-pressed="false">SKIP</button>
+        <button type="button" data-action="settings" aria-expanded="false">SETTINGS</button>
+        <span class="progress"></span>
+        <button type="button" data-action="next">NEXT</button>
+      </nav>
       <section class="home-layer" aria-label="Experience menu" hidden>
         <header class="home-header">
           <img class="home-logo" src="/icon-512.png" alt="VNMMO" />
@@ -85,7 +110,7 @@ root.innerHTML = `
           </div>
         </header>
         <div class="home-grid"></div>
-        <p class="home-hint">ENTER · read &nbsp; ESC · menu &nbsp; ↑ · back &nbsp; TAB · log</p>
+        <p class="home-hint">ENTER · read &nbsp; ESC · menu &nbsp; ↑ · back &nbsp; TAB · log &nbsp; A · auto &nbsp; S · skip &nbsp; 1–9 · choose</p>
       </section>
     </div>
     <p class="source-note"></p>
@@ -93,7 +118,13 @@ root.innerHTML = `
 
 const shell = root.querySelector<HTMLElement>('.reader-shell')!;
 const stage = root.querySelector<HTMLElement>('.stage')!;
-const backdrop = root.querySelector<HTMLImageElement>('.backdrop')!;
+const backdrop = root.querySelector<HTMLImageElement>('.backdrop:not(.backdrop-previous)')!;
+const backdropPrevious = root.querySelector<HTMLImageElement>('.backdrop-previous')!;
+const insightToast = root.querySelector<HTMLElement>('.insight-toast')!;
+const insightTitle = root.querySelector<HTMLElement>('.insight-title')!;
+const advanceCue = root.querySelector<HTMLElement>('.advance-cue')!;
+const autoButton = root.querySelector<HTMLButtonElement>('[data-action="auto"]')!;
+const skipButton = root.querySelector<HTMLButtonElement>('[data-action="skip"]')!;
 const figures = root.querySelector<HTMLElement>('.figures')!;
 const cutInWrap = root.querySelector<HTMLElement>('.cut-in-wrap')!;
 const cutIn = root.querySelector<HTMLImageElement>('.cut-in')!;
@@ -127,7 +158,95 @@ let catalog: Catalog;
 let experience: CompiledExperience;
 let state: ReaderState;
 let audio: AudioDirector;
+let prefs: ReaderPrefs = DEFAULT_PREFS;
+let playback: Playback = 'manual';
 const progressStore = new ProgressStore();
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+/** One line reveal at a time; a click during reveal completes it instead of advancing. */
+const reveal = {
+  frame: 0,
+  timer: 0,
+  text: '',
+  complete: true,
+};
+
+function cancelReveal(): void {
+  cancelAnimationFrame(reveal.frame);
+  clearTimeout(reveal.timer);
+  reveal.frame = 0;
+  reveal.timer = 0;
+}
+
+function finishReveal(): void {
+  cancelReveal();
+  reveal.complete = true;
+  line.textContent = reveal.text;
+  shell.dataset.revealing = 'false';
+  schedulePlayback();
+}
+
+function startReveal(text: string): void {
+  cancelReveal();
+  reveal.text = text;
+  const perChar = revealMsPerChar(prefs, reducedMotion.matches);
+  if (perChar === 0 || playback === 'skip') {
+    finishReveal();
+    return;
+  }
+  reveal.complete = false;
+  shell.dataset.revealing = 'true';
+  line.textContent = '';
+  const startedAt = performance.now();
+  const step = (now: number): void => {
+    const shown = Math.min(text.length, Math.floor((now - startedAt) / perChar));
+    line.textContent = text.slice(0, shown);
+    if (shown >= text.length) {
+      finishReveal();
+      return;
+    }
+    reveal.frame = requestAnimationFrame(step);
+  };
+  reveal.frame = requestAnimationFrame(step);
+}
+
+/** AUTO waits a reading pause after the reveal; SKIP steps through seen text on a short hold. */
+function schedulePlayback(): void {
+  clearTimeout(reveal.timer);
+  if (!reveal.complete || shell.dataset.view !== 'reading') return;
+  if (!canPlayThrough(experience, state, playback)) {
+    if (playback === 'skip') setPlayback('manual');
+    return;
+  }
+  const delay = playback === 'skip' ? SKIP_HOLD_MS : autoAdvanceMs(prefs, reveal.text);
+  reveal.timer = window.setTimeout(() => dispatch({ type: 'advance' }), delay);
+}
+
+function setPlayback(next: Playback): void {
+  playback = playback === next ? 'manual' : next;
+  shell.dataset.playback = playback;
+  autoButton.setAttribute('aria-pressed', String(playback === 'auto'));
+  skipButton.setAttribute('aria-pressed', String(playback === 'skip'));
+  if (playback === 'skip' && !reveal.complete) finishReveal();
+  else schedulePlayback();
+}
+
+function applyPrefs(): void {
+  shell.dataset.textSize = prefs.textSize;
+  shell.dataset.boxOpacity = prefs.boxOpacity;
+  for (const key of Object.keys(PREF_OPTIONS) as (keyof ReaderPrefs)[]) {
+    const value = settingsLayer.querySelector<HTMLElement>(`[data-pref-value="${key}"]`);
+    if (value) value.textContent = prefs[key].toUpperCase();
+  }
+}
+
+function setPref(key: keyof ReaderPrefs): void {
+  prefs = cyclePref(prefs, key);
+  applyPrefs();
+  void progressStore.putPrefs(prefs);
+  if (key === 'textSpeed' && !reveal.complete) startReveal(reveal.text);
+  if (key === 'autoDelay') schedulePlayback();
+}
 
 function byId<T extends { id: string }>(items: T[], id: string): T {
   const item = items.find((candidate) => candidate.id === id);
@@ -144,23 +263,58 @@ function facingTransform(appearance: Appearance, facing: 'left' | 'right' | 'inw
   return appearance.sourceFacing === resolved ? 'scaleX(1)' : 'scaleX(-1)';
 }
 
-function renderFigures(tableau: Tableau, assets: Map<string, CompiledAsset>): void {
-  figures.replaceChildren();
+/**
+ * Figures persist across moments keyed by actor so a re-staged actor glides/re-lights
+ * instead of hard-cutting; actors leaving the tableau fade out before removal.
+ */
+function renderFigures(tableau: Tableau, moment: Moment, assets: Map<string, CompiledAsset>): void {
+  const staged = new Set(tableau.figures.map((placement) => placement.actorId));
+  for (const existing of figures.querySelectorAll<HTMLImageElement>('.figure')) {
+    if (staged.has(existing.dataset.actorId!) || existing.classList.contains('figure-leaving')) continue;
+    existing.classList.add('figure-leaving');
+    const remove = (): void => existing.remove();
+    existing.addEventListener('transitionend', remove, { once: true });
+    if (reducedMotion.matches) remove();
+  }
   for (const placement of tableau.figures) {
     const actor = byId(experience.actors, placement.actorId);
     const appearance = resolveAppearance(actor, placement.appearanceId);
     const asset = assets.get(appearance.assetId)!;
-    const image = document.createElement('img');
-    image.className = `figure figure-${placement.emphasis} figure-projection-${appearance.projection}`;
-    image.src = asset.url;
-    image.alt = appearance.stageName;
+    let image = figures.querySelector<HTMLImageElement>(`.figure:not(.figure-leaving)[data-actor-id="${actor.id}"]`);
+    const entering = !image && !reducedMotion.matches;
+    if (!image) {
+      image = document.createElement('img');
+      image.className = 'figure';
+      image.dataset.actorId = actor.id;
+      figures.append(image);
+    }
+    const speaking = moment.speakerId === actor.id;
+    image.className = `figure figure-${placement.emphasis} figure-projection-${appearance.projection}${speaking ? ' figure-speaking' : ''}${entering ? ' figure-entering' : ''}`;
+    if (image.dataset.appearanceId !== appearance.id) {
+      image.src = asset.url;
+      image.alt = appearance.stageName;
+      image.dataset.appearanceId = appearance.id;
+    }
     image.style.left = `${SLOT_POSITION[placement.slot]}%`;
     image.style.height = `${actor.stageHeightPercent * PROJECTION_SCALE[appearance.projection]}%`;
     image.style.transform = `translateX(-50%) ${facingTransform(appearance, placement.facing, placement.slot)}`;
-    image.dataset.actorId = actor.id;
-    image.dataset.appearanceId = appearance.id;
-    figures.append(image);
+    if (entering) requestAnimationFrame(() => image!.classList.remove('figure-entering'));
   }
+}
+
+/** Crossfade when the plate changes; the previous plate holds underneath while the new one fades in. */
+function renderBackdrop(url: string): void {
+  if (backdrop.dataset.url === url) return;
+  if (backdrop.dataset.url && !reducedMotion.matches) {
+    backdropPrevious.src = backdrop.src;
+    backdropPrevious.hidden = false;
+    backdrop.classList.remove('backdrop-fading');
+    void backdrop.offsetWidth;
+    backdrop.classList.add('backdrop-fading');
+    backdrop.addEventListener('animationend', () => { backdropPrevious.hidden = true; }, { once: true });
+  }
+  backdrop.src = url;
+  backdrop.dataset.url = url;
 }
 
 function renderCutIn(tableau: Tableau, assets: Map<string, CompiledAsset>): void {
@@ -255,19 +409,32 @@ function renderChoice(moment: Moment): void {
   heading.textContent = moment.next.prompt;
   choiceLayer.className = `choice-layer choice-${moment.next.weight}`;
   choiceLayer.append(posture, heading);
-  for (const option of availableChoiceOptions(moment, state)) {
+  availableChoiceOptions(moment, state).forEach((option, index) => {
     const button = document.createElement('button');
     button.type = 'button';
     button.className = 'choice-option';
     button.dataset.optionId = option.id;
+    button.style.setProperty('--enter-delay', `${index * 70}ms`);
+    const key = document.createElement('kbd');
+    key.textContent = String(index + 1);
     const label = document.createElement('strong');
     label.textContent = option.label;
     const consequence = document.createElement('span');
     consequence.textContent = option.consequence;
-    button.append(label, consequence);
+    button.append(key, label, consequence);
     choiceLayer.append(button);
-  }
+  });
   choiceLayer.hidden = false;
+}
+
+let insightTimer = 0;
+function showInsights(insightIds: string[]): void {
+  const gained = experience.readerInsights.filter((insight) => insightIds.includes(insight.id));
+  if (gained.length === 0) return;
+  insightTitle.textContent = gained.map((insight) => insight.meaning).join(' · ');
+  insightToast.hidden = false;
+  clearTimeout(insightTimer);
+  insightTimer = window.setTimeout(() => { insightToast.hidden = true; }, 3200);
 }
 
 function renderEnding(moment: Moment): void {
@@ -294,7 +461,14 @@ function renderHome(progress: Map<string, ProgressRecord>): void {
     subtitle.textContent = entry.subtitle;
     const meta = document.createElement('span');
     meta.className = 'home-meta';
-    meta.textContent = `${entry.chapters} ${entry.chapters === 1 ? 'chapter' : 'chapters'} · ${entry.moments} moments${saved ? ' · in progress' : ''}`;
+    const read = saved ? saved.state.seenNodeIds.length : 0;
+    meta.textContent = `${entry.chapters} ${entry.chapters === 1 ? 'chapter' : 'chapters'} · ${entry.moments} moments${saved ? ` · ${Math.min(100, Math.round((read / entry.moments) * 100))}% read` : ''}`;
+    if (saved) {
+      const bar = document.createElement('span');
+      bar.className = 'home-progress';
+      bar.style.setProperty('--read', `${Math.min(100, (read / entry.moments) * 100)}%`);
+      cover.after(bar);
+    }
     const actions = document.createElement('div');
     actions.className = 'home-actions';
     const open = document.createElement('button');
@@ -376,7 +550,7 @@ function render(): void {
   shell.dataset.mode = moment.mode;
   shell.dataset.viewpoint = moment.viewpoint.kind;
   shell.dataset.povSide = viewpointSide(moment, tableau);
-  backdrop.src = background.url;
+  renderBackdrop(background.url);
   chapter.textContent = moment.chapter;
   locationLabel.textContent = tableau.location;
   viewpointLabel.textContent = moment.viewpoint.kind === 'public'
@@ -385,10 +559,11 @@ function render(): void {
   momentLabel.textContent = moment.label || moment.mode;
   speaker.textContent = speakerName(moment);
   speaker.hidden = !moment.speakerId;
-  line.textContent = moment.text;
   line.className = `line line-${moment.mode}`;
+  if (reveal.text !== moment.text || !reveal.complete) startReveal(moment.text);
+  else schedulePlayback();
   progress.textContent = `${String(ordinal).padStart(2, '0')} / ${String(experience.moments.length).padStart(2, '0')}`;
-  renderFigures(tableau, assets);
+  renderFigures(tableau, moment, assets);
   renderCutIn(tableau, assets);
   renderAtmosphere(tableau);
   renderArtifact(tableau, assets);
@@ -401,17 +576,25 @@ function render(): void {
   audio.sync(tableau);
 }
 
+function advance(): void {
+  if (!reveal.complete) return finishReveal();
+  dispatch({ type: 'advance' });
+}
+
 function dispatch(action: ReaderAction): void {
   if (shell.dataset.view === 'home') return;
+  if (playback !== 'manual' && (action.type === 'back' || action.type === 'restart' || action.type === 'toggle-backlog' || action.type === 'toggle-settings')) setPlayback('manual');
   const before = currentMoment(experience, state);
   const nextState = reduceReader(experience, state, action);
   const didMove = nextState.currentNodeId !== state.currentNodeId;
+  const gainedInsights = nextState.insightIds.filter((id) => !state.insightIds.includes(id));
   state = nextState;
   render();
   if (didMove) {
     const current = currentMoment(experience, state);
     audio.playCues(current.cueAssetIds);
     audio.playVoice(current.voiceAssetId);
+    showInsights(gainedInsights);
   }
   if (action.type === 'toggle-muted' && !state.isMuted) audio.playCues(before.cueAssetIds);
   if (action.type === 'toggle-voice' && state.isVoiceEnabled) audio.playVoice(before.voiceAssetId);
@@ -424,11 +607,20 @@ async function openExperience(entry: CatalogEntry, entryPoint: { momentId?: stri
   state = entryPoint.momentId ? initialReaderStateFromLink(experience, entryPoint.momentId) : resumeReaderState(experience, saved?.state);
   audio = new AudioDirector(new Map(experience.assets.map((asset) => [asset.id, asset])));
   sourceNote.textContent = `${experience.title} · ${experience.source.note}`;
+  reveal.text = '';
+  backdrop.dataset.url = '';
+  figures.replaceChildren();
+  shell.dataset.view = 'reading';
+  shell.classList.remove('shell-opening');
+  void shell.offsetWidth;
+  shell.classList.add('shell-opening');
   render();
   stage.focus();
 }
 
 async function goHome(): Promise<void> {
+  cancelReveal();
+  if (playback !== 'manual') setPlayback(playback);
   audio?.setPhysicalSoundEnabled(false);
   audio?.setVoiceEnabled(false);
   renderHome(await progressStore.all());
@@ -454,22 +646,37 @@ root.addEventListener('click', (event) => {
   if (action === 'settings') return dispatch({ type: 'toggle-settings' });
   if (action === 'audio') return dispatch({ type: 'toggle-muted' });
   if (action === 'voice') return dispatch({ type: 'toggle-voice' });
-  if (action === 'next') return dispatch({ type: 'advance' });
-  if (target.closest('.text-rail') || target.closest('.context-rail') || target.closest('.settings-layer')) return;
-  dispatch({ type: 'advance' });
+  if (action === 'auto') return setPlayback('auto');
+  if (action === 'skip') return setPlayback('skip');
+  if (action === 'next') return advance();
+  const pref = target.closest<HTMLButtonElement>('[data-pref]')?.dataset.pref as keyof ReaderPrefs | undefined;
+  if (pref) return setPref(pref);
+  if (target.closest('.context-rail') || target.closest('.settings-layer') || target.closest('.transport')) return;
+  if (playback !== 'manual') return setPlayback(playback);
+  advance();
 });
 
 window.addEventListener('keydown', (event) => {
   if (shell.dataset.view === 'home') return;
-  if (event.key === 'Escape') return void goHome();
+  if (event.key === 'Escape') {
+    if (state.isSettingsOpen || state.isBacklogOpen) return dispatch({ type: state.isSettingsOpen ? 'toggle-settings' : 'toggle-backlog' });
+    return void goHome();
+  }
   if (event.key === 'ArrowUp') dispatch({ type: 'back' });
   if (event.key === 'Tab') {
     event.preventDefault();
     dispatch({ type: 'toggle-backlog' });
   }
+  if (event.key === 'a' || event.key === 'A') setPlayback('auto');
+  if (event.key === 's' || event.key === 'S') setPlayback('skip');
+  if (/^[1-9]$/.test(event.key) && !choiceLayer.hidden && reveal.complete) {
+    const option = choiceLayer.querySelectorAll<HTMLButtonElement>('[data-option-id]')[Number(event.key) - 1];
+    if (option?.dataset.optionId) dispatch({ type: 'choose', optionId: option.dataset.optionId });
+  }
   if ([' ', 'Enter', 'ArrowDown'].includes(event.key)) {
     event.preventDefault();
-    dispatch({ type: 'advance' });
+    if (playback !== 'manual') return setPlayback(playback);
+    advance();
   }
 });
 
@@ -478,6 +685,9 @@ async function start(): Promise<void> {
   if (!catalogResponse.ok) throw new Error('Prepared catalog is missing. Run npm run build:experience.');
   catalog = await catalogResponse.json() as Catalog;
   if (catalog.experiences.length === 0) throw new Error('Prepared catalog has no experiences.');
+  prefs = await progressStore.prefs();
+  applyPrefs();
+  shell.dataset.playback = playback;
   const params = new URLSearchParams(window.location.search);
   const requestedId = params.get('story');
   const selected = requestedId ? catalog.experiences.find((candidate) => candidate.id === requestedId) : undefined;
