@@ -1,0 +1,42 @@
+{
+  "id": "t72mvg9a21rmr0d0pejvm18dgg",
+  "model": "minimax/speech-02-turbo",
+  "version": "hidden",
+  "input": {
+    "audio_format": "mp3",
+    "bitrate": 128000,
+    "channel": "mono",
+    "emotion": "neutral",
+    "english_normalization": true,
+    "language_boost": "English",
+    "pitch": -1,
+    "sample_rate": 32000,
+    "speed": 0.93,
+    "text": "Warning appeared first: discovery was not permission. Fang’s leverage then revealed why caution alone would not bury it. The reader held both; neither cultivator gained the other’s reason.",
+    "voice_id": "English_Insightful_Speaker"
+  },
+  "logs": "Generating speech with model speech-02-turbo\nGenerated speech in 2.18sec\nEach character is 1 token\nTokens: 188\n",
+  "output": "https://replicate.delivery/xezq/uHMdTJDnZUIfIaA7LN1f1txC2Ybzn1YMPvAz945jQ8nXkqOXA/tmp6_kaptsy.mp3",
+  "data_removed": false,
+  "error": null,
+  "source": "api",
+  "status": "succeeded",
+  "created_at": "2026-09-18T08:32:21.008Z",
+  "started_at": "2026-09-18T08:32:21.030464422Z",
+  "completed_at": "2026-09-18T08:32:23.328245886Z",
+  "urls": {
+    "cancel": "https://api.replicate.com/v1/predictions/t72mvg9a21rmr0d0pejvm18dgg/cancel",
+    "get": "https://api.replicate.com/v1/predictions/t72mvg9a21rmr0d0pejvm18dgg",
+    "stream": "https://stream.replicate.com/v1/files/jbxs-ierdtunwtrtojfx7vbjhelyda4imrtenvpyir3sg3bxp5lbpickq",
+    "web": "https://replicate.com/p/t72mvg9a21rmr0d0pejvm18dgg"
+  },
+  "metrics": {
+    "input_token_count": 188,
+    "output_token_count": 1,
+    "predict_time": 2.297781554,
+    "time_to_first_token": 0.000517816,
+    "token_input_count": 188,
+    "tokens_per_second": 0.4353004765881174,
+    "total_time": 2.320245886
+  }
+}

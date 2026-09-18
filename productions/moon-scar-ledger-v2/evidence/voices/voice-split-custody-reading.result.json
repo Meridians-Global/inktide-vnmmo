@@ -1,0 +1,42 @@
+{
+  "id": "hrqbr79gxdrmy0d0pek8bb9gf8",
+  "model": "minimax/speech-02-turbo",
+  "version": "hidden",
+  "input": {
+    "audio_format": "mp3",
+    "bitrate": 128000,
+    "channel": "mono",
+    "emotion": "calm",
+    "english_normalization": true,
+    "language_boost": "English",
+    "pitch": 0,
+    "sample_rate": 32000,
+    "speed": 0.92,
+    "text": "If command and custody stayed in one hand, caution would last only until ambition found a private room. The key must remain elsewhere.",
+    "voice_id": "English_Graceful_Lady"
+  },
+  "logs": "Generating speech with model speech-02-turbo\nGenerated speech in 2.00sec\nEach character is 1 token\nTokens: 134\n",
+  "output": "https://replicate.delivery/xezq/fho6vdwVl3TJZSXbPM1GeNIET2vN6a1NJDLUwed6Qf0oVq6cB/tmp746u8anf.mp3",
+  "data_removed": false,
+  "error": null,
+  "source": "api",
+  "status": "succeeded",
+  "created_at": "2026-09-18T08:33:28.299Z",
+  "started_at": "2026-09-18T08:33:28.316890381Z",
+  "completed_at": "2026-09-18T08:33:30.41649926Z",
+  "urls": {
+    "cancel": "https://api.replicate.com/v1/predictions/hrqbr79gxdrmy0d0pek8bb9gf8/cancel",
+    "get": "https://api.replicate.com/v1/predictions/hrqbr79gxdrmy0d0pek8bb9gf8",
+    "stream": "https://stream.replicate.com/v1/files/jbxs-txc5q76mq3o5z5o2u42vxjnlthvdthegrzywrjm47phzuzfquigq",
+    "web": "https://replicate.com/p/hrqbr79gxdrmy0d0pek8bb9gf8"
+  },
+  "metrics": {
+    "input_token_count": 134,
+    "output_token_count": 1,
+    "predict_time": 2.099608889,
+    "time_to_first_token": 0.000449772,
+    "token_input_count": 134,
+    "tokens_per_second": 0.4763812289890362,
+    "total_time": 2.1174992599999998
+  }
+}

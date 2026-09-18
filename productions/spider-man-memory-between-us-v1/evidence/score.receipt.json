@@ -1,0 +1,32 @@
+{
+  "requests": {
+    "between-us-theme": {
+      "model": "meta/musicgen:671ac645ce5e552cc63a54a2bbff63fcf798043055d2dac5fc9e36a837eedcfb",
+      "inputDigest": "309276bb3ebe2f62e919662bc3624a78b633e42b708558dbbb3e09f5ff92df8c",
+      "sha256": "89c120217129f9347e66eb06f750f6eb54353e1aaf0cce2278e25be2e3678caf",
+      "predictionId": "npcgty5r9nrne0d0pentmj5yr0",
+      "prompt": "Intimate melancholic piano with soft analog synth pad, rain against a window, slow, restrained, cinematic, no drums"
+    },
+    "stairs-resolve": {
+      "model": "meta/musicgen:671ac645ce5e552cc63a54a2bbff63fcf798043055d2dac5fc9e36a837eedcfb",
+      "inputDigest": "b6f0c2e4a04a48c4bd815415e3930b6c217fb7255f73df2ca01f600332d87a76",
+      "sha256": "b96d48a09873afc1ce4ff06c4df9aa5d9507747aaa85fccc42caba27b7bc2581",
+      "predictionId": "hectgrpmxxrnc0d0pep8yxvmcr",
+      "prompt": "Quiet hopeful strings and sparse piano, resolve after grief, night city after rain, slow, warm, no drums, film score"
+    },
+    "mask-pull": {
+      "model": "stackadoc/stable-audio-open-1.0:9aff84a639f96d0f7e6081cdea002d15133d0043727f849c40abdd166b7c75a8",
+      "inputDigest": "7c32db1697a1c43a056fb8772dbf3de138f3cb4a859370e62643a6ec324b1b29",
+      "sha256": "657535e1418f09574ddb8a3b8be3140bfd1ca314a302163e92c1ce61a73ee697",
+      "predictionId": "r3ed9z7de5rmy0d0pepry3tcm8",
+      "prompt": "A fabric mask pulled off over a head, close soft cloth slide and release, quiet room, no music"
+    },
+    "door-latch": {
+      "model": "stackadoc/stable-audio-open-1.0:9aff84a639f96d0f7e6081cdea002d15133d0043727f849c40abdd166b7c75a8",
+      "inputDigest": "c9b9558d23202275d693f1f40d515748403f958311939495c7bfc061d9847253",
+      "sha256": "a276471a30159b135194ee390345968b0fa98c4ff01017cf6d1fc39058978789",
+      "predictionId": "t7djxp89t5rmt0d0peq94h2zkm",
+      "prompt": "Apartment door unlocked and opened slowly, wooden door, metal latch, quiet hallway, no music"
+    }
+  }
+}

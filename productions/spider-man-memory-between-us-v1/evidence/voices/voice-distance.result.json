@@ -1,0 +1,42 @@
+{
+  "id": "j4yy3et04xrmw0d0peg9g5grrm",
+  "model": "minimax/speech-02-turbo",
+  "version": "hidden",
+  "input": {
+    "audio_format": "mp3",
+    "bitrate": 128000,
+    "channel": "mono",
+    "emotion": "calm",
+    "english_normalization": true,
+    "language_boost": "English",
+    "pitch": -1,
+    "sample_rate": 32000,
+    "speed": 0.94,
+    "text": "She kept the couch between them. Spider-Man stayed by the door, injured and careful not to come closer.",
+    "voice_id": "English_expressive_narrator"
+  },
+  "logs": "Generating speech with model speech-02-turbo\nGenerated speech in 1.78sec\nEach character is 1 token\nTokens: 103\n",
+  "output": "https://replicate.delivery/xezq/c5ooS9kt1XpqAJTekLifda3vRfCnomfciRxXExbOMBnT9p6cB/tmpp5df0eiu.mp3",
+  "data_removed": false,
+  "error": null,
+  "source": "api",
+  "status": "succeeded",
+  "created_at": "2026-09-18T08:26:58.983Z",
+  "started_at": "2026-09-18T08:26:59.001973966Z",
+  "completed_at": "2026-09-18T08:27:00.889829411Z",
+  "urls": {
+    "cancel": "https://api.replicate.com/v1/predictions/j4yy3et04xrmw0d0peg9g5grrm/cancel",
+    "get": "https://api.replicate.com/v1/predictions/j4yy3et04xrmw0d0peg9g5grrm",
+    "stream": "https://stream.replicate.com/v1/files/jbxs-ndwpoakmtfomkv34rchbjq7arsy2swiy4c5dmt2wvms4hpaac6cq",
+    "web": "https://replicate.com/p/j4yy3et04xrmw0d0peg9g5grrm"
+  },
+  "metrics": {
+    "input_token_count": 103,
+    "output_token_count": 1,
+    "predict_time": 1.887855445,
+    "time_to_first_token": 0.000448771,
+    "token_input_count": 103,
+    "tokens_per_second": 0.529827521421597,
+    "total_time": 1.906829411
+  }
+}

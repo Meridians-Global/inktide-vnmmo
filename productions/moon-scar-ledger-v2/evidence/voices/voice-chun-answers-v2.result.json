@@ -1,0 +1,42 @@
+{
+  "id": "7g661ew8zdrmr0d0pejbbvqcyw",
+  "model": "minimax/speech-02-turbo",
+  "version": "hidden",
+  "input": {
+    "audio_format": "mp3",
+    "bitrate": 128000,
+    "channel": "mono",
+    "emotion": "auto",
+    "english_normalization": true,
+    "language_boost": "English",
+    "pitch": 0,
+    "sample_rate": 32000,
+    "speed": 0.98,
+    "text": "The missing three did not fail. The moss was not consumed. It was teaching the stone to remember moonlight.",
+    "voice_id": "English_Graceful_Lady"
+  },
+  "logs": "Generating speech with model speech-02-turbo\nGenerated speech in 1.89sec\nEach character is 1 token\nTokens: 107\n",
+  "output": "https://replicate.delivery/xezq/oAquHfDTemp6kEBbRFazTzA2MdcKZdwjef3T60Uy9BX3Oq6cB/tmputz8cbak.mp3",
+  "data_removed": false,
+  "error": null,
+  "source": "api",
+  "status": "succeeded",
+  "created_at": "2026-09-18T08:31:39.771Z",
+  "started_at": "2026-09-18T08:31:39.787799053Z",
+  "completed_at": "2026-09-18T08:31:41.809304209Z",
+  "urls": {
+    "cancel": "https://api.replicate.com/v1/predictions/7g661ew8zdrmr0d0pejbbvqcyw/cancel",
+    "get": "https://api.replicate.com/v1/predictions/7g661ew8zdrmr0d0pejbbvqcyw",
+    "stream": "https://stream.replicate.com/v1/files/jbxs-c53dbl6hewux6rfl3egdwgiljmdheyltz4cy3kacdfxare6r4vtq",
+    "web": "https://replicate.com/p/7g661ew8zdrmr0d0pejbbvqcyw"
+  },
+  "metrics": {
+    "input_token_count": 107,
+    "output_token_count": 1,
+    "predict_time": 2.021505156,
+    "time_to_first_token": 0.000493609,
+    "token_input_count": 107,
+    "tokens_per_second": 0.49480172514818394,
+    "total_time": 2.038304209
+  }
+}

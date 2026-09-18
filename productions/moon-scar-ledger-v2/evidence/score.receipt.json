@@ -1,0 +1,25 @@
+{
+  "requests": {
+    "cleft-winter-theme": {
+      "model": "meta/musicgen:671ac645ce5e552cc63a54a2bbff63fcf798043055d2dac5fc9e36a837eedcfb",
+      "inputDigest": "53a8602e2d06b17ab84fb82357775712aa373a0e7727d778b45145a1e9bcc714",
+      "sha256": "330d88e053a758c305cee12ddb3d5db025053c9083e5ba3f5d41ce65f67c17b4",
+      "predictionId": "fdde6ch2dnrnc0d0peqa9vrdjr",
+      "prompt": "Sparse guzheng and dizi flute, cold mountain wind, wuxia, contemplative, ancient Chinese, slow, no drums"
+    },
+    "moon-scar-revelation": {
+      "model": "meta/musicgen:671ac645ce5e552cc63a54a2bbff63fcf798043055d2dac5fc9e36a837eedcfb",
+      "inputDigest": "251681fdbdf6166335b9ef68c7a5f81eccf491127c6b46c130c64b300674ee06",
+      "sha256": "9886bf368a6d7311b61ffc30fb31c08baf9bc41215d132247c676c8742a7f148",
+      "predictionId": "3tjgbm9yv5rna0d0peqtd6b9m0",
+      "prompt": "Ethereal shimmering pad with guqin phrases, moonlight in a stone cellar, revelation and awe, very slow, ancient Chinese, no drums"
+    },
+    "seal-stone": {
+      "model": "stackadoc/stable-audio-open-1.0:9aff84a639f96d0f7e6081cdea002d15133d0043727f849c40abdd166b7c75a8",
+      "inputDigest": "2c76c242fff2a5a9c2215330cfe3e0c7935ec5d8f2b999bfe453df8fdc9a2c6f",
+      "sha256": "d0f26127957be6814cbfa36739f05d66fd5f0e681cd0d6fdd797ae66fabd7333",
+      "predictionId": "vm7szajv9drmr0d0per95xzhq8",
+      "prompt": "Heavy stone lid sliding shut and sealing, deep grind and thud, cellar echo, no music"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "id": "n6djg1yd0srmt0d0peh86je4w8",
+  "model": "minimax/speech-02-turbo",
+  "version": "hidden",
+  "input": {
+    "audio_format": "mp3",
+    "bitrate": 128000,
+    "channel": "mono",
+    "emotion": "auto",
+    "english_normalization": true,
+    "language_boost": "English",
+    "pitch": 0,
+    "sample_rate": 32000,
+    "speed": 0.97,
+    "text": "The stairs. No webbing. Stay where I can see you.",
+    "voice_id": "English_ConfidentWoman"
+  },
+  "logs": "Generating speech with model speech-02-turbo\nGenerated speech in 1.42sec\nEach character is 1 token\nTokens: 49\n",
+  "output": "https://replicate.delivery/xezq/DBUttKdO4uYFM1likL27zW1gRzUDaLd4tjfMvXdGevX7hqOXA/tmphu5domo8.mp3",
+  "data_removed": false,
+  "error": null,
+  "source": "api",
+  "status": "succeeded",
+  "created_at": "2026-09-18T08:29:46.118Z",
+  "started_at": "2026-09-18T08:29:46.138994424Z",
+  "completed_at": "2026-09-18T08:29:47.672764265Z",
+  "urls": {
+    "cancel": "https://api.replicate.com/v1/predictions/n6djg1yd0srmt0d0peh86je4w8/cancel",
+    "get": "https://api.replicate.com/v1/predictions/n6djg1yd0srmt0d0peh86je4w8",
+    "stream": "https://stream.replicate.com/v1/files/jbxs-b6a7yq3djleshx3irkmrp6kjgp67xpho2en6u3dx45uf6tikyfra",
+    "web": "https://replicate.com/p/n6djg1yd0srmt0d0peh86je4w8"
+  },
+  "metrics": {
+    "input_token_count": 49,
+    "output_token_count": 1,
+    "predict_time": 1.533769841,
+    "time_to_first_token": 0.000473267,
+    "token_input_count": 49,
+    "tokens_per_second": 0.6521895482954363,
+    "total_time": 1.554764265
+  }
+}

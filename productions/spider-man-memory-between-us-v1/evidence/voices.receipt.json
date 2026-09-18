@@ -1,0 +1,376 @@
+{
+  "model": "minimax/speech-02-turbo",
+  "lines": {
+    "voice-rain-location": {
+      "inputDigest": "5957aed3eec0c596c19374b141f7118fe30491c1d797437531f831501115a2ce",
+      "sha256": "399294d73a156a87b02f9ccc861fd05ef99d15c172e3fe8a8fcba350ffc901c8",
+      "predictionId": "4psqem18a5rmw0d0peg9yffr24",
+      "text": "Rain softened the city beyond MJ’s window. Inside, there was nowhere for either of them to hide.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-distance": {
+      "inputDigest": "ff55d3dc9eba88421f8780b2e790ec32769562b0fd5edf3fc421611ba6dcf4bc",
+      "sha256": "d6e62448c3ac4183b826b0821dddff0c527493c03c164f38413de4979dc7e5eb",
+      "predictionId": "j4yy3et04xrmw0d0peg9g5grrm",
+      "text": "She kept the couch between them. Spider-Man stayed by the door, injured and careful not to come closer.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-room-reading-choice": {
+      "inputDigest": "947b50eacb3c168326c52b54fd6613c6bd0dca4e773f0f014f88e07afed532b7",
+      "sha256": "e20334750e4ccd10581439cb9d2a915c6b0c4778df46c71f265b14b2f5d213cc",
+      "predictionId": "s04t3dtex9rmy0d0pegaw1b08g",
+      "text": "Before either of them spoke, the room had already chosen what it would reveal.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-threshold-reading": {
+      "inputDigest": "9e92a369cc47433a7dbebd32ebd77cd192897db455d6f74c1dfe90a0e95dad49",
+      "sha256": "4aa484037fde09853dab8a4e2bdfdfedcd8eb3d3b5cba0e07cf041a23d829dac",
+      "predictionId": "kynf6b2xm5rmr0d0pega1jtx1r",
+      "text": "The door stayed within reach. If she wanted the conversation over, he would be the one who moved.",
+      "voiceId": "English_ReservedYoungMan"
+    },
+    "voice-mj-grip-reading": {
+      "inputDigest": "3abb52113945b0b9a82d4688a1c06b46efb2af2e85319debdc130249bee4a1dc",
+      "sha256": "257b016c24abbfea12b75802c724b9f49ce6a65a8dbbfad91b871eeb68a56366",
+      "predictionId": "hncpa5vca9rmr0d0pegawvfz8m",
+      "text": "Her fingers stayed at the seam of her jacket: one small boundary that still belonged entirely to her.",
+      "voiceId": "English_ConfidentWoman"
+    },
+    "voice-mj-boundary": {
+      "inputDigest": "80fb92366f11a95350a63a406c16a9554658277c9be2c2e2bfbd0eada0efb8fa",
+      "sha256": "8f8a36140556c2433738ee5f91b15f72210ecc64a11fef782680221bc3b6dcdd",
+      "predictionId": "b3eted3v21rmt0d0pegaty4ebg",
+      "text": "You remember a life with me. I remember a stranger making choices for me.",
+      "voiceId": "English_ConfidentWoman"
+    },
+    "voice-peter-mask-thought": {
+      "inputDigest": "39795af25134a7c421e94f49bcf8be436f5d1a584ec4e81e6df163cd30ceb59a",
+      "sha256": "8dbbd1f517f206864553fb73bf0f33ddd1dbf945bd6113e20b72a8297429248d",
+      "predictionId": "6cgp56c9pxrmy0d0peg9gb9sz4",
+      "text": "The mask made danger simple. Peter Parker was the part that could still ask to be forgiven.",
+      "voiceId": "English_ReservedYoungMan"
+    },
+    "voice-peter-protection": {
+      "inputDigest": "ebfc93eecd51c04977e92e6c8b06255821de677dc6f1d09bf698b8caa9068fbb",
+      "sha256": "33ca41a348766ec6c089e15711dfbfded2d576f59bb6e68c74d488a24057fcd1",
+      "predictionId": "wzq0d0mrbxrmw0d0pegaas8608",
+      "text": "I came to warn you, not to make you believe me. What happened to your memory was my decision—and it was wrong.",
+      "voiceId": "English_ReservedYoungMan"
+    },
+    "voice-unmask": {
+      "inputDigest": "b295346860efecd3ddb778339873afa00c79acfc76dd4a6b1ab0654f00818c80",
+      "sha256": "d281b4bc1fb93ca5977646649c5b967df9b6b04c2024d7041e4988c31baa6480",
+      "predictionId": "3ga92wd7fsrmt0d0pega1x3gsc",
+      "text": "He removed the mask. The hero did not leave; he became visibly human.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-name": {
+      "inputDigest": "dcb5933c8d25df687f13bc6b7dfcd86df36d0e54b78da631b7734734ba03a984",
+      "sha256": "97a49b34e6e6016519e1f515815340de0eedeb2f62068a345049a47f6f7f7de6",
+      "predictionId": "nqz0axxqk5rmr0d0peg9zc6d0c",
+      "text": "My name is Peter Parker. I loved you before the spell. That truth belongs to me; it does not obligate you.",
+      "voiceId": "English_ReservedYoungMan"
+    },
+    "voice-name-reading-choice": {
+      "inputDigest": "1f960a4cb66bc741fb2ddf3a77db1545bcbb7e3c573fba2634a0b2559292c080",
+      "sha256": "b7ce46d81dee99675b107e8720944f1d58cea88d7b7f5f62595f4dbb29f431cb",
+      "predictionId": "3f73m3y709rmy0d0peg8yk3gjc",
+      "text": "The name entered the room once. It landed in two different histories.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-peter-name-private": {
+      "inputDigest": "bce73b6e44efddb4dc336dafdac7a7a040c7d842b9434f08ea50293004988a99",
+      "sha256": "86c38c7abca6918164596065deea9bc7aabff0fcc4c7685c68c76f3ccf660a1a",
+      "predictionId": "9j6as2ynr1rmt0d0peg8xpyvec",
+      "text": "For four years, Peter Parker had been the name he removed from every life he touched. Saying it without demanding recognition felt like returning evidence, not reclaiming a place.",
+      "voiceId": "English_ReservedYoungMan"
+    },
+    "voice-mj-name-private": {
+      "inputDigest": "404c2659d0c82974b0e74ab8b36dedaecf04d4c84e28b16106efd7523e740a45",
+      "sha256": "2a7af987166ed4cf0255b262a2e0518fa28881b49cbf56beeec08515a410ac5b",
+      "predictionId": "vjyxbgq4dxrmw0d0pegavyyq8g",
+      "text": "The name explained the grief in his face. It did not place a memory in hers—and he had finally left that difference intact.",
+      "voiceId": "English_ConfidentWoman"
+    },
+    "voice-name-settles": {
+      "inputDigest": "b6e4f65ce7b941a5425991d13e02388d3ac36df200c9716bb0408c9aaf8174d0",
+      "sha256": "c97ccb4b3225730c5f8edccad2e2ad7e4f8f27bf9d2ec59989d871e7c97ff85a",
+      "predictionId": "gp1sb6fqg1rmw0d0peg9dwwba4",
+      "text": "MJ repeated the name once, quietly. Peter did not move closer.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-name-settles-v1": {
+      "inputDigest": "bcbb088c598c9d366f1bd92356c6bd0a2cb36bbf727ee95c62e6e8bc60e8085d",
+      "sha256": "87edd5d47979e10ff44964e2acabb05e001fcbdf0847d93beb3db03cd637633b",
+      "predictionId": "ygx73bg65xrmr0d0pegsabfamr",
+      "text": "MJ repeated the name once, testing its weight. Peter heard it return without mistaking sound for recognition.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-name-settles-v2": {
+      "inputDigest": "dc329b0c3a91dab89d877462181a0f454a3df3b3e56983ff19fda82bc48bea03",
+      "sha256": "a9d8101eaf2d5b3275edaf3453cefb5d36701356201e580fe34d36500aa08dbb",
+      "predictionId": "caba2krmx5rmy0d0pegs17j480",
+      "text": "MJ repeated the stranger’s name carefully. It identified the person before her without manufacturing a shared past.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-mj-sees": {
+      "inputDigest": "014a31ac0ea6a5d81f168b29795e3d68f6039354902811418193652fff4ca2e1",
+      "sha256": "2b56355a6a6ed548c25714d7522d415f0330926affbb6c2a63aaff21679378dc",
+      "predictionId": "sg7a74182hrmr0d0pegt7sgc1r",
+      "text": "His face carried the grief of recognition. Mine could only answer with sympathy.",
+      "voiceId": "English_ConfidentWoman"
+    },
+    "voice-mj-answer": {
+      "inputDigest": "b492c072295be5a45efffa88b97be2c6d2ac27f8274afbfcea70b59e4bac754e",
+      "sha256": "a75b4d11c825492f084f4715d6144e1804bc86bda5a289802e2a57b74f4f46c5",
+      "predictionId": "9y3c639pqsrmr0d0pegt6aw93w",
+      "text": "I can understand why the girl in your memories loved you. But I am standing here without them.",
+      "voiceId": "English_ConfidentWoman"
+    },
+    "voice-perspective-choice": {
+      "inputDigest": "46b14535b42b725c57a94c0fc6add3dd2fd68f33ca989c1f78d280cf67102e33",
+      "sha256": "31d6ed4b95977ee4ebed76d9ec1cf39196f45416b2f7bc6b2104fde2e2f180d5",
+      "predictionId": "mcvwm7a5gdrmy0d0pegtj3hfq0",
+      "text": "The same silence held two different losses.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-peter-restraint": {
+      "inputDigest": "9a8907d1219c2491b8db6e3836ad143b93bbe6b99fad8d7719e8306c71a1b8d8",
+      "sha256": "7b1b6897c7d7c69ab03f52ef360f074dd72e5392ca2cb3b27d7c43a74d396e5e",
+      "predictionId": "7ccx5wjm6drmy0d0pegtefw1b4",
+      "text": "Love could explain why he stayed. It could not grant permission to decide for her again.",
+      "voiceId": "English_ReservedYoungMan"
+    },
+    "voice-mj-boundary-private": {
+      "inputDigest": "6201de21ef19f8bbd09192ea9200719eed5078647462bbfef7d35f0b482449ca",
+      "sha256": "73f295336d82434fc6919ca514b8950ac1a551f270ed67040c8d503c8f2eebdf",
+      "predictionId": "w6yj2q32w1rmy0d0pegsaqyaxg",
+      "text": "Being grateful for his sacrifice did not require inheriting another woman’s answer.",
+      "voiceId": "English_ConfidentWoman"
+    },
+    "voice-both-truths-reading": {
+      "inputDigest": "a4aabe813fb22146049d564bd1d6bf48287e9521aa6af0c3f3fd18f4331ad34f",
+      "sha256": "2e2337ac610ca696e4c2c2666da96312c352626bc852736d12a9c3f4082ef90d",
+      "predictionId": "9xfx3z3hphrmw0d0pegtnjxb84",
+      "text": "He could love her and still have wronged her. She could honour the sacrifice and still refuse the life it presumed. Understanding made neither truth disappear.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-both-truths-reading-v1": {
+      "inputDigest": "f411c0ccd84fcde2d865a54fe44479ee80c9b09b6853fb4e7f10628f787c2ecb",
+      "sha256": "c7f8b25e1ed87610323776ab3c5a67fb97a9141064cd5807267aa33874ec1c43",
+      "predictionId": "sfvvepm5anrmy0d0pegrxpwmzr",
+      "text": "Peter’s restraint had made love look costly. MJ’s boundary then revealed why cost could not purchase consent. Holding both truths made neither disappear.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-both-truths-reading-v2": {
+      "inputDigest": "a0584f65d4d727c40241a11726cc2f8664727fcd2eb73c77adb72efaa28d4c48",
+      "sha256": "4c480b653195d0e391f3e4cd718f3d559b9366b172005097b47a7581d6e45753",
+      "predictionId": "v28dq6mrh1rmr0d0pegvkr70p0",
+      "text": "MJ’s boundary had made memory’s absence decisive. Peter’s restraint then revealed love learning not to overrule it. Holding both truths made neither disappear.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-room-without-verdict": {
+      "inputDigest": "b3695fbe59fe7fda0aac6cf6191b9ca48ad90db1395a958d8bc40c6604cce0f5",
+      "sha256": "b333046195d887c14865b225943c46e98831f092f9dda44e4f9ca81ab18c55c0",
+      "predictionId": "zydj095785rmy0d0pegrq59sqm",
+      "text": "Neither of them named the pause forgiveness. For the first time, the room did not require one pain to overrule the other.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-shared-silence": {
+      "inputDigest": "951358c28c8993188b825be9a6a9be6c92d4a620b33c6f46a0eadaa0881dcb19",
+      "sha256": "353c8d0b283784d8a24c217d51213f696d5f81b0099c6c843affc0ddc14caece",
+      "predictionId": "5pyhv1dnzxrmw0d0pegtbkf12w",
+      "text": "A distant siren crossed the rain. Peter lowered the mask. MJ did not step back—but she did not close the distance.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-shared-silence-v1": {
+      "inputDigest": "f3efe7193124afee12fd9a01aff5579d1c62c104edc7ede3ad9766eb574a9a9d",
+      "sha256": "001a8d1eed30ab44fdc990d8b52f7ee234f43dde667865bc907a2f880b8b7600",
+      "predictionId": "rq6zmc6975rmy0d0pegr2dwnc8",
+      "text": "A distant siren crossed the rain. Peter lowered the mask and kept the distance he had finally learned not to cross.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-shared-silence-v2": {
+      "inputDigest": "e215762efccbf32074e5840f38e45e3fe24aa531b256b314c7e64e803878d66c",
+      "sha256": "6a643ca6cf20d53a197c805106d1f1080f76a4e76367adf839096cd33fdb4679",
+      "predictionId": "8a9ageyqx9rmy0d0pegs2cwrj0",
+      "text": "A distant siren crossed the rain. MJ did not step back—but kindness did not become consent to a remembered life.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-shared-silence-v3": {
+      "inputDigest": "23b96b9e1b9d7d82c03cacd057780ca8b5ca1be56df0cab4c9c65d6f50099a0e",
+      "sha256": "770e985f4869793376aadf490d7968dd6498b052328c271c6480bd0e704154d9",
+      "predictionId": "c5a0s4q6knrmw0d0pegvhdv7ag",
+      "text": "A distant siren crossed the rain. Peter lowered the mask. MJ stayed. The distance between them remained real and, for once, mutually visible.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-small-defence-returns": {
+      "inputDigest": "0f3cd3f55ca04739917454cfa16111f70eb5840f9b032a16dd57363b24484c7b",
+      "sha256": "331b6e7b07e3af1c61774a699c01f49463998c877fb60824bf3ef2e3d7392d52",
+      "predictionId": "py2b1tfsrdrmw0d0pegrv1y8pm",
+      "text": "The couch still divided the room. Neither of them treated the pause as permission.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-small-defence-returns-v1": {
+      "inputDigest": "f2fbe06888fd42e0191b6c9384634a5cca9b26f1edd42e2e0049361ca65bfb22",
+      "sha256": "8d7bb2eb940579f6281bf495400ce9c9f989e3f2bc59876e7e510ad5799a6210",
+      "predictionId": "980pzqg8fdrmy0d0pehb32eezr",
+      "text": "The path to the door remained open behind Peter. What first looked like distance now read as a promise that MJ would never have to move around him.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-small-defence-returns-v2": {
+      "inputDigest": "e1aa1f79ad009f18aac361c700a18fd743915732e5f300cccc55d667e8bf6e46",
+      "sha256": "8b004879e0241e4584e1eecf211dd69d2bd2e12bad8027f96047b91e0a904ef3",
+      "predictionId": "stj0dxrqgnrmy0d0peh9cx8g2g",
+      "text": "MJ’s hand loosened at her jacket seam. The movement was not forgiveness; it was one defence becoming unnecessary.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-small-defence-returns-v3": {
+      "inputDigest": "a86aa99efabd4401e0c7164ca27ee8f1b44bed98c96286d37c7a3f203c26b7aa",
+      "sha256": "c8a288576a0ae8fa335da22bef773ec98abacd315b1a9bc201740fa97c152a00",
+      "predictionId": "eaycbdsb5drmy0d0peh9cpn3p4",
+      "text": "The exit remained open behind Peter as MJ’s hand loosened at her jacket seam. Two small defences changed without either becoming surrender.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-restraint-forecast": {
+      "inputDigest": "a267a0dc4760eb769bb715563bf397fbd727c2f00d00505311aae102093469ff",
+      "sha256": "598bd8e9fa069c444803621c9e2da0bd1ac2b6429de98ea772e69412b186c32b",
+      "predictionId": "am4q3y9t01rmr0d0pehaze61ew",
+      "text": "The silence had become legible enough to risk a prediction.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-forecast-retreat": {
+      "inputDigest": "089b5d331a517ac635c3006651a2c3888c4548a427e00339db9a98e9a71eef1d",
+      "sha256": "81ac315f05cb0e1ea42caf93a77fbdcf0f2eb387b4f1ed2475c8940ddf53956d",
+      "predictionId": "55bbcqt8qxrmy0d0peh8x1z52g",
+      "text": "You read the open door as preparation to vanish before her answer could hurt him.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-forecast-return-choice": {
+      "inputDigest": "3594dacc30a8d73da90934763aa986e47a9186788febf8738c4e3e5613bccf50",
+      "sha256": "05601ada1909b20aa8ee5cdae6e59f1f4661b22acd8453819403709d5fd1a8c9",
+      "predictionId": "xkayfg2qfxrmy0d0pehb40djtm",
+      "text": "You read the open door as evidence that staying no longer required him to control the exit.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-peter-offers-distance": {
+      "inputDigest": "eccd4cb7f864e292a6794d58d13571154abfdd1e0f5d343567b30c28b0be891d",
+      "sha256": "ca4e3cc9c1675b7385482ac12b8aa832070c00b27db725171df91cfe4fdefa00",
+      "predictionId": "m0xh09365xrmy0d0peh84dsw7m",
+      "text": "I can call a cab. Or I can take you home. You choose.",
+      "voiceId": "English_ReservedYoungMan"
+    },
+    "voice-peter-offers-distance-v1": {
+      "inputDigest": "e757239d55d7d79f0b32b6a75fc1d2b67f2f487b4c67318c28d1f8863f6a642e",
+      "sha256": "b1601f34a3e2d8d6feb1573a31513d8fb6c21f04df85877679411143b08fc37d",
+      "predictionId": "de07qgkmv5rmy0d0pehay66b2c",
+      "text": "Peter looked toward the open door, then stayed. “I can call a cab. Or I can take you home. You choose.”",
+      "voiceId": "English_ReservedYoungMan"
+    },
+    "voice-peter-offers-distance-v2": {
+      "inputDigest": "6ac04dc1ba1bd8a73e665bb3835e4f5d46e52b02a973ac4856a0b8d01fe633bf",
+      "sha256": "2e331305dc0f7be8a5cef0c35fa119e01ada13744c458069014f7cac44882c0d",
+      "predictionId": "b53thmm3f9rmy0d0peh9vh01bw",
+      "text": "Peter left the open door behind him and the decision with her. “I can call a cab. Or I can take you home. You choose.”",
+      "voiceId": "English_ReservedYoungMan"
+    },
+    "voice-ride-home": {
+      "inputDigest": "cd1ddd4abdd2e6fa70ae6d7ebedad765edeaba735c621cbd91dc1cf491451533",
+      "sha256": "41926ad484ddb5517f28f49a15c6edc62428245d34e5a4a6151d63c8d3b018cb",
+      "predictionId": "wvagxfmj6drmy0d0pehby6jeg4",
+      "text": "I still need to get home. Can you take me?",
+      "voiceId": "English_ConfidentWoman"
+    },
+    "voice-departure-decision": {
+      "inputDigest": "20567c2511ca8d5e9af210a34473c0b88d5b3e9f5db43440a7f9a4843dd7585b",
+      "sha256": "40ff785a19b59620153d50c34bd145917854ec89ef87da70c06fe9dd801f3727",
+      "predictionId": "k8c5tvx0vxrmr0d0peh84rj528",
+      "text": "Help could still become control in the distance between an offer and a door. The departure needed one rule Peter could not reinterpret for her.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-ordinary-route-reading": {
+      "inputDigest": "ca6db7702131ff92d0f4bcac7b00a2b16d125e3dd757ce4fb7f82da3259449ce",
+      "sha256": "d0c8ef4d994fadaeb01d8c42ed291e12c4675fdc270a9eddb1184cd93e61b099",
+      "predictionId": "c0v0ypnfj1rmr0d0peh8kt7qq0",
+      "text": "No web, no window, no spectacular rescue. If he meant to return the choice, he could survive the slow indignity of the stairs.",
+      "voiceId": "English_ConfidentWoman"
+    },
+    "voice-visible-route-reading": {
+      "inputDigest": "5d9d1a55f32b07768c6ea893a7d2d29b419b6744b9dd4c35b19973f75b3b8cce",
+      "sha256": "33f3e90f19abe39af1161329b842bc4e206dc26b680d1ad9979a96cc3e43a0f2",
+      "predictionId": "97yn7q5y8drmw0d0peh914k5gg",
+      "text": "Leaving first would spare him the answer and make her carry his absence again. This time, he would remain until she dismissed him.",
+      "voiceId": "English_ReservedYoungMan"
+    },
+    "voice-mj-names-route": {
+      "inputDigest": "88f2888792f74af3ad7cb57a7a40be815e64373f1f0cd5d7869e136d7f8260be",
+      "sha256": "3fc54cd7964d928a36d42f85add4cef9c4a8d2650806287028c2ea6a5cbe7af7",
+      "predictionId": "n6djg1yd0srmt0d0peh86je4w8",
+      "text": "The stairs. No webbing. Stay where I can see you.",
+      "voiceId": "English_ConfidentWoman"
+    },
+    "voice-door-opens": {
+      "inputDigest": "eef7d280c1b16a8170f6503f4e2f17b5da1bb014c6c0783249670da139176fd0",
+      "sha256": "3b12cdd5c4cb5fde2ac3b04c453f4d5f5cb19fb00c3bd9c900f8b62381599539",
+      "predictionId": "m01x0byvqnrmr0d0pehbyavj1c",
+      "text": "MJ opened the apartment door herself. The hallway was dry, ordinary, and bright enough to make every step accountable.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-hallway-threshold": {
+      "inputDigest": "c1e05d9e012718e9445c1ed5b4bf533a1b993ac87e13abba22582bcdb39214dd",
+      "sha256": "3047f38b3339a524cfbcf2fbc605615e3c8476201bab20389f852450ce4128d1",
+      "predictionId": "2w8mz5qag9rmt0d0pehay6tpf8",
+      "text": "She crossed first. Peter followed one full pace behind, the mask loose at his side.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-hallway-threshold-v1": {
+      "inputDigest": "5240be2cbfb912a153fa651579b15fa837374eda79e10b46225c64c1f56d8e6e",
+      "sha256": "5aa352f83f784558cb5f6895b511d9bf405e374e61e7aebc9b7ac180baf1c64c",
+      "predictionId": "mxd4whqxn9rmy0d0pehaajc3kr",
+      "text": "She crossed first and chose the stairs. Peter followed one full pace behind, accepting an ordinary route he could not optimize into a rescue.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-hallway-threshold-v2": {
+      "inputDigest": "bd5ceaf9bc9470a68db45c25cde48638f42864f0085df6aa7223a6678c205001",
+      "sha256": "69c9a1d311d245128ad4aa71c92555d2d53edcec8b6ae57d1bdb1cf9adacb09c",
+      "predictionId": "0dfxn00gw1rmt0d0pehstvkvm8",
+      "text": "She crossed first. Peter stayed one full pace behind and plainly visible, refusing the old instinct to make pain disappear by disappearing himself.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-mj-corrects-promise": {
+      "inputDigest": "861f0135f0213e95719ba4396fa4a2597889812f869e23ac0ab929708efbdeca",
+      "sha256": "2a18643bde585effb2a57eceefb0fffb60a70a000c8f30d2163262722a5a1b98",
+      "predictionId": "nt0w4ah44hrmy0d0pehtafqs0c",
+      "text": "Taking me home is not a promise about tomorrow. It is one walk, tonight.",
+      "voiceId": "English_ConfidentWoman"
+    },
+    "voice-peter-hears-limit": {
+      "inputDigest": "0c8b73832d796181d19105324f548433ad44f11b752999a05c511bac03cccc84",
+      "sha256": "e5e37cd28ce0db92245b7674378d83c2eb5211bb9c2a26c187a3a4f5678fe686",
+      "predictionId": "s5f9k29k0hrmt0d0pehtvp9bzc",
+      "text": "Once, he would have heard the limit as a door closing. Now he heard its other meaning: she had trusted him with something small enough not to own.",
+      "voiceId": "English_ReservedYoungMan"
+    },
+    "voice-peter-accepts-limit": {
+      "inputDigest": "ecbf792dca3e4c538e6b843c16d81d8ac6438d73c9fc77b054a130ad5cd64b13",
+      "sha256": "5d26d13d6e8e29ecacd0b0c9bd53271a8de05acad20333cb4a061c4e6d84739f",
+      "predictionId": "0vbhwgj1q1rmy0d0pehstw7954",
+      "text": "One walk. Tonight. You set the pace.",
+      "voiceId": "English_ReservedYoungMan"
+    },
+    "voice-stairs-begin": {
+      "inputDigest": "d6467b3090cf520e517e8131c4844907c36b07fb40453416e2fe6542673bbf68",
+      "sha256": "b3ba35c6800b408bbe11bcf2b587e523a15db243f62e525c1dddcd618e32e43a",
+      "predictionId": "z3z0rdtgcxrmr0d0pehvy15k0m",
+      "text": "MJ turned toward the stairwell. Peter waited for her first step, then matched neither her stride nor her silence—only the distance she had chosen.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-ending": {
+      "inputDigest": "be6c3e2fefa2bda7fb6e76b2c1532415b02119a024a5a2cb97999d39cf033f40",
+      "sha256": "ef9e68876b68235c43f2b056459af385fde3807e8b51ddeb2ba81cccf55ae97f",
+      "predictionId": "z5hdwvb3s1rmt0d0pehrjz3gvm",
+      "text": "He could protect her without possessing her answer. The city below still needed Spider-Man; the next stair required only Peter Parker to stay one pace behind.",
+      "voiceId": "English_ReservedYoungMan"
+    }
+  }
+}

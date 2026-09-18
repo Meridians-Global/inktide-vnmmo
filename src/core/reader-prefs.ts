@@ -5,6 +5,8 @@ export type TextSpeed = 'instant' | 'fast' | 'normal' | 'slow';
 export type TextSize = 'small' | 'medium' | 'large';
 export type BoxOpacity = 'clear' | 'soft' | 'solid';
 export type AutoDelay = 'brisk' | 'normal' | 'leisurely';
+export type Volume = 'quiet' | 'normal' | 'loud';
+export type Switch = 'on' | 'off';
 
 /** Presentation preferences. Device-wide, never part of the reading coordinate. */
 export type ReaderPrefs = {
@@ -12,6 +14,10 @@ export type ReaderPrefs = {
   textSize: TextSize;
   boxOpacity: BoxOpacity;
   autoDelay: AutoDelay;
+  volume: Volume;
+  music: Switch;
+  sfx: Switch;
+  voice: Switch;
 };
 
 export type Playback = 'manual' | 'auto' | 'skip';
@@ -21,6 +27,10 @@ export const DEFAULT_PREFS: ReaderPrefs = {
   textSize: 'medium',
   boxOpacity: 'soft',
   autoDelay: 'normal',
+  volume: 'normal',
+  music: 'on',
+  sfx: 'on',
+  voice: 'on',
 };
 
 export const PREF_OPTIONS: { [K in keyof ReaderPrefs]: readonly ReaderPrefs[K][] } = {
@@ -28,11 +38,18 @@ export const PREF_OPTIONS: { [K in keyof ReaderPrefs]: readonly ReaderPrefs[K][]
   textSize: ['small', 'medium', 'large'],
   boxOpacity: ['clear', 'soft', 'solid'],
   autoDelay: ['brisk', 'normal', 'leisurely'],
+  volume: ['quiet', 'normal', 'loud'],
+  music: ['on', 'off'],
+  sfx: ['on', 'off'],
+  voice: ['on', 'off'],
 };
 
 const MS_PER_CHAR: Record<TextSpeed, number> = { instant: 0, fast: 12, normal: 26, slow: 48 };
-const AUTO_BASE_MS: Record<AutoDelay, number> = { brisk: 700, normal: 1400, leisurely: 2400 };
-const AUTO_MS_PER_CHAR: Record<AutoDelay, number> = { brisk: 18, normal: 34, leisurely: 55 };
+const AUTO_BASE_MS: Record<AutoDelay, number> = { brisk: 350, normal: 800, leisurely: 1800 };
+const AUTO_MS_PER_CHAR: Record<AutoDelay, number> = { brisk: 10, normal: 20, leisurely: 40 };
+const MASTER_LEVEL: Record<Volume, number> = { quiet: 0.45, normal: 0.75, loud: 1 };
+/** Breath left after a spoken line finishes before AUTO advances. */
+const AUTO_AFTER_VOICE_MS: Record<AutoDelay, number> = { brisk: 200, normal: 450, leisurely: 1000 };
 export const SKIP_HOLD_MS = 90;
 
 export function cyclePref<K extends keyof ReaderPrefs>(prefs: ReaderPrefs, key: K): ReaderPrefs {
@@ -50,15 +67,28 @@ export function coercePrefs(candidate: unknown): ReaderPrefs {
     const value = record[key];
     return typeof value === 'string' && options.includes(value) ? (value as ReaderPrefs[K]) : DEFAULT_PREFS[key];
   };
-  return { textSpeed: pick('textSpeed'), textSize: pick('textSize'), boxOpacity: pick('boxOpacity'), autoDelay: pick('autoDelay') };
+  return { textSpeed: pick('textSpeed'), textSize: pick('textSize'), boxOpacity: pick('boxOpacity'), autoDelay: pick('autoDelay'), volume: pick('volume'), music: pick('music'), sfx: pick('sfx'), voice: pick('voice') };
+}
+
+/** Which audio channels the reader has switched on; every channel defaults on. */
+export function audioChannels(prefs: ReaderPrefs): { music: boolean; sfx: boolean; voice: boolean } {
+  return { music: prefs.music === 'on', sfx: prefs.sfx === 'on', voice: prefs.voice === 'on' };
 }
 
 export function revealMsPerChar(prefs: ReaderPrefs, reducedMotion: boolean): number {
   return reducedMotion ? 0 : MS_PER_CHAR[prefs.textSpeed];
 }
 
-/** Reading time granted after a line is fully revealed before AUTO advances. */
-export function autoAdvanceMs(prefs: ReaderPrefs, text: string): number {
+export function masterLevel(prefs: ReaderPrefs): number {
+  return MASTER_LEVEL[prefs.volume];
+}
+
+/**
+ * Reading time granted after a line is fully revealed before AUTO advances.
+ * A spoken line has already paced the reader, so only a short breath follows it.
+ */
+export function autoAdvanceMs(prefs: ReaderPrefs, text: string, spoken = false): number {
+  if (spoken) return AUTO_AFTER_VOICE_MS[prefs.autoDelay];
   return AUTO_BASE_MS[prefs.autoDelay] + text.length * AUTO_MS_PER_CHAR[prefs.autoDelay];
 }
 

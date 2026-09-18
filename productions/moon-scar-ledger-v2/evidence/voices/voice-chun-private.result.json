@@ -1,0 +1,42 @@
+{
+  "id": "pnwjg7dhsxrmw0d0pehtkbtmer",
+  "model": "minimax/speech-02-turbo",
+  "version": "hidden",
+  "input": {
+    "audio_format": "mp3",
+    "bitrate": 128000,
+    "channel": "mono",
+    "emotion": "calm",
+    "english_normalization": true,
+    "language_boost": "English",
+    "pitch": 0,
+    "sample_rate": 32000,
+    "speed": 0.92,
+    "text": "He did not ask whether it lived. He asked who had learned that it could.",
+    "voice_id": "English_Graceful_Lady"
+  },
+  "logs": "Generating speech with model speech-02-turbo\nGenerated speech in 1.66sec\nEach character is 1 token\nTokens: 72\n",
+  "output": "https://replicate.delivery/xezq/fzOpi0p2iepOh02seOveDBxzXffKzrfIbiPoOGcfzhfHsFVduA/tmpnxp6t1uf.mp3",
+  "data_removed": false,
+  "error": null,
+  "source": "api",
+  "status": "succeeded",
+  "created_at": "2026-09-18T08:30:44.687Z",
+  "started_at": "2026-09-18T08:30:44.709137564Z",
+  "completed_at": "2026-09-18T08:30:46.460835624Z",
+  "urls": {
+    "cancel": "https://api.replicate.com/v1/predictions/pnwjg7dhsxrmw0d0pehtkbtmer/cancel",
+    "get": "https://api.replicate.com/v1/predictions/pnwjg7dhsxrmw0d0pehtkbtmer",
+    "stream": "https://stream.replicate.com/v1/files/jbxs-tqcc7vhqh47izjxb4wznhvp3o4yqg6zwvkbk23kmluz4g36zxluq",
+    "web": "https://replicate.com/p/pnwjg7dhsxrmw0d0pehtkbtmer"
+  },
+  "metrics": {
+    "input_token_count": 72,
+    "output_token_count": 1,
+    "predict_time": 1.7516980599999998,
+    "time_to_first_token": 0.000465275,
+    "token_input_count": 72,
+    "tokens_per_second": 0.5710263127583007,
+    "total_time": 1.7738356240000002
+  }
+}

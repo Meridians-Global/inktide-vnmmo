@@ -1,0 +1,42 @@
+{
+  "id": "py2b1tfsrdrmw0d0pegrv1y8pm",
+  "model": "minimax/speech-02-turbo",
+  "version": "hidden",
+  "input": {
+    "audio_format": "mp3",
+    "bitrate": 128000,
+    "channel": "mono",
+    "emotion": "calm",
+    "english_normalization": true,
+    "language_boost": "English",
+    "pitch": -1,
+    "sample_rate": 32000,
+    "speed": 0.94,
+    "text": "The couch still divided the room. Neither of them treated the pause as permission.",
+    "voice_id": "English_expressive_narrator"
+  },
+  "logs": "Generating speech with model speech-02-turbo\nGenerated speech in 1.53sec\nEach character is 1 token\nTokens: 82\n",
+  "output": "https://replicate.delivery/xezq/HAYrhdTFyhaeBSQKoebIvCv038lZVsMJGKpK7Cxc4dZFhqOXA/tmpn_ure5kj.mp3",
+  "data_removed": false,
+  "error": null,
+  "source": "api",
+  "status": "succeeded",
+  "created_at": "2026-09-18T08:28:52.035Z",
+  "started_at": "2026-09-18T08:28:52.053751205Z",
+  "completed_at": "2026-09-18T08:28:53.701209071Z",
+  "urls": {
+    "cancel": "https://api.replicate.com/v1/predictions/py2b1tfsrdrmw0d0pegrv1y8pm/cancel",
+    "get": "https://api.replicate.com/v1/predictions/py2b1tfsrdrmw0d0pegrv1y8pm",
+    "stream": "https://stream.replicate.com/v1/files/jbxs-4avv2cricokiq27ccf4oohqs6utadebtlgmb2qpa3ujlhgliacfa",
+    "web": "https://replicate.com/p/py2b1tfsrdrmw0d0pegrv1y8pm"
+  },
+  "metrics": {
+    "input_token_count": 82,
+    "output_token_count": 1,
+    "predict_time": 1.647457856,
+    "time_to_first_token": 0.000484825,
+    "token_input_count": 82,
+    "tokens_per_second": 0.6071744838425348,
+    "total_time": 1.666209071
+  }
+}

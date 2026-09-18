@@ -1,4 +1,6 @@
 import type { Experience } from '../core/contracts';
+import { withVoiceLines } from '../core/voice-cast';
+import { spiderMemoryVoiceLines } from './generated/spider-memory.voices';
 
 const generated = 'assets/generated/spider-man-memory-between-us-v1';
 const stageKit = 'assets/stage-kit';
@@ -11,7 +13,7 @@ const normalize = {
 };
 const rainAtWindow = { kind: 'rain' as const, layer: 'back' as const, region: { left: 28, top: 10, width: 29, height: 64 }, intensity: 24, seed: 1616 };
 
-export const spiderMemoryExperience: Experience = {
+const authored: Experience = {
   schemaVersion: 2,
   id: 'spider-memory-between-us-v1',
   title: 'The Memory Between Us',
@@ -46,6 +48,10 @@ export const spiderMemoryExperience: Experience = {
     { id: 'rain-window', kind: 'ambience', sourcePath: `${generated}/rain-at-window-v1.wav`, sha256: 'f42d5166588b5af6ee40ef321aaeb2e2ecc09c6d1427c347e07acaa27c9d2dcc' },
     { id: 'cloth-shift', kind: 'cue', sourcePath: `${stageKit}/audio/foley/cloth-shift-v1.wav`, sha256: 'b2c9deb349f3843b222b5365bb5e131a8974a4c1271846b3f517c43d96b70591' },
     { id: 'distant-siren', kind: 'cue', sourcePath: `${generated}/distant-siren-v1.wav`, sha256: '52b83fdab791d42e6568693ac86a7216f8991de053975982535d22899c707860' },
+    { id: 'between-us-theme', kind: 'music', sourcePath: `${generated}/score/between-us-theme.mp3`, sha256: '89c120217129f9347e66eb06f750f6eb54353e1aaf0cce2278e25be2e3678caf' },
+    { id: 'stairs-resolve', kind: 'music', sourcePath: `${generated}/score/stairs-resolve.mp3`, sha256: 'b96d48a09873afc1ce4ff06c4df9aa5d9507747aaa85fccc42caba27b7bc2581' },
+    { id: 'mask-pull', kind: 'cue', sourcePath: `${generated}/score/mask-pull.wav`, sha256: '657535e1418f09574ddb8a3b8be3140bfd1ca314a302163e92c1ce61a73ee697' },
+    { id: 'door-latch', kind: 'cue', sourcePath: `${generated}/score/door-latch.wav`, sha256: 'a276471a30159b135194ee390345968b0fa98c4ff01017cf6d1fc39058978789' },
   ],
   actors: [
     {
@@ -70,65 +76,65 @@ export const spiderMemoryExperience: Experience = {
     },
   ],
   tableaux: [
-    { id: 'apartment-empty', location: 'MJ’s Apartment · Rain', backgroundAssetId: 'mj-apartment', ambienceAssetId: 'rain-window', shot: 'wide', tone: 'intimate', atmosphere: [rainAtWindow], figures: [] },
-    { id: 'masked-two-shot', location: 'MJ’s Apartment · Rain', backgroundAssetId: 'mj-apartment', ambienceAssetId: 'rain-window', shot: 'conversation', tone: 'cold', atmosphere: [rainAtWindow], figures: [
+    { id: 'apartment-empty', location: 'MJ’s Apartment · Rain', backgroundAssetId: 'mj-apartment', musicAssetId: 'between-us-theme', ambienceAssetId: 'rain-window', shot: 'wide', tone: 'intimate', atmosphere: [rainAtWindow], figures: [] },
+    { id: 'masked-two-shot', location: 'MJ’s Apartment · Rain', backgroundAssetId: 'mj-apartment', musicAssetId: 'between-us-theme', ambienceAssetId: 'rain-window', shot: 'conversation', tone: 'cold', atmosphere: [rainAtWindow], figures: [
       { actorId: 'mj', slot: 'left', facing: 'right', emphasis: 'active' },
       { actorId: 'peter-parker', appearanceId: 'spider-masked', slot: 'right', facing: 'left', emphasis: 'supporting' },
     ] },
-    { id: 'masked-peter-active', location: 'MJ’s Apartment · Rain', backgroundAssetId: 'mj-apartment', ambienceAssetId: 'rain-window', shot: 'conversation', tone: 'cold', atmosphere: [rainAtWindow], figures: [
+    { id: 'masked-peter-active', location: 'MJ’s Apartment · Rain', backgroundAssetId: 'mj-apartment', musicAssetId: 'between-us-theme', ambienceAssetId: 'rain-window', shot: 'conversation', tone: 'cold', atmosphere: [rainAtWindow], figures: [
       { actorId: 'mj', slot: 'left', facing: 'right', emphasis: 'supporting' },
       { actorId: 'peter-parker', appearanceId: 'spider-masked', slot: 'right', facing: 'left', emphasis: 'active' },
     ] },
     {
-      id: 'unmask-cg', location: 'MJ’s Apartment · Rain', backgroundAssetId: 'mj-apartment', ambienceAssetId: 'rain-window', shot: 'conversation', tone: 'intimate', atmosphere: [rainAtWindow], figures: [],
+      id: 'unmask-cg', location: 'MJ’s Apartment · Rain', backgroundAssetId: 'mj-apartment', musicAssetId: 'between-us-theme', ambienceAssetId: 'rain-window', shot: 'conversation', tone: 'intimate', atmosphere: [rainAtWindow], figures: [],
       cutIn: { assetId: 'spider-unmask-cg', framing: 'relationship-close', representedActorIds: ['mj', 'peter-parker'] },
     },
-    { id: 'revealed-peter-active', location: 'MJ’s Apartment · Rain', backgroundAssetId: 'mj-apartment', ambienceAssetId: 'rain-window', shot: 'conversation', tone: 'intimate', atmosphere: [rainAtWindow], figures: [
+    { id: 'revealed-peter-active', location: 'MJ’s Apartment · Rain', backgroundAssetId: 'mj-apartment', musicAssetId: 'between-us-theme', ambienceAssetId: 'rain-window', shot: 'conversation', tone: 'intimate', atmosphere: [rainAtWindow], figures: [
       { actorId: 'mj', slot: 'left', facing: 'right', emphasis: 'supporting' },
       { actorId: 'peter-parker', appearanceId: 'spider-revealed', slot: 'right', facing: 'left', emphasis: 'active' },
     ] },
-    { id: 'revealed-peter-appraisal', location: 'MJ’s Apartment · Rain', backgroundAssetId: 'mj-apartment', ambienceAssetId: 'rain-window', shot: 'conversation', tone: 'intimate', atmosphere: [rainAtWindow], figures: [
+    { id: 'revealed-peter-appraisal', location: 'MJ’s Apartment · Rain', backgroundAssetId: 'mj-apartment', musicAssetId: 'between-us-theme', ambienceAssetId: 'rain-window', shot: 'conversation', tone: 'intimate', atmosphere: [rainAtWindow], figures: [
       { actorId: 'mj', appearanceId: 'conflicted-boundary', slot: 'far-left', facing: 'right', emphasis: 'supporting' },
       { actorId: 'peter-parker', appearanceId: 'spider-revealed-appraisal', slot: 'right', facing: 'left', emphasis: 'active' },
     ] },
-    { id: 'revealed-mj-appraisal', location: 'MJ’s Apartment · Rain', backgroundAssetId: 'mj-apartment', ambienceAssetId: 'rain-window', shot: 'conversation', tone: 'intimate', atmosphere: [rainAtWindow], figures: [
+    { id: 'revealed-mj-appraisal', location: 'MJ’s Apartment · Rain', backgroundAssetId: 'mj-apartment', musicAssetId: 'between-us-theme', ambienceAssetId: 'rain-window', shot: 'conversation', tone: 'intimate', atmosphere: [rainAtWindow], figures: [
       { actorId: 'mj', appearanceId: 'conflicted-boundary-appraisal', slot: 'left', facing: 'right', emphasis: 'active' },
       { actorId: 'peter-parker', appearanceId: 'spider-revealed', slot: 'far-right', facing: 'left', emphasis: 'supporting' },
     ] },
-    { id: 'revealed-name-settles', location: 'MJ’s Apartment · Rain', backgroundAssetId: 'mj-apartment', ambienceAssetId: 'rain-window', shot: 'conversation', tone: 'intimate', atmosphere: [rainAtWindow], figures: [
+    { id: 'revealed-name-settles', location: 'MJ’s Apartment · Rain', backgroundAssetId: 'mj-apartment', musicAssetId: 'between-us-theme', ambienceAssetId: 'rain-window', shot: 'conversation', tone: 'intimate', atmosphere: [rainAtWindow], figures: [
       { actorId: 'mj', appearanceId: 'guarded-listening', slot: 'left', facing: 'right', emphasis: 'active' },
       { actorId: 'peter-parker', appearanceId: 'spider-revealed', slot: 'right', facing: 'left', emphasis: 'active' },
     ] },
-    { id: 'revealed-mj-active', location: 'MJ’s Apartment · Rain', backgroundAssetId: 'mj-apartment', ambienceAssetId: 'rain-window', shot: 'conversation', tone: 'intimate', atmosphere: [rainAtWindow], figures: [
+    { id: 'revealed-mj-active', location: 'MJ’s Apartment · Rain', backgroundAssetId: 'mj-apartment', musicAssetId: 'between-us-theme', ambienceAssetId: 'rain-window', shot: 'conversation', tone: 'intimate', atmosphere: [rainAtWindow], figures: [
       { actorId: 'mj', appearanceId: 'conflicted-boundary', slot: 'left', facing: 'right', emphasis: 'active' },
       { actorId: 'peter-parker', appearanceId: 'spider-revealed', slot: 'right', facing: 'left', emphasis: 'supporting' },
     ] },
-    { id: 'revealed-shared-silence', location: 'MJ’s Apartment · Rain', backgroundAssetId: 'mj-apartment', ambienceAssetId: 'rain-window', shot: 'conversation', tone: 'intimate', atmosphere: [rainAtWindow], figures: [
+    { id: 'revealed-shared-silence', location: 'MJ’s Apartment · Rain', backgroundAssetId: 'mj-apartment', musicAssetId: 'between-us-theme', ambienceAssetId: 'rain-window', shot: 'conversation', tone: 'intimate', atmosphere: [rainAtWindow], figures: [
       { actorId: 'mj', appearanceId: 'conflicted-boundary', slot: 'left', facing: 'right', emphasis: 'active' },
       { actorId: 'peter-parker', appearanceId: 'spider-revealed', slot: 'right', facing: 'left', emphasis: 'active' },
     ] },
-    { id: 'revealed-mj-trust', location: 'MJ’s Apartment · Rain', backgroundAssetId: 'mj-apartment', ambienceAssetId: 'rain-window', shot: 'conversation', tone: 'intimate', atmosphere: [rainAtWindow], figures: [
+    { id: 'revealed-mj-trust', location: 'MJ’s Apartment · Rain', backgroundAssetId: 'mj-apartment', musicAssetId: 'between-us-theme', ambienceAssetId: 'rain-window', shot: 'conversation', tone: 'intimate', atmosphere: [rainAtWindow], figures: [
       { actorId: 'mj', appearanceId: 'reluctant-trust', slot: 'left', facing: 'right', emphasis: 'active' },
       { actorId: 'peter-parker', appearanceId: 'spider-revealed', slot: 'right', facing: 'left', emphasis: 'supporting' },
     ] },
-    { id: 'revealed-choice-returned', location: 'MJ’s Apartment · Rain', backgroundAssetId: 'mj-apartment', ambienceAssetId: 'rain-window', shot: 'conversation', tone: 'intimate', atmosphere: [rainAtWindow], figures: [
+    { id: 'revealed-choice-returned', location: 'MJ’s Apartment · Rain', backgroundAssetId: 'mj-apartment', musicAssetId: 'between-us-theme', ambienceAssetId: 'rain-window', shot: 'conversation', tone: 'intimate', atmosphere: [rainAtWindow], figures: [
       { actorId: 'mj', appearanceId: 'choice-returned-listening', slot: 'left', facing: 'right', emphasis: 'supporting' },
       { actorId: 'peter-parker', appearanceId: 'choice-returned-staying', slot: 'right', facing: 'left', emphasis: 'active' },
     ] },
-    { id: 'revealed-small-defences', location: 'MJ’s Apartment · Rain', backgroundAssetId: 'mj-apartment', ambienceAssetId: 'rain-window', shot: 'conversation', tone: 'intimate', atmosphere: [rainAtWindow], figures: [
+    { id: 'revealed-small-defences', location: 'MJ’s Apartment · Rain', backgroundAssetId: 'mj-apartment', musicAssetId: 'between-us-theme', ambienceAssetId: 'rain-window', shot: 'conversation', tone: 'intimate', atmosphere: [rainAtWindow], figures: [
       { actorId: 'mj', appearanceId: 'choice-returned-listening', slot: 'left', facing: 'right', emphasis: 'active' },
       { actorId: 'peter-parker', appearanceId: 'spider-revealed', slot: 'right', facing: 'left', emphasis: 'active' },
     ] },
-    { id: 'hallway-empty', location: 'Apartment Hallway · After Midnight', backgroundAssetId: 'apartment-hallway', ambienceAssetId: 'rain-window', shot: 'wide', tone: 'cold', figures: [] },
-    { id: 'hallway-mj-active', location: 'Apartment Hallway · After Midnight', backgroundAssetId: 'apartment-hallway', ambienceAssetId: 'rain-window', shot: 'conversation', tone: 'intimate', figures: [
+    { id: 'hallway-empty', location: 'Apartment Hallway · After Midnight', backgroundAssetId: 'apartment-hallway', musicAssetId: 'stairs-resolve', ambienceAssetId: 'rain-window', shot: 'wide', tone: 'cold', figures: [] },
+    { id: 'hallway-mj-active', location: 'Apartment Hallway · After Midnight', backgroundAssetId: 'apartment-hallway', musicAssetId: 'stairs-resolve', ambienceAssetId: 'rain-window', shot: 'conversation', tone: 'intimate', figures: [
       { actorId: 'mj', appearanceId: 'reluctant-trust', slot: 'left', facing: 'right', emphasis: 'active' },
       { actorId: 'peter-parker', appearanceId: 'spider-revealed', slot: 'right', facing: 'left', emphasis: 'supporting' },
     ] },
-    { id: 'hallway-peter-active', location: 'Apartment Hallway · After Midnight', backgroundAssetId: 'apartment-hallway', ambienceAssetId: 'rain-window', shot: 'conversation', tone: 'intimate', figures: [
+    { id: 'hallway-peter-active', location: 'Apartment Hallway · After Midnight', backgroundAssetId: 'apartment-hallway', musicAssetId: 'stairs-resolve', ambienceAssetId: 'rain-window', shot: 'conversation', tone: 'intimate', figures: [
       { actorId: 'mj', appearanceId: 'reluctant-trust', slot: 'left', facing: 'right', emphasis: 'supporting' },
       { actorId: 'peter-parker', appearanceId: 'choice-returned-staying', slot: 'right', facing: 'left', emphasis: 'active' },
     ] },
-    { id: 'hallway-shared-distance', location: 'Apartment Hallway · After Midnight', backgroundAssetId: 'apartment-hallway', ambienceAssetId: 'rain-window', shot: 'conversation', tone: 'cold', figures: [
+    { id: 'hallway-shared-distance', location: 'Apartment Hallway · After Midnight', backgroundAssetId: 'apartment-hallway', musicAssetId: 'stairs-resolve', ambienceAssetId: 'rain-window', shot: 'conversation', tone: 'cold', figures: [
       { actorId: 'mj', appearanceId: 'choice-returned-listening', slot: 'far-left', facing: 'right', emphasis: 'active' },
       { actorId: 'peter-parker', appearanceId: 'spider-revealed', slot: 'far-right', facing: 'left', emphasis: 'active' },
     ] },
@@ -145,7 +151,7 @@ export const spiderMemoryExperience: Experience = {
     { id: 'mj-boundary', chapter: 'Scene 16 · The Memory Between Us', tableauId: 'masked-two-shot', viewpoint: { kind: 'public' }, mode: 'dialogue', speakerId: 'mj', text: 'You remember a life with me. I remember a stranger making choices for me.', cueAssetIds: [], next: { type: 'goto', nodeId: 'peter-mask-thought' } },
     { id: 'peter-mask-thought', chapter: 'Scene 16 · The Memory Between Us', tableauId: 'masked-peter-active', viewpoint: { kind: 'private', holderId: 'peter-parker' }, mode: 'thought', speakerId: 'peter-parker', text: 'The mask made danger simple. Peter Parker was the part that could still ask to be forgiven.', cueAssetIds: [], next: { type: 'goto', nodeId: 'peter-protection' } },
     { id: 'peter-protection', chapter: 'Scene 16 · The Memory Between Us', tableauId: 'masked-peter-active', viewpoint: { kind: 'public' }, mode: 'dialogue', speakerId: 'peter-parker', text: 'I came to warn you, not to make you believe me. What happened to your memory was my decision—and it was wrong.', cueAssetIds: [], next: { type: 'goto', nodeId: 'unmask' } },
-    { id: 'unmask', chapter: 'Scene 16 · The Memory Between Us', tableauId: 'unmask-cg', viewpoint: { kind: 'public' }, mode: 'action', label: 'Revelation', text: 'He removed the mask. The hero did not leave; he became visibly human.', cueAssetIds: ['cloth-shift'], performanceBeat: { actorId: 'peter-parker', phase: 'decision', importance: 'pivotal' }, next: { type: 'goto', nodeId: 'name' } },
+    { id: 'unmask', chapter: 'Scene 16 · The Memory Between Us', tableauId: 'unmask-cg', viewpoint: { kind: 'public' }, mode: 'action', label: 'Revelation', text: 'He removed the mask. The hero did not leave; he became visibly human.', cueAssetIds: ['mask-pull'], performanceBeat: { actorId: 'peter-parker', phase: 'decision', importance: 'pivotal' }, next: { type: 'goto', nodeId: 'name' } },
     { id: 'name', chapter: 'Scene 16 · The Memory Between Us', tableauId: 'revealed-peter-active', viewpoint: { kind: 'public' }, mode: 'dialogue', speakerId: 'peter-parker', text: 'My name is Peter Parker. I loved you before the spell. That truth belongs to me; it does not obligate you.', cueAssetIds: [], next: { type: 'goto', nodeId: 'name-reading-choice' } },
     { id: 'name-reading-choice', chapter: 'Scene 16 · The Memory Between Us', tableauId: 'revealed-shared-silence', viewpoint: { kind: 'public' }, mode: 'narration', label: 'Attention', text: 'The name entered the room once. It landed in two different histories.', cueAssetIds: [], next: { type: 'choice', posture: 'traversal', weight: 'texture', purpose: 'interpret', prompt: 'Where do you let the name land?', options: [
       { id: 'stay-with-peter', label: 'Stay with Peter', consequence: 'Read what it costs him to say a name erased from everyone else.', nodeId: 'peter-name-private' },
@@ -199,7 +205,7 @@ export const spiderMemoryExperience: Experience = {
     { id: 'ordinary-route-reading', chapter: 'Scene 16 · The Memory Between Us', tableauId: 'revealed-mj-trust', viewpoint: { kind: 'private', holderId: 'mj' }, mode: 'thought', speakerId: 'mj', text: 'No web, no window, no spectacular rescue. If he meant to return the choice, he could survive the slow indignity of the stairs.', cueAssetIds: [], next: { type: 'goto', nodeId: 'mj-names-route' } },
     { id: 'visible-route-reading', chapter: 'Scene 16 · The Memory Between Us', tableauId: 'revealed-peter-appraisal', viewpoint: { kind: 'private', holderId: 'peter-parker' }, mode: 'thought', speakerId: 'peter-parker', text: 'Leaving first would spare him the answer and make her carry his absence again. This time, he would remain until she dismissed him.', cueAssetIds: [], next: { type: 'goto', nodeId: 'mj-names-route' } },
     { id: 'mj-names-route', chapter: 'Scene 16 · The Memory Between Us', tableauId: 'revealed-mj-trust', viewpoint: { kind: 'public' }, mode: 'dialogue', speakerId: 'mj', text: 'The stairs. No webbing. Stay where I can see you.', cueAssetIds: [], next: { type: 'goto', nodeId: 'door-opens' } },
-    { id: 'door-opens', chapter: 'Scene 16 · The Memory Between Us', tableauId: 'hallway-empty', viewpoint: { kind: 'public' }, mode: 'location', label: 'Beyond the room', text: 'MJ opened the apartment door herself. The hallway was dry, ordinary, and bright enough to make every step accountable.', cueAssetIds: ['cloth-shift'], next: { type: 'goto', nodeId: 'hallway-threshold' } },
+    { id: 'door-opens', chapter: 'Scene 16 · The Memory Between Us', tableauId: 'hallway-empty', viewpoint: { kind: 'public' }, mode: 'location', label: 'Beyond the room', text: 'MJ opened the apartment door herself. The hallway was dry, ordinary, and bright enough to make every step accountable.', cueAssetIds: ['door-latch'], next: { type: 'goto', nodeId: 'hallway-threshold' } },
     { id: 'hallway-threshold', chapter: 'Scene 16 · The Memory Between Us', tableauId: 'hallway-shared-distance', viewpoint: { kind: 'public' }, mode: 'action', label: 'The threshold', text: 'She crossed first. Peter followed one full pace behind, the mask loose at his side.', readingVariants: [
       { when: { kind: 'active-choice', choiceNodeId: 'departure-decision', optionId: 'choose-ordinary-route' }, text: 'She crossed first and chose the stairs. Peter followed one full pace behind, accepting an ordinary route he could not optimize into a rescue.' },
       { when: { kind: 'active-choice', choiceNodeId: 'departure-decision', optionId: 'choose-visible-route' }, text: 'She crossed first. Peter stayed one full pace behind and plainly visible, refusing the old instinct to make pain disappear by disappearing himself.' },
@@ -211,3 +217,5 @@ export const spiderMemoryExperience: Experience = {
     { id: 'ending', chapter: 'Scene 16 · The Memory Between Us', tableauId: 'hallway-shared-distance', viewpoint: { kind: 'private', holderId: 'peter-parker' }, mode: 'ending', speakerId: 'peter-parker', label: 'What remains', text: 'He could protect her without possessing her answer. The city below still needed Spider-Man; the next stair required only Peter Parker to stay one pace behind.', cueAssetIds: [], next: { type: 'end' } },
   ],
 };
+
+export const spiderMemoryExperience: Experience = withVoiceLines(authored, spiderMemoryVoiceLines);

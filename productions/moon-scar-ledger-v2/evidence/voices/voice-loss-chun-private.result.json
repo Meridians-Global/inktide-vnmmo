@@ -1,0 +1,42 @@
+{
+  "id": "dgggsdar4nrmr0d0pej9k3yz70",
+  "model": "minimax/speech-02-turbo",
+  "version": "hidden",
+  "input": {
+    "audio_format": "mp3",
+    "bitrate": 128000,
+    "channel": "mono",
+    "emotion": "calm",
+    "english_normalization": true,
+    "language_boost": "English",
+    "pitch": 0,
+    "sample_rate": 32000,
+    "speed": 0.92,
+    "text": "He had heard the word missing. Not failed. The omission had told him where the real result was buried.",
+    "voice_id": "English_Graceful_Lady"
+  },
+  "logs": "Generating speech with model speech-02-turbo\nGenerated speech in 1.76sec\nEach character is 1 token\nTokens: 102\n",
+  "output": "https://replicate.delivery/xezq/xOw3lbJYfRzXUC9E78fiQLwcoTUjYxVOrFF75tnlrfyDHVduA/tmp51vt3rf9.mp3",
+  "data_removed": false,
+  "error": null,
+  "source": "api",
+  "status": "succeeded",
+  "created_at": "2026-09-18T08:31:27.269Z",
+  "started_at": "2026-09-18T08:31:27.288480867Z",
+  "completed_at": "2026-09-18T08:31:29.14781266Z",
+  "urls": {
+    "cancel": "https://api.replicate.com/v1/predictions/dgggsdar4nrmr0d0pej9k3yz70/cancel",
+    "get": "https://api.replicate.com/v1/predictions/dgggsdar4nrmr0d0pej9k3yz70",
+    "stream": "https://stream.replicate.com/v1/files/jbxs-xjv6ykwjhmhfvy7dbklolpkirkxscgrhgiohpf4sy35ne43h5zra",
+    "web": "https://replicate.com/p/dgggsdar4nrmr0d0pej9k3yz70"
+  },
+  "metrics": {
+    "input_token_count": 102,
+    "output_token_count": 1,
+    "predict_time": 1.859331793,
+    "time_to_first_token": 0.000471205,
+    "token_input_count": 102,
+    "tokens_per_second": 0.5379639583815846,
+    "total_time": 1.87881266
+  }
+}
