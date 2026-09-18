@@ -286,5 +286,5 @@ button { font: inherit; }
 
 .home-header { grid-template-columns: auto 1fr; align-items: center; gap: clamp(14px, 1.8vw, 28px); max-width: none; }
 .home-header > div { display: grid; gap: 8px; max-width: 62ch; }
-.home-logo { width: clamp(64px, 8vw, 128px); height: auto; filter: drop-shadow(0 10px 24px rgba(0,0,0,.6)); }
-.transport-logo { width: 1.1em; height: 1.1em; margin-right: 5px; vertical-align: -0.2em; }
+.home-logo { width: clamp(96px, 11vw, 176px); height: auto; filter: drop-shadow(0 10px 24px rgba(0,0,0,.6)); }
+.transport-logo { width: 1.5em; height: 1.5em; margin-right: 6px; vertical-align: -0.4em; }

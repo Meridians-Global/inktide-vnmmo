@@ -67,7 +67,7 @@ root.innerHTML = `
           <p class="line"></p>
         </div>
         <nav class="transport" aria-label="Reading controls">
-          <button type="button" data-action="home"><img class="transport-logo" src="/favicon.png" alt="" />MENU</button>
+          <button type="button" data-action="home"><img class="transport-logo" src="/icon-192.png" alt="" />MENU</button>
           <button type="button" data-action="back">BACK</button>
           <button type="button" data-action="backlog">LOG</button>
           <button type="button" data-action="settings" aria-expanded="false">SETTINGS</button>
@@ -77,7 +77,7 @@ root.innerHTML = `
       </footer>
       <section class="home-layer" aria-label="Experience menu" hidden>
         <header class="home-header">
-          <img class="home-logo" src="/vnmmo-logo.png" alt="VNMMO" />
+          <img class="home-logo" src="/icon-512.png" alt="VNMMO" />
           <div>
             <span class="eyebrow">VNMMO</span>
             <h1>Choose an Experience</h1>
