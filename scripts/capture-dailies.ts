@@ -88,8 +88,8 @@ async function settle(page: Page, expectedText: string): Promise<void> {
   await page.evaluate(() => document.fonts.ready);
 }
 
-async function replay(page: Page, frame: DailiesFramePlan, origin: string, experienceId: string): Promise<void> {
-  await page.goto(`${origin}/?story=${encodeURIComponent(experienceId)}`);
+async function replay(page: Page, frame: DailiesFramePlan, origin: string, experienceId: string, startNodeId: string): Promise<void> {
+  await page.goto(`${origin}/?story=${encodeURIComponent(experienceId)}&moment=${encodeURIComponent(startNodeId)}`);
   await page.waitForSelector('.line:not(:empty)');
   for (const step of frame.steps) {
     if (step.type === 'advance') await page.click('[data-action="next"]');
@@ -136,7 +136,7 @@ export async function captureExperience(
 
   const frames: AutoDailiesFrame[] = [];
   for (const frame of plan) {
-    await replay(page, frame, origin, experience.id);
+    await replay(page, frame, origin, experience.id, experience.startNodeId);
     const file = `${frame.frameId}.png`;
     const bytes = await page.locator('.stage').screenshot({ animations: 'disabled', caret: 'hide', type: 'png' });
     await writeFile(join(framesRoot, file), bytes);

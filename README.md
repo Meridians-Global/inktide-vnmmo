@@ -87,6 +87,7 @@ typed visual edit, then pass identity, full-body framing, facing, scale and cont
 
 - `docs/AUTHORING.md` — how to build a new compiling Experience, step by step, and the `npm run climb` loop
   (manual edit → produce → capture every reachable reading → before/after diff → human verdict).
+- `docs/NARRATIVE_TO_VN.md` — which parts of porting prose into an Experience are automated, which stay manual, and why.
 - `src/core/contracts.ts` — the only authoring/runtime shape.
 - `src/core/compiler.ts` — deterministic structural gate.
 - `src/core/figure-normalization.ts` — padding-invariant actor preparation.

@@ -7,6 +7,7 @@ export type ProductionCoordinate = Readonly<{
 export const productions: Readonly<Record<string, ProductionCoordinate>> = {
   'spider-memory-between-us-v1': { productionId: 'spider-man-memory-between-us-v1', storyFile: 'src/story/spider-memory.ts' },
   'moon-scar-reading-v1': { productionId: 'moon-scar-ledger-v2', storyFile: 'src/story/moon-scar.ts' },
+  'privet-drive-boy-who-lived-v1': { productionId: 'privet-drive-boy-who-lived-v1', storyFile: 'src/story/boy-who-lived.ts' },
 };
 
 export function productionFor(experienceId: string): ProductionCoordinate {

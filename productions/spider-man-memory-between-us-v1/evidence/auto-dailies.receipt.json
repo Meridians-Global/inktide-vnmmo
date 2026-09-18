@@ -7,7 +7,7 @@
     "width": 1600,
     "height": 900
   },
-  "capturedAt": "2026-09-15T22:04:21.509Z",
+  "capturedAt": "2026-09-18T03:03:03.931Z",
   "consoleErrors": [],
   "frames": [
     {
@@ -16,7 +16,7 @@
       "tableauId": "apartment-empty",
       "reading": "base",
       "file": "auto-dailies/rain-location.png",
-      "sha256": "fa73dde2c89e884d3eb91219423382b5c5072896093eb417b7d41eaf604508dc",
+      "sha256": "2a5d04e1c05d5ffa210f8d3e6e53901d66ef071f95e45c0d7219647d26c9e355",
       "route": [],
       "insightIds": [],
       "availableOptionIds": [],
@@ -29,7 +29,7 @@
       "tableauId": "masked-two-shot",
       "reading": "base",
       "file": "auto-dailies/distance.png",
-      "sha256": "4584fa3f19bdbc2ec06412a8febb7231a2f7654a8b75c04d27def137d89aef46",
+      "sha256": "1b8137a5e12f6e4509e06828b1a44760403ebe3a74ecc478dbac09f5998d9983",
       "route": [],
       "insightIds": [],
       "availableOptionIds": [],
@@ -42,7 +42,7 @@
       "tableauId": "masked-two-shot",
       "reading": "base",
       "file": "auto-dailies/room-reading-choice.png",
-      "sha256": "d0af7d1e0786856ff02ffc148070f0255194fae98d1c004b81f11dc4d2d1bfad",
+      "sha256": "db243399fabdb9b1125c48d9f951d90ac2905ea65d5b07ca66557dba2bfdf5b7",
       "route": [],
       "insightIds": [],
       "availableOptionIds": [
@@ -58,7 +58,7 @@
       "tableauId": "masked-peter-active",
       "reading": "base",
       "file": "auto-dailies/threshold-reading.png",
-      "sha256": "6dbd6c0b6aeffb5fedd594059963eb04beebecde895c536a780d1ca0fc681722",
+      "sha256": "53be6f18368e743b95f17a57ed340fe16c1bd1874493030b9a0815c64eb71471",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -78,7 +78,7 @@
       "tableauId": "masked-two-shot",
       "reading": "base",
       "file": "auto-dailies/mj-grip-reading.png",
-      "sha256": "b22243350df9640bec024d54fa5781765fc206bb7fe130e0adb216be41d1f7bb",
+      "sha256": "7c57be863e774a88e273e2096c75e8f4180f75a9ff94dcd9ef8d89527d491acb",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -98,7 +98,7 @@
       "tableauId": "masked-two-shot",
       "reading": "base",
       "file": "auto-dailies/mj-boundary.png",
-      "sha256": "353ea59f0572221c3a1f9f05da2b7cb3d0a843acc42214f92946831ce72c00b1",
+      "sha256": "45a4722ff303b2957a87477073d608ce28b01747a1781b39623aadedfc314e6b",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -118,7 +118,7 @@
       "tableauId": "masked-peter-active",
       "reading": "base",
       "file": "auto-dailies/peter-mask-thought.png",
-      "sha256": "1f795da1675afa9b1279a80a9fcbd36c971eb66aae53ed0e7ebe98dcd3975dda",
+      "sha256": "311df7aae8bf01ae50f741ee99eb87f315f3d0eeef105f219471f049ee636967",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -138,7 +138,7 @@
       "tableauId": "masked-peter-active",
       "reading": "base",
       "file": "auto-dailies/peter-protection.png",
-      "sha256": "10ab006d9ad323c706b57228412d6bff9ff907512be406b40795604b62a4c90b",
+      "sha256": "c3cd226ef1ef21f40ee34907e0764f563c0e428d1989d13f8371cea9c73f3e02",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -158,7 +158,7 @@
       "tableauId": "unmask-cg",
       "reading": "base",
       "file": "auto-dailies/unmask.png",
-      "sha256": "b4617fc394e8b8bdb7b6f4f4bbb04ac2f5c4f890450331e913b0fa8f4348d828",
+      "sha256": "2a3671f1b67588ed613a18127fa1356937d50cd393d256dc7175cecf5200db95",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -178,7 +178,7 @@
       "tableauId": "revealed-peter-active",
       "reading": "base",
       "file": "auto-dailies/name.png",
-      "sha256": "14381b416c98e7fc610b9fef9bf663a2684220bdf5c6e3d144902720f69f2553",
+      "sha256": "3d57033d2f84a945a9ddd761134511a91dfbee05b670af7366b73128e0d0ade4",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -198,7 +198,7 @@
       "tableauId": "revealed-shared-silence",
       "reading": "base",
       "file": "auto-dailies/name-reading-choice.png",
-      "sha256": "44d3baf7f03778b4f4568a8be7edc5d4d1d79af757215d09bbd04b64a71cc574",
+      "sha256": "6007fddd189577967e0232a1e59cf9eeff27c9a6dbfd448f10f5986f50887414",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -221,7 +221,7 @@
       "tableauId": "revealed-peter-active",
       "reading": "base",
       "file": "auto-dailies/peter-name-private.png",
-      "sha256": "83fbe2233df85c25438c8b4beb6ce43ec4d55df0a3a5c5f8f9d1a976480aaddf",
+      "sha256": "823fd7e75164b147bb1eae2284e10ac3be9f3e6809983e476d39d507d25be1ea",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -245,7 +245,7 @@
       "tableauId": "revealed-mj-active",
       "reading": "base",
       "file": "auto-dailies/mj-name-private.png",
-      "sha256": "0348cb6acb2ad95c6f5f748b4b055f15cc56b0f198111efe7ab0b6992564a915",
+      "sha256": "350c5e59a32cd3c9778ddeb7ee5574b901be2118e16473da8486072eb214a3be",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -269,7 +269,7 @@
       "tableauId": "revealed-name-settles",
       "reading": "variant",
       "file": "auto-dailies/name-settles--5f6e79.png",
-      "sha256": "2c71201e66cee57da0133810ba07281237da6c2690480e2c0859005c78f03e0a",
+      "sha256": "09fea0a09b8b6edfbceb964467ccd0bbe71a8469db62984a0533c95cd4b1242d",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -293,7 +293,7 @@
       "tableauId": "revealed-name-settles",
       "reading": "variant",
       "file": "auto-dailies/name-settles--66ee32.png",
-      "sha256": "6e7937075df1600b18c5867c49319774e2cb2d0ba8bcf31621dfe7c19435d420",
+      "sha256": "46ffcefd5b69041dbd4cad1e29eacdf8d8519537957c2f13bedd575beda54401",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -317,7 +317,7 @@
       "tableauId": "revealed-mj-appraisal",
       "reading": "base",
       "file": "auto-dailies/mj-sees.png",
-      "sha256": "f968d4ea7b7e67f9581ef6b04663bbf2c5a5a290494236cd7b4f9c83f22ca9b4",
+      "sha256": "b2ac26e246d923dff5025550a15c1dfc55026bbffa34422e9d25d2a2ff95e8c6",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -341,7 +341,7 @@
       "tableauId": "revealed-mj-active",
       "reading": "base",
       "file": "auto-dailies/mj-answer.png",
-      "sha256": "95828e1442f9166c50730370d0f4eee869c8614009ab26d9791f2d6a770d98b2",
+      "sha256": "c03978aa376aaab143f3985f8a8d199a50bab04aeab428e2d1a8090e830ecbe7",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -365,7 +365,7 @@
       "tableauId": "revealed-mj-active",
       "reading": "base",
       "file": "auto-dailies/perspective-choice.png",
-      "sha256": "3537092b821b9058cc2d7271dc70f55e34edbb53ba5e729f99f0ab4bcb9a9dbe",
+      "sha256": "c587764eaa728824cbeb4d3f67f6a5129c3cc191c7a22def4d6f259d5bfac4c4",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -392,7 +392,7 @@
       "tableauId": "revealed-mj-active",
       "reading": "variant",
       "file": "auto-dailies/perspective-choice--6d906c.png",
-      "sha256": "a9a601542adcc1ebd1d36397b0f6dbd439cd34eb69c227e256b7ce7320bed1fb",
+      "sha256": "e701049418a20a9524a7a391b16b47bae6c09f985063c61bad1d2edde95bfa68",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -422,7 +422,7 @@
       "tableauId": "revealed-peter-appraisal",
       "reading": "base",
       "file": "auto-dailies/peter-restraint.png",
-      "sha256": "1e4a46d04f5f970fbaaa97cf5383792cc05147a2c0390c3d592b87db0a40be54",
+      "sha256": "daaa2a4669f6265b658da157f5aa659736ae4211eda81f77c077dcb4f499206e",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -451,7 +451,7 @@
       "tableauId": "revealed-mj-appraisal",
       "reading": "base",
       "file": "auto-dailies/mj-boundary-private.png",
-      "sha256": "a1902137fcf543f4cf974df74342cc695cd1cad19847a6709b866c1a846fa7f4",
+      "sha256": "9c5d94bf7e90286250dafa88239fdb51c89305cc95941dc53cc8a5be837517f3",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -480,7 +480,7 @@
       "tableauId": "revealed-mj-appraisal",
       "reading": "variant",
       "file": "auto-dailies/both-truths-reading--b737ea.png",
-      "sha256": "6c746c2e6e8791d6f9d8256a33467da54a2b23ff44766ef3f797790215a754d5",
+      "sha256": "7d17c7d76807d183691d5546bbc4dee68eac86370ac0df6513165b57c1fbbca5",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -510,7 +510,7 @@
       "tableauId": "revealed-peter-appraisal",
       "reading": "variant",
       "file": "auto-dailies/both-truths-reading--bff09f.png",
-      "sha256": "7bb6bfa77045c2b65e34e8cec951d3d148e7adcf585462950857c1f2482857d2",
+      "sha256": "e44baff2e2950c732af9ddd573d6e0eb559b9ad30569315b8c38e1fc19bd8c39",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -540,7 +540,7 @@
       "tableauId": "revealed-shared-silence",
       "reading": "base",
       "file": "auto-dailies/room-without-verdict.png",
-      "sha256": "0b16d121cdc44faa3b183dbe13a8a89a766ba587b9b68222c012d85dbe4e165e",
+      "sha256": "1a4c28f968bd4d5e845835d13b4dfbdd7c61504fbcbdb1e68281c919d124f734",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -570,7 +570,7 @@
       "tableauId": "revealed-shared-silence",
       "reading": "variant",
       "file": "auto-dailies/shared-silence--091ec5.png",
-      "sha256": "bd24d5a64095b27ab7d1e05ca5f238eb1a109f2d31c6a1c8e236e9ca945dc6b9",
+      "sha256": "217f1a6449ebd36ad86a0ae9a3372f5ded7f1ecb59d1fcc92cbf66eab2f33b8c",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -599,7 +599,7 @@
       "tableauId": "revealed-shared-silence",
       "reading": "variant",
       "file": "auto-dailies/shared-silence--afa097.png",
-      "sha256": "2363d9eab06d971512cc8c13569a5712527f62436bd48ddc9f8c328cc401188b",
+      "sha256": "5ff9e4b4ad14dfd729108925172a2b365605cba36713da7e97eb8e786cc90484",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -629,7 +629,7 @@
       "tableauId": "revealed-shared-silence",
       "reading": "variant",
       "file": "auto-dailies/shared-silence--fe257c.png",
-      "sha256": "53fe0faac9df6ef211a6667b090d4689916dfe37bd4a2f88d87e90cfb8eae580",
+      "sha256": "2c9e47b66ce53c1016489cf7c687fffe17dd2757915a03f679e1df1320a1025c",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -658,7 +658,7 @@
       "tableauId": "revealed-small-defences",
       "reading": "variant",
       "file": "auto-dailies/small-defence-returns--3ee236.png",
-      "sha256": "2442ed7f378ca9507d0898a821ac988f2b4c77362fc081eaea97ca1ce0617a6a",
+      "sha256": "3cd5b235c43c86ab1a3c775968a7d2c026b5e2c500f74ecbc6855e35bd2a1d56",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -688,7 +688,7 @@
       "tableauId": "revealed-small-defences",
       "reading": "variant",
       "file": "auto-dailies/small-defence-returns--63cd71.png",
-      "sha256": "5c009a770aa4cebba33c52852c11bab80a0b78f676d086b1b58bee40c064344b",
+      "sha256": "86d6867507222bd6039cc7c86d3ccb1b943c52f2ea545eb71c3cc54fcf90979b",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -717,7 +717,7 @@
       "tableauId": "revealed-small-defences",
       "reading": "variant",
       "file": "auto-dailies/small-defence-returns--89cf6b.png",
-      "sha256": "d9ef56dbdf18c99dfe4d4f9c7b074c1341035851083cb973220645319c5e4038",
+      "sha256": "ff290eb4aec351e8d807c68bdd3d587711eb2f5707aee68f3015a540d4c4c406",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -746,7 +746,7 @@
       "tableauId": "revealed-shared-silence",
       "reading": "base",
       "file": "auto-dailies/restraint-forecast.png",
-      "sha256": "cc691a107d462a91c2342528701be2f50a2575271475164b4daf461cff189c00",
+      "sha256": "7d26075faa2497b10e11a72fca646af06bbe59efff30778d7be78bc55212bacb",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -778,7 +778,7 @@
       "tableauId": "revealed-peter-appraisal",
       "reading": "base",
       "file": "auto-dailies/forecast-retreat.png",
-      "sha256": "63bf82baee241ec576eab22ad2c5445c268c1220ab405be853f364867a67637d",
+      "sha256": "dbbbe95614bfbfa7f8b6ffcc7228d9ef3a5f12715c2efc3f640d48686f02afc6",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -811,7 +811,7 @@
       "tableauId": "revealed-mj-appraisal",
       "reading": "base",
       "file": "auto-dailies/forecast-return-choice.png",
-      "sha256": "3393383314a6983abef23a710cfc75f71e6b6f29da679e5e730445f1ac0d8788",
+      "sha256": "053a5a7376c32994450b0d4832d3e453ad1bc2811bd3c223b650914d74a7fdcc",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -844,7 +844,7 @@
       "tableauId": "revealed-choice-returned",
       "reading": "variant",
       "file": "auto-dailies/peter-offers-distance--6534d9.png",
-      "sha256": "531fa68b331ac9d4940483cec24d759fb498e0193d87a1a0974dbbccb7f8653b",
+      "sha256": "2b06c832f85d4c2feb300e9da66a8d20f13c584bf33451da5376f4e30d202c64",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -877,7 +877,7 @@
       "tableauId": "revealed-choice-returned",
       "reading": "variant",
       "file": "auto-dailies/peter-offers-distance--cb2784.png",
-      "sha256": "2418a749208610dd4f1ade77e235a5bbe5dddc1956c75ec826a9190196902c5b",
+      "sha256": "198fa8dcd6124177df280ec6d712dcbdeffe739ee26848277d15958dc3fc5123",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -910,7 +910,7 @@
       "tableauId": "revealed-mj-trust",
       "reading": "base",
       "file": "auto-dailies/ride-home.png",
-      "sha256": "04e9b74322e54f5c084d0f8e30e66469d53d3a56b0c0172b2d04d1b74cb936f9",
+      "sha256": "f9f9a85728c956c79f667780abdb97d56b6570ec588a9324af3a755d7c0bbc07",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -943,7 +943,7 @@
       "tableauId": "revealed-shared-silence",
       "reading": "base",
       "file": "auto-dailies/departure-decision.png",
-      "sha256": "ddd22bbdd394c1aa3451ece0072bab6f6fbd04b0d2c2c632e17fec9dbe4b70c5",
+      "sha256": "9138bd67e39e141177010628c6a7782ea4bdc77414a015fec5b7a3276abb94d9",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -979,7 +979,7 @@
       "tableauId": "revealed-mj-trust",
       "reading": "base",
       "file": "auto-dailies/ordinary-route-reading.png",
-      "sha256": "eddf23fac0be60d9e9126cd1a7b2f4da638f7b9655691fc9a169e0c7ed9136f9",
+      "sha256": "359b43fee53cbc8b457738c37c9c464e360c176c68060ecd0f1c873fff1d9403",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1016,7 +1016,7 @@
       "tableauId": "revealed-peter-appraisal",
       "reading": "base",
       "file": "auto-dailies/visible-route-reading.png",
-      "sha256": "6970d18c6a09bc5ce8f1ac433803d82315be64311de5e4fa19a505187d777d2c",
+      "sha256": "207ebc2764b765f607fd5bfd44aca4e446b1b4cd587eaab067f844da4ce9bbdd",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1053,7 +1053,7 @@
       "tableauId": "revealed-mj-trust",
       "reading": "base",
       "file": "auto-dailies/mj-names-route.png",
-      "sha256": "06bd348c9ff04abef6073343b5770f7cb8bd5270cb51f8a33c84589ff2493480",
+      "sha256": "34596ac55004b14c788ffb0bb816b8daca450a2202ea83969e798dadeca7641d",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1090,7 +1090,7 @@
       "tableauId": "hallway-empty",
       "reading": "base",
       "file": "auto-dailies/door-opens.png",
-      "sha256": "4a93ff6470ecad7a5f9cb8e760d449866642c3294db19ff1db2400e16a7e37da",
+      "sha256": "4a73ad69458d9c6631a9f46b7ebae3514c321471641daf30817a605381695511",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1127,7 +1127,7 @@
       "tableauId": "hallway-shared-distance",
       "reading": "variant",
       "file": "auto-dailies/hallway-threshold--bcf1f3.png",
-      "sha256": "47d873bfa32097a225dde20ebe4f6ccced0a60d9ae819c24222d6e9883373124",
+      "sha256": "899a135f63370044bbe02bf4fc1aed9df6849f36eb141b0dc956529fb39c97a3",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1164,7 +1164,7 @@
       "tableauId": "hallway-shared-distance",
       "reading": "variant",
       "file": "auto-dailies/hallway-threshold--fbbe31.png",
-      "sha256": "1317eb2b7ff72e4e8ce6af90ac09a47ccb54dd0bc0c307dc6d51a06ff0c071b8",
+      "sha256": "c9cdc1c17a74f8caba901142bd5f1cd88796804abd057fd85a95677a81bd974c",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1201,7 +1201,7 @@
       "tableauId": "hallway-mj-active",
       "reading": "base",
       "file": "auto-dailies/mj-corrects-promise.png",
-      "sha256": "b135c88fa873360380a862ac92417f748c1c021bd6bbd18507877a8f5415e401",
+      "sha256": "69e6b25b9377fa05462e8bb099cab9b4cf581a4f81e65b41b7c62d54301d1c99",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1238,7 +1238,7 @@
       "tableauId": "hallway-peter-active",
       "reading": "base",
       "file": "auto-dailies/peter-hears-limit.png",
-      "sha256": "bcad79ccc01b1ae2a39dad1058b8ae4105e1a7ec92f84ca18ef695e41194c668",
+      "sha256": "1dd1647fc92903c937d2310ed1e8b21b9af7bd8fea1516046f375c27ce1a6729",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1275,7 +1275,7 @@
       "tableauId": "hallway-peter-active",
       "reading": "base",
       "file": "auto-dailies/peter-accepts-limit.png",
-      "sha256": "52b10e3eefed95fd333cf62fbb78ea9784c80ccaea06f6b90816305e237c9a51",
+      "sha256": "26cd0305020e39a8c3579237d54762185e6a4a0402ac8f289452240a539cbf9f",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1312,7 +1312,7 @@
       "tableauId": "hallway-shared-distance",
       "reading": "base",
       "file": "auto-dailies/stairs-begin.png",
-      "sha256": "00144dd528a027bf66fce7f064b9c471663fcf81e4ec08d6c6cd1bb8344e8845",
+      "sha256": "f7c7202b2c3c502417b743c07c4dcfedd70becb14d7d029f4593a93bfad9756d",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1349,7 +1349,7 @@
       "tableauId": "hallway-shared-distance",
       "reading": "base",
       "file": "auto-dailies/ending.png",
-      "sha256": "2526ec3a2ef3ba342ad7dca5539a79de0ab8c34c3062c4111debbd0a18d210fe",
+      "sha256": "0f7a6aecc92a7a35b419faed578e591daae6c7dec59c850daabe3d7dbd187e50",
       "route": [
         {
           "nodeId": "room-reading-choice",

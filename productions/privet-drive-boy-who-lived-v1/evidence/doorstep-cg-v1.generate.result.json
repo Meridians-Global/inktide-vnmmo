@@ -1,0 +1,39 @@
+{
+  "id": "gp4q8k5jqsrmr0d0p9may7qn28",
+  "model": "bytedance/seedream-4.5",
+  "version": "hidden",
+  "input": {
+    "aspect_ratio": "16:9",
+    "image_input": [
+      "data:image/jpeg;base64,...",
+      "data:image/jpeg;base64,...",
+      "data:image/jpeg;base64,..."
+    ],
+    "max_images": 1,
+    "prompt": "Modern premium visual-novel event CG, full 16:9 frame, smooth high-resolution anime illustration with crisp tapered linework, nuanced facial acting, cinematic moonlight-and-shadow lighting and no coarse pixels. Preserve the three referenced identities: a very tall, thin, very old wizard with long silver hair and a silver beard both tucked into his belt, half-moon spectacles on a long crooked nose, twinkling light-blue eyes, wearing long sweeping purple robes and a cloak, high-heeled buckled boots; a severe-looking older witch with black hair drawn into a tight bun, square spectacles, an emerald-green cloak over a dark high-collared dress, thin lips, upright posture; a giant of a man, twice as tall as an ordinary man and several times as wide, long shaggy tangled black hair and a wild beard hiding most of his face, small glinting dark eyes, a huge moleskin overcoat, enormous hands. They stand close together on the dark doorstep of an ordinary English brick suburban house at night, looking down at a small bundle of blankets laid on the step with a sealed parchment letter tucked into it. Inside the blankets a baby boy with a tuft of jet-black hair sleeps, and on his forehead a fine curiously shaped cut like a bolt of lightning is just visible. Medium ensemble composition, faces and the bundle readable at phone scale, quiet negative space in the lower quarter for a dialogue rail. This is one pivotal authored image, not a sprite sheet or interface. No text, letters, numbers, captions, logos, border, interface, placement guides, anonymous silhouettes, duplicate objects, extra limbs, malformed hands, chibi anatomy, glossy 3D, photorealism, vector-flat rendering, painterly blur, coarse pixels, real actor likeness.",
+    "sequential_image_generation": "disabled",
+    "size": "2K"
+  },
+  "logs": "Generating 2560x1440 image with aspect ratio 16:9 at 2K resolution\nGenerating...\nGenerated in 50.3sec\n",
+  "output": [
+    "https://replicate.delivery/xezq/WsNYIB6hHJrJCpAf9WeFz7ihkyITQFseyG9SYTDAIBBHCLduA/tmpskaoayk2.jpg"
+  ],
+  "data_removed": false,
+  "error": null,
+  "source": "api",
+  "status": "succeeded",
+  "created_at": "2026-09-18T02:46:41.086Z",
+  "started_at": "2026-09-18T02:46:41.112784304Z",
+  "completed_at": "2026-09-18T02:47:31.870293278Z",
+  "urls": {
+    "cancel": "https://api.replicate.com/v1/predictions/gp4q8k5jqsrmr0d0p9may7qn28/cancel",
+    "get": "https://api.replicate.com/v1/predictions/gp4q8k5jqsrmr0d0p9may7qn28",
+    "stream": "https://stream.replicate.com/v1/files/jbxs-ydwq5rlielsglhx2wys7si52smexclavhlejoyvdlgi6p4ihnnea",
+    "web": "https://replicate.com/p/gp4q8k5jqsrmr0d0p9may7qn28"
+  },
+  "metrics": {
+    "image_output_count": 1,
+    "predict_time": 50.757508984,
+    "total_time": 50.784293278
+  }
+}

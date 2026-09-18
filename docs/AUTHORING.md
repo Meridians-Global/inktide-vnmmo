@@ -141,6 +141,28 @@ Moon-Scar variant) to `scripts/acquire-<slug>-assets.ts`, add an `acquire:<slug>
    Moon-Scar, `matteInspection`), `reviews`, and any deterministic `preparedAssets` (e.g. the apartment stage
    crop records its source digest and extract rectangle).
 
+#### Manifest-driven acquisition (preferred for new productions)
+
+`scripts/lib/acquisition-kit.ts` folds steps 2–7 into one reusable `acquire(projectRoot, token, manifest)` call so
+a new production script is a **manifest**, not a copy of provider plumbing. `scripts/acquire-boy-who-lived-assets.ts`
+is the worked example: a shared style / exclusion / stage-plate vocabulary, then one `AcquisitionRequest` per asset
+(`kind: 'background' | 'cg' | 'isolated'`, `aspectRatio`, `prompt`, optional `matte` chroma and `references`).
+The kit owns:
+
+- resume-or-regenerate: a retained result is reused only if its input digest, prompt and aspect ratio still match
+  the manifest (`REBUILD_IDS=a,b` forces specific ids);
+- HTTP 429 back-off using the provider's `retry_after`;
+- `references` resolved from **local pinned bytes** (`receipt.sourcePath`), never a provider URL, so identity
+  chains (`dumbledore-arrival-v1 → dumbledore-grave-v1`; three approved sprites → `doorstep-cg-v1`) stay
+  reproducible after URLs expire;
+- segmentation matte + `refineSegmentedChromaMatte` + `inspectChromaMatte` for every isolated subject;
+- events/results/receipt written exactly as above (`schemaVersion`, `techniqueTransfer`, `requestDigests`,
+  `assets`).
+
+Order requests so every reference is acquired before the request that cites it; the kit throws otherwise.
+Ambience and cues that do not need a provider can be synthesised deterministically (`scripts/generate-privet-audio.ts`,
+seeded PRNG, 48 kHz WAV) and pinned like any other asset.
+
 `tests/production-evidence.test.ts` re-hashes every asset named in every `acquisition.receipt.json`, so add
 your production id there once its receipt exists, and keep receipts and bytes in lockstep.
 
@@ -415,6 +437,9 @@ Messages are verbatim from `src/core/compiler.ts`. Zod schema failures appear fi
 | `Private POV hop X → Y needs a public bridge` | Insert a public moment between two private moments with different holders. |
 | `Unreachable moment: X` | Link to it from the start graph or delete it. |
 | `Experience graph must be acyclic` | Remove the back-edge; the reader owns Back. |
+| `Reading variants on X require a public viewpoint` | Variants cannot sit on a private thought. Either move the variant to the next public beat, or split the thought into one moment per choice option (`vernon-blinks-map` / `vernon-blinks-sign`) and let each option `goto` its own. |
+| `Reader insight X is never harvested` | Every `readerInsights[].id` granted by some option must be consumed by a `reader-insights` variant somewhere downstream. |
+| `Reader-insight variants on X are ambiguous without a combined variant for A, B, …` | The compiler does not know insights are mutually exclusive. Keep one moment's `reader-insights` variants to a small set whose every reachable union has a variant, or harvest the other insights on a different moment. |
 
 Build-time (not compiler) failures from `scripts/build-experience.ts`:
 
