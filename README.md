@@ -1,10 +1,10 @@
 <img width="3024" height="1296" alt="Meridians Readme Banner" src="https://github.com/user-attachments/assets/a8216b78-7e15-45cc-b42d-2b5ff1ff35ce" />
 
-# Inktide VNMMO
+# VNMMO
 
 Designed and built by [jasonyu0100](https://github.com/jasonyu0100).
 
-The Inktide VNMMO begins in black and white. Its seeded universe starts as a manga.
+VNMMO begins in black and white. Its seeded universe starts as a manga.
 
 This independent repository owns a TypeScript system library for reader-paced visual-novel Experiences. It
 keeps one authoring contract, one pure compiler, one pure reader state machine, and one static web reader.

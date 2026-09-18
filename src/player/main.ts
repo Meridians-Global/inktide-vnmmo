@@ -1,7 +1,8 @@
 import './styles.css';
 import { CompiledExperience, type Actor, type Appearance, type CompiledAsset, type Moment, type Tableau } from '../core/contracts';
-import { availableChoiceOptions, backlog, currentMoment, initialReaderStateFromLink, reduceReader, type ReaderAction, type ReaderState } from '../core/reader-state';
+import { availableChoiceOptions, backlog, currentMoment, initialReaderStateFromLink, reduceReader, resumeReaderState, type ReaderAction, type ReaderState } from '../core/reader-state';
 import { AudioDirector } from './audio-director';
+import { ProgressStore, type ProgressRecord } from './progress-store';
 
 const SLOT_POSITION: Record<string, number> = {
   'far-left': 12,
@@ -16,6 +17,9 @@ const PROJECTION_SCALE: Record<Appearance['projection'], number> = {
   'three-quarter': 1.28,
   portrait: 1.55,
 };
+
+type CatalogEntry = { id: string; title: string; subtitle: string; url: string; coverUrl: string; chapters: number; moments: number };
+type Catalog = { defaultExperienceId: string; experiences: CatalogEntry[] };
 
 const root = document.querySelector<HTMLElement>('#app');
 if (!root) throw new Error('Missing app root');
@@ -35,6 +39,14 @@ root.innerHTML = `
       <div class="atmosphere atmosphere-front" aria-hidden="true"></div>
       <div class="artifact-wrap" aria-hidden="true"><img class="artifact" alt="" /></div>
       <div class="choice-layer" hidden></div>
+      <div class="ending-layer" hidden>
+        <span class="choice-posture">END OF PASSAGE</span>
+        <p class="choice-heading ending-title"></p>
+        <div class="ending-actions">
+          <button type="button" class="choice-option" data-action="restart"><strong>Read again</strong><span>Start this Experience from its first moment</span></button>
+          <button type="button" class="choice-option" data-action="home"><strong>Back to menu</strong><span>Choose another Experience</span></button>
+        </div>
+      </div>
       <div class="backlog-layer" hidden></div>
       <aside class="settings-layer" aria-label="Reader settings" hidden>
         <span class="settings-eyebrow">READER SETTINGS</span>
@@ -55,6 +67,7 @@ root.innerHTML = `
           <p class="line"></p>
         </div>
         <nav class="transport" aria-label="Reading controls">
+          <button type="button" data-action="home"><img class="transport-logo" src="/favicon.png" alt="" />MENU</button>
           <button type="button" data-action="back">BACK</button>
           <button type="button" data-action="backlog">LOG</button>
           <button type="button" data-action="settings" aria-expanded="false">SETTINGS</button>
@@ -62,6 +75,18 @@ root.innerHTML = `
           <button type="button" data-action="next">NEXT</button>
         </nav>
       </footer>
+      <section class="home-layer" aria-label="Experience menu" hidden>
+        <header class="home-header">
+          <img class="home-logo" src="/vnmmo-logo.png" alt="VNMMO" />
+          <div>
+            <span class="eyebrow">VNMMO</span>
+            <h1>Choose an Experience</h1>
+          <p>Reader-paced visual novels compiled from authorized world state. Progress is kept on this device.</p>
+          </div>
+        </header>
+        <div class="home-grid"></div>
+        <p class="home-hint">ENTER · read &nbsp; ESC · menu &nbsp; ↑ · back &nbsp; TAB · log</p>
+      </section>
     </div>
     <p class="source-note"></p>
   </section>`;
@@ -77,6 +102,10 @@ const atmosphereFront = root.querySelector<HTMLElement>('.atmosphere-front')!;
 const artifactWrap = root.querySelector<HTMLElement>('.artifact-wrap')!;
 const artifact = root.querySelector<HTMLImageElement>('.artifact')!;
 const choiceLayer = root.querySelector<HTMLElement>('.choice-layer')!;
+const endingLayer = root.querySelector<HTMLElement>('.ending-layer')!;
+const endingTitle = root.querySelector<HTMLElement>('.ending-title')!;
+const homeLayer = root.querySelector<HTMLElement>('.home-layer')!;
+const homeGrid = root.querySelector<HTMLElement>('.home-grid')!;
 const backlogLayer = root.querySelector<HTMLElement>('.backlog-layer')!;
 const settingsLayer = root.querySelector<HTMLElement>('.settings-layer')!;
 const line = root.querySelector<HTMLElement>('.line')!;
@@ -94,9 +123,11 @@ const soundSettingValue = root.querySelector<HTMLElement>('.sound-setting-value'
 const voiceSettingValue = root.querySelector<HTMLElement>('.voice-setting-value')!;
 const voiceSettingNote = root.querySelector<HTMLElement>('.voice-setting-note')!;
 
+let catalog: Catalog;
 let experience: CompiledExperience;
 let state: ReaderState;
 let audio: AudioDirector;
+const progressStore = new ProgressStore();
 
 function byId<T extends { id: string }>(items: T[], id: string): T {
   const item = items.find((candidate) => candidate.id === id);
@@ -239,6 +270,62 @@ function renderChoice(moment: Moment): void {
   choiceLayer.hidden = false;
 }
 
+function renderEnding(moment: Moment): void {
+  endingLayer.hidden = moment.next.type !== 'end';
+  endingTitle.textContent = experience.title;
+}
+
+function renderHome(progress: Map<string, ProgressRecord>): void {
+  homeGrid.replaceChildren();
+  for (const entry of catalog.experiences) {
+    const saved = progress.get(entry.id);
+    const card = document.createElement('article');
+    card.className = 'home-card';
+    card.dataset.storyId = entry.id;
+    const cover = document.createElement('img');
+    cover.className = 'home-cover';
+    cover.src = entry.coverUrl;
+    cover.alt = '';
+    const body = document.createElement('div');
+    body.className = 'home-card-body';
+    const title = document.createElement('h2');
+    title.textContent = entry.title;
+    const subtitle = document.createElement('p');
+    subtitle.textContent = entry.subtitle;
+    const meta = document.createElement('span');
+    meta.className = 'home-meta';
+    meta.textContent = `${entry.chapters} ${entry.chapters === 1 ? 'chapter' : 'chapters'} · ${entry.moments} moments${saved ? ' · in progress' : ''}`;
+    const actions = document.createElement('div');
+    actions.className = 'home-actions';
+    const open = document.createElement('button');
+    open.type = 'button';
+    open.className = 'home-open';
+    open.dataset.openStory = entry.id;
+    open.dataset.resume = saved ? 'true' : 'false';
+    open.textContent = saved ? 'RESUME' : 'READ';
+    actions.append(open);
+    if (saved) {
+      const restart = document.createElement('button');
+      restart.type = 'button';
+      restart.className = 'home-restart';
+      restart.dataset.openStory = entry.id;
+      restart.dataset.resume = 'false';
+      restart.textContent = 'START OVER';
+      actions.append(restart);
+    }
+    body.append(title, subtitle, meta, actions);
+    card.append(cover, body);
+    homeGrid.append(card);
+  }
+  homeLayer.hidden = false;
+  shell.dataset.view = 'home';
+  const url = new URL(window.location.href);
+  url.searchParams.delete('story');
+  url.searchParams.delete('moment');
+  window.history.replaceState(null, '', url);
+  homeGrid.querySelector<HTMLButtonElement>('.home-open')?.focus();
+}
+
 function renderBacklog(): void {
   backlogLayer.replaceChildren();
   if (!state.isBacklogOpen) {
@@ -282,6 +369,9 @@ function render(): void {
   url.searchParams.set('story', experience.id);
   url.searchParams.set('moment', moment.id);
   window.history.replaceState(null, '', url);
+  void progressStore.put({ experienceId: experience.id, state });
+  shell.dataset.view = 'reading';
+  homeLayer.hidden = true;
   shell.dataset.tone = tableau.tone;
   shell.dataset.mode = moment.mode;
   shell.dataset.viewpoint = moment.viewpoint.kind;
@@ -303,6 +393,7 @@ function render(): void {
   renderAtmosphere(tableau);
   renderArtifact(tableau, assets);
   renderChoice(moment);
+  renderEnding(moment);
   renderBacklog();
   renderSettings();
   audio.setPhysicalSoundEnabled(!state.isMuted);
@@ -311,6 +402,7 @@ function render(): void {
 }
 
 function dispatch(action: ReaderAction): void {
+  if (shell.dataset.view === 'home') return;
   const before = currentMoment(experience, state);
   const nextState = reduceReader(experience, state, action);
   const didMove = nextState.currentNodeId !== state.currentNodeId;
@@ -325,11 +417,38 @@ function dispatch(action: ReaderAction): void {
   if (action.type === 'toggle-voice' && state.isVoiceEnabled) audio.playVoice(before.voiceAssetId);
 }
 
+async function openExperience(entry: CatalogEntry, entryPoint: { momentId?: string; resume: boolean }): Promise<void> {
+  const [response, saved] = await Promise.all([fetch(entry.url), entryPoint.resume ? progressStore.get(entry.id) : progressStore.clear(entry.id).then(() => null)]);
+  if (!response.ok) throw new Error('Prepared experience is missing. Run npm run build:experience.');
+  experience = await response.json() as CompiledExperience;
+  state = entryPoint.momentId ? initialReaderStateFromLink(experience, entryPoint.momentId) : resumeReaderState(experience, saved?.state);
+  audio = new AudioDirector(new Map(experience.assets.map((asset) => [asset.id, asset])));
+  sourceNote.textContent = `${experience.title} · ${experience.source.note}`;
+  render();
+  stage.focus();
+}
+
+async function goHome(): Promise<void> {
+  audio?.setPhysicalSoundEnabled(false);
+  audio?.setVoiceEnabled(false);
+  renderHome(await progressStore.all());
+}
+
 root.addEventListener('click', (event) => {
   const target = event.target as HTMLElement;
+  const opener = target.closest<HTMLButtonElement>('[data-open-story]');
+  if (opener?.dataset.openStory) {
+    const entry = catalog.experiences.find((candidate) => candidate.id === opener.dataset.openStory);
+    if (!entry) return;
+    void openExperience(entry, { resume: opener.dataset.resume === 'true' });
+    return;
+  }
+  if (shell.dataset.view === 'home') return;
   const option = target.closest<HTMLButtonElement>('[data-option-id]');
   if (option?.dataset.optionId) return dispatch({ type: 'choose', optionId: option.dataset.optionId });
   const action = target.closest<HTMLButtonElement>('[data-action]')?.dataset.action;
+  if (action === 'home') return void goHome();
+  if (action === 'restart') return dispatch({ type: 'restart' });
   if (action === 'back') return dispatch({ type: 'back' });
   if (action === 'backlog') return dispatch({ type: 'toggle-backlog' });
   if (action === 'settings') return dispatch({ type: 'toggle-settings' });
@@ -341,6 +460,8 @@ root.addEventListener('click', (event) => {
 });
 
 window.addEventListener('keydown', (event) => {
+  if (shell.dataset.view === 'home') return;
+  if (event.key === 'Escape') return void goHome();
   if (event.key === 'ArrowUp') dispatch({ type: 'back' });
   if (event.key === 'Tab') {
     event.preventDefault();
@@ -355,22 +476,17 @@ window.addEventListener('keydown', (event) => {
 async function start(): Promise<void> {
   const catalogResponse = await fetch('/generated/catalog.json');
   if (!catalogResponse.ok) throw new Error('Prepared catalog is missing. Run npm run build:experience.');
-  const catalog = await catalogResponse.json() as {
-    defaultExperienceId: string;
-    experiences: { id: string; url: string }[];
-  };
-  const requestedId = new URLSearchParams(window.location.search).get('story') ?? catalog.defaultExperienceId;
-  const selected = catalog.experiences.find((candidate) => candidate.id === requestedId) ?? catalog.experiences[0];
-  if (!selected) throw new Error('Prepared catalog has no experiences.');
-  const response = await fetch(selected.url);
-  if (!response.ok) throw new Error('Prepared experience is missing. Run npm run build:experience.');
-  experience = await response.json() as CompiledExperience;
-  const requestedMomentId = new URLSearchParams(window.location.search).get('moment') ?? undefined;
-  state = initialReaderStateFromLink(experience, requestedMomentId);
-  audio = new AudioDirector(new Map(experience.assets.map((asset) => [asset.id, asset])));
-  sourceNote.textContent = `${experience.title} · ${experience.source.note}`;
-  render();
-  stage.focus();
+  catalog = await catalogResponse.json() as Catalog;
+  if (catalog.experiences.length === 0) throw new Error('Prepared catalog has no experiences.');
+  const params = new URLSearchParams(window.location.search);
+  const requestedId = params.get('story');
+  const selected = requestedId ? catalog.experiences.find((candidate) => candidate.id === requestedId) : undefined;
+  if (!selected) {
+    renderHome(await progressStore.all());
+    return;
+  }
+  const momentId = params.get('moment');
+  await openExperience(selected, momentId ? { momentId, resume: true } : { resume: true });
 }
 
 void start();

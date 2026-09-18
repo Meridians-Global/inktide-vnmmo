@@ -136,6 +136,16 @@ export function initialReaderStateFromLink(experience: CompiledExperience, reque
   }
 }
 
+/**
+ * Resume a persisted reader state. Only the moment coordinate is trusted; the legal path, route and insights
+ * are rebuilt by the strict initializer so a stale save from an older compile can never grant unearned knowledge.
+ */
+export function resumeReaderState(experience: CompiledExperience, saved: Pick<ReaderState, 'currentNodeId' | 'isMuted' | 'isVoiceEnabled'> | null | undefined): ReaderState {
+  const state = initialReaderStateFromLink(experience, saved?.currentNodeId);
+  if (!saved) return state;
+  return { ...state, isMuted: saved.isMuted, isVoiceEnabled: saved.isVoiceEnabled };
+}
+
 export function currentMoment(experience: CompiledExperience, state: ReaderState): Moment {
   const moment = experience.moments.find((candidate) => candidate.id === state.currentNodeId);
   if (!moment) throw new Error(`Compiled experience lost moment ${state.currentNodeId}`);

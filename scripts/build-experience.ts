@@ -16,7 +16,7 @@ const outputRoot = join(projectRoot, 'public', 'generated');
 await rm(outputRoot, { recursive: true, force: true });
 await mkdir(outputRoot, { recursive: true });
 
-const catalog: { id: string; title: string; subtitle: string; url: string }[] = [];
+const catalog: { id: string; title: string; subtitle: string; url: string; coverUrl: string; chapters: number; moments: number }[] = [];
 const portfolioInputs: ProductionPortfolioInput[] = [];
 for (const input of experiences) {
   const experienceRoot = join(outputRoot, input.id);
@@ -75,7 +75,17 @@ for (const input of experiences) {
     productionAuditSha256,
     receiptSha256: createHash('sha256').update(receiptJson).digest('hex'),
   });
-  catalog.push({ id: input.id, title: input.title, subtitle: input.subtitle, url: `/generated/${input.id}/experience.json` });
+  const opening = compiled.experience.moments.find((moment) => moment.id === compiled.experience.startNodeId) ?? compiled.experience.moments[0]!;
+  const openingTableau = compiled.experience.tableaux.find((tableau) => tableau.id === opening.tableauId)!;
+  catalog.push({
+    id: input.id,
+    title: input.title,
+    subtitle: input.subtitle,
+    url: `/generated/${input.id}/experience.json`,
+    coverUrl: compiled.experience.assets.find((asset) => asset.id === openingTableau.backgroundAssetId)!.url,
+    chapters: new Set(compiled.experience.moments.map((moment) => moment.chapter)).size,
+    moments: compiled.experience.moments.length,
+  });
   console.log(`Prepared ${compiled.experience.id} · ${copiedAssets.length} verified assets · ${experienceDigest} · audit ${productionAuditSha256}`);
 }
 
