@@ -85,15 +85,9 @@ const manifest: AcquisitionManifest = {
     figure('mcgonagall-grief-v1', mcgonagall, 'Facing screen-right at the same standing height and grounded feet. Her composure cracks: arms unfolded, one hand pressed to her mouth, eyes wet behind the square spectacles, shoulders drawn in. Quiet grief, no theatrical pose.', ['mcgonagall-stern-v1']),
     figure('hagrid-bundle-v1', hagrid, 'Facing screen-left in three-quarter profile, cradling a small bundle of blankets protectively in both enormous arms, head bowed toward it, tender and careful. The bundle is closed; no baby face visible.'),
     figure('hagrid-weeping-v1', hagrid, 'Same crisp 2D ink-and-cel rendering as the reference, identical dark trousers and heavy brown leather boots, never barefoot. Facing screen-left at the same standing height and grounded feet, arms now empty, one huge hand covering his eyes while the other clutches a large spotted handkerchief, shoulders shaking, weeping openly. Enormous and heartbroken.', ['hagrid-bundle-v1']),
-    {
-      id: 'doorstep-cg-v1',
-      kind: 'cg',
-      aspectRatio: '16:9',
-      references: ['dumbledore-arrival-v1', 'mcgonagall-stern-v1', 'hagrid-bundle-v1'],
-      prompt: `Modern premium visual-novel event CG, full 16:9 frame, smooth high-resolution anime illustration with crisp tapered linework, nuanced facial acting, cinematic moonlight-and-shadow lighting and no coarse pixels. Preserve the three referenced identities: ${dumbledore}; ${mcgonagall}; ${hagrid}. They stand close together on the dark doorstep of an ordinary English brick suburban house at night, looking down at a small bundle of blankets laid on the step with a sealed parchment letter tucked into it. Inside the blankets a baby boy with a tuft of jet-black hair sleeps, and on his forehead a fine curiously shaped cut like a bolt of lightning is just visible. Medium ensemble composition, faces and the bundle readable at phone scale, quiet negative space in the lower quarter for a dialogue rail. This is one pivotal authored image, not a sprite sheet or interface. ${exclusions}`,
-    },
   ],
 };
+// The doorstep CG is composed in scripts/acquire-cg-compositions.ts from these pinned sprites.
 
 const assets = await acquire(projectRoot, token, manifest);
 console.log(assetLines(assets, {
@@ -103,5 +97,4 @@ console.log(assetLines(assets, {
   'tabby-cat-map-v1': 'artifact',
   'put-outer-v1': 'artifact',
   'sealed-letter-v1': 'artifact',
-  'doorstep-cg-v1': 'cg',
 }));

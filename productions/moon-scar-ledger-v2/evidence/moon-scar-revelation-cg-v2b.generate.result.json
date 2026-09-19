@@ -1,0 +1,39 @@
+{
+  "id": "mbexs4k135rmy0d0pzf9fjwg5m",
+  "model": "bytedance/seedream-4.5",
+  "version": "hidden",
+  "input": {
+    "aspect_ratio": "16:9",
+    "image_input": [
+      "data:image/jpeg;base64,...",
+      "data:image/jpeg;base64,...",
+      "data:image/jpeg;base64,..."
+    ],
+    "max_images": 1,
+    "prompt": "Modern premium visual-novel event CG, full 16:9 frame, smooth high-resolution anime illustration with crisp tapered linework, nuanced facial acting, painterly cinematic lighting and no coarse pixels. This is one pivotal authored image, not a sprite sheet or interface. Preserve the two referenced identities: Fang Yuan is the long-haired young man in layered charcoal robes, controlled and analytical; Gu Yue Chun is the young woman with the compact braided bun and muted olive-grey robes, natural dark-brown eyes, contained alarm. A concealed worn-stone cellar. A palm-sized dark-stone Moon-Scar reliquary on an examination table has just opened one thin violet crescent seam. Xianxia register, cool charcoal-violet and weathered blue-grey palette. No text, letters, numbers, captions, logos, border, interface, placement guides, anonymous silhouettes, duplicate objects, extra limbs, malformed hands, chibi anatomy, glossy 3D, photorealism, vector-flat rendering, coarse pixels, real actor likeness. Composition: full shot, figures head to toe, camera high, looking down, three-quarter angle. Placement: the reliquary on the table, violet seam open on the right third in the foreground, facing the camera; Fang Yuan leaning over the table on the centre third in the midground, turned into the depth of the scene, eyes on the seam, one hand hovering above it, not touching; Gu Yue Chun a step back against the wall on the left third in the farground, facing screen-right, watching Fang Yuan, not the reliquary. Depth: foreground the table corner and the reliquary, cut by the frame edge; midground Fang Yuan bent over the table, his shadow thrown up the wall; background cellar stair with a sliver of lantern light from above. Light: the violet seam from low and near, with a faint warm lantern glow from the stair behind her, watchful and cold. Leading line: Fang Yuan's long shadow across the wall toward Gu Yue Chun. Keep the lower quarter of the frame quiet with nothing readable placed there. Asymmetric framing on the rule of thirds; no centred symmetric lineup, no flat wall behind the figures, no eye-level group shot.",
+    "sequential_image_generation": "disabled",
+    "size": "2K"
+  },
+  "logs": "Generating 2560x1440 image with aspect ratio 16:9 at 2K resolution\nGenerating...\nGenerated in 46.6sec\n",
+  "output": [
+    "https://replicate.delivery/xezq/hBjJsF1NG1K0AZsb9zAf0qrkzsv2HzNegXsGka3zzKxO47OXA/tmprjkbco9h.jpg"
+  ],
+  "data_removed": false,
+  "error": null,
+  "source": "api",
+  "status": "succeeded",
+  "created_at": "2026-09-19T04:13:19.513Z",
+  "started_at": "2026-09-19T04:13:19.536718369Z",
+  "completed_at": "2026-09-19T04:14:06.602892307Z",
+  "urls": {
+    "cancel": "https://api.replicate.com/v1/predictions/mbexs4k135rmy0d0pzf9fjwg5m/cancel",
+    "get": "https://api.replicate.com/v1/predictions/mbexs4k135rmy0d0pzf9fjwg5m",
+    "stream": "https://stream.replicate.com/v1/files/jbxs-ecnjlf36mop5syhme3635zrd2tcn4uuxtiwef7rh2oqdrqpvifha",
+    "web": "https://replicate.com/p/mbexs4k135rmy0d0pzf9fjwg5m"
+  },
+  "metrics": {
+    "image_output_count": 1,
+    "predict_time": 47.066173948,
+    "total_time": 47.089892307
+  }
+}

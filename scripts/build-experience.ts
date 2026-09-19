@@ -7,6 +7,7 @@ import { auditExperience, summarizeProductionPortfolio, type ProductionPortfolio
 import { experiences } from '../src/story';
 import { productionTargetFor } from '../src/story/production-targets';
 import { loadLocalEnvironment } from './config';
+import { loadProductionEvidence } from './lib/production-evidence';
 
 const projectRoot = resolve(import.meta.dirname, '..');
 await loadLocalEnvironment(projectRoot);
@@ -54,7 +55,7 @@ for (const input of experiences) {
   const experienceJson = `${JSON.stringify(compiled.experience, null, 2)}\n`;
   const experienceDigest = createHash('sha256').update(experienceJson).digest('hex');
   const target = productionTargetFor(input.id);
-  const productionAudit = auditExperience(input, target);
+  const productionAudit = auditExperience(input, target, await loadProductionEvidence(projectRoot, input.id));
   const productionAuditJson = `${JSON.stringify(productionAudit, null, 2)}\n`;
   const productionAuditSha256 = createHash('sha256').update(productionAuditJson).digest('hex');
   await writeFile(join(experienceRoot, 'experience.json'), experienceJson);

@@ -224,3 +224,12 @@ The exact 1280×720 threshold frame and deep Back check are retained. Strongest 
 tonight, and Peter repeats the limit without bargaining. Most visible remaining failure: Spider and MJ still differ
 slightly in contour/rendering treatment. Next repair: improve that shared cast style only at a demanded pivotal close
 coordinate; do not add more length to a route that already clears its target.
+
+## CG composition pass
+
+Three composed candidates (`evidence/cg-composition.receipt.json`) replaced `spider-unmask-revelation-cg-v3`.
+The first pass described MJ from memory ("red-haired") and the model obeyed the text over the reference,
+so the subject prompt now restates the pinned identity and forbids a second figure or a window reflection.
+Selected `spider-unmask-revelation-cg-v4a`: MJ's shoulder on the near left third, the mask offered along the
+depth axis, Peter rimmed by the window on the right. Rejected `v4b` (MJ's back to camera, chest tear) and
+`v4c` (frontal close-up, no depth between them).

@@ -15,9 +15,15 @@ export type ProductionDemand = Readonly<{
   id: string;
   lane: 'story' | 'performance' | 'set';
   priority: 'high' | 'medium';
-  reason: 'missing-choice-purpose' | 'minimum-location-count' | 'minimum-reading-duration' | 'missing-choice-payoff' | 'static-pivotal-performance';
+  reason: 'missing-choice-purpose' | 'minimum-location-count' | 'minimum-reading-duration' | 'missing-choice-payoff' | 'static-pivotal-performance' | 'uncomposed-cg';
   momentIds: readonly string[];
   actorIds: readonly string[];
+}>;
+
+/** Evidence gathered outside the Experience; the caller reads receipts, the audit only compares. */
+export type ProductionEvidence = Readonly<{
+  /** SHA-256 of every CG generated from a typed composition brief. */
+  composedCgSha256s: readonly string[];
 }>;
 
 export type ChoiceAudit = Readonly<{
@@ -216,7 +222,11 @@ function choicePayoffs(experience: Experience, choice: Moment): string[] {
   });
 }
 
-export function auditExperience(experience: Experience, target: ProductionTarget): ProductionAudit {
+export function auditExperience(
+  experience: Experience,
+  target: ProductionTarget,
+  evidence: ProductionEvidence = { composedCgSha256s: [] },
+): ProductionAudit {
   const moments = new Map(experience.moments.map((moment) => [moment.id, moment]));
   const reading = readingInventory(experience, target, moments);
   const choices = experience.moments.flatMap((moment): ChoiceAudit[] => {
@@ -295,6 +305,20 @@ export function auditExperience(experience: Experience, target: ProductionTarget
       reason: 'missing-choice-payoff',
       momentIds: [choice.momentId],
       actorIds: choice.privateHolderIds,
+    });
+  }
+
+  const composed = new Set(evidence.composedCgSha256s);
+  for (const asset of experience.assets) {
+    if (asset.kind !== 'cg' || composed.has(asset.sha256)) continue;
+    const cutInIds = experience.tableaux.filter((tableau) => tableau.cutIn?.assetId === asset.id).map((tableau) => tableau.id);
+    demands.push({
+      id: `set:cg-composition:${asset.id}`,
+      lane: 'set',
+      priority: 'medium',
+      reason: 'uncomposed-cg',
+      momentIds: experience.moments.filter((moment) => cutInIds.includes(moment.tableauId)).map((moment) => moment.id),
+      actorIds: [],
     });
   }
 

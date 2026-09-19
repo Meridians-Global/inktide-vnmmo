@@ -9,6 +9,7 @@
     "acquire:moon-scar": "tsx scripts/acquire-moon-scar-assets.ts",
     "acquire:spider": "tsx scripts/acquire-spider-assets.ts",
     "acquire:boy-who-lived": "tsx scripts/acquire-boy-who-lived-assets.ts",
+    "acquire:cg": "tsx scripts/acquire-cg-compositions.ts",
     "audio:boy-who-lived": "tsx scripts/generate-privet-audio.ts",
     "voices": "tsx scripts/generate-voices.ts",
     "score": "tsx scripts/generate-score.ts",

@@ -160,6 +160,33 @@ The kit owns:
   `assets`).
 
 Order requests so every reference is acquired before the request that cites it; the kit throws otherwise.
+
+#### CG composition brief (required for `kind: 'cg'`)
+
+A CG is a shot, not a lineup. Every `cg` request carries a typed `composition: CgComposition`
+(`src/core/cg-composition.ts`); the kit refuses a CG without one and compiles the brief after the subject `prompt`,
+so the prompt describes *who and what* and the brief describes *how it is framed*. The rubric the brief encodes:
+
+| Choice | Field | Rule of thumb |
+| --- | --- | --- |
+| Shot scale | `scale` | `wide`/`full` for place and arrival, `medium`/`medium-close` for relationships, `close` only for a reveal in the hands. |
+| Camera | `camera.height`, `camera.angle` | Pick a height that means something: `low` for awe or threat, `high` for vulnerability; `over-shoulder`/`from-behind` puts the reader in a body. Avoid `eye` + `frontal` unless the flatness is the point. |
+| Placement | `placements[].third` | Subjects sit on the **thirds**, staggered — never all on the same third. |
+| Depth | `placements[].plane`, `planes` | Something in the **foreground** (may be cut by the frame edge), the action in the **midground**, a **background** that recedes. Never everyone on one plane against a wall. |
+| Vectors | `placements[].facing`, `vector` | At least one subject turned into the scene; name where each gaze or hand points so the eye is led, not parked. |
+| Leading line | `leadingLine` | A road, railing, shadow, corridor or gesture that runs to the subject. |
+| Light | `light` | One motivated key (moon, window, lantern) with a source direction and the mood it sets. |
+| Negative space | `negativeSpace` | Reserve where the dialogue rail falls (`lower-quarter` by default) and keep subjects out of a reserved `left-third`/`right-third`. |
+
+`validateComposition` rejects an empty cast, all-same-third, all-same-plane, all-facing-camera and a subject in
+reserved space. The compiled brief is stored on the receipt (`assets[id].composition`) and its prompt participates
+in resume-or-regenerate, so changing a brief regenerates the CG. Generate two or three candidates with distinct
+briefs (`npm run acquire:cg -- <production-id>`, receipt `cg-composition.receipt.json`) and choose one by eye in the
+16:9 reader; record the pick and the rejected takes in `PRODUCTION_REVIEW.md`. The production audit reads that
+receipt and raises `set:cg-composition:<asset-id>` (`uncomposed-cg`) for any `cg` asset whose digest was not
+generated from a brief. Write the subject prompt from the pinned sprite, not from memory — the model follows the
+text over the reference when they disagree.
+
 Ambience and cues that do not need a provider can be synthesised deterministically (`scripts/generate-privet-audio.ts`,
 seeded PRNG, 48 kHz WAV) and pinned like any other asset.
 

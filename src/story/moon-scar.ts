@@ -36,7 +36,7 @@ const authored: Experience = {
     { id: 'chun-held-warning', kind: 'figure', sourcePath: `${generated}/gu-yue-chun-held-warning-v1.png`, sha256: '68ff37476636752dc3f935e440a9282f8f889cb8059eaadcd11f73e9955fb8e7', preparation: { ...normalize, matteCleanup: { spill: 'magenta', alphaFloor: 8, edgeAlphaCeiling: 249, channelMargin: 14 } } },
     { id: 'sealed-substrate', kind: 'artifact', sourcePath: `${generated}/sealed-substrate-v3.png`, sha256: '68e970759a94505f3965a0a60650bd531adfb299f81f77a60f15d19a44081b70' },
     { id: 'moon-scar-gu', kind: 'artifact', sourcePath: `${generated}/moon-scar-gu-v3.png`, sha256: 'ef5e118a551c86fb01cbd09cd346c2013d1842e44818d27daccaaaf051b86640' },
-    { id: 'moon-scar-cg', kind: 'cg', sourcePath: `${generated}/moon-scar-revelation-cg-v1.jpg`, sha256: 'a9b98de23c59b5e2f3fac20b33adc4a202e45bb3adb3ca7e1f15d3a3041ecd1a' },
+    { id: 'moon-scar-cg', kind: 'cg', sourcePath: `${generated}/moon-scar-revelation-cg-v2a.jpg`, sha256: 'f47f849f3d707a7874f250b2050a63bcd1b9dd52d49293058fc2a0e109bb8a96' },
     { id: 'winter-wind', kind: 'ambience', sourcePath: `${base}/audio/ambience/winter-wind.wav`, sha256: 'f8a696b14987176d9b840e147011818d63f3cc4c54592403f640d94b0b69eecc' },
     { id: 'interior-room', kind: 'ambience', sourcePath: `${base}/audio/ambience/interior-room.wav`, sha256: 'b97136cf6eba23c088dd07b3e8a57a316ea8208778f31648e778a1607dd85044' },
     { id: 'tension-drone', kind: 'music', sourcePath: `${base}/audio/music/subterranean-tension-drone-v1.wav`, sha256: 'dd57f7c71b7c01362afad3255390d0ddee3e9ab8a4ffe9a992c514223b410c0c' },

@@ -44,7 +44,7 @@ const authored: Experience = {
     { id: 'mcgonagall-grief', kind: 'figure', sourcePath: `${generated}/mcgonagall-grief-v1.png`, sha256: '0acc0c59557edbd9ea88fc1b56b13568ec50c736e75f7ee37f9a7719ab80e4bd', preparation: magenta },
     { id: 'hagrid-bundle', kind: 'figure', sourcePath: `${generated}/hagrid-bundle-v1.png`, sha256: '1702b790ff090d44109bbb5b4587f19c4307716aeb985ce79dee8decb140a392', preparation: magenta },
     { id: 'hagrid-weeping', kind: 'figure', sourcePath: `${generated}/hagrid-weeping-v1.png`, sha256: '60605abc48e2d521b32abf3e6174d7ce23124db3597949985bd3812426e6c60a', preparation: magenta },
-    { id: 'doorstep-cg', kind: 'cg', sourcePath: `${generated}/doorstep-cg-v1.jpg`, sha256: '078c908767ae4765a9c6f571c1d88b264aaa98cbb738391e57792bd3a49bfe3a' },
+    { id: 'doorstep-cg', kind: 'cg', sourcePath: `${generated}/doorstep-cg-v2c.jpg`, sha256: '56061f8d48f756d954a40dc698f6c89b837586075f41bd72f1f4863ab387f822' },
     { id: 'suburban-night', kind: 'ambience', sourcePath: `${generated}/suburban-night-v1.wav`, sha256: '6622538b6ccc1f787dbb782597e94a8ac2451484b466415bc6aa928eb2decf3b' },
     { id: 'put-outer-click', kind: 'cue', sourcePath: `${generated}/put-outer-click-v1.wav`, sha256: '4da2a4ed6c6c95306c37513fa66a6dfb40ac2c1ab398451a51a7b83f23ad4e77' },
     { id: 'motorcycle-descent', kind: 'cue', sourcePath: `${generated}/motorcycle-descent-v1.wav`, sha256: '1b412a7101fadeb9084221ecd62689d7a17e372465603a93d84a15b32a1db00f' },

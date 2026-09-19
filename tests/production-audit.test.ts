@@ -15,6 +15,10 @@ const staticFangDecision: Experience = {
   }),
 };
 
+function composedEvidence(experience: Experience) {
+  return { composedCgSha256s: experience.assets.filter((asset) => asset.kind === 'cg').map((asset) => asset.sha256) };
+}
+
 describe('production audit', () => {
   it('derives exact choice convergence and payoff coordinates', () => {
     const audit = auditExperience(spiderMemoryExperience, productionTargetFor(spiderMemoryExperience.id));
@@ -29,14 +33,25 @@ describe('production audit', () => {
   });
 
   it('turns declared production targets and static pivotal acting into typed demands', () => {
-    const spider = auditExperience(spiderMemoryExperience, productionTargetFor(spiderMemoryExperience.id));
-    const moon = auditExperience(moonScarExperience, productionTargetFor(moonScarExperience.id));
+    const spider = auditExperience(spiderMemoryExperience, productionTargetFor(spiderMemoryExperience.id), composedEvidence(spiderMemoryExperience));
+    const moon = auditExperience(moonScarExperience, productionTargetFor(moonScarExperience.id), composedEvidence(moonScarExperience));
 
     assert.ok(!spider.demands.some((demand) => demand.lane === 'story' || demand.lane === 'set'));
     assert.ok(!moon.demands.some((demand) => demand.lane === 'story' || demand.lane === 'set'));
     assert.ok(!moon.demands.some((demand) => demand.lane === 'performance'));
     const staticMoon = auditExperience(staticFangDecision, productionTargetFor(moonScarExperience.id));
     assert.ok(staticMoon.demands.some((demand) => demand.id === 'performance:question-choice:fang-yuan'));
+  });
+
+  it('demands a composition brief for every CG the evidence cannot vouch for', () => {
+    const unvouched = auditExperience(spiderMemoryExperience, productionTargetFor(spiderMemoryExperience.id));
+    const demand = unvouched.demands.find((candidate) => candidate.id === 'set:cg-composition:spider-unmask-cg');
+    assert.equal(demand?.reason, 'uncomposed-cg');
+    assert.equal(demand?.lane, 'set');
+    assert.ok(demand && demand.momentIds.length > 0, 'names the moments that show the cut-in');
+
+    const vouched = auditExperience(spiderMemoryExperience, productionTargetFor(spiderMemoryExperience.id), composedEvidence(spiderMemoryExperience));
+    assert.ok(!vouched.demands.some((candidate) => candidate.reason === 'uncomposed-cg'));
   });
 
   it('measures the shortest valid route instead of summing mutually exclusive branches', () => {
@@ -65,7 +80,7 @@ describe('production audit', () => {
     const moonTarget = productionTargetFor(moonScarExperience.id);
     const report = summarizeProductionPortfolio([
       {
-        audit: auditExperience(spiderMemoryExperience, spiderTarget),
+        audit: auditExperience(spiderMemoryExperience, spiderTarget, composedEvidence(spiderMemoryExperience)),
         target: spiderTarget,
         experienceSha256: 'spider-experience',
         productionAuditSha256: 'spider-audit',
