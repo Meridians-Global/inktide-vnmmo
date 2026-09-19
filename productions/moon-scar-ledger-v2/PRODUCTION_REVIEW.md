@@ -226,3 +226,11 @@ Strongest moment: Fang accepts split custody without surrendering command, turni
 procedure. Most visible remaining failure: `question-choice` still uses neutral Fang for a pivotal internal decision.
 That exact acting coordinate remains the only high-priority audit demand and should be repaired before expanding the
 story again.
+
+## CG composition pass
+
+Three composed candidates (`evidence/cg-composition.receipt.json`) replaced `moon-scar-revelation-cg-v1`.
+Selected `moon-scar-revelation-cg-v2a`: over Fang Yuan's shoulder, the reliquary lit by its own violet seam in
+the midground, Gu Yue Chun isolated on the far right third with the cellar stair for depth. Rejected `v2b`
+(best environment, but Gu Yue Chun too small for the reaction beat) and `v2c` (Chun's profile dominates the
+reliquary).

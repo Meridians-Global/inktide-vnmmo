@@ -1,0 +1,39 @@
+{
+  "id": "y9a41qxm9srmt0d0pzeb979n34",
+  "model": "bytedance/seedream-4.5",
+  "version": "hidden",
+  "input": {
+    "aspect_ratio": "16:9",
+    "image_input": [
+      "data:image/jpeg;base64,...",
+      "data:image/jpeg;base64,...",
+      "data:image/jpeg;base64,..."
+    ],
+    "max_images": 1,
+    "prompt": "Modern premium visual-novel event CG, full 16:9 frame, smooth high-resolution anime illustration with crisp tapered linework, nuanced facial acting, painterly cinematic lighting and no coarse pixels. This is one pivotal authored image, not a sprite sheet or interface. Preserve the three referenced identities: a very tall, thin, very old wizard with long silver hair and beard tucked into his belt, half-moon spectacles on a long crooked nose, long sweeping purple robes and cloak; a severe older witch with black hair in a tight bun, square spectacles, an emerald-green cloak over a dark high-collared dress; a giant of a man, twice as tall as an ordinary man, long shaggy tangled black hair and a wild beard, a huge moleskin overcoat, enormous hands. Night on the dark doorstep of an ordinary English brick suburban house. A small bundle of blankets lies on the step with a sealed parchment letter tucked into it; inside sleeps a baby boy with a tuft of jet-black hair and a fine lightning-shaped cut on his forehead. Storybook-gothic British register, palette of sodium-lamp amber, indigo night and suburban brick. No text, letters, numbers, captions, logos, border, interface, placement guides, anonymous silhouettes, duplicate objects, extra limbs, malformed hands, chibi anatomy, glossy 3D, photorealism, vector-flat rendering, coarse pixels, real actor likeness. Composition: medium shot, figures from the waist, camera low, looking slightly up, over the shoulder of the nearest figure. Placement: Hagrid's enormous shoulder and beard, out of focus on the left third in the foreground, back to the camera; Dumbledore, bending to lay the bundle down on the centre third in the midground, turned into the depth of the scene, both hands and eyes on the bundle; McGonagall in the lit doorway of the house on the right third in the farground, facing screen-left, arms folded, gaze on Dumbledore. Depth: foreground Hagrid's dark coat, cut by the frame edge; midground Dumbledore and the bundle on the step; background the brick porch and hall window with a faint light behind curtains. Light: warm light from the hall window from behind McGonagall, spilling over the step, intimate and grave. Leading line: Dumbledore's long arms and the edge of the step toward the bundle. Keep the lower quarter of the frame quiet with nothing readable placed there. Asymmetric framing on the rule of thirds; no centred symmetric lineup, no flat wall behind the figures, no eye-level group shot.",
+    "sequential_image_generation": "disabled",
+    "size": "2K"
+  },
+  "logs": "Generating 2560x1440 image with aspect ratio 16:9 at 2K resolution\nGenerating...\nGenerated in 63.9sec\n",
+  "output": [
+    "https://replicate.delivery/xezq/DWsJsB6wMCY4HBkOGcGuInViGnfEicbjNKA1KUs0dtey27OXA/tmphesrmj9t.jpg"
+  ],
+  "data_removed": false,
+  "error": null,
+  "source": "api",
+  "status": "succeeded",
+  "created_at": "2026-09-19T04:11:29.742Z",
+  "started_at": "2026-09-19T04:11:29.762879199Z",
+  "completed_at": "2026-09-19T04:12:34.400944221Z",
+  "urls": {
+    "cancel": "https://api.replicate.com/v1/predictions/y9a41qxm9srmt0d0pzeb979n34/cancel",
+    "get": "https://api.replicate.com/v1/predictions/y9a41qxm9srmt0d0pzeb979n34",
+    "stream": "https://stream.replicate.com/v1/files/jbxs-w46y52npjs66zt3ajitfcuwxi47nhvmup5s4tkph3tzljyqllrtq",
+    "web": "https://replicate.com/p/y9a41qxm9srmt0d0pzeb979n34"
+  },
+  "metrics": {
+    "image_output_count": 1,
+    "predict_time": 64.638065022,
+    "total_time": 64.658944221
+  }
+}

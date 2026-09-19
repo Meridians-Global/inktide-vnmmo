@@ -2,12 +2,12 @@
   "schemaVersion": 1,
   "productionId": "moon-scar-ledger-v2",
   "experienceId": "moon-scar-reading-v1",
-  "experienceSha256": "f9e7f9e11e54e95a2cc9a1b784f069865f5022fe73bc2df5a271e83055380650",
+  "experienceSha256": "59c6b08005f7dffa0a4b4573a202d02238bf62e617dec836b6480795fabf0e89",
   "viewport": {
     "width": 1600,
     "height": 900
   },
-  "capturedAt": "2026-09-18T09:03:19.546Z",
+  "capturedAt": "2026-09-19T04:29:13.360Z",
   "consoleErrors": [],
   "frames": [
     {
@@ -16,7 +16,7 @@
       "tableauId": "cleft-establishing",
       "reading": "base",
       "file": "auto-dailies/cleft-location.png",
-      "sha256": "9b8a6df36f443b75a2187871dc9852745ef82fa37f6d9c50bb219971c5e3fe81",
+      "sha256": "72416934c7ee9b22ef63972400cd26d618d96f851e231e103b77dcfabff22a61",
       "route": [],
       "insightIds": [],
       "availableOptionIds": [],
@@ -55,7 +55,7 @@
       "tableauId": "cleft-chun-active",
       "reading": "base",
       "file": "auto-dailies/chun-speaks.png",
-      "sha256": "edb5d1911eb417ca58c20367cf4d50030233e4f939cbe59c0933c799f23172d0",
+      "sha256": "fe75618c216a9e32ef4f28f97a502bb92d3f7c28a458aff0721902988b21ed43",
       "route": [],
       "insightIds": [],
       "availableOptionIds": [],
@@ -81,7 +81,7 @@
       "tableauId": "cellar-establishing",
       "reading": "base",
       "file": "auto-dailies/cellar-location.png",
-      "sha256": "4861806b74967b71ab3938bcc7c653c9db16e6153dd8c41666a3292d1291e583",
+      "sha256": "899f0918e501c298b1e7bcf93bd2e6631abbc3e998c40603a522ad8892934f11",
       "route": [],
       "insightIds": [],
       "availableOptionIds": [],
@@ -123,7 +123,7 @@
       "tableauId": "substrate-fang-appraisal",
       "reading": "base",
       "file": "auto-dailies/crescent-reading.png",
-      "sha256": "612e0c72c66c111a1882f457483b6ae5d16dd37a73f7f9add0b573f0f17a9746",
+      "sha256": "afee235db603d82b22976cb6f6ab64b3be813ded47eb7a459e69efd36f98e84f",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -206,7 +206,7 @@
       "tableauId": "fang-question",
       "reading": "base",
       "file": "auto-dailies/rank-question.png",
-      "sha256": "8e92e87d1e1202ac68ae067273244f84f6c9b7417dd59ec3f6c210a980ab4ba7",
+      "sha256": "6b2c9b10c8837508aa3283226bac98869922c937f0012952cf2b914a75bbfba6",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -278,7 +278,7 @@
       "tableauId": "cellar-conversation",
       "reading": "base",
       "file": "auto-dailies/loss-chun-private.png",
-      "sha256": "f3117f63ef74a78d5fe3bf140b23adf0ba88fea637230f14806964cafa48fb28",
+      "sha256": "a7a34cb67d3b066ea385a29f0495c8f7d520f39feed0beb164d89528b4f85010",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -302,7 +302,7 @@
       "tableauId": "cellar-disclosure",
       "reading": "variant",
       "file": "auto-dailies/chun-answers--92cdae.png",
-      "sha256": "02203117a4be0f6a2cbf6a1622c44e1d77adf835949a17cc69d475de92952f20",
+      "sha256": "9a75bd21dc7f4f17c2029eec048e6c789113a7dbd6ba53c1d7137121ee0f27c0",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -350,7 +350,7 @@
       "tableauId": "substrate-held-warning",
       "reading": "variant",
       "file": "auto-dailies/inspection-returns--5c1aa6.png",
-      "sha256": "6ee270aa8ff9c170568097cf9b4932e10438c21a516772ca0642dc77d42260a0",
+      "sha256": "7b6d87da3c6c267afe393a771820a02ba9d3de84e836d4000a917fcac6786a3f",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -375,7 +375,7 @@
       "tableauId": "substrate-held-warning",
       "reading": "variant",
       "file": "auto-dailies/inspection-returns--95b4d6.png",
-      "sha256": "23e931c16718e8fae456ac8d94959f425dd0116b6801b307767a2f0e2982cc8e",
+      "sha256": "a7bca556637f3af5defe141621104790a13fbf7dfc070934206be05ad29183d8",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -509,7 +509,7 @@
       "tableauId": "substrate-chun-appraisal",
       "reading": "base",
       "file": "auto-dailies/chun-warning-private.png",
-      "sha256": "0241d700a9a06340cc05cf0294b135200cd156dfb39d7f670bd700b1a907de02",
+      "sha256": "d609e8ea783b756d0c81887a4d126ba9dec82eb8b594486cb77a55f31cb40eae",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -538,7 +538,7 @@
       "tableauId": "substrate-fang-appraisal",
       "reading": "variant",
       "file": "auto-dailies/moon-scar-synthesis--736d76.png",
-      "sha256": "44512b068c4cba32789215781aa2f31d7d4b6ebe782c0a8a87dc3d2856b1a956",
+      "sha256": "14eb1bd78427fa51bdeabe6a418f353f6d249921ea9b5b9a9fa83dd90d1fd61e",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -598,7 +598,7 @@
       "tableauId": "substrate-study",
       "reading": "base",
       "file": "auto-dailies/two-measures.png",
-      "sha256": "7263d6da188f424f89f18d8218d3a96c2d2c5b807c019b831b73061d051d21a7",
+      "sha256": "dc1a96ef15095c9ae07f7e07969e854458acf7066e8a23008524e38feb20cb90",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -628,7 +628,7 @@
       "tableauId": "moon-scar-reveal",
       "reading": "base",
       "file": "auto-dailies/moon-scar.png",
-      "sha256": "56e3a2a76da48bcd437e7fb2810e601d7bf5c3eb70b430cdee02b96c447f6cc9",
+      "sha256": "8d1f3bf99ce72365a6c390279b60dcc98d6e65ddc41c13bf26c4a1e81e86a6a8",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -718,7 +718,7 @@
       "tableauId": "substrate-fang-appraisal",
       "reading": "base",
       "file": "auto-dailies/forecast-seize.png",
-      "sha256": "9486d0ff1c693e66027c298c96ddc721da79cadad1b51c9e09bae8d4165ebcbf",
+      "sha256": "1bd5989a78223b95544f9208c049aae281372548e9d8813c3dd5bd8a311a3390",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -986,7 +986,7 @@
       "tableauId": "substrate-fang-appraisal",
       "reading": "base",
       "file": "auto-dailies/untouched-original-reading.png",
-      "sha256": "85d0d8b57e8c7f9931b03b8f33d0b25f0cd47237fa1ffc0923a3d12fef9bfdbe",
+      "sha256": "7fc666a3d835375cee1d8b295681f2489536102c835ba214845bf4f69125c9e2",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -1023,7 +1023,7 @@
       "tableauId": "substrate-chun-appraisal",
       "reading": "base",
       "file": "auto-dailies/split-custody-reading.png",
-      "sha256": "d725334aac8b265b88234003578c5d769240200b7f66c3451d7066c033bd1758",
+      "sha256": "ba22219df27ae3d276d80f2ad1f16d536751c962691fb83994a741eccc6dec50",
       "route": [
         {
           "nodeId": "evidence-reading-choice",

@@ -21,6 +21,18 @@ describe('production evidence', () => {
     }
   });
 
+  it('pins every composed CG candidate and keeps its composition brief', async () => {
+    for (const productionId of ['moon-scar-ledger-v2', 'spider-man-memory-between-us-v1', 'privet-drive-boy-who-lived-v1']) {
+      const receipt = JSON.parse(await readFile(resolve(projectRoot, 'productions', productionId, 'evidence', 'cg-composition.receipt.json'), 'utf8')) as {
+        assets: Record<string, { sourcePath: string; sha256: string; composition?: { placements: unknown[] } }>;
+      };
+      for (const [assetId, asset] of Object.entries(receipt.assets)) {
+        assert.equal(await digest(resolve(projectRoot, asset.sourcePath)), asset.sha256, `${productionId}:${assetId}`);
+        assert.ok(asset.composition && asset.composition.placements.length > 0, `${productionId}:${assetId} composition brief`);
+      }
+    }
+  });
+
   it('pins deterministic eye corrections to exact sources and outputs', async () => {
     for (const productionId of ['moon-scar-ledger-v2', 'spider-man-memory-between-us-v1']) {
       const receipt = JSON.parse(await readFile(resolve(projectRoot, 'productions', productionId, 'evidence', 'eye-correction.receipt.json'), 'utf8')) as {

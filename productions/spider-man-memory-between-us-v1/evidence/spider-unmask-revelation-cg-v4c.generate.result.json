@@ -1,0 +1,39 @@
+{
+  "id": "2z1ykavzbdrmt0d0pzja1qp7w0",
+  "model": "bytedance/seedream-4.5",
+  "version": "hidden",
+  "input": {
+    "aspect_ratio": "16:9",
+    "image_input": [
+      "data:image/jpeg;base64,...",
+      "data:image/jpeg;base64,...",
+      "data:image/jpeg;base64,..."
+    ],
+    "max_images": 1,
+    "prompt": "Modern premium visual-novel event CG, full 16:9 frame, smooth high-resolution anime illustration with crisp tapered linework, nuanced facial acting, painterly cinematic lighting and no coarse pixels. This is one pivotal authored image, not a sprite sheet or interface. Preserve the referenced identities exactly; there are only two people in the room. MJ is a slim young Black American woman in her early twenties with warm brown skin, dark brown eyes and long textured dark hair tied loosely back, wearing a dark olive jacket over a rust knit top and black jeans, guarded and startled. Peter Parker is in the red-and-navy Spider-Man suit, mask just removed and held in his gloved hand, complete with black web lines and white eye lenses, his uncovered face and brown hair shown, suit torso intact with no wound or tear. A small New York apartment at night, rain only on the outside of the window, city glow beyond it; no reflection or second figure in the glass. Mature cinematic register, slightly desaturated urban palette. No text, letters, numbers, captions, logos, border, interface, placement guides, anonymous silhouettes, duplicate objects, extra limbs, malformed hands, chibi anatomy, glossy 3D, photorealism, vector-flat rendering, coarse pixels, real actor likeness. Composition: medium close-up, figures from the chest, camera at eye level, three-quarter angle. Placement: Peter's gloved hand and the removed mask, nearest the camera on the right third in the foreground, facing the camera, the mask lowered, lenses toward the floor; Peter's uncovered face, turned to MJ on the centre third in the midground, facing screen-left, eyes on her, unguarded; MJ, small in the depth of the room on the left third in the farground, facing screen-right, arms crossed, gaze locked on him. Depth: foreground the mask in his hand, slightly soft, cut by the frame edge; midground his face and shoulders; background MJ across the room by the kitchen counter, the window with rain. Light: cold window light from screen-left behind MJ, catching one side of Peter's face, raw and intimate. Leading line: the line of his arm from the mask up to his face and on to MJ. Keep the lower quarter of the frame quiet with nothing readable placed there. Asymmetric framing on the rule of thirds; no centred symmetric lineup, no flat wall behind the figures, no eye-level group shot.",
+    "sequential_image_generation": "disabled",
+    "size": "2K"
+  },
+  "logs": "Generating 2560x1440 image with aspect ratio 16:9 at 2K resolution\nGenerating...\nGenerated in 44.2sec\n",
+  "output": [
+    "https://replicate.delivery/xezq/hYO9AlOKL3pPCJjahEsO0AgNlEzz9GxbZU1P6L0JsCFnfdnLA/tmpwm6d_jmd.jpg"
+  ],
+  "data_removed": false,
+  "error": null,
+  "source": "api",
+  "status": "succeeded",
+  "created_at": "2026-09-19T04:20:00.475Z",
+  "started_at": "2026-09-19T04:20:00.495204127Z",
+  "completed_at": "2026-09-19T04:20:45.060667128Z",
+  "urls": {
+    "cancel": "https://api.replicate.com/v1/predictions/2z1ykavzbdrmt0d0pzja1qp7w0/cancel",
+    "get": "https://api.replicate.com/v1/predictions/2z1ykavzbdrmt0d0pzja1qp7w0",
+    "stream": "https://stream.replicate.com/v1/files/jbxs-3pdwezedt522mzmywv2w7dyyhxyvdiqq6ayfmnt642a62go7stya",
+    "web": "https://replicate.com/p/2z1ykavzbdrmt0d0pzja1qp7w0"
+  },
+  "metrics": {
+    "image_output_count": 1,
+    "predict_time": 44.565463001,
+    "total_time": 44.585667128
+  }
+}

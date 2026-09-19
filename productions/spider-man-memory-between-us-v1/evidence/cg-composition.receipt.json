@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "productionId": "spider-man-memory-between-us-v1",
+  "status": "candidate",
+  "techniqueTransfer": [
+    "typed CgComposition brief compiled into every CG prompt: shot scale, camera, thirds, depth planes, gaze/gesture vectors, key light, reserved rail space",
+    "identity references drawn from already-pinned sprites by repository path",
+    "multiple candidates per CG for human selection; rejected takes retained as evidence"
+  ],
+  "models": {
+    "generation": "bytedance/seedream-4.5",
+    "matte": "851-labs/background-remover:a029dff38972b5fda4ec5d75d7d1cd25aeff621d2cf4946a41055d7db66b80bc"
+  },
+  "requestDigests": {
+    "spider-unmask-revelation-cg-v4a.generate": "c09fea98c834b3e1c1b972c7a5294e1ccd952a156a98e4f7ccbe26f42eaf23e3",
+    "spider-unmask-revelation-cg-v4b.generate": "b273b96335f88e617e3918e0cab4e6826cb2858952d0ebf600e0d262f1fabc76",
+    "spider-unmask-revelation-cg-v4c.generate": "8eeacf28bb50cc3c9a6d363fed2a22c783d3c9e3e45095ea883c1df559f0ded3"
+  },
+  "assets": {
+    "spider-unmask-revelation-cg-v4a": {
+      "sourcePath": "assets/generated/spider-man-memory-between-us-v1/spider-unmask-revelation-cg-v4a.jpg",
+      "sha256": "8d7c3389c6943b2e521c9a968023c90cec7f0a0086f023f9d4b7e450cc6cfd8a",
+      "provenance": "replicate",
+      "predictionIds": [
+        "6hr2e218h5rmw0d0pzhs9vrmc8"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/fsdo3Ne6sCvbNUXBAbGi604wfHondedGb4KW5VjJ7R4d0v7cB/tmp31iyzr67.jpg",
+      "composition": {
+        "scale": "medium",
+        "camera": {
+          "height": "eye",
+          "angle": "over-shoulder"
+        },
+        "placements": [
+          {
+            "subject": "MJ's shoulder and red hair, back to camera",
+            "third": "left",
+            "plane": "fore",
+            "facing": "away-from-camera"
+          },
+          {
+            "subject": "the removed mask held out in Peter's gloved hand",
+            "third": "centre",
+            "plane": "mid",
+            "facing": "toward-camera",
+            "vector": "the mask offered toward MJ along the depth axis"
+          },
+          {
+            "subject": "Peter, unmasked, by the rain-streaked window",
+            "third": "right",
+            "plane": "far",
+            "facing": "screen-left",
+            "vector": "eyes on MJ, waiting"
+          }
+        ],
+        "planes": {
+          "fore": "MJ's dark shoulder and hair, soft, cut by the frame edge",
+          "mid": "the mask in his hand, sharp",
+          "far": "Peter against the window, the city lights blurred behind him"
+        },
+        "light": {
+          "key": "cool city light through the rain window",
+          "from": "behind Peter, rimming his face and hair, MJ in shadow",
+          "mood": "exposed and quiet"
+        },
+        "leadingLine": "his extended arm carrying the mask from the window to MJ",
+        "negativeSpace": "lower-quarter"
+      }
+    },
+    "spider-unmask-revelation-cg-v4b": {
+      "sourcePath": "assets/generated/spider-man-memory-between-us-v1/spider-unmask-revelation-cg-v4b.jpg",
+      "sha256": "c574433d3a3ed7f22de80cb21034cf3fc4cb9fca1e1ea80dae24ec902f8955ea",
+      "provenance": "replicate",
+      "predictionIds": [
+        "81d9j0q6gsrmt0d0pzhra5ce8g"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/WxtlGBJSHfXkVqDEhHOsMRz0wVlROYqFkBjidWOOquP3e7OXA/tmplecslyxy.jpg",
+      "composition": {
+        "scale": "full",
+        "camera": {
+          "height": "low",
+          "angle": "three-quarter"
+        },
+        "placements": [
+          {
+            "subject": "the mask lying on the floorboards where it was dropped",
+            "third": "right",
+            "plane": "fore",
+            "facing": "toward-camera",
+            "vector": "its eye lenses turned toward MJ"
+          },
+          {
+            "subject": "Peter, unmasked, standing very still",
+            "third": "centre",
+            "plane": "mid",
+            "facing": "screen-left",
+            "vector": "looking at MJ, hands open at his sides"
+          },
+          {
+            "subject": "MJ backed to the doorway",
+            "third": "left",
+            "plane": "far",
+            "facing": "screen-right",
+            "vector": "one hand on the doorframe, staring at his face"
+          }
+        ],
+        "planes": {
+          "fore": "floorboards and the dropped mask, cut by the frame edge",
+          "mid": "Peter in the room, a low lamp beside him",
+          "far": "MJ in the hallway doorway, dim hall light behind her"
+        },
+        "light": {
+          "key": "a single warm table lamp",
+          "from": "beside Peter, the window behind him blue with rain",
+          "mood": "a held breath"
+        },
+        "leadingLine": "the floorboards converging from the mask to the doorway",
+        "negativeSpace": "lower-quarter"
+      }
+    },
+    "spider-unmask-revelation-cg-v4c": {
+      "sourcePath": "assets/generated/spider-man-memory-between-us-v1/spider-unmask-revelation-cg-v4c.jpg",
+      "sha256": "49a47bf97d7f9e4e054430ec4f2e92dd6d58a0df45653a7dfd2e259d67f7df4c",
+      "provenance": "replicate",
+      "predictionIds": [
+        "2z1ykavzbdrmt0d0pzja1qp7w0"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/hYO9AlOKL3pPCJjahEsO0AgNlEzz9GxbZU1P6L0JsCFnfdnLA/tmpwm6d_jmd.jpg",
+      "composition": {
+        "scale": "medium-close",
+        "camera": {
+          "height": "eye",
+          "angle": "three-quarter"
+        },
+        "placements": [
+          {
+            "subject": "Peter's gloved hand and the removed mask, nearest the camera",
+            "third": "right",
+            "plane": "fore",
+            "facing": "toward-camera",
+            "vector": "the mask lowered, lenses toward the floor"
+          },
+          {
+            "subject": "Peter's uncovered face, turned to MJ",
+            "third": "centre",
+            "plane": "mid",
+            "facing": "screen-left",
+            "vector": "eyes on her, unguarded"
+          },
+          {
+            "subject": "MJ, small in the depth of the room",
+            "third": "left",
+            "plane": "far",
+            "facing": "screen-right",
+            "vector": "arms crossed, gaze locked on him"
+          }
+        ],
+        "planes": {
+          "fore": "the mask in his hand, slightly soft, cut by the frame edge",
+          "mid": "his face and shoulders",
+          "far": "MJ across the room by the kitchen counter, the window with rain"
+        },
+        "light": {
+          "key": "cold window light",
+          "from": "screen-left behind MJ, catching one side of Peter's face",
+          "mood": "raw and intimate"
+        },
+        "leadingLine": "the line of his arm from the mask up to his face and on to MJ",
+        "negativeSpace": "lower-quarter"
+      }
+    }
+  }
+}

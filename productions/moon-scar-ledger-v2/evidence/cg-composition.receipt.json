@@ -1,0 +1,171 @@
+{
+  "schemaVersion": 1,
+  "productionId": "moon-scar-ledger-v2",
+  "status": "candidate",
+  "techniqueTransfer": [
+    "typed CgComposition brief compiled into every CG prompt: shot scale, camera, thirds, depth planes, gaze/gesture vectors, key light, reserved rail space",
+    "identity references drawn from already-pinned sprites by repository path",
+    "multiple candidates per CG for human selection; rejected takes retained as evidence"
+  ],
+  "models": {
+    "generation": "bytedance/seedream-4.5",
+    "matte": "851-labs/background-remover:a029dff38972b5fda4ec5d75d7d1cd25aeff621d2cf4946a41055d7db66b80bc"
+  },
+  "requestDigests": {
+    "moon-scar-revelation-cg-v2a.generate": "2e55c5c1cf5058e4731f43f23b91d924bc7a16e2db211f72b7802bf4698d4c36",
+    "moon-scar-revelation-cg-v2b.generate": "490001ae239dd87006327ecd98bfd5ba991509e4126538b687fe85b41a73b97d",
+    "moon-scar-revelation-cg-v2c.generate": "5c9cc3b131c1b3a188d3b2b5b830da25d81e92863af1ab85284f28841a0ffeea"
+  },
+  "assets": {
+    "moon-scar-revelation-cg-v2a": {
+      "sourcePath": "assets/generated/moon-scar-ledger-v2/moon-scar-revelation-cg-v2a.jpg",
+      "sha256": "f47f849f3d707a7874f250b2050a63bcd1b9dd52d49293058fc2a0e109bb8a96",
+      "provenance": "replicate",
+      "predictionIds": [
+        "81k51bdqh1rmr0d0pzesvwvwnw"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/3Ph2wU7BEd4vLNVZPLolI1wLqOhAjt3s2fcnqNLPbmcv7dnLA/tmp5qfurcyi.jpg",
+      "composition": {
+        "scale": "medium",
+        "camera": {
+          "height": "low",
+          "angle": "over-shoulder"
+        },
+        "placements": [
+          {
+            "subject": "Fang Yuan's shoulder and long dark hair, seen from behind",
+            "third": "left",
+            "plane": "fore",
+            "facing": "away-from-camera",
+            "vector": "his hand resting on the table edge toward the reliquary"
+          },
+          {
+            "subject": "the open reliquary with its violet crescent seam",
+            "third": "centre",
+            "plane": "mid",
+            "facing": "toward-camera"
+          },
+          {
+            "subject": "Gu Yue Chun across the table, lit from below by the seam",
+            "third": "right",
+            "plane": "far",
+            "facing": "screen-left",
+            "vector": "her gaze dropped to the reliquary, hand withdrawn to her sleeve"
+          }
+        ],
+        "planes": {
+          "fore": "Fang Yuan's dark robed shoulder, cut by the frame edge",
+          "mid": "the stone table and the glowing reliquary",
+          "far": "rough cellar wall, a shelf of sealed jars, a dark stair"
+        },
+        "light": {
+          "key": "the violet crescent seam",
+          "from": "the reliquary itself, casting upward onto her face and the underside of his jaw",
+          "mood": "secret, taut, dangerous"
+        },
+        "leadingLine": "the table edge running from his hand to the reliquary",
+        "negativeSpace": "lower-quarter"
+      }
+    },
+    "moon-scar-revelation-cg-v2b": {
+      "sourcePath": "assets/generated/moon-scar-ledger-v2/moon-scar-revelation-cg-v2b.jpg",
+      "sha256": "3fc11e183e088dc91cbd7372f79997123903eca759231941aafc146ff7cdde30",
+      "provenance": "replicate",
+      "predictionIds": [
+        "mbexs4k135rmy0d0pzf9fjwg5m"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/hBjJsF1NG1K0AZsb9zAf0qrkzsv2HzNegXsGka3zzKxO47OXA/tmprjkbco9h.jpg",
+      "composition": {
+        "scale": "full",
+        "camera": {
+          "height": "high",
+          "angle": "three-quarter"
+        },
+        "placements": [
+          {
+            "subject": "the reliquary on the table, violet seam open",
+            "third": "right",
+            "plane": "fore",
+            "facing": "toward-camera"
+          },
+          {
+            "subject": "Fang Yuan leaning over the table",
+            "third": "centre",
+            "plane": "mid",
+            "facing": "into-depth",
+            "vector": "eyes on the seam, one hand hovering above it, not touching"
+          },
+          {
+            "subject": "Gu Yue Chun a step back against the wall",
+            "third": "left",
+            "plane": "far",
+            "facing": "screen-right",
+            "vector": "watching Fang Yuan, not the reliquary"
+          }
+        ],
+        "planes": {
+          "fore": "the table corner and the reliquary, cut by the frame edge",
+          "mid": "Fang Yuan bent over the table, his shadow thrown up the wall",
+          "far": "cellar stair with a sliver of lantern light from above"
+        },
+        "light": {
+          "key": "the violet seam",
+          "from": "low and near, with a faint warm lantern glow from the stair behind her",
+          "mood": "watchful and cold"
+        },
+        "leadingLine": "Fang Yuan's long shadow across the wall toward Gu Yue Chun",
+        "negativeSpace": "lower-quarter"
+      }
+    },
+    "moon-scar-revelation-cg-v2c": {
+      "sourcePath": "assets/generated/moon-scar-ledger-v2/moon-scar-revelation-cg-v2c.jpg",
+      "sha256": "392765e53f570be8256d1827793f02f2ab1142101d9543f01b6857a66fd3310e",
+      "provenance": "replicate",
+      "predictionIds": [
+        "7r3gvggvxhrmr0d0pzfshwt66r"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/6HPYEaxbdV43GlsXvwjiW6pSEcYxvbOzfv7qe9fPm5Nrx3duA/tmpopgjvxmh.jpg",
+      "composition": {
+        "scale": "medium-close",
+        "camera": {
+          "height": "eye",
+          "angle": "profile"
+        },
+        "placements": [
+          {
+            "subject": "Gu Yue Chun's face and shoulder in profile, nearest the camera",
+            "third": "right",
+            "plane": "fore",
+            "facing": "screen-left",
+            "vector": "gaze fixed on Fang Yuan across the light"
+          },
+          {
+            "subject": "the reliquary between them on the table, seam glowing",
+            "third": "centre",
+            "plane": "mid",
+            "facing": "toward-camera"
+          },
+          {
+            "subject": "Fang Yuan behind the table, face lit violet from below",
+            "third": "left",
+            "plane": "far",
+            "facing": "screen-right",
+            "vector": "eyes on the reliquary, unmoved"
+          }
+        ],
+        "planes": {
+          "fore": "her profile and braided bun, cut by the frame edge",
+          "mid": "the table and the open reliquary",
+          "far": "Fang Yuan and the dark cellar arch behind him"
+        },
+        "light": {
+          "key": "the violet crescent seam",
+          "from": "between them, the only light, her face in half shadow",
+          "mood": "intimate and unsafe"
+        },
+        "leadingLine": "her eyeline across the seam to his face",
+        "negativeSpace": "lower-quarter"
+      }
+    }
+  }
+}

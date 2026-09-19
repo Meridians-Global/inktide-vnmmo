@@ -53,3 +53,11 @@ CG for palette/lighting), reviewed against the existing frame in `DIFF.html`. Do
 Three rules surfaced while wiring choices and were added to the error table in `docs/AUTHORING.md`:
 reading variants require a public viewpoint (split private thoughts per option instead), every granted insight
 must be harvested, and multi-insight variants on one moment need a combined variant for every reachable union.
+
+## CG composition pass
+
+Three composed candidates (`evidence/cg-composition.receipt.json`) replaced `doorstep-cg-v1`, which was an
+eye-level centred trio against the door. Selected `doorstep-cg-v2c`: low over-shoulder from behind Hagrid,
+Dumbledore and the bundle in the midground, McGonagall in the lit doorway on the far right third, warm hall
+light as key. Rejected `v2a` (Hagrid centred and dominant) and `v2b` (strong street depth, but the bundle is
+a speck and the shot reads as an establishing plate, not a handover).

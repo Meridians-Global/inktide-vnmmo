@@ -2,12 +2,12 @@
   "schemaVersion": 1,
   "productionId": "privet-drive-boy-who-lived-v1",
   "experienceId": "privet-drive-boy-who-lived-v1",
-  "experienceSha256": "1ef77e5afa66e101a95271d5afc2faa2a486f01f54e94a79d0a80d43f103fa96",
+  "experienceSha256": "a2ccf608e7364ac1b3cf5d515bea849b5f5e10982def11ffc4b3d8c6526333e8",
   "viewport": {
     "width": 1600,
     "height": 900
   },
-  "capturedAt": "2026-09-18T09:04:07.484Z",
+  "capturedAt": "2026-09-19T04:30:17.849Z",
   "consoleErrors": [],
   "frames": [
     {
@@ -111,7 +111,7 @@
       "tableauId": "morning-vernon",
       "reading": "base",
       "file": "auto-dailies/cloaks-in-town.png",
-      "sha256": "769c6e28638ab8219ba9ce0ba50302f764643f8631cb3e2532372575642cf206",
+      "sha256": "ea7212c636cfcb8046ec2ec9c8fb5a33f199c3a26178383049aec23c8c8745e9",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -204,7 +204,7 @@
       "tableauId": "morning-cat-watching",
       "reading": "base",
       "file": "auto-dailies/vernon-returns.png",
-      "sha256": "162b5d8f0a3d7eb621725417772789bda328002f709ce818b9dc2170a26dce57",
+      "sha256": "64ab5ebe5d25d58c1121da0fac19de008c552235fb99637392bc64635824afa0",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -279,7 +279,7 @@
       "tableauId": "morning-cat-watching",
       "reading": "variant",
       "file": "auto-dailies/vernon-returns--d8f2e3.png",
-      "sha256": "d966688ab5dacb04b654b62eebfc8b69b5b77a4867d5271d141c5c8729312b3a",
+      "sha256": "63bedaa3e04583d22f202932a8c1d6f41751ce37e9cdd2dd0d3bbc94e0b10278",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -329,7 +329,7 @@
       "tableauId": "night-cat",
       "reading": "base",
       "file": "auto-dailies/cat-waits.png",
-      "sha256": "9ef948cf6139cef9d747a16de2b33bbc99c177dbb5f48e115808c3f6e52d3eee",
+      "sha256": "a0bf5a38e949e365b0494414682165b989ff042996030d8c65d0d081ecd339d3",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -354,7 +354,7 @@
       "tableauId": "night-cat",
       "reading": "variant",
       "file": "auto-dailies/cat-waits--2d8cc8.png",
-      "sha256": "d6bb380e2e0265a57e19fe7fb440dd713cdc41a0bb14ad8c0be0c023ba201d13",
+      "sha256": "4b8711de21f1e9330f6a1fcc2f0e7b8558084ca43d36d69bb7f9b747e6d0389e",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -479,7 +479,7 @@
       "tableauId": "dark-mcgonagall-active",
       "reading": "base",
       "file": "auto-dailies/mcgonagall-scolds.png",
-      "sha256": "0e8edb2a0b243857d30d96e1694c93675b45c21858db6ee7b80de3ec3c1e2989",
+      "sha256": "adb08573b78e1ffc4575108c906574708b06444abcf0c274a2b2ba075fb32ba4",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -504,7 +504,7 @@
       "tableauId": "dark-dumbledore-active",
       "reading": "base",
       "file": "auto-dailies/dumbledore-celebrate.png",
-      "sha256": "755c4871156007b0bf2ec29b4504a6db8c45a53418ae24aa8b6b67643f0f3c27",
+      "sha256": "416e81e6eb4bae543f8068cdada53fde48aeeb72ab6e8edbb67cc265b8e3c480",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -554,7 +554,7 @@
       "tableauId": "dark-mcgonagall-active",
       "reading": "base",
       "file": "auto-dailies/mcgonagall-private.png",
-      "sha256": "b08cd01c0ae31df143ee99b004d271bbb19564ff032f147697c6a3fabf1da1e4",
+      "sha256": "a6e4e5bc901142148b83c301b2acd8f2a399e0eb13a5b03f93fa991ecf842f89",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -633,7 +633,7 @@
       "tableauId": "dark-dumbledore-grave",
       "reading": "variant",
       "file": "auto-dailies/dumbledore-guess--48b31e.png",
-      "sha256": "0155eb919b60e93916359ea66a6499c24406296b9725322c386ba60296edd868",
+      "sha256": "64c7c7f0538d2867dc723070c21bec180560e4476f5a9806d8a74a845d59f618",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -691,7 +691,7 @@
       "tableauId": "dark-dumbledore-grave",
       "reading": "variant",
       "file": "auto-dailies/dumbledore-guess--e029ff.png",
-      "sha256": "6669b67e1a7964654aa3bae8a4f49198703f297b29b0cc3f6718f2c86f9b461b",
+      "sha256": "a65e602b0ac486b15856fc00651553fdc8b6ef1559dc0345db9ecbb2ead0dd03",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -778,7 +778,7 @@
       "tableauId": "doorstep-reveal",
       "reading": "base",
       "file": "auto-dailies/doorstep.png",
-      "sha256": "34743d78f7e939966015078971da3f007d229031cb543d314b76e63f7b5a8e7c",
+      "sha256": "b617cb137afc49a94965f0ef3e850e1415a81fe8159009b73209d65fb8f5e309",
       "route": [
         {
           "nodeId": "cat-on-wall",

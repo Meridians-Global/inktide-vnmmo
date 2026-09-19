@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "productionId": "privet-drive-boy-who-lived-v1",
+  "status": "candidate",
+  "techniqueTransfer": [
+    "typed CgComposition brief compiled into every CG prompt: shot scale, camera, thirds, depth planes, gaze/gesture vectors, key light, reserved rail space",
+    "identity references drawn from already-pinned sprites by repository path",
+    "multiple candidates per CG for human selection; rejected takes retained as evidence"
+  ],
+  "models": {
+    "generation": "bytedance/seedream-4.5",
+    "matte": "851-labs/background-remover:a029dff38972b5fda4ec5d75d7d1cd25aeff621d2cf4946a41055d7db66b80bc"
+  },
+  "requestDigests": {
+    "doorstep-cg-v2a.generate": "c9e1d50d7988e43474969c5562e6ee4d339825f023d751b4e459c0271e1db586",
+    "doorstep-cg-v2b.generate": "eb4d4799a9f37d60407bf413f18a1e1d826e73c0a87bb902c04804e27acc4ec8",
+    "doorstep-cg-v2c.generate": "8abab57ba6fab43c2497cbbd8c75ffbb117ce8fd13062cd88304654ff78ec8d3"
+  },
+  "assets": {
+    "doorstep-cg-v2a": {
+      "sourcePath": "assets/generated/privet-drive-boy-who-lived-v1/doorstep-cg-v2a.jpg",
+      "sha256": "c47e5c2224ab968d5be26a36ca1c6bc48b0a93fe631b8597ba2b28a1b91162ae",
+      "provenance": "replicate",
+      "predictionIds": [
+        "14pmpp6yaxrmr0d0pzd95vhwn4"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/Zx0RKVvAfQwlUqHJVeIcTMalLMsvT2XpTxY8kHq4cm7507OXA/tmpyq2iq0rp.jpg",
+      "composition": {
+        "scale": "full",
+        "camera": {
+          "height": "low",
+          "angle": "three-quarter"
+        },
+        "placements": [
+          {
+            "subject": "the bundle with the letter, on the step",
+            "third": "left",
+            "plane": "fore",
+            "facing": "toward-camera",
+            "vector": "the letter angled toward the three adults"
+          },
+          {
+            "subject": "Hagrid, crouched huge and tender",
+            "third": "centre",
+            "plane": "mid",
+            "facing": "into-depth",
+            "vector": "head bowed, both hands reaching down to the bundle"
+          },
+          {
+            "subject": "Dumbledore and McGonagall standing side by side",
+            "third": "right",
+            "plane": "far",
+            "facing": "screen-left",
+            "vector": "both looking down at the bundle"
+          }
+        ],
+        "planes": {
+          "fore": "the worn brick step and the bundle, cut by the frame edge",
+          "mid": "Hagrid kneeling on the path, the doorframe behind him",
+          "far": "the dark cul-de-sac, extinguished lamp posts, a thin moon over the roofs"
+        },
+        "light": {
+          "key": "cold moonlight",
+          "from": "high behind the adults, rimming their silhouettes and falling on the bundle",
+          "mood": "hushed, tender and final"
+        },
+        "leadingLine": "the garden path running from the street to the step",
+        "negativeSpace": "lower-quarter"
+      }
+    },
+    "doorstep-cg-v2b": {
+      "sourcePath": "assets/generated/privet-drive-boy-who-lived-v1/doorstep-cg-v2b.jpg",
+      "sha256": "11d109623f09f03da065bb7ee54d79f9aaa522efbf7e6df739e68299acbf5495",
+      "provenance": "replicate",
+      "predictionIds": [
+        "6ym6pbyyesrmt0d0pzdsad31zm"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/aiRW1uJ28tInBVUKLVZCeqkfQdFWCNODvwseZaRiNkNgr3duA/tmp3bs01ede.jpg",
+      "composition": {
+        "scale": "wide",
+        "camera": {
+          "height": "high",
+          "angle": "three-quarter"
+        },
+        "placements": [
+          {
+            "subject": "Dumbledore, seen from behind and above, lowering the bundle onto the step",
+            "third": "right",
+            "plane": "fore",
+            "facing": "away-from-camera",
+            "vector": "his long arms reaching down to the step"
+          },
+          {
+            "subject": "McGonagall, hand at her mouth",
+            "third": "centre",
+            "plane": "mid",
+            "facing": "screen-right",
+            "vector": "looking at the bundle"
+          },
+          {
+            "subject": "Hagrid, huge and weeping, on the pavement",
+            "third": "left",
+            "plane": "far",
+            "facing": "screen-right",
+            "vector": "one hand covering his eyes"
+          }
+        ],
+        "planes": {
+          "fore": "Dumbledore's purple shoulders and the doorstep, cut by the frame edge",
+          "mid": "McGonagall on the path beside a low garden wall",
+          "far": "Hagrid, the motorbike, and the dark street of identical houses"
+        },
+        "light": {
+          "key": "a single orange sodium lamp",
+          "from": "far down the street behind Hagrid, everything nearer in moon-blue shadow",
+          "mood": "lonely and ceremonial"
+        },
+        "leadingLine": "the low garden wall running from Hagrid to the step",
+        "negativeSpace": "lower-quarter"
+      }
+    },
+    "doorstep-cg-v2c": {
+      "sourcePath": "assets/generated/privet-drive-boy-who-lived-v1/doorstep-cg-v2c.jpg",
+      "sha256": "56061f8d48f756d954a40dc698f6c89b837586075f41bd72f1f4863ab387f822",
+      "provenance": "replicate",
+      "predictionIds": [
+        "y9a41qxm9srmt0d0pzeb979n34"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/DWsJsB6wMCY4HBkOGcGuInViGnfEicbjNKA1KUs0dtey27OXA/tmphesrmj9t.jpg",
+      "composition": {
+        "scale": "medium",
+        "camera": {
+          "height": "low",
+          "angle": "over-shoulder"
+        },
+        "placements": [
+          {
+            "subject": "Hagrid's enormous shoulder and beard, out of focus",
+            "third": "left",
+            "plane": "fore",
+            "facing": "away-from-camera"
+          },
+          {
+            "subject": "Dumbledore, bending to lay the bundle down",
+            "third": "centre",
+            "plane": "mid",
+            "facing": "into-depth",
+            "vector": "both hands and eyes on the bundle"
+          },
+          {
+            "subject": "McGonagall in the lit doorway of the house",
+            "third": "right",
+            "plane": "far",
+            "facing": "screen-left",
+            "vector": "arms folded, gaze on Dumbledore"
+          }
+        ],
+        "planes": {
+          "fore": "Hagrid's dark coat, cut by the frame edge",
+          "mid": "Dumbledore and the bundle on the step",
+          "far": "the brick porch and hall window with a faint light behind curtains"
+        },
+        "light": {
+          "key": "warm light from the hall window",
+          "from": "behind McGonagall, spilling over the step",
+          "mood": "intimate and grave"
+        },
+        "leadingLine": "Dumbledore's long arms and the edge of the step toward the bundle",
+        "negativeSpace": "lower-quarter"
+      }
+    }
+  }
+}

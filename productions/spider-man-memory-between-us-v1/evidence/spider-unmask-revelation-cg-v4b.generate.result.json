@@ -1,0 +1,39 @@
+{
+  "id": "81d9j0q6gsrmt0d0pzhra5ce8g",
+  "model": "bytedance/seedream-4.5",
+  "version": "hidden",
+  "input": {
+    "aspect_ratio": "16:9",
+    "image_input": [
+      "data:image/jpeg;base64,...",
+      "data:image/jpeg;base64,...",
+      "data:image/jpeg;base64,..."
+    ],
+    "max_images": 1,
+    "prompt": "Modern premium visual-novel event CG, full 16:9 frame, smooth high-resolution anime illustration with crisp tapered linework, nuanced facial acting, painterly cinematic lighting and no coarse pixels. This is one pivotal authored image, not a sprite sheet or interface. Preserve the referenced identities exactly; there are only two people in the room. MJ is a slim young Black American woman in her early twenties with warm brown skin, dark brown eyes and long textured dark hair tied loosely back, wearing a dark olive jacket over a rust knit top and black jeans, guarded and startled. Peter Parker is in the red-and-navy Spider-Man suit, mask just removed and held in his gloved hand, complete with black web lines and white eye lenses, his uncovered face and brown hair shown, suit torso intact with no wound or tear. A small New York apartment at night, rain only on the outside of the window, city glow beyond it; no reflection or second figure in the glass. Mature cinematic register, slightly desaturated urban palette. No text, letters, numbers, captions, logos, border, interface, placement guides, anonymous silhouettes, duplicate objects, extra limbs, malformed hands, chibi anatomy, glossy 3D, photorealism, vector-flat rendering, coarse pixels, real actor likeness. Composition: full shot, figures head to toe, camera low, looking slightly up, three-quarter angle. Placement: the mask lying on the floorboards where it was dropped on the right third in the foreground, facing the camera, its eye lenses turned toward MJ; Peter, unmasked, standing very still on the centre third in the midground, facing screen-left, looking at MJ, hands open at his sides; MJ backed to the doorway on the left third in the farground, facing screen-right, one hand on the doorframe, staring at his face. Depth: foreground floorboards and the dropped mask, cut by the frame edge; midground Peter in the room, a low lamp beside him; background MJ in the hallway doorway, dim hall light behind her. Light: a single warm table lamp from beside Peter, the window behind him blue with rain, a held breath. Leading line: the floorboards converging from the mask to the doorway. Keep the lower quarter of the frame quiet with nothing readable placed there. Asymmetric framing on the rule of thirds; no centred symmetric lineup, no flat wall behind the figures, no eye-level group shot.",
+    "sequential_image_generation": "disabled",
+    "size": "2K"
+  },
+  "logs": "Warning: Moderation check failed: Error code: 429 - {'error': {'message': 'Too Many Requests', 'type': 'invalid_request_error', 'param': None, 'code': None}}\nWarning: Moderation check failed: Error code: 429 - {'error': {'message': 'Too Many Requests', 'type': 'invalid_request_error', 'param': None, 'code': None}}\nWarning: Moderation check failed: Error code: 429 - {'error': {'message': 'Too Many Requests', 'type': 'invalid_request_error', 'param': None, 'code': None}}\nWarning: Moderation check failed: Error code: 429 - {'error': {'message': 'Too Many Requests', 'type': 'invalid_request_error', 'param': None, 'code': None}}\nGenerating 2560x1440 image with aspect ratio 16:9 at 2K resolution\nGenerating...\nGenerated in 36.3sec\n",
+  "output": [
+    "https://replicate.delivery/xezq/WxtlGBJSHfXkVqDEhHOsMRz0wVlROYqFkBjidWOOquP3e7OXA/tmplecslyxy.jpg"
+  ],
+  "data_removed": false,
+  "error": null,
+  "source": "api",
+  "status": "succeeded",
+  "created_at": "2026-09-19T04:19:21.35Z",
+  "started_at": "2026-09-19T04:19:21.394219887Z",
+  "completed_at": "2026-09-19T04:19:58.537591674Z",
+  "urls": {
+    "cancel": "https://api.replicate.com/v1/predictions/81d9j0q6gsrmt0d0pzhra5ce8g/cancel",
+    "get": "https://api.replicate.com/v1/predictions/81d9j0q6gsrmt0d0pzhra5ce8g",
+    "stream": "https://stream.replicate.com/v1/files/jbxs-rfsamz6js7sl4c3kyxxrr36fsa5g3s7x5utegsjizyxqvcxlgdma",
+    "web": "https://replicate.com/p/81d9j0q6gsrmt0d0pzhra5ce8g"
+  },
+  "metrics": {
+    "image_output_count": 1,
+    "predict_time": 37.143371797,
+    "total_time": 37.187591674
+  }
+}
