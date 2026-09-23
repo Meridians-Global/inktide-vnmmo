@@ -2,12 +2,12 @@
   "schemaVersion": 1,
   "productionId": "privet-drive-boy-who-lived-v1",
   "experienceId": "privet-drive-boy-who-lived-v1",
-  "experienceSha256": "5a0214682633400d3fc2a4516f2dfd5fa254dae4a437ff3900a35626d59dc7f1",
+  "experienceSha256": "942d10feac8535d1b1619af97b2d8012b19e749197b4660f0b705a28fc519550",
   "viewport": {
     "width": 1600,
     "height": 900
   },
-  "capturedAt": "2026-09-23T00:59:16.672Z",
+  "capturedAt": "2026-09-23T01:17:46.901Z",
   "consoleErrors": [],
   "frames": [
     {
@@ -16,7 +16,7 @@
       "tableauId": "morning-establishing",
       "reading": "base",
       "file": "auto-dailies/privet-morning.png",
-      "sha256": "bbfacc984899f381dda64173e94da30c0c6b641440c0bd193dfa4b2a8f6cf6c3",
+      "sha256": "3214600a0335ef528107c3b0810c3f6bc4456c8b77de0743f34c99293f980604",
       "route": [],
       "insightIds": [],
       "availableOptionIds": [],
@@ -29,7 +29,7 @@
       "tableauId": "morning-establishing",
       "reading": "base",
       "file": "auto-dailies/normal-people.png",
-      "sha256": "e8a5483988ced576dbf44b6d0415582238befa7d84acc3e1f2f79bafbffa7c3e",
+      "sha256": "70638d4980dd0c5843e0ba154e9435785490cae243b8d8bab68139d77eea8c43",
       "route": [],
       "insightIds": [],
       "availableOptionIds": [],
@@ -42,7 +42,7 @@
       "tableauId": "morning-vernon",
       "reading": "base",
       "file": "auto-dailies/vernon-leaves.png",
-      "sha256": "05f4b8fea60e935929ad09aabe0f6e32d2f4a828dcd89c798cb6328224e58aee",
+      "sha256": "1ebc95ea2482d1706d6a04810471eb08dc961b0fa96e8fdf59b4097a33f9d652",
       "route": [],
       "insightIds": [],
       "availableOptionIds": [],
@@ -55,7 +55,7 @@
       "tableauId": "morning-cat",
       "reading": "base",
       "file": "auto-dailies/cat-on-wall.png",
-      "sha256": "39bfcd22532492ab1cf293c1581045cf0adfc7155ab90579aee3c49481785439",
+      "sha256": "8b512a59848b12faed16eea00cccf50533dd77e19609f812234e149dcec56498",
       "route": [],
       "insightIds": [],
       "availableOptionIds": [
@@ -71,7 +71,7 @@
       "tableauId": "morning-cat-noticing",
       "reading": "base",
       "file": "auto-dailies/vernon-blinks-map.png",
-      "sha256": "f286fb76577c7845d685b122a69db62d45b4557a4fc61e650e1f9a36ffc2b176",
+      "sha256": "657f931367ce948a5908e660809fdf7c9a41458e1f3474408943dd35d9d53097",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -91,7 +91,7 @@
       "tableauId": "morning-cat-noticing",
       "reading": "base",
       "file": "auto-dailies/vernon-blinks-sign.png",
-      "sha256": "0e1702bc9bfacbf24e264d610e4ab8795738cc3859fe619ee1c858855204eda5",
+      "sha256": "5726019e51ebfbd4d08579c438da02b284c4f2d4c96529f0548d690c03756133",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -111,7 +111,7 @@
       "tableauId": "morning-vernon",
       "reading": "base",
       "file": "auto-dailies/cloaks-in-town.png",
-      "sha256": "f2c573e999c3060c2f1af1aefe0d13c77282f6a5a564a21ecf518ec30b16feef",
+      "sha256": "fc4c61dc1df77a3c5e4eeff5aa05afb633e3df3832874a898d8c17ebf96ec9ae",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -131,7 +131,7 @@
       "tableauId": "morning-vernon",
       "reading": "base",
       "file": "auto-dailies/whispers.png",
-      "sha256": "507b47e9b87be79020d434039401eb3140bdacac50201430f08a7ddf8f79288c",
+      "sha256": "646ee6898b58fdf30ffbb695981d01c3e0e7225e250439408d0eaff02d7bc5de",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -155,7 +155,7 @@
       "tableauId": "morning-vernon-dismissing",
       "reading": "base",
       "file": "auto-dailies/vernon-stops-collection.png",
-      "sha256": "1760c582fbc0815b343ae70e50709e5954b03d281c3866ea6d82ecf08c7aa385",
+      "sha256": "04322930be1751d72d093b80601a258d33e0e7fee581050167e303dd25b47e9f",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -180,7 +180,7 @@
       "tableauId": "morning-vernon-alarmed",
       "reading": "base",
       "file": "auto-dailies/vernon-stops-name.png",
-      "sha256": "453394630068399ae808a8edf60e8c08f5a41b7fb80ce4df3c00f0b9f915a9ac",
+      "sha256": "e535d7ad9549753e324f95726b95f19df7bcfc9016d8fb5447bb7fb7dbacee4d",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -205,7 +205,7 @@
       "tableauId": "morning-vernon-alarmed",
       "reading": "base",
       "file": "auto-dailies/vernon-stops-cloaks.png",
-      "sha256": "4821791d1aae759c749005ed8305eff407cd3b6af77d94673b94fbd193aa158f",
+      "sha256": "9f4505f2d0962894fae661e23b005231aad8c7c2c978e6c6fc16970d9f394036",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -230,7 +230,7 @@
       "tableauId": "morning-cat-watching",
       "reading": "base",
       "file": "auto-dailies/vernon-returns.png",
-      "sha256": "3167fc99d1baf57113aa80896b937be3cd8a90afb629f28a6918c4bf988f0ea8",
+      "sha256": "950fa0a8358d663b9b5296ac076531510bc61bc645f0004e356651db1c8edfd6",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -255,7 +255,7 @@
       "tableauId": "morning-cat-watching",
       "reading": "variant",
       "file": "auto-dailies/vernon-returns--7a3bd6.png",
-      "sha256": "20fcdf5491c64387cd93f2db7447ff355f94a2f69126a9133ed5d48973953181",
+      "sha256": "86b3f90f560dcbaab6ff195f570ca7e611d9f4860c32cd6090c93707520cdb2c",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -280,7 +280,7 @@
       "tableauId": "morning-cat-watching",
       "reading": "variant",
       "file": "auto-dailies/vernon-returns--bf0106.png",
-      "sha256": "d87badf21ad04c8b0851bbb45a1bec72400f30337ed58ca64324f09a4260a702",
+      "sha256": "e799f4b7c9ad902c76b95470f4ee057ed48b7d6a12dd16461c17a300f56d5d22",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -305,7 +305,7 @@
       "tableauId": "morning-cat-watching",
       "reading": "variant",
       "file": "auto-dailies/vernon-returns--d8f2e3.png",
-      "sha256": "cdcf3198ba84484c1e0bb41ba145f0a644ae10f96c709bc6836b25a42fa4df8a",
+      "sha256": "921baf9ef648ab89b05160d73ea929e70bc6ae850d16f2a7e0adc40b9c99b8df",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -330,7 +330,7 @@
       "tableauId": "night-establishing",
       "reading": "base",
       "file": "auto-dailies/privet-night.png",
-      "sha256": "be7acab16d5e7a43ac77820f42c9602723065e1cba07f282b2b3765d16c9b139",
+      "sha256": "d3b2ec8260833e8be154e3a5c7e641a073d82d95ec393d76c8687010b9aa0dac",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -405,7 +405,7 @@
       "tableauId": "night-arrival",
       "reading": "base",
       "file": "auto-dailies/man-appears.png",
-      "sha256": "839bd1a1c40b0bd984a8f053e5b0e9e58f8d1989d6fb70c551a73d41b1046200",
+      "sha256": "71c9a3699ffa739a56abca6a8c799a1ca7817be6e60a059ef78bb046412d68a9",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -455,7 +455,7 @@
       "tableauId": "dark-dumbledore-cat",
       "reading": "base",
       "file": "auto-dailies/greets-cat.png",
-      "sha256": "c4c1632060708fd495a7c665fe6bdc38e75e591ae60a695b882f8e3b86f0d97d",
+      "sha256": "1b7e26e4ee17b09b537468ea6f1cdc8cbc2a91d22d193699f6b1fbe8027f0cc0",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -471,7 +471,7 @@
         "potters-named"
       ],
       "availableOptionIds": [],
-      "textSha256": "e6f80daacad95e0f44b114c86dc664aa663f7eaa1f4fc0e46d830b3684cd0d3f",
+      "textSha256": "ec87ac2611490f3b119ac1f6b8d3cf5507e85e8bc7e4c91b0da2aee025456f1f",
       "steps": 13
     },
     {
@@ -480,7 +480,7 @@
       "tableauId": "dark-mcgonagall-active",
       "reading": "base",
       "file": "auto-dailies/cat-becomes-woman.png",
-      "sha256": "e5c454a1cdfbd60223eab9aa0d51c2d02123df307a111d74c4f5e2c3fa371669",
+      "sha256": "6a3b5134c16833ac3f3d11ccdda249bffdf67f48623c6b8407a0dd450efe9d82",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -505,7 +505,7 @@
       "tableauId": "dark-mcgonagall-active",
       "reading": "variant",
       "file": "auto-dailies/cat-becomes-woman--ce51f2.png",
-      "sha256": "37d9ab0ca785c81da7cb3e2187d3e2845a26d2f1fa951798edb0191211cd165f",
+      "sha256": "dd97c1cdbc0292284010bc96efe91fe8e1f6b2658d6ddb4140404715b5515bc9",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -530,7 +530,7 @@
       "tableauId": "dark-mcgonagall-active",
       "reading": "base",
       "file": "auto-dailies/mcgonagall-scolds.png",
-      "sha256": "b490711af394dd8dedf34a4bc13fb3cc15559f09a9f1fed00d651ac81ab33126",
+      "sha256": "8ac80185de4326c4ba5978cdc074150b7bedd56affe2c87cdc72bc0b96d19803",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -546,7 +546,7 @@
         "potters-named"
       ],
       "availableOptionIds": [],
-      "textSha256": "4950baaac355245c9fe3760697fc8ed4b097bc7edee7847b1a6e43dc5b2c5a78",
+      "textSha256": "938a2fdf9d0ea0aa775eaf8751fc000eb1fbbb2828dfa48c595af18daae40c1b",
       "steps": 15
     },
     {
@@ -555,7 +555,7 @@
       "tableauId": "dark-dumbledore-active",
       "reading": "base",
       "file": "auto-dailies/dumbledore-celebrate.png",
-      "sha256": "89e82770c021be04431cb31908c6ccd1d58e14090ab91ab32706181114ebe802",
+      "sha256": "d5ec297ce46b66b11fde6f0904110616eca69dc46d6cb2274d9a4db417acf083",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -571,7 +571,7 @@
         "potters-named"
       ],
       "availableOptionIds": [],
-      "textSha256": "04238ac19640c2bf91d4b0c907e7963eecff75cd3ebbd960580eea231c09f1e1",
+      "textSha256": "3ab235fb2d733c66f712a40931990ce93b56c339710ce0335c6e8ec1bee3706e",
       "steps": 16
     },
     {
@@ -580,7 +580,7 @@
       "tableauId": "dark-mcgonagall-questioning",
       "reading": "base",
       "file": "auto-dailies/mcgonagall-asks.png",
-      "sha256": "62aeb09f73a0391fb4fdfded5c95236604e2816410f559d767ac900293799137",
+      "sha256": "7bcaead975e578338fcc7e5076cf63b7499c2ca2342964513c7596b9d498f353",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -596,7 +596,7 @@
         "potters-named"
       ],
       "availableOptionIds": [],
-      "textSha256": "f51c7a43cdae9e76ed5cebcc03d69d3ce658f4715a1deac921a9bfbd0dc48603",
+      "textSha256": "027414574bbcf9294f2fe63b36930f72b0af9a105f7c912f6f63a1d15b506084",
       "steps": 17
     },
     {
@@ -605,7 +605,7 @@
       "tableauId": "dark-mcgonagall-questioning",
       "reading": "base",
       "file": "auto-dailies/mcgonagall-private.png",
-      "sha256": "bff2cd887b5539aec21112cfb51b2054857783ff2a35f4b9b8d05ec28ada3954",
+      "sha256": "e8670f3c345c166fbfe3bb13baa5ddd34f30505648e28ff4c05af9a2968a37c2",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -630,7 +630,7 @@
       "tableauId": "dark-dumbledore-grave",
       "reading": "base",
       "file": "auto-dailies/dumbledore-confirms.png",
-      "sha256": "8fdd8f9345e0869827381de39aad9f2ef6911fe6af864efc02571d1d6c3ddf25",
+      "sha256": "60dbaa2a99e61e415146a4c8f413b0b45a8db21ce00cfdf2bf5711c20b5c9492",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -646,7 +646,7 @@
         "potters-named"
       ],
       "availableOptionIds": [],
-      "textSha256": "e367b9d3129a2b2dfe5dc9d2948f92e575f9a9d03e139fc501b6990d2b15bee6",
+      "textSha256": "223c8fb93adf43a40315a3f4d57d02533bd4b4e918c93252491ea0b0e633341f",
       "steps": 19
     },
     {
@@ -655,7 +655,7 @@
       "tableauId": "dark-mcgonagall-grief",
       "reading": "base",
       "file": "auto-dailies/mcgonagall-breaks.png",
-      "sha256": "4e86c1d1e2cdfb3efa61b2b4eef6e40220b9d8af9665936d696490847331b614",
+      "sha256": "4c510431b7e83d49493114e90f5bf103dc188fa1fcff36124ac602acaf9d9841",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -684,7 +684,7 @@
       "tableauId": "dark-dumbledore-grave",
       "reading": "variant",
       "file": "auto-dailies/dumbledore-guess--48b31e.png",
-      "sha256": "6daf97e43a8aa042efb0c674afe6fffdcf72203f3e80d462833aa8273954157b",
+      "sha256": "ec89ace1b724af275b9cf6e7dbf1bff3845bee642ff15f14fde1a37a1eeb31ea",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -704,7 +704,7 @@
         "potters-named"
       ],
       "availableOptionIds": [],
-      "textSha256": "88bf2e7e5e6902f13a9ccce69657c345a547d3305e46d81e7dca2995b0743524",
+      "textSha256": "c5b09c1097838ec31eaeb07bcea4df9851e2edfafbaef0f728e623716b350054",
       "steps": 21
     },
     {
@@ -713,7 +713,7 @@
       "tableauId": "dark-dumbledore-grave",
       "reading": "variant",
       "file": "auto-dailies/dumbledore-guess--4ecb69.png",
-      "sha256": "4490d4b5b3755572b0284628a277f5ea145e597fcbbc9b09e2c48afe28353b0d",
+      "sha256": "06eab7e625f0a3c4ab353321f2f411133535d6b3d62813ec606c4cd40266b295",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -733,7 +733,7 @@
         "potters-named"
       ],
       "availableOptionIds": [],
-      "textSha256": "8a7fd8b49160f44f6e6bde7e7041343cec69d8adad00c920d3295685df05ae41",
+      "textSha256": "c1dc91cdfd89f68b145009ad0521d59102c079f948fa98b20876cbf1517b051e",
       "steps": 21
     },
     {
@@ -742,7 +742,7 @@
       "tableauId": "dark-dumbledore-grave",
       "reading": "variant",
       "file": "auto-dailies/dumbledore-guess--e029ff.png",
-      "sha256": "9cdf8cedf738d354a7d6eabb8b0bfc9d037410b2df62c10b0faa89e885484b52",
+      "sha256": "ea620511e0e20b0f3b15b1e1b0f62d38273d82ba7079d571605cb99b4e171e7a",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -763,7 +763,7 @@
         "power-broke-assumed"
       ],
       "availableOptionIds": [],
-      "textSha256": "14b374eb69b88fdd68e1a630c22b2944d1a0a3c41505b37e18ea2d7bb17bd695",
+      "textSha256": "f10edd49e6f50e6ec343dbe4a05e74c57bf3a2e51f978b2a1d276c5503f4922a",
       "steps": 21
     },
     {
@@ -772,7 +772,7 @@
       "tableauId": "dark-hagrid-arrives",
       "reading": "base",
       "file": "auto-dailies/hagrid-arrives.png",
-      "sha256": "6147a8fe405f1dbe9c414165cc8c9b635ad1d3f7d13b3be8888fe313cb09a38f",
+      "sha256": "9f23717f4a982c6c217c94e911da492ca1ae2165876a6530d857fcfe1f9ba164",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -801,7 +801,7 @@
       "tableauId": "dark-hagrid-hushed",
       "reading": "base",
       "file": "auto-dailies/hagrid-reports.png",
-      "sha256": "44f98c36885ff2f23f5f271f2bdc4df0b2d8f6140bd102b15fc61277ea32055f",
+      "sha256": "401879038ea3c040e46720b6b5ef0c28b3d7513fd43af2102797baade0f47c6f",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -821,7 +821,7 @@
         "potters-named"
       ],
       "availableOptionIds": [],
-      "textSha256": "4c62d4a2e12c62980f0afa1b442e4331df3539f14aa8a856bd0c190b1e5cb85d",
+      "textSha256": "4cf5b3e0a3d60fc3385dd1fa4e1bf0b5ef9cd1fea1f6471332c516cc3a4e307d",
       "steps": 23
     },
     {
@@ -830,7 +830,7 @@
       "tableauId": "doorstep-reveal",
       "reading": "base",
       "file": "auto-dailies/doorstep.png",
-      "sha256": "86cc47f1922ab2fef2da8583ea1ccf0f28aeb2afd9347e88cefc15aa7862ce79",
+      "sha256": "865efbf6f6e5c6daace209454234e607def96991dee1658192380b3df49862ea",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -859,7 +859,7 @@
       "tableauId": "dark-trio-mcgonagall",
       "reading": "base",
       "file": "auto-dailies/scar-question.png",
-      "sha256": "f562207f1891c412fb8fcf5175ab545657b7be502d80ea037e655bafb28db7f4",
+      "sha256": "cec2df97ecb0a7628972c2cb202e27b796ed03faa4755cb9c33f5e17cbb65c55",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -879,7 +879,7 @@
         "potters-named"
       ],
       "availableOptionIds": [],
-      "textSha256": "83f11ec5ff50f7c6227c45f59f7847da0b452aa976a4cae31a68117028cbc806",
+      "textSha256": "33e98a9cc2170ad647651ad6e8d6994b89562ef7ae65ab680897b0ec87424fbc",
       "steps": 25
     },
     {
@@ -888,7 +888,7 @@
       "tableauId": "dark-trio-dumbledore",
       "reading": "base",
       "file": "auto-dailies/scars-handy.png",
-      "sha256": "b3b38468c09ccf75845428a1c6a5a5fe316564c8dd34155a5ee115a79f0f0a0c",
+      "sha256": "2dce6f9550bd1a81e0c20f9ae15561775aded67c9e2afdf1b6d4135e4f875294",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -908,7 +908,7 @@
         "potters-named"
       ],
       "availableOptionIds": [],
-      "textSha256": "1f9c377d1e23aed41e38f887204d4ec4a9ba22047ae73e2c7984c6a54e0bb761",
+      "textSha256": "d054c3efe2ff61b12d981b80aee2a39b27b58f5cee34d21f75729499fa0e32d7",
       "steps": 26
     },
     {
@@ -917,7 +917,7 @@
       "tableauId": "dark-letter",
       "reading": "base",
       "file": "auto-dailies/letter-decision.png",
-      "sha256": "775eb7ddb05e0a90d4b8bb73c14f714f7c7cfc4c239df861ea667d0ea74b6f34",
+      "sha256": "afa1a424548d9451cf76aee9969af37d4cf146210958f276aab408cc35d89a16",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -950,7 +950,7 @@
       "tableauId": "dark-letter-resolved",
       "reading": "variant",
       "file": "auto-dailies/letter-placed--3f1f5d.png",
-      "sha256": "aaabbcc85755a2a878a509aa6ae39cac3b6a95e9a4026ea877e7835a31f594ee",
+      "sha256": "8f8cf187387055883d38437e023114e7932546ac378f5b13e933ad5c578b7ab9",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -974,7 +974,7 @@
         "potters-named"
       ],
       "availableOptionIds": [],
-      "textSha256": "a589f5f137e6a83db43edbd3bfe05169bfbc034cba13cd9387ce3e46df4502d4",
+      "textSha256": "a7a74bf81e5f84ca1b7f4c98e03c538ea70b74d24b647e7cd0787dc7e5672581",
       "steps": 29
     },
     {
@@ -983,7 +983,7 @@
       "tableauId": "dark-letter-resolved",
       "reading": "variant",
       "file": "auto-dailies/letter-placed--51a663.png",
-      "sha256": "05e4dc801feb0480d6b8bf57f36303dd406805109729cc7030f05b681a81571d",
+      "sha256": "58c0ffbd56f865f8db6d50223a6ad1707f6e1f55599afc73f6f8dd395e0a01a3",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -1007,7 +1007,7 @@
         "potters-named"
       ],
       "availableOptionIds": [],
-      "textSha256": "4d27e97ac3ffb182dcd3e54fa90e6af59f5126a4afc93e7b6e98b12fb1206ab5",
+      "textSha256": "a96f765c44ae3fddae0680fbb684b071a89e2632f1304af7301f33a7bba2055c",
       "steps": 29
     },
     {
@@ -1016,7 +1016,7 @@
       "tableauId": "dark-letter-resolved",
       "reading": "variant",
       "file": "auto-dailies/letter-placed--c168a7.png",
-      "sha256": "04f52d066e2b7fef15135e76369c13f58f6541a585b4369aa24ab735d5400f5a",
+      "sha256": "48582ea3699288748cf9ad811e46d7edff5623351a457de098b91f64bd975081",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -1041,7 +1041,7 @@
         "charm-compels-assumed"
       ],
       "availableOptionIds": [],
-      "textSha256": "0064e668c29334c774df759d95a951b7005ed292086043a968e9c447261f569d",
+      "textSha256": "f368fe37d564176a9de47296693f1d43e8a197ec0723066c63a5e010438b9101",
       "steps": 29
     },
     {
@@ -1050,7 +1050,7 @@
       "tableauId": "dark-farewell",
       "reading": "base",
       "file": "auto-dailies/hagrid-farewell.png",
-      "sha256": "201102e306c345addc76db4c60b75b6ca7626bb28d210fa05ff0088ed32c5f16",
+      "sha256": "9543a55547a081606774ec89c0e0ca74307ead1f7119ac57e07df732dc220b92",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -1074,7 +1074,7 @@
         "potters-named"
       ],
       "availableOptionIds": [],
-      "textSha256": "07dce37353e1ee9b74f22118bdae461f277cc9a96de38acea9fbf30735896fb4",
+      "textSha256": "500d58a02627b1e1bda550d02788b6f292a88a59522322ca9a4e6f8449154c6e",
       "steps": 30
     },
     {
@@ -1083,7 +1083,7 @@
       "tableauId": "dark-hagrid-weeps",
       "reading": "base",
       "file": "auto-dailies/hagrid-weeps.png",
-      "sha256": "bcc96c479266df009737e85644971798ab6f5d19287bf93d837cbda8df98bbac",
+      "sha256": "7429287bb23d459e67608c47ea8563baa5ba9126c4b33c40cb838a58e8bde36b",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -1103,7 +1103,7 @@
         "potters-named"
       ],
       "availableOptionIds": [],
-      "textSha256": "f904943ce8a217a5d4791b4c50e5ce86057d4ceac0cb8a8340c4529764dca9f2",
+      "textSha256": "0e2e3acd9eab908e96a1e17f781cb29c6b7ac9ece1a3e3455a52f6ea2ee90dcf",
       "steps": 27
     },
     {
@@ -1112,7 +1112,7 @@
       "tableauId": "night-relit",
       "reading": "base",
       "file": "auto-dailies/they-leave.png",
-      "sha256": "213932099adb7c0b63c2489b3009f194ac1950ce71efe68982362175c846856a",
+      "sha256": "699eea9da5705db01ad0eb4f5dbc3356118a948e653cac789bcb588da699e75b",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -1145,7 +1145,7 @@
       "tableauId": "night-relit",
       "reading": "variant",
       "file": "auto-dailies/they-leave--0b0d98.png",
-      "sha256": "4715b24411091eca935e2383591576679004e18e7433b1c9a5357fd987a55f09",
+      "sha256": "6251e84942e84a07be35a8aeefa64eb00d61f084f4a1cab761848457b547fa07",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -1178,7 +1178,7 @@
       "tableauId": "night-relit",
       "reading": "base",
       "file": "auto-dailies/ending.png",
-      "sha256": "bbedba37416a143ede3903fe9ccee215ae72625694ea8a942e73d1415207a85e",
+      "sha256": "d43b529a4422d5850bd91ad6478aaa37d91113429605a9493edf4cd2fe403c7b",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -1211,7 +1211,7 @@
       "tableauId": "night-relit",
       "reading": "variant",
       "file": "auto-dailies/ending--13137f.png",
-      "sha256": "25cabdb68dceb42953c4e75d3dddc03b3dbb7c677770346d2465947ff757124b",
+      "sha256": "390b5aea091f403384d130b4cb6e227c5e37be23b62d2faffcecaf31a46b27cd",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -1245,7 +1245,7 @@
       "tableauId": "night-relit",
       "reading": "variant",
       "file": "auto-dailies/ending--54afda.png",
-      "sha256": "c433a6f7405c0fea5f852de57483521bf11e8ee7e8266b45930a16564f5a8fc3",
+      "sha256": "c1edb8b78756757723759bbf03e2ef0f8add3fe107c2940a352817c57302a684",
       "route": [
         {
           "nodeId": "cat-on-wall",
@@ -1280,7 +1280,7 @@
       "tableauId": "night-relit",
       "reading": "variant",
       "file": "auto-dailies/ending--d5fda6.png",
-      "sha256": "0eb9ac1ecc5cd82e31aa1019c318be64e851a9b806c1234bd109fe06c220cca1",
+      "sha256": "6be4817020d1c4950aeb5f582de7eb3d77cfe54750906d5c8ce7eeebea4bbaf3",
       "route": [
         {
           "nodeId": "cat-on-wall",

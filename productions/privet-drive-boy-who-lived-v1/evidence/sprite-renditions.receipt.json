@@ -13,23 +13,27 @@
     "matte": "851-labs/background-remover:a029dff38972b5fda4ec5d75d7d1cd25aeff621d2cf4946a41055d7db66b80bc"
   },
   "requestDigests": {
-    "vernon-noticing-v1.generate": "283ee18d7d77f61ae1f1d3bc9977f066384078b873268abb04040b72c387c20b",
+    "vernon-noticing-v1.generate": "040648301c9163a7f82b73d5b3a7da32c868394fa873aeefcd07676904c79ddf",
     "vernon-noticing-v1.matte": "0a70ab3bb7e38dda61d01e910e9df97f3a615a6211a7eb3c66946a549761682b",
-    "vernon-alarmed-v1.generate": "e59e8ba0b191b1c8a0dfc34e48bc6ecdc36f5dc1d18ceb77ed42bcc7a3caf1bd",
+    "vernon-alarmed-v1.generate": "9990c93295d57455a84de58073f5840f503dab21b103960627d64e120ab946bf",
     "vernon-alarmed-v1.matte": "e3fdb4bd691aafda85f939843aefc6eb7cec0896a56287a2ac283eabd6af701a",
-    "vernon-dismissing-v1.generate": "a39d02050b1d68670d563b8a7aba7d802fb6245823d459fd8b8dc2816727a1d0",
+    "vernon-dismissing-v1.generate": "c2fe3a11f6f296216c947d55ebff32f129cb0a812ee53e9b9ccfa9a4cc99fe29",
     "vernon-dismissing-v1.matte": "e567b49855d8d213fe1d08340369e48994cb08753399c011fb917f4afac1e008",
-    "dumbledore-listening-v1.generate": "d3aa57f2773cd1ac2eb64a237041f2608c260128f12128686cadfc97c9769e67",
+    "dumbledore-listening-v1.generate": "347a7c93d946cd8c9fa9bd55278b230637a7ca8adc4a23bdcfe641d37ff24ac5",
     "dumbledore-listening-v1.matte": "3070ad7b331dd40db3c27e09af64db51df20f9ace4618aeb302a0e5668700b97",
-    "dumbledore-resolved-v1.generate": "0a3108f69c919884f12866a4bf739a013c7c839b978c27857f35e3edd9219244",
+    "dumbledore-resolved-v1.generate": "315ea12ff1131cbebe364de93aac02981cdf3ff7c1a60ac2910a2ec9c0f5ee46",
     "dumbledore-resolved-v1.matte": "9e0a40ea6811b4fd423f88bfb7d657d912df08bc875b9aa7a4696912e6c5687a",
-    "mcgonagall-questioning-v1.generate": "5f8ddbdd76473b3ac2c8b585aa9a082934f389f476fcebcaf6d5ec0c71d587ff",
+    "mcgonagall-questioning-v1.generate": "d2d1e7d5f5e79ab63f647652d3d5e927576aec90bedd88dd793e0c2db0cea8c4",
     "mcgonagall-questioning-v1.matte": "5c7cbc0dfbed7d213b759707f5e990575bab218efa5a2406d3ec7edb552346aa",
-    "mcgonagall-steadied-v1.generate": "c30f2edf89ee9dcf264a8462e6abe99ab047362abfcaf6696be4c35de1ad5e51",
+    "mcgonagall-questioning-v2.generate": "0e7c283f33dd00930dfe93544ac627333833d8250a6a3a41039385271aaa3378",
+    "mcgonagall-questioning-v2.matte": "520cb74ece8c398e49a9c40e74fb17190c03e4ced2819f3d8ddd51f5316a5285",
+    "mcgonagall-grief-v2.generate": "ce1d018681ffe9692f22861b5873c376e0ff99a197e93a3143fc64e92b4d645d",
+    "mcgonagall-grief-v2.matte": "8fce9dfbed0b50b8ffb5d92cc40ab193e48af7fd44aae068daed0791cdb66e1e",
+    "mcgonagall-steadied-v1.generate": "fded89547fb5fc8a64b98418a6c2091137d6b0022831de3c2661e058fef7345d",
     "mcgonagall-steadied-v1.matte": "aba7afaccedb69ac87064544506bf0cd4720caae593311f4646acbc6f9cc7e47",
-    "hagrid-hushed-v1.generate": "14a118ce5ed687c498a3098d5ab719fc84e8c479f93b811313690bada0598cf9",
+    "hagrid-hushed-v1.generate": "59638322c8d5ba39f4735813039a3724710f306734a3dbfcaba8fb943cf3286d",
     "hagrid-hushed-v1.matte": "3fb86e53e4407758b744048f7a098fe648bf23595c2ca06fda1584e149a08ade",
-    "hagrid-farewell-v1.generate": "e53b6d1146fbd1e5272ae6dbbdbe617acfc10ace66e07330b525b50efe8eaf5c",
+    "hagrid-farewell-v1.generate": "718cd3563e0c705890cfbd15dd6da38c0994345c78d8f955b7c5dc48dd99e669",
     "hagrid-farewell-v1.matte": "b72de610c1066568fcce5d261123e672a01e94d21e70135dc7ff1a4274b709db"
   },
   "assets": {
@@ -42,13 +46,7 @@
         "1f37egstedrge0d0semrhwc3qr"
       ],
       "generatedUrl": "https://replicate.delivery/xezq/YwGgvBhS0k72Lx0fv0eTzbcz6z0iaQ4NWKQ8Fu87Gs677MQXA/tmp1f1ojren.jpg",
-      "transparentUrl": "https://replicate.delivery/czjl/be3hR4jsXwV4UCkZA7OXz9LHeKPLNrifLGjC9gvm7sZ83ZguA/output.png",
-      "matteInspection": {
-        "visiblePixels": 1375232,
-        "boundaryPixels": 17452,
-        "residualBoundaryFraction": 0.00028650011460004584,
-        "transparentRgbPixels": 0
-      }
+      "transparentUrl": "https://replicate.delivery/czjl/be3hR4jsXwV4UCkZA7OXz9LHeKPLNrifLGjC9gvm7sZ83ZguA/output.png"
     },
     "vernon-alarmed-v1": {
       "sourcePath": "assets/generated/privet-drive-boy-who-lived-v1/vernon-alarmed-v1.png",
@@ -59,13 +57,7 @@
         "hchcj8antxrga0d0senapr4xdw"
       ],
       "generatedUrl": "https://replicate.delivery/xezq/vq0rsChY9hqsIBDAkfeLIe5nENfyeXul933ElfhKR1PfheMQXA/tmpegjkzuuq.jpg",
-      "transparentUrl": "https://replicate.delivery/czjl/aoS8OMckKPqHD9VjsZXSw1cUJJlpexYTj6BohazKtnqjeMQXA/output.png",
-      "matteInspection": {
-        "visiblePixels": 1540345,
-        "boundaryPixels": 19567,
-        "residualBoundaryFraction": 0.0035774518321664028,
-        "transparentRgbPixels": 0
-      }
+      "transparentUrl": "https://replicate.delivery/czjl/aoS8OMckKPqHD9VjsZXSw1cUJJlpexYTj6BohazKtnqjeMQXA/output.png"
     },
     "vernon-dismissing-v1": {
       "sourcePath": "assets/generated/privet-drive-boy-who-lived-v1/vernon-dismissing-v1.png",
@@ -76,13 +68,7 @@
         "7hj11rdm49rge0d0sena9pqpr8"
       ],
       "generatedUrl": "https://replicate.delivery/xezq/3hjySeE5ofrrOU8e0zMo9L1494Ji8ezk9NpB1S4gzMJs1zAdB/tmp_bqfzqe2.jpg",
-      "transparentUrl": "https://replicate.delivery/czjl/tpYzEUtsYGpFI9bPgLORiq5tIgz9UB6UMWtxpTwds5wXPD0F/output.png",
-      "matteInspection": {
-        "visiblePixels": 1354214,
-        "boundaryPixels": 16296,
-        "residualBoundaryFraction": 0.04596219931271478,
-        "transparentRgbPixels": 0
-      }
+      "transparentUrl": "https://replicate.delivery/czjl/tpYzEUtsYGpFI9bPgLORiq5tIgz9UB6UMWtxpTwds5wXPD0F/output.png"
     },
     "dumbledore-listening-v1": {
       "sourcePath": "assets/generated/privet-drive-boy-who-lived-v1/dumbledore-listening-v1.png",
@@ -93,13 +79,7 @@
         "a11mn9aczhrgc0d0senswp8jx4"
       ],
       "generatedUrl": "https://replicate.delivery/xezq/OQWnRhcqekSzR6Wxe5Bsd0KlJePxPlYZfhr9vL6ojgJP4zAdB/tmp_89uk35n.jpg",
-      "transparentUrl": "https://replicate.delivery/czjl/bssdLfuzcsXmM6FxTUkAyjseJ21VfLRB808K6yXgHfVb4zAdB/output.png",
-      "matteInspection": {
-        "visiblePixels": 1177881,
-        "boundaryPixels": 18073,
-        "residualBoundaryFraction": 0.12648702484368948,
-        "transparentRgbPixels": 0
-      }
+      "transparentUrl": "https://replicate.delivery/czjl/bssdLfuzcsXmM6FxTUkAyjseJ21VfLRB808K6yXgHfVb4zAdB/output.png"
     },
     "dumbledore-resolved-v1": {
       "sourcePath": "assets/generated/privet-drive-boy-who-lived-v1/dumbledore-resolved-v1.png",
@@ -110,13 +90,7 @@
         "ggew3fn38xrga0d0sent59qht4"
       ],
       "generatedUrl": "https://replicate.delivery/xezq/f8cJfTJBftX1gowNVxy16MMXXqEvMwBBJyzfbD4Eq2On5zAdB/tmp6x3y6irr.jpg",
-      "transparentUrl": "https://replicate.delivery/czjl/vAYP7lkYCZIINF1ipNBaWgOSjZfGOkJVJ5fsEBUlklPceZguA/output.png",
-      "matteInspection": {
-        "visiblePixels": 1228102,
-        "boundaryPixels": 15990,
-        "residualBoundaryFraction": 0.28893058161350843,
-        "transparentRgbPixels": 0
-      }
+      "transparentUrl": "https://replicate.delivery/czjl/vAYP7lkYCZIINF1ipNBaWgOSjZfGOkJVJ5fsEBUlklPceZguA/output.png"
     },
     "mcgonagall-questioning-v1": {
       "sourcePath": "assets/generated/privet-drive-boy-who-lived-v1/mcgonagall-questioning-v1.png",
@@ -127,11 +101,39 @@
         "6kat71rh1nrgc0d0sep9v0pzs8"
       ],
       "generatedUrl": "https://replicate.delivery/xezq/dhr3K4Lne31YbiFjhwEghLeOdI4I4dCHPA82lXujMaM1eZguA/tmpjby7uw8b.jpg",
-      "transparentUrl": "https://replicate.delivery/czjl/p2awsd8DmgZPOJHsMGC1K18cYqNhsQuyu44AbtfHnZccfMQXA/output.png",
+      "transparentUrl": "https://replicate.delivery/czjl/p2awsd8DmgZPOJHsMGC1K18cYqNhsQuyu44AbtfHnZccfMQXA/output.png"
+    },
+    "mcgonagall-questioning-v2": {
+      "sourcePath": "assets/generated/privet-drive-boy-who-lived-v1/mcgonagall-questioning-v2.png",
+      "sha256": "5d9df6afff395de526259365a19aa039e717cd97ffb4b33379f080a38e70c456",
+      "provenance": "replicate",
+      "predictionIds": [
+        "9gfj8jrk8drmw0d0sf7v7ns6t8",
+        "fjjxmvepjhrgc0d0sf7tg3d3sc"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/7iUtbWBefyrGLUN5KECD9NCVeeseZgZi6MYCwfM5mD5a3YD0F/tmpvayd50nw.jpg",
+      "transparentUrl": "https://replicate.delivery/czjl/ghZKik7QMGqNPtwjLPN7BrASrVax62heC6FbefyRXw0BHbguA/output.png",
       "matteInspection": {
-        "visiblePixels": 817827,
-        "boundaryPixels": 15781,
-        "residualBoundaryFraction": 0.0013940814903998478,
+        "visiblePixels": 893206,
+        "boundaryPixels": 13125,
+        "residualBoundaryFraction": 0.001980952380952381,
+        "transparentRgbPixels": 0
+      }
+    },
+    "mcgonagall-grief-v2": {
+      "sourcePath": "assets/generated/privet-drive-boy-who-lived-v1/mcgonagall-grief-v2.png",
+      "sha256": "e21efcacd77af76ed44a41c8f3b6a8cff6b9e714ceafd3a830e9d2cefce0adad",
+      "provenance": "replicate",
+      "predictionIds": [
+        "psd1g8f86xrmt0d0sf7sawkvxg",
+        "gezt2b1bdnrge0d0sf8a8xyxfc"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/arxv8TWI2YJoIZslQCE27bMeThoY1p6PiZZTsoJ9P4fzjNQXA/tmp_jl1jc8x.jpg",
+      "transparentUrl": "https://replicate.delivery/czjl/aKVilzy7ieTxaycfx20ZpVe53lEIz3kIKJfP76KYc9ZdP2AdB/output.png",
+      "matteInspection": {
+        "visiblePixels": 956882,
+        "boundaryPixels": 13338,
+        "residualBoundaryFraction": 0,
         "transparentRgbPixels": 0
       }
     },
@@ -144,13 +146,7 @@
         "81wwqhv9fdrga0d0sepadbss04"
       ],
       "generatedUrl": "https://replicate.delivery/xezq/RW4uUqwwUYbsFBXdza3c47pFsQYekYmMO3fW66vImP5LfZguA/tmp5pj6uw2q.jpg",
-      "transparentUrl": "https://replicate.delivery/czjl/YSCIxLYAmzoMKFTMDvs8NNGfeLReYIUaHiKZeS9Uzd1f5nB6C/output.png",
-      "matteInspection": {
-        "visiblePixels": 911177,
-        "boundaryPixels": 13479,
-        "residualBoundaryFraction": 0,
-        "transparentRgbPixels": 0
-      }
+      "transparentUrl": "https://replicate.delivery/czjl/YSCIxLYAmzoMKFTMDvs8NNGfeLReYIUaHiKZeS9Uzd1f5nB6C/output.png"
     },
     "hagrid-hushed-v1": {
       "sourcePath": "assets/generated/privet-drive-boy-who-lived-v1/hagrid-hushed-v1.png",
@@ -161,13 +157,7 @@
         "gx5h9tr9esrg80d0sepsyvaghr"
       ],
       "generatedUrl": "https://replicate.delivery/xezq/gfarGMLBqiyoDSCrCl1wbQMnOU622WLfD59mtkyyQffSfnB6C/tmpifv4ncip.jpg",
-      "transparentUrl": "https://replicate.delivery/czjl/78Rd786ec90qDSCAofumbfXbdpvGDWejpErJqz36fZREfPD0F/output.png",
-      "matteInspection": {
-        "visiblePixels": 1395662,
-        "boundaryPixels": 20745,
-        "residualBoundaryFraction": 0,
-        "transparentRgbPixels": 0
-      }
+      "transparentUrl": "https://replicate.delivery/czjl/78Rd786ec90qDSCAofumbfXbdpvGDWejpErJqz36fZREfPD0F/output.png"
     },
     "hagrid-farewell-v1": {
       "sourcePath": "assets/generated/privet-drive-boy-who-lived-v1/hagrid-farewell-v1.png",
@@ -178,13 +168,7 @@
         "76wycbm1xxrg80d0septh2t1sm"
       ],
       "generatedUrl": "https://replicate.delivery/xezq/DfoS6gnyRWTmWyH4Ok1paRWJaDx6NivSabF3Yayq5VvJgGoLA/tmpy8s4u9y6.jpg",
-      "transparentUrl": "https://replicate.delivery/czjl/qZzXWydmxZbEI1RAFle6Akr5uYVupEN2Ejmv5V61frOXANQXA/output.png",
-      "matteInspection": {
-        "visiblePixels": 1777491,
-        "boundaryPixels": 23369,
-        "residualBoundaryFraction": 0,
-        "transparentRgbPixels": 0
-      }
+      "transparentUrl": "https://replicate.delivery/czjl/qZzXWydmxZbEI1RAFle6Akr5uYVupEN2Ejmv5V61frOXANQXA/output.png"
     }
   }
 }
