@@ -126,6 +126,7 @@ const ChoiceSchema = z.object({
     label: z.string().min(1),
     consequence: z.string().min(1),
     nodeId: z.string().min(1),
+    distractor: z.literal(true).optional(),
     grantsInsightIds: z.array(z.string().min(1)).min(1).optional(),
     requiresInsightIds: z.array(z.string().min(1)).min(1).optional(),
   }).strict()).min(2).max(4),
@@ -180,8 +181,11 @@ export type Moment = z.infer<typeof MomentSchema>;
 
 const ReaderInsightSchema = z.object({
   id: z.string().min(1),
+  /** A mistaken insight is a plausible misreading the reader can carry until the text corrects it. */
+  standing: z.enum(['grounded', 'mistaken']),
   meaning: z.string().min(1),
 }).strict();
+export type ReaderInsight = z.infer<typeof ReaderInsightSchema>;
 
 export const ExperienceSchema = z.object({
   schemaVersion: z.literal(2),

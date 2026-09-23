@@ -1,0 +1,42 @@
+{
+  "id": "739p2jg071rmw0d0setsebrt78",
+  "model": "minimax/speech-02-turbo",
+  "version": "hidden",
+  "input": {
+    "audio_format": "mp3",
+    "bitrate": 128000,
+    "channel": "mono",
+    "emotion": "calm",
+    "english_normalization": true,
+    "language_boost": "English",
+    "pitch": -1,
+    "sample_rate": 32000,
+    "speed": 0.94,
+    "text": "A distant siren crossed the rain. Peter lowered the mask. MJ did not step back—and nothing in her stillness was counting.",
+    "voice_id": "English_expressive_narrator"
+  },
+  "logs": "Generating speech with model speech-02-turbo\nGenerated speech in 1.79sec\nEach character is 1 token\nTokens: 121\n",
+  "output": "https://replicate.delivery/xezq/eZehcsrpNIk9YEFCHaefzip45BdkufkmhS0vHDrYWblOApB6C/tmpgfp44md2.mp3",
+  "data_removed": false,
+  "error": null,
+  "source": "api",
+  "status": "succeeded",
+  "created_at": "2026-09-23T00:40:32.056Z",
+  "started_at": "2026-09-23T00:40:32.072295657Z",
+  "completed_at": "2026-09-23T00:40:33.988244731Z",
+  "urls": {
+    "cancel": "https://api.replicate.com/v1/predictions/739p2jg071rmw0d0setsebrt78/cancel",
+    "get": "https://api.replicate.com/v1/predictions/739p2jg071rmw0d0setsebrt78",
+    "stream": "https://stream.replicate.com/v1/files/jbxs-dnl32yfgeqbykhhjnr6gxzal2ae6b7hceim4a4b3h6qy2mvzwxma",
+    "web": "https://replicate.com/p/739p2jg071rmw0d0setsebrt78"
+  },
+  "metrics": {
+    "input_token_count": 121,
+    "output_token_count": 1,
+    "predict_time": 1.9159490639999999,
+    "time_to_first_token": 0.000413663,
+    "token_input_count": 121,
+    "tokens_per_second": 0.5220472560715677,
+    "total_time": 1.932244731
+  }
+}

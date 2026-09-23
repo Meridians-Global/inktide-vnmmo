@@ -378,6 +378,90 @@
       "predictionId": "8zawpc5yedrmr0d0pekb2h9dv0",
       "text": "A seventy-percent technique was ordinary. A material that learned from failure could change who owned the next winter. More useful still was a witness another hand could keep.",
       "voiceId": "English_magnetic_voiced_man"
+    },
+    "voice-witness-question": {
+      "inputDigest": "e338dbed1424b6f94a92e499588a7fd0d45cbf696861803ca143a2e69416ee7c",
+      "sha256": "a64989df25fca88a665b9a87294dd4021b8d9c953e97883713f0b413ac7db29a",
+      "predictionId": "t4th7d3swnrmr0d0setr2vhy8r",
+      "text": "Who else has counted these?",
+      "voiceId": "English_magnetic_voiced_man"
+    },
+    "voice-witness-chun-private": {
+      "inputDigest": "119eafc0752001ae4cb4d76328a619d9c02117c1882eeebad3a281d2f58a7543",
+      "sha256": "3c1fe1d1028b15b295c4c33169012859ed38180ce3b9426627c1953befd60ef4",
+      "predictionId": "pss4yew8d5rmt0d0setrbjg3sc",
+      "text": "He asked about witnesses before he asked about the stone. Secrecy was the smaller danger in this room, and he had reached for it first.",
+      "voiceId": "English_Graceful_Lady"
+    },
+    "voice-chun-answers-v3": {
+      "inputDigest": "fa57ba1eef8eb2f4aef2b0ac8de20f708e6b4e8e47b714fdffc1504ba49d8dfb",
+      "sha256": "c525c3d37c0d13ef737fe4e4833f99d001e1d97f61782ffd890cbdb83cc44f11",
+      "predictionId": "g634hvcvm5rmr0d0setrhyabt8",
+      "text": "No one. That is not the result either. The moss was not consumed. It was teaching the stone to remember moonlight.",
+      "voiceId": "English_Graceful_Lady"
+    },
+    "voice-chun-claim-reading": {
+      "inputDigest": "fa2c4329c82e36800e554200e8c38448d8a4b2dad164b27cc9081b67bd981a86",
+      "sha256": "59dc3d344d86fab0494325e5ca71d0eaad1d2abc8616ca0d60e6dd9be241f351",
+      "predictionId": "hyw0x7xevsrmr0d0setv75d7n4",
+      "text": "You read her caution as a claim: the one who found it keeps it. The reading fitted the sleeve, the sealed room, and the key she had not yet mentioned.",
+      "voiceId": "English_Insightful_Speaker"
+    },
+    "voice-chun-hesitates-v1": {
+      "inputDigest": "96642d5ef44737e31d4e5da2afb14945dc93d846cbd0a8d5b5b1669038103004",
+      "sha256": "d34c5114ff141d27615a0b6fbe7c06d9282c5b25252b97a9edf598ce85603fcb",
+      "predictionId": "sp117cxxd5rmy0d0setrkbm250",
+      "text": "Chun’s hand hovered above the seam. She had hidden this from no one; she had kept it from herself. The distance, not the secrecy, made the result a warning.",
+      "voiceId": "English_Insightful_Speaker"
+    },
+    "voice-forecast-delegate": {
+      "inputDigest": "838889ee55a779999064129fab8ae4d4771c8175d78018c3d960040c9239f1cc",
+      "sha256": "8a9c545a0feca46a258244b10d11f9fa48bb5c82eeca489a4da596596d18bd75",
+      "predictionId": "4sqmk6pgg5rmr0d0sett43pz58",
+      "text": "You expected him to let the finder take the finder’s risk, and to learn from whatever it cost her.",
+      "voiceId": "English_Insightful_Speaker"
+    },
+    "voice-conduct-prediction-settles-v3": {
+      "inputDigest": "9af4b22c3cb9660ebd96a41fefd0a7d34a7a46d2c996aa196b86932c3137032d",
+      "sha256": "c66998b15f4e09e3c7d0c745bd1ece3ffce0e16f8e8abd4fe9d6d1301140cd70",
+      "predictionId": "5pj405ez1hrmt0d0setsr7z0sg",
+      "text": "You had expected Fang to spend Chun’s hand. He spent no one’s. The untouched seam made patience visible as a form of control.",
+      "voiceId": "English_Insightful_Speaker"
+    },
+    "voice-repeat-tonight-reading": {
+      "inputDigest": "ac8d4c4ac8ca1090124ca2cb5a18435800ce18cb93b5e39b161793edbb858aa3",
+      "sha256": "ef0b09bd2d564854595dca3ff3a43f81d446fff442c794c05a19a27576227b13",
+      "predictionId": "7w6zfhqdm5rmw0d0setrnh6gc8",
+      "text": "You wanted the trial tonight, while the seam still answered. Fang Yuan’s order went the other way.",
+      "voiceId": "English_Insightful_Speaker"
+    },
+    "voice-seal-order-v3": {
+      "inputDigest": "334f1f655898015881ce0af799a72ce384c2149d7e97a172856eb99eeba72a5a",
+      "sha256": "68a93d754ffa932f19decdcf6ca207d3ebe72d05d22f4ed8a2b623072a818052",
+      "predictionId": "3n40e3qw75rmt0d0setsq3pttr",
+      "text": "“Seal the original,” Fang said. “Not tonight. You keep the key. Tomorrow, show me the first failed core—and we work from a copy.”",
+      "voiceId": "English_magnetic_voiced_man"
+    },
+    "voice-fang-answers-cost-v1": {
+      "inputDigest": "859a9c5a731e2129a99ec0d6dc26313cb725b36af3d36c686d79010c2bb2e845",
+      "sha256": "210e2817d069fd01428ef98ad4500d003ee5d3a6384ea0e4b8d1752e57f4abc1",
+      "predictionId": "24ks9c8b05rmt0d0sev9r5dcx4",
+      "text": "Then the difference becomes the result. We record it before we use it. Tonight would only have recorded our appetite.",
+      "voiceId": "English_magnetic_voiced_man"
+    },
+    "voice-scar-closes-v1": {
+      "inputDigest": "697bb486a84d9c2ad3c6cea33ef9a364775c94f1379ec00e24c8de014bb2a628",
+      "sha256": "8222fc1a92098fcb7a067fdf73f2b57c586119d028f2330de767366c6ac0fdcf",
+      "predictionId": "mwbmnw0sk9rmr0d0sev9tsrmf8",
+      "text": "Chun lowered the mineral lid herself; he had not asked her to. Violet light narrowed to a thread, then vanished beneath blank paper and dark stone.",
+      "voiceId": "English_Insightful_Speaker"
+    },
+    "voice-key-remains-v1": {
+      "inputDigest": "5141c18df9a8ade6b147c77951d89562c2b1bf39327101eb752dc364365e59a3",
+      "sha256": "1e5c1324e75d13391eb8056c088a367515203629bc469e23902714ff81253338",
+      "predictionId": "h9s0pth8mdrmt0d0sev8xn11xc",
+      "text": "The key disappeared into Chun’s sleeve. Whatever you had taken for a claim, she had kept the key so that no one—herself included—could reach the stone alone. Fang watched the motion and did not ask for it.",
+      "voiceId": "English_Insightful_Speaker"
     }
   }
 }

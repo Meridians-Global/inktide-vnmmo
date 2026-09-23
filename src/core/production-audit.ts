@@ -9,13 +9,28 @@ export type ProductionTarget = Readonly<{
   minimumLocationCount: number;
   minimumReadingSeconds: number;
   readingWordsPerMinute: number;
+  /** Choice purposes that must offer a plausible-but-wrong option alongside the grounded reads. */
+  distractedChoicePurposes: readonly ChoicePurpose[];
+  /** Consecutive staged moments an actor may hold one rendition before the run reads as a held pose. */
+  maximumHeldPoseMoments: number;
+  /** Renditions an actor needs before baseline → appraisal → decision acting is possible at all. */
+  minimumActorRenditions: number;
 }>;
 
 export type ProductionDemand = Readonly<{
   id: string;
   lane: 'story' | 'performance' | 'set';
   priority: 'high' | 'medium';
-  reason: 'missing-choice-purpose' | 'minimum-location-count' | 'minimum-reading-duration' | 'missing-choice-payoff' | 'static-pivotal-performance' | 'uncomposed-cg';
+  reason:
+    | 'missing-choice-purpose'
+    | 'minimum-location-count'
+    | 'minimum-reading-duration'
+    | 'missing-choice-payoff'
+    | 'undistracted-choice'
+    | 'static-pivotal-performance'
+    | 'held-pose'
+    | 'thin-rendition-set'
+    | 'uncomposed-cg';
   momentIds: readonly string[];
   actorIds: readonly string[];
 }>;
@@ -222,6 +237,50 @@ function choicePayoffs(experience: Experience, choice: Moment): string[] {
   });
 }
 
+type HeldPoseRun = Readonly<{ actorId: string; momentIds: readonly string[] }>;
+
+function stagedRendition(experience: Experience, moment: Moment, actorId: string): string | undefined {
+  const tableau = experience.tableaux.find((candidate) => candidate.id === moment.tableauId);
+  const actor = experience.actors.find((candidate) => candidate.id === actorId);
+  const figure = tableau?.figures.find((candidate) => candidate.actorId === actorId);
+  if (!actor || !figure) return undefined;
+  return figure.appearanceId ?? actor.defaultAppearanceId;
+}
+
+/** Maximal goto-linked runs where a staged actor holds one rendition for more moments than the target allows. */
+function heldPoseRuns(experience: Experience, moments: Map<string, Moment>, maximumMoments: number): HeldPoseRun[] {
+  const predecessorCount = new Map<string, number>();
+  for (const moment of experience.moments) {
+    if (moment.next.type !== 'goto') continue;
+    predecessorCount.set(moment.next.nodeId, (predecessorCount.get(moment.next.nodeId) ?? 0) + 1);
+  }
+  const runs: HeldPoseRun[] = [];
+  for (const actor of experience.actors) {
+    const continues = (from: Moment, to: Moment): boolean =>
+      from.next.type === 'goto' &&
+      (predecessorCount.get(to.id) ?? 0) === 1 &&
+      stagedRendition(experience, from, actor.id) !== undefined &&
+      stagedRendition(experience, from, actor.id) === stagedRendition(experience, to, actor.id);
+    for (const start of experience.moments) {
+      if (stagedRendition(experience, start, actor.id) === undefined) continue;
+      const openedByPredecessor = experience.moments.some((previous) =>
+        previous.next.type === 'goto' && previous.next.nodeId === start.id && continues(previous, start),
+      );
+      if (openedByPredecessor) continue;
+      const momentIds = [start.id];
+      let current = start;
+      while (current.next.type === 'goto') {
+        const following = moments.get(current.next.nodeId);
+        if (!following || !continues(current, following)) break;
+        momentIds.push(following.id);
+        current = following;
+      }
+      if (momentIds.length > maximumMoments) runs.push({ actorId: actor.id, momentIds });
+    }
+  }
+  return runs;
+}
+
 export function auditExperience(
   experience: Experience,
   target: ProductionTarget,
@@ -305,6 +364,42 @@ export function auditExperience(
       reason: 'missing-choice-payoff',
       momentIds: [choice.momentId],
       actorIds: choice.privateHolderIds,
+    });
+  }
+
+  for (const moment of experience.moments) {
+    if (moment.next.type !== 'choice' || !target.distractedChoicePurposes.includes(moment.next.purpose)) continue;
+    if (moment.next.options.some((option) => option.distractor)) continue;
+    demands.push({
+      id: `story:choice-distractor:${moment.id}`,
+      lane: 'story',
+      priority: 'medium',
+      reason: 'undistracted-choice',
+      momentIds: [moment.id],
+      actorIds: [],
+    });
+  }
+
+  for (const actor of experience.actors) {
+    if (actor.appearances.length >= target.minimumActorRenditions) continue;
+    demands.push({
+      id: `performance:renditions:${actor.id}`,
+      lane: 'performance',
+      priority: 'medium',
+      reason: 'thin-rendition-set',
+      momentIds: [],
+      actorIds: [actor.id],
+    });
+  }
+
+  for (const run of heldPoseRuns(experience, moments, target.maximumHeldPoseMoments)) {
+    demands.push({
+      id: `performance:held-pose:${run.actorId}:${run.momentIds[0]}`,
+      lane: 'performance',
+      priority: 'medium',
+      reason: 'held-pose',
+      momentIds: run.momentIds,
+      actorIds: [run.actorId],
     });
   }
 

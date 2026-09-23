@@ -80,6 +80,7 @@ export function compileExperience(input: unknown, options: { assetUrlBase?: stri
   const assetsById = new Map(experience.assets.map((asset) => [asset.id, asset]));
   const actorsById = new Map(experience.actors.map((actor) => [actor.id, actor]));
   const insightIds = new Set(experience.readerInsights.map((insight) => insight.id));
+  const insightStanding = new Map(experience.readerInsights.map((insight) => [insight.id, insight.standing]));
   const tableauxById = new Map(experience.tableaux.map((tableau) => [tableau.id, tableau]));
   const momentsById = new Map(experience.moments.map((moment) => [moment.id, moment]));
 
@@ -198,7 +199,17 @@ export function compileExperience(input: unknown, options: { assetUrlBase?: stri
       if (immediatelyAvailable.length < 2) {
         errors.push(`Choice ${moment.id} needs at least two options available without prior reader knowledge`);
       }
+      if (moment.next.options.every((option) => option.distractor)) {
+        errors.push(`Choice ${moment.id} needs at least one grounded option`);
+      }
       for (const option of moment.next.options) {
+        const grantsMistaken = (option.grantsInsightIds ?? []).some((id) => insightStanding.get(id) === 'mistaken');
+        if (option.distractor && !grantsMistaken) {
+          errors.push(`Distractor ${moment.id}/${option.id} must grant a mistaken reader insight`);
+        }
+        if (!option.distractor && grantsMistaken) {
+          errors.push(`Choice ${moment.id}/${option.id} grants a mistaken reader insight but is not marked as a distractor`);
+        }
         for (const duplicate of findDuplicates(option.grantsInsightIds ?? [])) {
           errors.push(`Choice ${moment.id}/${option.id} grants duplicate reader insight ${duplicate}`);
         }
@@ -406,6 +417,12 @@ export function compileExperience(input: unknown, options: { assetUrlBase?: stri
     ));
     if (!granted) errors.push(`Reader insight ${insight.id} is never learned`);
     if (!harvestedByChoice && !harvestedByReading) errors.push(`Reader insight ${insight.id} is never harvested`);
+    if (insight.standing === 'mistaken' && !harvestedByReading) {
+      errors.push(`Mistaken reader insight ${insight.id} is never corrected by a reading variant`);
+    }
+    if (insight.standing === 'mistaken' && harvestedByChoice) {
+      errors.push(`Mistaken reader insight ${insight.id} must not gate a choice option`);
+    }
   }
 
   const reachable = new Set<string>();

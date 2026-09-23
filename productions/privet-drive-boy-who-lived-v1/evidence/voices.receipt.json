@@ -308,6 +308,55 @@
       "predictionId": "80b34cz6gsrmw0d0pemtm2c04m",
       "text": "He could not know that at this very moment people meeting in secret all over the country were holding up their glasses and saying in hushed voices: “To Harry Potter—the boy who lived!”",
       "voiceId": "English_CaptivatingStoryteller"
+    },
+    "voice-vernon-stops-collection": {
+      "inputDigest": "5b5d30398d01f7b8ada6de11acc57e533bfb65d3bfcfebbb1f66272702e7177f",
+      "sha256": "5cc6b9cf44367ecfaf01f9990421350808adcdce1c25cf7ee3219f842c381083",
+      "predictionId": "96yqcr9vpnrmr0d0seva1y7ts4",
+      "text": "Some silly stunt, then. Collecting for something. He looked for the bucket and found none, and the word Potter went past him like a bus he had already decided not to catch.",
+      "voiceId": "English_MatureBoss"
+    },
+    "voice-cat-becomes-woman-v1": {
+      "inputDigest": "6c93a199a2e119c929dcfcf11faf122d44cf01c8f32449cb1aae3f82bd0b5ddc",
+      "sha256": "451946645810106d3b88bf3fa0b954d8b5c28e81f568d2c92ba79bece905f2c4",
+      "predictionId": "1yen25ja89rmw0d0sev9xkfkfm",
+      "text": "He turned to smile at the tabby, but it had gone. Instead he was smiling at a rather severe-looking woman in square spectacles exactly the shape of the markings the cat had had around its eyes. She, too, was wearing a cloak, an emerald one—the same cloaks Mr Dursley had decided were collecting for something—and she was not collecting for anything. She looked distinctly ruffled.",
+      "voiceId": "English_CaptivatingStoryteller"
+    },
+    "voice-letter-placed-v3": {
+      "inputDigest": "f31e03c533b7eab6ce2d5c153fb8649af561cefa3cdf11a9594d0dd16c5537c5",
+      "sha256": "d300ba0166c95231ee0eff5eca85c6eae8507571711ace7d55a7d53a216b5e37",
+      "predictionId": "wr4g9eb28drmy0d0sev87d8260",
+      "text": "I’ve explained everything in the letter. They will take him in, Professor—not because I make them, but because they are the only family he has left. It is the best place for him. Dry your eyes, Hagrid.",
+      "voiceId": "English_Steadymentor"
+    },
+    "voice-hagrid-farewell": {
+      "inputDigest": "7df36a03ec80f593242fee3e4de1590b24fd25b01b86c7c5af8a7ee3b7078537",
+      "sha256": "bdbbaf456271050127ee229933f6adb124dbb860de90b86f36a355fee8f1c23f",
+      "predictionId": "906m7xbnnnrmw0d0sev9576szm",
+      "text": "Yeah. I’ll be takin’ Sirius his bike back. G’night, Professor McGonagall—Professor Dumbledore, sir.",
+      "voiceId": "English_ManWithDeepVoice"
+    },
+    "voice-ending-v1": {
+      "inputDigest": "015651f58cb676c3c690c59f2643bca3875a971dd4289478fa4c2f6e36d5b525",
+      "sha256": "b9ed3b5a4c89f756d974978e63b2daf2ad1e16a8d929fc45087949f9fd28baa2",
+      "predictionId": "56bk62w4axrmy0d0sevabcgtpc",
+      "text": "He could not know that at this very moment people meeting in secret all over the country were holding up their glasses—not to a curse that had failed, but to him—and saying in hushed voices: “To Harry Potter—the boy who lived!”",
+      "voiceId": "English_CaptivatingStoryteller"
+    },
+    "voice-ending-v2": {
+      "inputDigest": "48fe67a1f7daa780b4d3e66100f329d0b6a7e29405c0d3a11e534429e9aacf86",
+      "sha256": "1f04c8d792ca8ee3ff33a55aa182242cc4684c1aa886a48f1c6a6f2ea5ac93b3",
+      "predictionId": "4mzr6jwqf9rmw0d0sevax46bhg",
+      "text": "Nothing held him to the step but blankets and a letter. He could not know that at this very moment people meeting in secret all over the country were holding up their glasses and saying in hushed voices: “To Harry Potter—the boy who lived!”",
+      "voiceId": "English_CaptivatingStoryteller"
+    },
+    "voice-ending-v3": {
+      "inputDigest": "55b0d42de0a95e4a3a230c3375ea4ab277e8ea6eff018205eabaaf9097f14d4c",
+      "sha256": "1a2fbd76924766bf9bf9162623a298dc1dd62339647ec2ef6998d390ab870139",
+      "predictionId": "wpt83ynathrmy0d0sev9c8qxsg",
+      "text": "Nothing held him to the step but blankets and a letter. He could not know that at this very moment people meeting in secret all over the country were holding up their glasses—not to a curse that had failed, but to him—and saying in hushed voices: “To Harry Potter—the boy who lived!”",
+      "voiceId": "English_CaptivatingStoryteller"
     }
   }
 }

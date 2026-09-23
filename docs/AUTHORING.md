@@ -315,6 +315,16 @@ after-state → what remains; a third appearance or the same, held              
 unchanged default pose cannot pass as acting. `src/core/performance-beats.ts` detects these transitions from the
 exact bindings for review; it never reads the prose.
 
+**Acting variation.** A staged actor who keeps one rendition across a long run of consecutive moments reads as a
+held pose, so text and voice end up doing all the work. The audit flags `held-pose` when any staged actor (not just
+the speaker) keeps one `appearanceId` beyond `maximumHeldPoseMoments` consecutive goto-linked moments, and
+`thin-rendition-set` when an actor defines fewer than `minimumActorRenditions`. Repair by cutting to a rendition
+that means something — a listening beat, a question, an alarm, a resolve, a farewell — at the moment the actor's
+state actually changes, not by rotating poses for their own sake. New renditions come from
+`scripts/acquire-sprite-renditions.ts`: each request is reference-conditioned on the actor's pinned baseline sprite,
+changes only the named performance, keeps facing/scale/wardrobe/palette, and writes its own receipt. Pick by eye in
+the 16:9 dailies; the audit status is mechanical evidence, never artistic approval.
+
 Keep `chapter` identical across a scene (it is the header). `label` is a short display tag; without it the
 rail shows the mode. `cueAssetIds` must be `cue` assets; `voiceAssetId` must be a `voice` asset.
 
@@ -335,8 +345,19 @@ next: { type: 'choice', posture: 'traversal', weight: 'fork', purpose: 'interpre
 - Every choice declares a `weight` (`texture` — the branches differ in reading only; `fork` — they visit different
   moments) and a `purpose` (`observe` · `interpret` · `predict` · `decide`). The production audit
   (`src/story/production-targets.ts`) requires each Experience to offer all four purposes at least once.
+- **Distractors.** Every `interpret`, `predict` and `decide` choice should carry at least one plausible-wrong
+  option marked `distractor: true`. A distractor grants a `standing: 'mistaken'` insight (see below) and routes to
+  its own short texture beat before rejoining the same convergence moment as the grounded options — it never forks
+  the plot. Write `consequence` text as neutral stakes ("He looks for the bucket and the badge."), never as the
+  answer key; the reader must not be able to tell the distractor from the label. The audit's `undistracted-choice`
+  demand names any applicable choice that has none.
 - **Reader insights.** Declare every semantic thing a reader can *learn* in `experience.readerInsights`
-  (`{ id, meaning }`). An option `grantsInsightIds` when reading it teaches that thing; an option
+  (`{ id, standing, meaning }`). `standing: 'grounded'` is a supported reading; `standing: 'mistaken'` is a
+  plausible misreading the reader carries as hidden information until later text corrects or complicates it. The
+  toast shows both alike. Rules: a distractor must grant at least one mistaken insight, a grounded option may not,
+  a choice needs at least one non-distractor option, a mistaken insight may never `requiresInsightIds`-gate an
+  option, and every mistaken insight must be harvested by a downstream `reader-insights` variant whose text
+  quietly contradicts, costs or reframes the misread. An option `grantsInsightIds` when reading it teaches that thing; an option
   `requiresInsightIds` when it is only offered to a reader who already knows it. Insights survive Back (the reader
   still knows what they read) and clear on Restart; the compiler rejects insights that are declared but never
   granted, granted but never declared, or granted with no downstream moment that harvests them.
@@ -387,7 +408,8 @@ Dailies in the 16:9 reader:
 `npm run produce` (= `check` + `production:status`) reads `public/generated/production-report.json` and prints, per
 Experience, the shortest-route reading duration, `targets-met` / `needs-repair`, and typed demand ids
 (`purpose:<choice-purpose>`, `locations:minimum`, `duration:minimum`, `payoff:<choice-node>`,
-`performance:<moment>:<actor>`). The single `next repair` is mechanically derived — it names the smallest
+`choice-distractor:<choice-node>`, `performance:<moment>:<actor>`, `performance:held-pose:<actor>:<moment>`,
+`performance:renditions:<actor>`, `cg-composition:<asset>`). The single `next repair` is mechanically derived — it names the smallest
 structural gap, never an artistic verdict. `npm run produce:strict` fails on any high-priority demand.
 
 ## 8. Hill-climb: automated dailies around manual edits
@@ -466,6 +488,11 @@ Messages are verbatim from `src/core/compiler.ts`. Zod schema failures appear fi
 | `Experience graph must be acyclic` | Remove the back-edge; the reader owns Back. |
 | `Reading variants on X require a public viewpoint` | Variants cannot sit on a private thought. Either move the variant to the next public beat, or split the thought into one moment per choice option (`vernon-blinks-map` / `vernon-blinks-sign`) and let each option `goto` its own. |
 | `Reader insight X is never harvested` | Every `readerInsights[].id` granted by some option must be consumed by a `reader-insights` variant somewhere downstream. |
+| `Distractor M/O must grant a mistaken reader insight` | Add `grantsInsightIds` naming a `standing: 'mistaken'` insight, or drop `distractor: true`. |
+| `Choice M/O grants a mistaken reader insight but is not marked as a distractor` | Mark the option `distractor: true`, or change the insight's `standing` to `grounded`. |
+| `Choice M needs at least one grounded option` | Every choice must offer a non-distractor route. |
+| `Mistaken reader insight X is never corrected by a reading variant` | Add a downstream `reader-insights` variant that contradicts or reframes the misread. |
+| `Mistaken reader insight X must not gate a choice option` | Remove it from `requiresInsightIds`; mistaken insights are texture, never keys. |
 | `Reader-insight variants on X are ambiguous without a combined variant for A, B, …` | The compiler does not know insights are mutually exclusive. Keep one moment's `reader-insights` variants to a small set whose every reachable union has a variant, or harvest the other insights on a different moment. |
 
 Build-time (not compiler) failures from `scripts/build-experience.ts`:

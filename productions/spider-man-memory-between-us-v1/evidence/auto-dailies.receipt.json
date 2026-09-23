@@ -2,12 +2,12 @@
   "schemaVersion": 1,
   "productionId": "spider-man-memory-between-us-v1",
   "experienceId": "spider-memory-between-us-v1",
-  "experienceSha256": "c4825fcfac5fffef3f5c8ebeeb3aa0880cdbd55154d5d65d30a6e87792316752",
+  "experienceSha256": "7403cc5d767f4c2a33fa5daf3ce7878a4bd90dc899540b0cc396c20260830d65",
   "viewport": {
     "width": 1600,
     "height": 900
   },
-  "capturedAt": "2026-09-19T04:27:41.819Z",
+  "capturedAt": "2026-09-23T00:56:53.100Z",
   "consoleErrors": [],
   "frames": [
     {
@@ -16,7 +16,7 @@
       "tableauId": "apartment-empty",
       "reading": "base",
       "file": "auto-dailies/rain-location.png",
-      "sha256": "4f949bc6bc523042c80f5ce3eb392ad0d514578dddd30b4c74597df5d6ae12c5",
+      "sha256": "b9716baf813080dfa46792c8adb28271283890e86a8e025fc3d59a936d0543b1",
       "route": [],
       "insightIds": [],
       "availableOptionIds": [],
@@ -29,7 +29,7 @@
       "tableauId": "masked-two-shot",
       "reading": "base",
       "file": "auto-dailies/distance.png",
-      "sha256": "6f94cec6b6f0b7867fe6582f7db76900107df245bc2447ea4e0e3910e0e64b88",
+      "sha256": "f859cee868f1ed123c17d63362358e30c6218b06e6f09a29dc6872d7e34626f2",
       "route": [],
       "insightIds": [],
       "availableOptionIds": [],
@@ -42,7 +42,7 @@
       "tableauId": "masked-two-shot",
       "reading": "base",
       "file": "auto-dailies/room-reading-choice.png",
-      "sha256": "172b53266e7f9d6235d0062683435b28cbb0a5d46f29402208aaa9799b572014",
+      "sha256": "ab32ce753d713289ff3eba88736a8572ab054b92b20a041e8c77e4a11d60f488",
       "route": [],
       "insightIds": [],
       "availableOptionIds": [
@@ -58,7 +58,7 @@
       "tableauId": "masked-peter-active",
       "reading": "base",
       "file": "auto-dailies/threshold-reading.png",
-      "sha256": "5f8a6deda661a9cdc0e432e990a79f3b1b81244485abb50738637bab50608bb2",
+      "sha256": "1d9855c6566fdd11b4f56c51daf9a52554dcc4a577c6b199e605700960bfb9b9",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -78,7 +78,7 @@
       "tableauId": "masked-two-shot",
       "reading": "base",
       "file": "auto-dailies/mj-grip-reading.png",
-      "sha256": "9ddb9a08f5dc4b8e85761add38d7bb6bc0d563cbd06dcbfd792bd908bdc50fa7",
+      "sha256": "7cd9d0817d068eee13d72105d2c9c04770e457315151886d00f027dd0694da46",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -98,7 +98,7 @@
       "tableauId": "masked-two-shot",
       "reading": "base",
       "file": "auto-dailies/mj-boundary.png",
-      "sha256": "674d04d589fdb7675079b7f8da78bf8d442491992c56176eda4ab68aa841f0f9",
+      "sha256": "e8ca25e3c1cc893f3d7fd56b4f8ee7f082b0cc384a5e34c00d6a747b6394c7fd",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -118,7 +118,7 @@
       "tableauId": "masked-peter-active",
       "reading": "base",
       "file": "auto-dailies/peter-mask-thought.png",
-      "sha256": "c82bbb3014732ad417e73e5386df7f50430b2249d73e9a8ae2402b7405191f4f",
+      "sha256": "f14e51fec6272368ab012aed1c9d63ec4061598e0d0c973852d36b03641ad1a0",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -138,7 +138,7 @@
       "tableauId": "masked-peter-active",
       "reading": "base",
       "file": "auto-dailies/peter-protection.png",
-      "sha256": "ba4c10debaadba4a1b7a762972141609e54ffcca9301be8b4361e90a1dc08c12",
+      "sha256": "e577d4837f75d5b8c0048316f64ea9825d72f8c3336cca4b15258e084fffc509",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -158,7 +158,7 @@
       "tableauId": "unmask-cg",
       "reading": "base",
       "file": "auto-dailies/unmask.png",
-      "sha256": "efd56ea9303959f6b68cd0db925093d200ec8b2944aabaa50e3efd95288083d2",
+      "sha256": "59c8798de225b5ee1bbc55726ca91cf9cd621090f661449998ae5e45d8f13036",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -178,7 +178,7 @@
       "tableauId": "revealed-peter-active",
       "reading": "base",
       "file": "auto-dailies/name.png",
-      "sha256": "4c88ec74f39f7423e87bd8899989307b6b4d64c5b6857e8e295bb6867d867576",
+      "sha256": "c401ba9676a94032a607dd90ae59eebe8e20a0876075fb552ee064783a01c600",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -198,7 +198,7 @@
       "tableauId": "revealed-shared-silence",
       "reading": "base",
       "file": "auto-dailies/name-reading-choice.png",
-      "sha256": "b87f4714200af20ec560273a80c49577d560f54bded9a8ad847021db4a555e01",
+      "sha256": "4e51980e601e4ce59bb8fc818f5364d76f0f68fb22f0197fefe2f4a97887ed64",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -210,10 +210,36 @@
       ],
       "availableOptionIds": [
         "stay-with-peter",
-        "watch-mj-receive"
+        "watch-mj-receive",
+        "hear-a-plea"
       ],
       "textSha256": "83967167e89bff6e19669f6a2e2cb8a843a4bc5c9cb20bc9ceb0b66c62ae7d75",
       "steps": 9
+    },
+    {
+      "frameId": "plea-reading",
+      "momentId": "plea-reading",
+      "tableauId": "revealed-shared-silence",
+      "reading": "base",
+      "file": "auto-dailies/plea-reading.png",
+      "sha256": "8e2f490af092dc4e7e30e45d367106b5b5ef3684f26d40ccf2925b4ee67a903a",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "hear-a-plea"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "name-as-plea-assumed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "81cc78afd5ad80e8d5a146665ba9da6092eaae1778f1848fd75e222a718fde94",
+      "steps": 10
     },
     {
       "frameId": "peter-name-private",
@@ -221,7 +247,7 @@
       "tableauId": "revealed-peter-active",
       "reading": "base",
       "file": "auto-dailies/peter-name-private.png",
-      "sha256": "6d846abfd63410b4060b3725d96255353dfbaed555b8ca6cd232f4e8da7fdd3a",
+      "sha256": "0aa8746fea458d900043001b3acf88fe3e1567f052f373c7255f6beb81821e73",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -245,7 +271,7 @@
       "tableauId": "revealed-mj-active",
       "reading": "base",
       "file": "auto-dailies/mj-name-private.png",
-      "sha256": "8e9d2c33e06df93d569bb39b086290ec1d190d62bb1eff27fd2328962c0d4c22",
+      "sha256": "b69691c5ff96019b1f4983a7e775d7986381557475ebb6c6f0ec7114f32a7714",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -269,7 +295,7 @@
       "tableauId": "revealed-name-settles",
       "reading": "variant",
       "file": "auto-dailies/name-settles--5f6e79.png",
-      "sha256": "40b06d2d2fcd78e167460de6f64d41087a090dbcef9ea7ec8d28aff6a2d5980f",
+      "sha256": "aee98e0b9fe78dd5cc3f883314becf823c8d733c455512d5d7431eecbb684359",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -293,7 +319,7 @@
       "tableauId": "revealed-name-settles",
       "reading": "variant",
       "file": "auto-dailies/name-settles--66ee32.png",
-      "sha256": "c43f8e2df165200b4128893f2608264b5789e082d0e2a0200158c41d80481c61",
+      "sha256": "c6a81f1f28da0f6383ba5f4068ceaca9bc01344338a5d97c442a7c180f6011ca",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -312,12 +338,37 @@
       "steps": 11
     },
     {
+      "frameId": "name-settles--e7f2a4",
+      "momentId": "name-settles",
+      "tableauId": "revealed-name-settles",
+      "reading": "variant",
+      "file": "auto-dailies/name-settles--e7f2a4.png",
+      "sha256": "9aef79d5a884cc0aef21860cb06691a2402807e92ab0ddaf81702f2cd3eb10f0",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "hear-a-plea"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "name-as-plea-assumed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "b884a60f49d37b366bdb2b8dc8041f86ceeefab5f05e19f5cca15744187940f7",
+      "steps": 11
+    },
+    {
       "frameId": "mj-sees",
       "momentId": "mj-sees",
       "tableauId": "revealed-mj-appraisal",
       "reading": "base",
       "file": "auto-dailies/mj-sees.png",
-      "sha256": "1dbfe1b5fcf1f7354273920c71e1e017bb26deab2c84f0ca064553af6b45d9a9",
+      "sha256": "6f394f8b31b450ad8c609ad306574692a2266f2c85b45a0dd3dd2d2de452e932",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -341,7 +392,7 @@
       "tableauId": "revealed-mj-active",
       "reading": "base",
       "file": "auto-dailies/mj-answer.png",
-      "sha256": "5b627f7cd2cdf96c94843b0bc8e0a8552f5c2413378b03866e673659f1ecc870",
+      "sha256": "31f2da6ea2b4fb5955e2578a46f0e47ba5171c888ba092269b24a2533dcb94e3",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -360,12 +411,37 @@
       "steps": 13
     },
     {
+      "frameId": "mj-answer--ae91a0",
+      "momentId": "mj-answer",
+      "tableauId": "revealed-mj-active",
+      "reading": "variant",
+      "file": "auto-dailies/mj-answer--ae91a0.png",
+      "sha256": "d7317598434bf1a735051a3b50f69ba27e64120ae0d7872b9ca73711f2496090",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "hear-a-plea"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "name-as-plea-assumed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "b109e099584bc1f6eaedcb4c3d6725bbd1d6a7565fe211058ce8bc2b66fa32fc",
+      "steps": 13
+    },
+    {
       "frameId": "perspective-choice",
       "momentId": "perspective-choice",
       "tableauId": "revealed-mj-active",
       "reading": "base",
       "file": "auto-dailies/perspective-choice.png",
-      "sha256": "bf4f4208ca4457d2fb67dabe89a0a53599dfe161d498c9aeb374935484cff2eb",
+      "sha256": "a047ca6135862162cc8e6e15fef9a2a0d251a3595a133d79a849302dd5ee6582",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -381,18 +457,19 @@
       ],
       "availableOptionIds": [
         "read-peter",
-        "read-mj"
+        "read-mj",
+        "read-debt"
       ],
       "textSha256": "a4f55b763e426abe0a8f58b0c499027e500e496c20269317dab5b3317793726d",
       "steps": 14
     },
     {
-      "frameId": "perspective-choice--6d906c",
+      "frameId": "perspective-choice--504443",
       "momentId": "perspective-choice",
       "tableauId": "revealed-mj-active",
       "reading": "variant",
-      "file": "auto-dailies/perspective-choice--6d906c.png",
-      "sha256": "06f89f8cbf196144e065747ddba5acb295d56bdfce3dbe3b5219364937b7f6b3",
+      "file": "auto-dailies/perspective-choice--504443.png",
+      "sha256": "eefb7f0eda11faff7f2866f4575f00e1a7bcd8f6d858a6d02948ddf176e80547",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -411,10 +488,40 @@
       "availableOptionIds": [
         "read-peter",
         "read-mj",
-        "hold-both"
+        "hold-both",
+        "read-debt"
       ],
       "textSha256": "a4f55b763e426abe0a8f58b0c499027e500e496c20269317dab5b3317793726d",
       "steps": 18
+    },
+    {
+      "frameId": "mj-debt-reading",
+      "momentId": "mj-debt-reading",
+      "tableauId": "revealed-mj-appraisal",
+      "reading": "base",
+      "file": "auto-dailies/mj-debt-reading.png",
+      "sha256": "6245ef482196c5a6623df4f498faa8753b339a3167f51054772fdb5ef5a96de3",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "read-debt"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "mj-owes-assumed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "8c02b235692bf5db7392234e92c812545741fba426773f8068515cf3399dce96",
+      "steps": 15
     },
     {
       "frameId": "peter-restraint",
@@ -422,7 +529,7 @@
       "tableauId": "revealed-peter-appraisal",
       "reading": "base",
       "file": "auto-dailies/peter-restraint.png",
-      "sha256": "6ac337143453ca388f5f3ee68178d36cb67e2587beb27e8b2571561afd1c0614",
+      "sha256": "dee5f5872894be451c5b267f23a6f9f30aa2405e1c4ca1cb05e0eb2998e5c3ca",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -451,7 +558,7 @@
       "tableauId": "revealed-mj-appraisal",
       "reading": "base",
       "file": "auto-dailies/mj-boundary-private.png",
-      "sha256": "5291838f10cfe5dbf7e2eff1e06552f952386f101c903a3840ad8fa0f33a3dd7",
+      "sha256": "d82e50e6727c2c51997cde44630d91113acf20fc11312b4ada85c0d41e646592",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -480,7 +587,7 @@
       "tableauId": "revealed-mj-appraisal",
       "reading": "variant",
       "file": "auto-dailies/both-truths-reading--b737ea.png",
-      "sha256": "1cef0aff157432cf4fa63c14c8eacca441a53276afccc930b3279a11ad3c7086",
+      "sha256": "4e00740b6f8f7d4525ce2f3772e76e88ee0745369c3159a680d36c0311f3a16b",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -510,7 +617,7 @@
       "tableauId": "revealed-peter-appraisal",
       "reading": "variant",
       "file": "auto-dailies/both-truths-reading--bff09f.png",
-      "sha256": "9782fd3015b1b5cb9e9d335144adaf37f8f00a963e0cd9ded5aae6400d73414b",
+      "sha256": "ef0fbfa2ca4fddd0e81575e0ceddb5462cb6d93aad0a4cda19ecd0d0a70e9cc4",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -540,7 +647,7 @@
       "tableauId": "revealed-shared-silence",
       "reading": "base",
       "file": "auto-dailies/room-without-verdict.png",
-      "sha256": "c395fbf65c394bd643182b82f533aa8fa2730a961ff1a51b706eb91bba855efb",
+      "sha256": "7243edb5afaaf221f83dd86176f0a6a7c72c8948880c0e37f8689885cb7e9847",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -570,7 +677,7 @@
       "tableauId": "revealed-shared-silence",
       "reading": "variant",
       "file": "auto-dailies/shared-silence--091ec5.png",
-      "sha256": "cb3b82439fc522bd516e0a63e96409aaa1436586c83242a5ba706d7a7c002df7",
+      "sha256": "7713b2ee693ddfad73def2f37acdeb1768aae5e02f9794db9ece5008d0b04968",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -594,12 +701,41 @@
       "steps": 16
     },
     {
+      "frameId": "shared-silence--799ef5",
+      "momentId": "shared-silence",
+      "tableauId": "revealed-shared-silence",
+      "reading": "variant",
+      "file": "auto-dailies/shared-silence--799ef5.png",
+      "sha256": "6625efd754260329a2e91a151196080f65bd5d468d5420e083ad98932d6ace64",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "read-debt"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "mj-owes-assumed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "7532d1aa1f823d4b0c304784815cb07656289ed616aaf3fa2a4109499081fd64",
+      "steps": 16
+    },
+    {
       "frameId": "shared-silence--afa097",
       "momentId": "shared-silence",
       "tableauId": "revealed-shared-silence",
       "reading": "variant",
       "file": "auto-dailies/shared-silence--afa097.png",
-      "sha256": "5fc4b4bac9b247230037882e09545018e8dd38a463ad974806575efa98efb550",
+      "sha256": "cb32320134fc0d6dacc85a65a76784ef75904d3e9a1aa6d3dce51c1a8036be58",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -629,7 +765,7 @@
       "tableauId": "revealed-shared-silence",
       "reading": "variant",
       "file": "auto-dailies/shared-silence--fe257c.png",
-      "sha256": "9b95f1b94a97fa22b77bb938d8a204944e1aecc610e495a75509ff4bfe89ea08",
+      "sha256": "522a37fca349bcfb4df65c4fc920d0343a14b82e9f44791bd6ea086c35e630ff",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -658,7 +794,7 @@
       "tableauId": "revealed-small-defences",
       "reading": "variant",
       "file": "auto-dailies/small-defence-returns--3ee236.png",
-      "sha256": "5166776131153f69740cf0154f5b0020fca0a2c943ddd696f13bb61803e6199f",
+      "sha256": "1394015cd7a984f6aeef89140c1112658f1925f835811cc7a53ad6358bfbbc87",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -688,7 +824,7 @@
       "tableauId": "revealed-small-defences",
       "reading": "variant",
       "file": "auto-dailies/small-defence-returns--63cd71.png",
-      "sha256": "407249697f1e1cbac41bba9f812ca199074c69de4a137aa34e648b73e5237a49",
+      "sha256": "8104926f266d09c83c51fab1e002333620b0f0882cd27359ad1fb5ceec55c302",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -717,7 +853,7 @@
       "tableauId": "revealed-small-defences",
       "reading": "variant",
       "file": "auto-dailies/small-defence-returns--89cf6b.png",
-      "sha256": "a6af37541c4427a3818b71ec79c37ebc2faec83fba41cba62400e9d63d56748f",
+      "sha256": "a679916c4080873c248fca61818428be91d9946afd211471dfbcf9c050c94603",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -746,7 +882,7 @@
       "tableauId": "revealed-shared-silence",
       "reading": "base",
       "file": "auto-dailies/restraint-forecast.png",
-      "sha256": "b4e57fae945aa51b792dcbc5edfa5c38fda4cf62a2b8b0a1b7c0973d41ef23ab",
+      "sha256": "8e35428ad3db8098958916b8a9c36e23f495c9a9c63f300d7ee3fedc30fdf34c",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -767,10 +903,45 @@
       ],
       "availableOptionIds": [
         "expect-retreat",
-        "expect-return-choice"
+        "expect-return-choice",
+        "expect-plead"
       ],
       "textSha256": "3dbb5dc450d0d458e41c06b3b7149aa757e5e52aa00c91aba0b78ad8f609729a",
       "steps": 18
+    },
+    {
+      "frameId": "forecast-plead",
+      "momentId": "forecast-plead",
+      "tableauId": "revealed-peter-appraisal",
+      "reading": "base",
+      "file": "auto-dailies/forecast-plead.png",
+      "sha256": "7093e33d7ff1c8d81059b00f49ec53de85ef605f0670c012df913de4e0722827",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "read-peter"
+        },
+        {
+          "nodeId": "restraint-forecast",
+          "optionId": "expect-plead"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "peter-restraint-understood",
+        "peter-pleads-assumed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "3393b68a0d0ca9663b0d489489a2e658db2da7bb06017a567d07c7f83f71c194",
+      "steps": 19
     },
     {
       "frameId": "forecast-retreat",
@@ -778,7 +949,7 @@
       "tableauId": "revealed-peter-appraisal",
       "reading": "base",
       "file": "auto-dailies/forecast-retreat.png",
-      "sha256": "17e8c4366de9bf1d2935c5988e738fe086e86e6e8003eb0ead74dd99bb6f2e41",
+      "sha256": "25c5140a19c725cc892a1bb5ca19625224ba73161db206b0307d5d0db57eb86b",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -811,7 +982,7 @@
       "tableauId": "revealed-mj-appraisal",
       "reading": "base",
       "file": "auto-dailies/forecast-return-choice.png",
-      "sha256": "f5ddb155830b3b48fa94212cace4d253b92bbf8cecb835ad10fc376b49ee6723",
+      "sha256": "2c18395caed934c132efd7956d5d4a46d83b95a5bc581d42a5fb83d2c8dba0c8",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -844,7 +1015,7 @@
       "tableauId": "revealed-choice-returned",
       "reading": "variant",
       "file": "auto-dailies/peter-offers-distance--6534d9.png",
-      "sha256": "8f77ad54cb58c7e8350fd08ac260381c46d8d62b6e565f58cf7abe89cac2e8a0",
+      "sha256": "633fb48b1b6f8be1f33039be8f74aee0310b5611cc5ef2ed8004412103ba29e3",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -877,7 +1048,7 @@
       "tableauId": "revealed-choice-returned",
       "reading": "variant",
       "file": "auto-dailies/peter-offers-distance--cb2784.png",
-      "sha256": "6a0c9a85a988e25e62373cc5ac33716d1dc944d531876e764ed3c90500e21fda",
+      "sha256": "c4f59dad4f7b9220766bd3b2ff8bbd6a60d4f43894bdcbb5d705382f4a10271e",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -905,12 +1076,46 @@
       "steps": 20
     },
     {
+      "frameId": "peter-offers-distance--e2fdad",
+      "momentId": "peter-offers-distance",
+      "tableauId": "revealed-choice-returned",
+      "reading": "variant",
+      "file": "auto-dailies/peter-offers-distance--e2fdad.png",
+      "sha256": "efd2e0ff3682ac99eb77423d33042d345bf0db8f9fd582abb1c326a93f99d5d4",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "read-peter"
+        },
+        {
+          "nodeId": "restraint-forecast",
+          "optionId": "expect-plead"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "peter-restraint-understood",
+        "peter-pleads-assumed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "4882b41ab15d3ae062233b69ab56eca80c0b23b948e65a3bb60a1b39af07a85e",
+      "steps": 20
+    },
+    {
       "frameId": "ride-home",
       "momentId": "ride-home",
       "tableauId": "revealed-mj-trust",
       "reading": "base",
       "file": "auto-dailies/ride-home.png",
-      "sha256": "502474e29945cd2fabdb30ab080ef1597670ed766dbb0106ef445e0b4ec478ff",
+      "sha256": "bedd6d597f4f784359c7a3454fdde6c51bfd418891e07df971bd7401746a01bc",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -943,7 +1148,7 @@
       "tableauId": "revealed-shared-silence",
       "reading": "base",
       "file": "auto-dailies/departure-decision.png",
-      "sha256": "9fa1c575e18cee1369f72cdfc234c3aa6025093f5cf12bf9b5ac123ff68511fd",
+      "sha256": "6235879f67d380b88e6f3bc10078827649bd38f7af30028beff68fe820717213",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -968,10 +1173,49 @@
       ],
       "availableOptionIds": [
         "choose-ordinary-route",
-        "choose-visible-route"
+        "choose-visible-route",
+        "choose-swing"
       ],
       "textSha256": "93f6b010348ca7081477201bf98a01f11cd9c1c97eb388dccc30e99c6206affb",
       "steps": 22
+    },
+    {
+      "frameId": "swing-route-reading",
+      "momentId": "swing-route-reading",
+      "tableauId": "revealed-shared-silence",
+      "reading": "base",
+      "file": "auto-dailies/swing-route-reading.png",
+      "sha256": "30b060eafbf4c305f85b618b907411f08b6a5a28e0db410e2dc38bacd300612f",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "read-peter"
+        },
+        {
+          "nodeId": "restraint-forecast",
+          "optionId": "expect-retreat"
+        },
+        {
+          "nodeId": "departure-decision",
+          "optionId": "choose-swing"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "peter-restraint-understood",
+        "rescue-as-care-assumed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "9a83e167939cf8b52b871f666f5983dc476a4afd35c0964864fc4c9915a8ae7c",
+      "steps": 23
     },
     {
       "frameId": "ordinary-route-reading",
@@ -979,7 +1223,7 @@
       "tableauId": "revealed-mj-trust",
       "reading": "base",
       "file": "auto-dailies/ordinary-route-reading.png",
-      "sha256": "e03ae00260617c5f9d11201277ac9bfe8b2d4073b7cb7fee5b41690002307c36",
+      "sha256": "b997ed438cb37c8df37702c7b82c514482245f4fe34c98be77f2d7bc2495db3e",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1016,7 +1260,7 @@
       "tableauId": "revealed-peter-appraisal",
       "reading": "base",
       "file": "auto-dailies/visible-route-reading.png",
-      "sha256": "b877065bc887ffb80c18fd0339ca54daf0082b298235696b83789f73adb55ade",
+      "sha256": "eb214ccb229768a5394b291b43bd1b8f7c41482371e71b6365c588ffa2418662",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1053,7 +1297,7 @@
       "tableauId": "revealed-mj-trust",
       "reading": "base",
       "file": "auto-dailies/mj-names-route.png",
-      "sha256": "253cf0124c0488050cbc755c42db015c0f51f53ec2dc19ac54f5c4947b6e05e6",
+      "sha256": "f229bc496129ae8bf00f3fb9b6c7c329283c4f28ca24c70c0f21d0a7e6193810",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1090,7 +1334,7 @@
       "tableauId": "hallway-empty",
       "reading": "base",
       "file": "auto-dailies/door-opens.png",
-      "sha256": "a2c5e6e34e65f08ad6578e7ccdb99bcee78b0983b77273e2716687a6b136186a",
+      "sha256": "23ea6497870ca6b3a61aeb2b4109ffde879fafc36a73dfe177c3b5dd3e486fe3",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1122,12 +1366,88 @@
       "steps": 25
     },
     {
+      "frameId": "door-opens--3f5e21",
+      "momentId": "door-opens",
+      "tableauId": "hallway-empty",
+      "reading": "variant",
+      "file": "auto-dailies/door-opens--3f5e21.png",
+      "sha256": "ade15b5a9052ba0e92102879b8c730291d43a01bf7a20a3b6bc6871d583c88d0",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "read-peter"
+        },
+        {
+          "nodeId": "restraint-forecast",
+          "optionId": "expect-retreat"
+        },
+        {
+          "nodeId": "departure-decision",
+          "optionId": "choose-swing"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "peter-restraint-understood",
+        "rescue-as-care-assumed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "dbc20c84bbc06786d0c0278f382defdc07f04f94249aa0f036363a28ff236917",
+      "steps": 25
+    },
+    {
+      "frameId": "hallway-threshold--7f5573",
+      "momentId": "hallway-threshold",
+      "tableauId": "hallway-shared-distance",
+      "reading": "variant",
+      "file": "auto-dailies/hallway-threshold--7f5573.png",
+      "sha256": "da63fec7ba7a9d4721f88fe616e92bcd986cf1cbd235a12c248534a3e216c020",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "read-peter"
+        },
+        {
+          "nodeId": "restraint-forecast",
+          "optionId": "expect-retreat"
+        },
+        {
+          "nodeId": "departure-decision",
+          "optionId": "choose-swing"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "peter-restraint-understood",
+        "rescue-as-care-assumed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "3e849449e3b43c4e719147f163f3936b0429a430b8d4974a4dd13d5ec68c0b2a",
+      "steps": 26
+    },
+    {
       "frameId": "hallway-threshold--bcf1f3",
       "momentId": "hallway-threshold",
       "tableauId": "hallway-shared-distance",
       "reading": "variant",
       "file": "auto-dailies/hallway-threshold--bcf1f3.png",
-      "sha256": "113cfeead0ce59e26ecb95dcf41ec18c83560b00e3cfb00c0989d3a40f6691c1",
+      "sha256": "b11688bb0c9f19c9552ac79b199df91c51af6fc1cb33eb84eef23121b7b89f35",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1164,7 +1484,7 @@
       "tableauId": "hallway-shared-distance",
       "reading": "variant",
       "file": "auto-dailies/hallway-threshold--fbbe31.png",
-      "sha256": "b28f61ec2e7ff5d04bfd2ff5cfd064735d35374900bfc298328dcfa1b751a79c",
+      "sha256": "6cace7ee6d6c302dbf8f3447497a6f4ef36289b1a77d893126d33594dee40b17",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1201,7 +1521,7 @@
       "tableauId": "hallway-mj-active",
       "reading": "base",
       "file": "auto-dailies/mj-corrects-promise.png",
-      "sha256": "fe3e816fce9377fd79d4a6f6ed454a90d18f5fcf2d9b4347743cf5968e9c29ae",
+      "sha256": "f0bab9a8023abfed4497db9cada2e8af39fc4be7dc5509b9fcb5bb45008d8055",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1233,12 +1553,49 @@
       "steps": 27
     },
     {
+      "frameId": "mj-corrects-promise--1ea632",
+      "momentId": "mj-corrects-promise",
+      "tableauId": "hallway-mj-active",
+      "reading": "variant",
+      "file": "auto-dailies/mj-corrects-promise--1ea632.png",
+      "sha256": "3d94e7c84a6d39f2d2a4e98cf228b919f40c5d80ba61411fe00f10ab47a3a390",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "read-debt"
+        },
+        {
+          "nodeId": "restraint-forecast",
+          "optionId": "expect-retreat"
+        },
+        {
+          "nodeId": "departure-decision",
+          "optionId": "choose-ordinary-route"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "mj-owes-assumed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "9340afbf515f1f776fc0e55ede578f4e9b3292e95b2609cc69f4135d138fadb7",
+      "steps": 27
+    },
+    {
       "frameId": "peter-hears-limit",
       "momentId": "peter-hears-limit",
       "tableauId": "hallway-peter-active",
       "reading": "base",
       "file": "auto-dailies/peter-hears-limit.png",
-      "sha256": "ef9c91cedfe523ea76c093589b51c172e2d74b3780434b07cc9aaf23afd4b497",
+      "sha256": "adf4b663a3d6ca387c21dff67ac8ac45a7f91ad4944cd6c14eef5eccbc3634ca",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1275,7 +1632,7 @@
       "tableauId": "hallway-peter-active",
       "reading": "base",
       "file": "auto-dailies/peter-accepts-limit.png",
-      "sha256": "fd94879441c4f4d8bf663504a0b053cc748ec6b2b1eea616373f8071869c0d1b",
+      "sha256": "a5696b547798b989e076c7cf49fb9870b91718c78ce507e9cb30dbc803140d03",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1312,7 +1669,7 @@
       "tableauId": "hallway-shared-distance",
       "reading": "base",
       "file": "auto-dailies/stairs-begin.png",
-      "sha256": "703fcd5ebcb0cfd4da0b1a4d18163311dc090c6f1cbc20022839b5475cd56bf6",
+      "sha256": "76dd842d16fa079caf6e2e3fed81ccae88f4840dc7a9c3bf3401472756595584",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1344,12 +1701,50 @@
       "steps": 30
     },
     {
+      "frameId": "stairs-begin--5e033b",
+      "momentId": "stairs-begin",
+      "tableauId": "hallway-shared-distance",
+      "reading": "variant",
+      "file": "auto-dailies/stairs-begin--5e033b.png",
+      "sha256": "b5162ae707d9e5f806d6151fe1d885b0b75546b3cdd09467d87224c7197dd46c",
+      "route": [
+        {
+          "nodeId": "room-reading-choice",
+          "optionId": "watch-threshold"
+        },
+        {
+          "nodeId": "name-reading-choice",
+          "optionId": "stay-with-peter"
+        },
+        {
+          "nodeId": "perspective-choice",
+          "optionId": "read-peter"
+        },
+        {
+          "nodeId": "restraint-forecast",
+          "optionId": "expect-plead"
+        },
+        {
+          "nodeId": "departure-decision",
+          "optionId": "choose-ordinary-route"
+        }
+      ],
+      "insightIds": [
+        "threshold-distance-noticed",
+        "peter-restraint-understood",
+        "peter-pleads-assumed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "ac6c1752d853d395eb73f8b67783c72bfa6aa44a41e41802a04baba4c459dffb",
+      "steps": 30
+    },
+    {
       "frameId": "ending",
       "momentId": "ending",
       "tableauId": "hallway-shared-distance",
       "reading": "base",
       "file": "auto-dailies/ending.png",
-      "sha256": "597fb4e72fa1f24ea7ac6277e01e3fd864be8e36ada20fea9089437ef6b2d03e",
+      "sha256": "3372b9f76d04fb60872aa2fdb0508e89dade2dfbdcfe56e3e4470b9f912ab35c",
       "route": [
         {
           "nodeId": "room-reading-choice",

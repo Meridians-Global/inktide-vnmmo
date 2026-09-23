@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "productionId": "moon-scar-ledger-v2",
+  "status": "candidate",
+  "techniqueTransfer": [
+    "supplementary acting pass: extra renditions requested only where the production audit reports thin-rendition-set or held-pose",
+    "each rendition conditioned on the pinned baseline sprite by repository path so identity and wardrobe are inherited, not re-described",
+    "performance text names one phase (appraisal, decision, after-state) so renditions map onto performanceBeat phases rather than arbitrary pose churn",
+    "provider events, inputs, outputs and byte digests retained before story admission"
+  ],
+  "models": {
+    "generation": "bytedance/seedream-4.5",
+    "matte": "851-labs/background-remover:a029dff38972b5fda4ec5d75d7d1cd25aeff621d2cf4946a41055d7db66b80bc"
+  },
+  "requestDigests": {
+    "fang-seal-order-v1.generate": "6c2e88fdf18142cd037f0ee60697419137d0854f693a9a18612780d0ad2eb894",
+    "fang-seal-order-v1.matte": "c02ee22db54a6cf27f08b36e3747667f26cee8c03aa95057087e0f6ef854f1f5"
+  },
+  "assets": {
+    "fang-seal-order-v1": {
+      "sourcePath": "assets/generated/moon-scar-ledger-v2/fang-seal-order-v1.png",
+      "sha256": "518952bef361a34c87fcfd618880749d559771383bf89672da6918dd172c2cff",
+      "provenance": "replicate",
+      "predictionIds": [
+        "88n7syvhy5rmr0d0sera9b8qg8",
+        "4m11c4y6fdrge0d0seraj760xw"
+      ],
+      "generatedUrl": "https://replicate.delivery/xezq/rWzexDVEPmRnIaaNXfh64sL0C91M9M7BIpiPEhsPWvYqDNQXA/tmpbjpco348.jpg",
+      "transparentUrl": "https://replicate.delivery/czjl/g9c5rffrHdpJP0KaughVHg54XeaUkXfGpzCFnWwWT8j2O0AdB/output.png",
+      "matteInspection": {
+        "visiblePixels": 1265467,
+        "boundaryPixels": 20315,
+        "residualBoundaryFraction": 0.00009844942160964804,
+        "transparentRgbPixels": 0
+      }
+    }
+  }
+}

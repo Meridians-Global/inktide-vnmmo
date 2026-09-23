@@ -112,7 +112,7 @@ describe('reader state', () => {
     if (!spiderCompiled.ok) throw new Error(spiderCompiled.errors.join('\n'));
     const spider = spiderCompiled.experience;
     let state = initialReaderState(spider, 'perspective-choice');
-    assert.deepEqual(availableChoiceOptions(currentMoment(spider, state), state).map((option) => option.id), ['read-peter', 'read-mj']);
+    assert.deepEqual(availableChoiceOptions(currentMoment(spider, state), state).map((option) => option.id), ['read-peter', 'read-mj', 'read-debt']);
     assert.equal(reduceReader(spider, state, { type: 'choose', optionId: 'hold-both' }), state);
 
     state = reduceReader(spider, state, { type: 'choose', optionId: 'read-peter' });
@@ -124,7 +124,7 @@ describe('reader state', () => {
     assert.ok(state.insightIds.includes('mj-memory-boundary-understood'));
     state = reduceReader(spider, state, { type: 'back' });
 
-    assert.deepEqual(availableChoiceOptions(currentMoment(spider, state), state).map((option) => option.id), ['read-peter', 'read-mj', 'hold-both']);
+    assert.deepEqual(availableChoiceOptions(currentMoment(spider, state), state).map((option) => option.id), ['read-peter', 'read-mj', 'hold-both', 'read-debt']);
     assert.equal(currentMoment(spider, reduceReader(spider, state, { type: 'choose', optionId: 'hold-both' })).id, 'both-truths-reading');
     assert.throws(() => initialReaderState(spider, 'both-truths-reading'), /Cannot reconstruct reader path/);
     assert.deepEqual(reduceReader(spider, state, { type: 'restart' }).insightIds, []);

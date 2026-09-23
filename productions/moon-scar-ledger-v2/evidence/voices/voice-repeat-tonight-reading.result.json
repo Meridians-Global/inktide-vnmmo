@@ -1,0 +1,42 @@
+{
+  "id": "7w6zfhqdm5rmw0d0setrnh6gc8",
+  "model": "minimax/speech-02-turbo",
+  "version": "hidden",
+  "input": {
+    "audio_format": "mp3",
+    "bitrate": 128000,
+    "channel": "mono",
+    "emotion": "neutral",
+    "english_normalization": true,
+    "language_boost": "English",
+    "pitch": -1,
+    "sample_rate": 32000,
+    "speed": 0.93,
+    "text": "You wanted the trial tonight, while the seam still answered. Fang Yuan’s order went the other way.",
+    "voice_id": "English_Insightful_Speaker"
+  },
+  "logs": "Generating speech with model speech-02-turbo\nGenerated speech in 1.92sec\nEach character is 1 token\nTokens: 98\n",
+  "output": "https://replicate.delivery/xezq/1corTjgYcGrxJtncRMTxvlFN1LeeVNwXfjRPXbFypnQ9RaguA/tmpm9n91vsf.mp3",
+  "data_removed": false,
+  "error": null,
+  "source": "api",
+  "status": "succeeded",
+  "created_at": "2026-09-23T00:41:32.833Z",
+  "started_at": "2026-09-23T00:41:32.848763542Z",
+  "completed_at": "2026-09-23T00:41:34.890211163Z",
+  "urls": {
+    "cancel": "https://api.replicate.com/v1/predictions/7w6zfhqdm5rmw0d0setrnh6gc8/cancel",
+    "get": "https://api.replicate.com/v1/predictions/7w6zfhqdm5rmw0d0setrnh6gc8",
+    "stream": "https://stream.replicate.com/v1/files/jbxs-leoryrotee2w2645nqrkn6aarcqqe6g2y2oz7knzge3j4hp7ghda",
+    "web": "https://replicate.com/p/7w6zfhqdm5rmw0d0setrnh6gc8"
+  },
+  "metrics": {
+    "input_token_count": 98,
+    "output_token_count": 1,
+    "predict_time": 2.041447631,
+    "time_to_first_token": 0.000483097,
+    "token_input_count": 98,
+    "tokens_per_second": 0.48996441797062606,
+    "total_time": 2.057211163
+  }
+}
