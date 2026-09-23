@@ -1,5 +1,6 @@
 // @jasonyu0100
 import type { CompiledExperience, Moment } from './contracts';
+import { quoteSpokenLine } from './presentation';
 import { availableChoiceOptions, currentMoment, initialReaderState, reduceReader, type ReaderAction, type ReaderState } from './reader-state';
 
 export type DailiesStep =
@@ -100,7 +101,7 @@ export function planDailies(experience: CompiledExperience, limit = 50_000, maxR
       route: state.route,
       insightIds: state.insightIds,
       availableOptionIds: options,
-      text: moment.text,
+      text: moment.mode === 'dialogue' && moment.speakerId ? quoteSpokenLine(moment.text).text : moment.text,
       steps,
     });
   };

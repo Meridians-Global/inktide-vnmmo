@@ -1,5 +1,6 @@
 import './styles.css';
 import { CompiledExperience, type Actor, type Appearance, type CompiledAsset, type Moment, type Tableau } from '../core/contracts';
+import { actorHue, presentLine } from '../core/presentation';
 import { DEFAULT_PREFS, PREF_OPTIONS, audioChannels, autoAdvanceMs, canPlayThrough, cyclePref, masterLevel, revealMsPerChar, SKIP_HOLD_MS, type Playback, type ReaderPrefs } from '../core/reader-prefs';
 import { availableChoiceOptions, backlog, currentMoment, initialReaderStateFromLink, reduceReader, resumeReaderState, type ReaderAction, type ReaderState } from '../core/reader-state';
 import { AudioDirector } from './audio-director';
@@ -31,6 +32,7 @@ root.innerHTML = `
       <img class="backdrop backdrop-previous" alt="" aria-hidden="true" />
       <img class="backdrop" alt="" />
       <div class="plate-scrim"></div>
+      <div class="pov-veil" aria-hidden="true"></div>
       <div class="cut-in-wrap" aria-hidden="true"><img class="cut-in" alt="" /></div>
       <div class="atmosphere atmosphere-back" aria-hidden="true"></div>
       <header class="context-rail">
@@ -93,7 +95,7 @@ root.innerHTML = `
       <footer class="text-rail">
         <div class="text-copy">
           <span class="moment-label"></span>
-          <strong class="speaker"></strong>
+          <strong class="speaker"><span class="speaker-name"></span><i class="voice-meter" aria-hidden="true"><b></b><b></b><b></b><b></b></i></strong>
           <p class="line"></p>
         </div>
         <span class="advance-cue" aria-hidden="true"></span>
@@ -149,6 +151,8 @@ const backlogLayer = root.querySelector<HTMLElement>('.backlog-layer')!;
 const settingsLayer = root.querySelector<HTMLElement>('.settings-layer')!;
 const line = root.querySelector<HTMLElement>('.line')!;
 const speaker = root.querySelector<HTMLElement>('.speaker')!;
+const speakerName_ = root.querySelector<HTMLElement>('.speaker-name')!;
+const povVeil = root.querySelector<HTMLElement>('.pov-veil')!;
 const momentLabel = root.querySelector<HTMLElement>('.moment-label')!;
 const chapter = root.querySelector<HTMLElement>('.chapter')!;
 const locationLabel = root.querySelector<HTMLElement>('.location')!;
@@ -303,7 +307,9 @@ function renderFigures(tableau: Tableau, moment: Moment, assets: Map<string, Com
       figures.append(image);
     }
     const speaking = moment.speakerId === actor.id;
-    image.className = `figure figure-${placement.emphasis} figure-projection-${appearance.projection}${speaking ? ' figure-speaking' : ''}${entering ? ' figure-entering' : ''}`;
+    const outsidePov = moment.viewpoint.kind === 'private' && moment.viewpoint.holderId !== actor.id;
+    image.className = `figure figure-${placement.emphasis} figure-projection-${appearance.projection}${speaking ? ' figure-speaking' : ''}${outsidePov ? ' figure-outside-pov' : ''}${entering ? ' figure-entering' : ''}`;
+    image.style.setProperty('--actor-hue', String(actorHue(actor.id)));
     if (image.dataset.appearanceId !== appearance.id) {
       image.src = asset.url;
       image.alt = appearance.stageName;
@@ -528,9 +534,12 @@ function renderBacklog(): void {
     const entry = document.createElement('div');
     entry.className = 'backlog-entry';
     const name = document.createElement('strong');
-    name.textContent = speakerName(moment) || moment.label || moment.mode;
+    const presented = presentLine(experience, moment, undefined, speakerName(moment));
+    name.textContent = presented.speakerName || presented.eyebrow;
+    if (presented.speakerHue !== undefined) name.style.setProperty('--actor-hue', String(presented.speakerHue));
+    entry.className = `backlog-entry backlog-${presented.register}`;
     const text = document.createElement('p');
-    text.textContent = moment.text;
+    text.textContent = presented.text;
     entry.append(name, text);
     backlogLayer.append(entry);
   }
@@ -559,20 +568,26 @@ function render(): void {
   shell.dataset.view = 'reading';
   homeLayer.hidden = true;
   shell.dataset.tone = tableau.tone;
+  const previousId = shell.dataset.momentId;
+  const previous = previousId ? experience.moments.find((candidate) => candidate.id === previousId) : undefined;
+  const presented = presentLine(experience, moment, previous, speakerName(moment));
+  shell.dataset.momentId = moment.id;
   shell.dataset.mode = moment.mode;
   shell.dataset.viewpoint = moment.viewpoint.kind;
   shell.dataset.povSide = viewpointSide(moment, tableau);
+  renderPovShift(presented.povShift);
   renderBackdrop(background.url);
   chapter.textContent = moment.chapter;
   locationLabel.textContent = tableau.location;
   viewpointLabel.textContent = moment.viewpoint.kind === 'public'
     ? 'PUBLIC VIEW'
     : `${byId(experience.actors, moment.viewpoint.holderId).name.toUpperCase()} · PRIVATE`;
-  momentLabel.textContent = moment.label || moment.mode;
-  speaker.textContent = speakerName(moment);
-  speaker.hidden = !moment.speakerId;
-  line.className = `line line-${moment.mode}`;
-  if (reveal.text !== moment.text || !reveal.complete) startReveal(moment.text);
+  momentLabel.textContent = presented.eyebrow;
+  speakerName_.textContent = presented.speakerName;
+  speaker.hidden = !presented.speakerName;
+  if (presented.speakerHue !== undefined) speaker.style.setProperty('--actor-hue', String(presented.speakerHue));
+  line.className = `line line-${presented.register}${presented.quoted ? ' line-quoted' : ''}`;
+  if (reveal.text !== presented.text || !reveal.complete) startReveal(presented.text);
   else schedulePlayback();
   progress.textContent = `${String(ordinal).padStart(2, '0')} / ${String(experience.moments.length).padStart(2, '0')}`;
   renderFigures(tableau, moment, assets);
@@ -584,6 +599,21 @@ function render(): void {
   renderBacklog();
   renderSettings();
   audio.sync(tableau);
+}
+
+/**
+ * A change of viewpoint is a camera move, not a label swap: the veil irises in
+ * on the holder (or lifts back to the public plate) and the badge re-enters.
+ */
+function renderPovShift(shift: ReturnType<typeof presentLine>['povShift']): void {
+  povVeil.style.setProperty('--pov-x', { left: '29%', center: '50%', right: '71%' }[shell.dataset.povSide ?? 'center']!);
+  if (shift === 'none' || reducedMotion.matches) return;
+  shell.dataset.povShift = shift;
+  for (const element of [shell, viewpointLabel]) {
+    element.classList.remove('pov-shifting');
+    void element.offsetWidth;
+    element.classList.add('pov-shifting');
+  }
 }
 
 function advance(): void {
@@ -614,6 +644,7 @@ let spokenCurrentLine = false;
 function speak(voiceAssetId: string | undefined): void {
   audio.playVoice(voiceAssetId);
   spokenCurrentLine = audio.isSpeaking;
+  shell.dataset.speaking = String(audio.isSpeaking);
 }
 
 async function openExperience(entry: CatalogEntry, entryPoint: { momentId?: string; resume: boolean }): Promise<void> {
@@ -625,10 +656,14 @@ async function openExperience(entry: CatalogEntry, entryPoint: { momentId?: stri
   audio = new AudioDirector(new Map(experience.assets.map((asset) => [asset.id, asset])));
   audio.setMasterLevel(masterLevel(prefs));
   audio.setChannels(audioChannels(prefs));
-  audio.onVoiceEnd = () => schedulePlayback();
+  audio.onVoiceEnd = () => {
+    shell.dataset.speaking = 'false';
+    schedulePlayback();
+  };
   sourceNote.textContent = `${experience.title} · ${experience.source.note}`;
   reveal.text = '';
   backdrop.dataset.url = '';
+  delete shell.dataset.momentId;
   figures.replaceChildren();
   shell.dataset.view = 'reading';
   shell.classList.remove('shell-opening');

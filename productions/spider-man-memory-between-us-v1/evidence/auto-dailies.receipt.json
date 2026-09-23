@@ -7,7 +7,7 @@
     "width": 1600,
     "height": 900
   },
-  "capturedAt": "2026-09-23T00:56:53.100Z",
+  "capturedAt": "2026-09-23T01:15:19.828Z",
   "consoleErrors": [],
   "frames": [
     {
@@ -16,7 +16,7 @@
       "tableauId": "apartment-empty",
       "reading": "base",
       "file": "auto-dailies/rain-location.png",
-      "sha256": "b9716baf813080dfa46792c8adb28271283890e86a8e025fc3d59a936d0543b1",
+      "sha256": "8ff32651789736ce4212c4649326ec50413a61a3a8a60a7bc142438da9bfe945",
       "route": [],
       "insightIds": [],
       "availableOptionIds": [],
@@ -29,7 +29,7 @@
       "tableauId": "masked-two-shot",
       "reading": "base",
       "file": "auto-dailies/distance.png",
-      "sha256": "f859cee868f1ed123c17d63362358e30c6218b06e6f09a29dc6872d7e34626f2",
+      "sha256": "ab14b58f1dd45f92248b8649c7bb13aec38f57d1f2b2cfc2dc01fbe2decb3360",
       "route": [],
       "insightIds": [],
       "availableOptionIds": [],
@@ -42,7 +42,7 @@
       "tableauId": "masked-two-shot",
       "reading": "base",
       "file": "auto-dailies/room-reading-choice.png",
-      "sha256": "ab32ce753d713289ff3eba88736a8572ab054b92b20a041e8c77e4a11d60f488",
+      "sha256": "17cb0e574b689bbd86594fee8f139f369c84605ab2ee7f0f07de48124e2690af",
       "route": [],
       "insightIds": [],
       "availableOptionIds": [
@@ -58,7 +58,7 @@
       "tableauId": "masked-peter-active",
       "reading": "base",
       "file": "auto-dailies/threshold-reading.png",
-      "sha256": "1d9855c6566fdd11b4f56c51daf9a52554dcc4a577c6b199e605700960bfb9b9",
+      "sha256": "d2084350f014bbbb0584996eabed00a9e0a5b1a73bcca0b2d6f432ba77ad32c3",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -78,7 +78,7 @@
       "tableauId": "masked-two-shot",
       "reading": "base",
       "file": "auto-dailies/mj-grip-reading.png",
-      "sha256": "7cd9d0817d068eee13d72105d2c9c04770e457315151886d00f027dd0694da46",
+      "sha256": "b53387fb84fb3e85af5e6f2ca06937d97a7e4b9014c43acf7076b1ee9bf5a9c8",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -98,7 +98,7 @@
       "tableauId": "masked-two-shot",
       "reading": "base",
       "file": "auto-dailies/mj-boundary.png",
-      "sha256": "e8ca25e3c1cc893f3d7fd56b4f8ee7f082b0cc384a5e34c00d6a747b6394c7fd",
+      "sha256": "52fb4e3c7397c3b33f7c77e12584eed4b47e6e800ec2362e0c7c3e3a16098869",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -109,7 +109,7 @@
         "threshold-distance-noticed"
       ],
       "availableOptionIds": [],
-      "textSha256": "b91e38ccc91519c33b74d042cc4cd67a43b0bc664cff20d35066c017f3e6b8af",
+      "textSha256": "4c4926c81d932b70ec2131e9c86a22da9887d21843e53dc08c060e0554002388",
       "steps": 4
     },
     {
@@ -118,7 +118,7 @@
       "tableauId": "masked-peter-active",
       "reading": "base",
       "file": "auto-dailies/peter-mask-thought.png",
-      "sha256": "f14e51fec6272368ab012aed1c9d63ec4061598e0d0c973852d36b03641ad1a0",
+      "sha256": "dfdc66c4f9e7810d3c94073f7a7068978264f3c9e69d5a4ae57b65359d7253d7",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -138,7 +138,7 @@
       "tableauId": "masked-peter-active",
       "reading": "base",
       "file": "auto-dailies/peter-protection.png",
-      "sha256": "e577d4837f75d5b8c0048316f64ea9825d72f8c3336cca4b15258e084fffc509",
+      "sha256": "9c251b4e49c036f2a1e229218e9db534f945de1ccae303fdc7f91a80ad4e8178",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -149,7 +149,7 @@
         "threshold-distance-noticed"
       ],
       "availableOptionIds": [],
-      "textSha256": "9587075440108687c7208bc4fbc764bd987e99226da93d33ab220c5902191036",
+      "textSha256": "2e823dc4f56ea01de5a245358b89a6a19ebbabde63faa06a76b195f5bf065d62",
       "steps": 6
     },
     {
@@ -158,7 +158,7 @@
       "tableauId": "unmask-cg",
       "reading": "base",
       "file": "auto-dailies/unmask.png",
-      "sha256": "59c8798de225b5ee1bbc55726ca91cf9cd621090f661449998ae5e45d8f13036",
+      "sha256": "953fd59ab24202f4e674d767a82cef628fb775d058e3f254d359e881ef31f6ba",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -178,7 +178,7 @@
       "tableauId": "revealed-peter-active",
       "reading": "base",
       "file": "auto-dailies/name.png",
-      "sha256": "c401ba9676a94032a607dd90ae59eebe8e20a0876075fb552ee064783a01c600",
+      "sha256": "f6d43792bad879ee3d897bb638af971cf6fc739f63338b6b6d109dfe41fe58cf",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -189,7 +189,7 @@
         "threshold-distance-noticed"
       ],
       "availableOptionIds": [],
-      "textSha256": "9c2d5d2dda15cedd5ab502ec4b10ed38a93814cc71196b4fa09b8eb73046b4fe",
+      "textSha256": "9d8ba8ff07fe702976d73e3fed773601af52fd7a20d2c7ce65f18bc66c1e963e",
       "steps": 8
     },
     {
@@ -198,7 +198,7 @@
       "tableauId": "revealed-shared-silence",
       "reading": "base",
       "file": "auto-dailies/name-reading-choice.png",
-      "sha256": "4e51980e601e4ce59bb8fc818f5364d76f0f68fb22f0197fefe2f4a97887ed64",
+      "sha256": "fb1280bd1e1495cedc6e2ec23a2871f9006815fef5c61883ffce835fc87ac1ad",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -222,7 +222,7 @@
       "tableauId": "revealed-shared-silence",
       "reading": "base",
       "file": "auto-dailies/plea-reading.png",
-      "sha256": "8e2f490af092dc4e7e30e45d367106b5b5ef3684f26d40ccf2925b4ee67a903a",
+      "sha256": "96fe83e4725f21b0f149c8dfd384a5bab08c1d3d8ae280252025c0bf93279aac",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -247,7 +247,7 @@
       "tableauId": "revealed-peter-active",
       "reading": "base",
       "file": "auto-dailies/peter-name-private.png",
-      "sha256": "0aa8746fea458d900043001b3acf88fe3e1567f052f373c7255f6beb81821e73",
+      "sha256": "c3e66a49f1df554b5a5ee51a917c631096a52524fd358d636a1d9d7d1e037a40",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -271,7 +271,7 @@
       "tableauId": "revealed-mj-active",
       "reading": "base",
       "file": "auto-dailies/mj-name-private.png",
-      "sha256": "b69691c5ff96019b1f4983a7e775d7986381557475ebb6c6f0ec7114f32a7714",
+      "sha256": "8103aff5f7049c780df10824589ff21f16e34c79cdd1496e524546b339890a37",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -295,7 +295,7 @@
       "tableauId": "revealed-name-settles",
       "reading": "variant",
       "file": "auto-dailies/name-settles--5f6e79.png",
-      "sha256": "aee98e0b9fe78dd5cc3f883314becf823c8d733c455512d5d7431eecbb684359",
+      "sha256": "f84c2dcc390a764081266c2c60da06c142d71c188e2dcd042b2abb6d4259e558",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -319,7 +319,7 @@
       "tableauId": "revealed-name-settles",
       "reading": "variant",
       "file": "auto-dailies/name-settles--66ee32.png",
-      "sha256": "c6a81f1f28da0f6383ba5f4068ceaca9bc01344338a5d97c442a7c180f6011ca",
+      "sha256": "b94355a62e57221129d2c7eac0a7ddb45ead6dd88087dcbc92fa8384b8c7cbd8",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -343,7 +343,7 @@
       "tableauId": "revealed-name-settles",
       "reading": "variant",
       "file": "auto-dailies/name-settles--e7f2a4.png",
-      "sha256": "9aef79d5a884cc0aef21860cb06691a2402807e92ab0ddaf81702f2cd3eb10f0",
+      "sha256": "fa5746206121a88272988f75fbaad87efe2231e38dde8398086a622cfc568e7c",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -368,7 +368,7 @@
       "tableauId": "revealed-mj-appraisal",
       "reading": "base",
       "file": "auto-dailies/mj-sees.png",
-      "sha256": "6f394f8b31b450ad8c609ad306574692a2266f2c85b45a0dd3dd2d2de452e932",
+      "sha256": "da99de12cf99a4c27f4f18af76f7d5386867dd2f92329df98c1bf88260afb08c",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -392,7 +392,7 @@
       "tableauId": "revealed-mj-active",
       "reading": "base",
       "file": "auto-dailies/mj-answer.png",
-      "sha256": "31f2da6ea2b4fb5955e2578a46f0e47ba5171c888ba092269b24a2533dcb94e3",
+      "sha256": "e73ad73d7200299fb1017e8bbe6864b8de5a22445d725e3a4a258de59017cfaa",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -407,7 +407,7 @@
         "threshold-distance-noticed"
       ],
       "availableOptionIds": [],
-      "textSha256": "0d43d645ed9e1966bb0908f681beebfc5170b8973cc4f1fe4114008afaf2eeaf",
+      "textSha256": "ad5041504937399ab52299ecfa0b8ee97fa388853c46a306642de210deadbf80",
       "steps": 13
     },
     {
@@ -416,7 +416,7 @@
       "tableauId": "revealed-mj-active",
       "reading": "variant",
       "file": "auto-dailies/mj-answer--ae91a0.png",
-      "sha256": "d7317598434bf1a735051a3b50f69ba27e64120ae0d7872b9ca73711f2496090",
+      "sha256": "644c136dd32b20e8d043b1d4743057efa796b8cf3df1046703d317e8ec2bdba7",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -432,7 +432,7 @@
         "name-as-plea-assumed"
       ],
       "availableOptionIds": [],
-      "textSha256": "b109e099584bc1f6eaedcb4c3d6725bbd1d6a7565fe211058ce8bc2b66fa32fc",
+      "textSha256": "93efe96941c9a5f5c9e9b87a4cc74fbaf82610165d2acfa3b2ce84386b46f0c4",
       "steps": 13
     },
     {
@@ -441,7 +441,7 @@
       "tableauId": "revealed-mj-active",
       "reading": "base",
       "file": "auto-dailies/perspective-choice.png",
-      "sha256": "a047ca6135862162cc8e6e15fef9a2a0d251a3595a133d79a849302dd5ee6582",
+      "sha256": "e3036302e2415ffc725387a76ec9ada83fe8148ca0e553148fd27958d677ea4d",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -469,7 +469,7 @@
       "tableauId": "revealed-mj-active",
       "reading": "variant",
       "file": "auto-dailies/perspective-choice--504443.png",
-      "sha256": "eefb7f0eda11faff7f2866f4575f00e1a7bcd8f6d858a6d02948ddf176e80547",
+      "sha256": "0590571a4ec2d45e2e22dd646e55fc2b8df93dda26633c9a0b339c9274c67582",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -500,7 +500,7 @@
       "tableauId": "revealed-mj-appraisal",
       "reading": "base",
       "file": "auto-dailies/mj-debt-reading.png",
-      "sha256": "6245ef482196c5a6623df4f498faa8753b339a3167f51054772fdb5ef5a96de3",
+      "sha256": "42dd0036652eab8fd5a3ec1badc054da27aee855dd04bcb5b678b4245afdb6b0",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -529,7 +529,7 @@
       "tableauId": "revealed-peter-appraisal",
       "reading": "base",
       "file": "auto-dailies/peter-restraint.png",
-      "sha256": "dee5f5872894be451c5b267f23a6f9f30aa2405e1c4ca1cb05e0eb2998e5c3ca",
+      "sha256": "e82db229ff8ee870f92285a7248410aab9a6053b19aa8f6d4e9de6e8f1816be2",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -558,7 +558,7 @@
       "tableauId": "revealed-mj-appraisal",
       "reading": "base",
       "file": "auto-dailies/mj-boundary-private.png",
-      "sha256": "d82e50e6727c2c51997cde44630d91113acf20fc11312b4ada85c0d41e646592",
+      "sha256": "69428acc33ae4344bc64901e8850b9b510b6db2b05bc59037060fc76e42d9f08",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -587,7 +587,7 @@
       "tableauId": "revealed-mj-appraisal",
       "reading": "variant",
       "file": "auto-dailies/both-truths-reading--b737ea.png",
-      "sha256": "4e00740b6f8f7d4525ce2f3772e76e88ee0745369c3159a680d36c0311f3a16b",
+      "sha256": "e5d828246b253c26c5b61625c45f6cd278e925bd4f30d420fef2e95fdceba4f8",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -617,7 +617,7 @@
       "tableauId": "revealed-peter-appraisal",
       "reading": "variant",
       "file": "auto-dailies/both-truths-reading--bff09f.png",
-      "sha256": "ef0fbfa2ca4fddd0e81575e0ceddb5462cb6d93aad0a4cda19ecd0d0a70e9cc4",
+      "sha256": "739ef06d196148a24ed0720d55309078e9953a2bf1de5d5dd53a75259b713e31",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -647,7 +647,7 @@
       "tableauId": "revealed-shared-silence",
       "reading": "base",
       "file": "auto-dailies/room-without-verdict.png",
-      "sha256": "7243edb5afaaf221f83dd86176f0a6a7c72c8948880c0e37f8689885cb7e9847",
+      "sha256": "07048650e5cc0e8af200781997c0fddee08ca5a72745f661a7a40e6bbb8f6e6e",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -677,7 +677,7 @@
       "tableauId": "revealed-shared-silence",
       "reading": "variant",
       "file": "auto-dailies/shared-silence--091ec5.png",
-      "sha256": "7713b2ee693ddfad73def2f37acdeb1768aae5e02f9794db9ece5008d0b04968",
+      "sha256": "6f1705c5ec53f37cbbc88ed4d7988b57bd0e4111c3634f3c1a2adfb456bb6e5d",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -706,7 +706,7 @@
       "tableauId": "revealed-shared-silence",
       "reading": "variant",
       "file": "auto-dailies/shared-silence--799ef5.png",
-      "sha256": "6625efd754260329a2e91a151196080f65bd5d468d5420e083ad98932d6ace64",
+      "sha256": "f0e93615fa02b7842808538f682b9fc24473239bc04c38093b427d52bdab96a0",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -735,7 +735,7 @@
       "tableauId": "revealed-shared-silence",
       "reading": "variant",
       "file": "auto-dailies/shared-silence--afa097.png",
-      "sha256": "cb32320134fc0d6dacc85a65a76784ef75904d3e9a1aa6d3dce51c1a8036be58",
+      "sha256": "7870b776d6c9c96cc00390b6119a6c97812e577ef8a7d20b87701f5ecaa5aead",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -765,7 +765,7 @@
       "tableauId": "revealed-shared-silence",
       "reading": "variant",
       "file": "auto-dailies/shared-silence--fe257c.png",
-      "sha256": "522a37fca349bcfb4df65c4fc920d0343a14b82e9f44791bd6ea086c35e630ff",
+      "sha256": "1910e92bbbada24c9d03d3c753c47db19065b9f55c7d66d04708a581d2eae08e",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -794,7 +794,7 @@
       "tableauId": "revealed-small-defences",
       "reading": "variant",
       "file": "auto-dailies/small-defence-returns--3ee236.png",
-      "sha256": "1394015cd7a984f6aeef89140c1112658f1925f835811cc7a53ad6358bfbbc87",
+      "sha256": "19381f435607bf5c4c11f4e508639fa86ee1096e0c7399e4c9d47283d166d2c4",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -824,7 +824,7 @@
       "tableauId": "revealed-small-defences",
       "reading": "variant",
       "file": "auto-dailies/small-defence-returns--63cd71.png",
-      "sha256": "8104926f266d09c83c51fab1e002333620b0f0882cd27359ad1fb5ceec55c302",
+      "sha256": "b277da0a6345d2164cfea896f280c4b820547f47a17bf0ee1239e5284339c1c7",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -853,7 +853,7 @@
       "tableauId": "revealed-small-defences",
       "reading": "variant",
       "file": "auto-dailies/small-defence-returns--89cf6b.png",
-      "sha256": "a679916c4080873c248fca61818428be91d9946afd211471dfbcf9c050c94603",
+      "sha256": "ed5d8c2479a8ffb2d23c843c5d40af3911e552bb83e203c0faae535f5a5d8b0c",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -882,7 +882,7 @@
       "tableauId": "revealed-shared-silence",
       "reading": "base",
       "file": "auto-dailies/restraint-forecast.png",
-      "sha256": "8e35428ad3db8098958916b8a9c36e23f495c9a9c63f300d7ee3fedc30fdf34c",
+      "sha256": "7d82eaff2577006d6976b4097b0d4f111ba3eff6d84ea10385156518b58b7da0",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -915,7 +915,7 @@
       "tableauId": "revealed-peter-appraisal",
       "reading": "base",
       "file": "auto-dailies/forecast-plead.png",
-      "sha256": "7093e33d7ff1c8d81059b00f49ec53de85ef605f0670c012df913de4e0722827",
+      "sha256": "c8222264a3f7c3650f89379c223b7a3cfdcbc4ec1c1623fe00b8301bfd31990b",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -949,7 +949,7 @@
       "tableauId": "revealed-peter-appraisal",
       "reading": "base",
       "file": "auto-dailies/forecast-retreat.png",
-      "sha256": "25c5140a19c725cc892a1bb5ca19625224ba73161db206b0307d5d0db57eb86b",
+      "sha256": "d120cc3d130629823f79e91e5d323d05182f324c0c79f8a0fcb0b2daeb5f8f40",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -982,7 +982,7 @@
       "tableauId": "revealed-mj-appraisal",
       "reading": "base",
       "file": "auto-dailies/forecast-return-choice.png",
-      "sha256": "2c18395caed934c132efd7956d5d4a46d83b95a5bc581d42a5fb83d2c8dba0c8",
+      "sha256": "8ae0f87892f6e81249d056128b4c76a6889207e8e8cb2efb864c3f09ac185e10",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1015,7 +1015,7 @@
       "tableauId": "revealed-choice-returned",
       "reading": "variant",
       "file": "auto-dailies/peter-offers-distance--6534d9.png",
-      "sha256": "633fb48b1b6f8be1f33039be8f74aee0310b5611cc5ef2ed8004412103ba29e3",
+      "sha256": "7ef34c3977c605e3c75f97a628fe8cd822d3f1f0916cc34fad90347ac1f4fdf0",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1039,7 +1039,7 @@
         "peter-restraint-understood"
       ],
       "availableOptionIds": [],
-      "textSha256": "f8f044f8e467ce77d66b6cc70227c682b972af3e8df3ac091da19cbe2dd228fd",
+      "textSha256": "941395617533a671b72b283b85a66f7ff5e0c5499d9b3c210d330cc1bb16f94a",
       "steps": 20
     },
     {
@@ -1048,7 +1048,7 @@
       "tableauId": "revealed-choice-returned",
       "reading": "variant",
       "file": "auto-dailies/peter-offers-distance--cb2784.png",
-      "sha256": "c4f59dad4f7b9220766bd3b2ff8bbd6a60d4f43894bdcbb5d705382f4a10271e",
+      "sha256": "52851ec66fa3793d47fb576836fab017b2bbda00246d1a3c62369adf1ee3c8db",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1072,7 +1072,7 @@
         "peter-restraint-understood"
       ],
       "availableOptionIds": [],
-      "textSha256": "26440e23181e5a2f15b6eb9c859ea013838bfa8263989c9b693a36d7718f2733",
+      "textSha256": "6136321b7675278e193dba1c62683082626c29447e74aaa0ad51d4ece5aa51ea",
       "steps": 20
     },
     {
@@ -1081,7 +1081,7 @@
       "tableauId": "revealed-choice-returned",
       "reading": "variant",
       "file": "auto-dailies/peter-offers-distance--e2fdad.png",
-      "sha256": "efd2e0ff3682ac99eb77423d33042d345bf0db8f9fd582abb1c326a93f99d5d4",
+      "sha256": "32e4a0cc6c232f7ecd4f9357820752173b0e4999d819592a15e7fb66e5ef99bd",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1106,7 +1106,7 @@
         "peter-pleads-assumed"
       ],
       "availableOptionIds": [],
-      "textSha256": "4882b41ab15d3ae062233b69ab56eca80c0b23b948e65a3bb60a1b39af07a85e",
+      "textSha256": "65677962bac29892e76b7e7cd7fa059faad20f29c68d10d5ef4252c5d92ffeb4",
       "steps": 20
     },
     {
@@ -1115,7 +1115,7 @@
       "tableauId": "revealed-mj-trust",
       "reading": "base",
       "file": "auto-dailies/ride-home.png",
-      "sha256": "bedd6d597f4f784359c7a3454fdde6c51bfd418891e07df971bd7401746a01bc",
+      "sha256": "5b5889e9f5f8ae2810b45d0d21d658fcd9307afad5377da66ac96f16fda388e4",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1139,7 +1139,7 @@
         "peter-restraint-understood"
       ],
       "availableOptionIds": [],
-      "textSha256": "6d5401e8ec9e47ac64196e3de1e46357303ee0199ac2a42bcf565ea075e2b384",
+      "textSha256": "6e5fbe455013d2043126ca481ea3f6aa00f51fbc384ca5f578f47d891775542d",
       "steps": 21
     },
     {
@@ -1148,7 +1148,7 @@
       "tableauId": "revealed-shared-silence",
       "reading": "base",
       "file": "auto-dailies/departure-decision.png",
-      "sha256": "6235879f67d380b88e6f3bc10078827649bd38f7af30028beff68fe820717213",
+      "sha256": "f3561d94b0e8b8e16d41d8e4c0872f69d09f7f011e98d41137bd7bd2b69a9bdd",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1185,7 +1185,7 @@
       "tableauId": "revealed-shared-silence",
       "reading": "base",
       "file": "auto-dailies/swing-route-reading.png",
-      "sha256": "30b060eafbf4c305f85b618b907411f08b6a5a28e0db410e2dc38bacd300612f",
+      "sha256": "0a017ff853200501b015cecd72d5a175b0f2ca1f5caccd6ac13863db1674d811",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1223,7 +1223,7 @@
       "tableauId": "revealed-mj-trust",
       "reading": "base",
       "file": "auto-dailies/ordinary-route-reading.png",
-      "sha256": "b997ed438cb37c8df37702c7b82c514482245f4fe34c98be77f2d7bc2495db3e",
+      "sha256": "875623ab740805b2b765e18aa96fc8f568b630ac1307d8783de4b7036239dfa7",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1260,7 +1260,7 @@
       "tableauId": "revealed-peter-appraisal",
       "reading": "base",
       "file": "auto-dailies/visible-route-reading.png",
-      "sha256": "eb214ccb229768a5394b291b43bd1b8f7c41482371e71b6365c588ffa2418662",
+      "sha256": "c4b434fe1bc54e22df3d838673c5f9689974a7d19b3ce5f3e275b9bce0b6ff9f",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1297,7 +1297,7 @@
       "tableauId": "revealed-mj-trust",
       "reading": "base",
       "file": "auto-dailies/mj-names-route.png",
-      "sha256": "f229bc496129ae8bf00f3fb9b6c7c329283c4f28ca24c70c0f21d0a7e6193810",
+      "sha256": "8e26defcfcd21bc4a17c377bdf250e7b8c6a46d98976a40f409825dfde1b45d4",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1325,7 +1325,7 @@
         "peter-restraint-understood"
       ],
       "availableOptionIds": [],
-      "textSha256": "780ce88ef64196a0348fd1c83b94045341ba0f3fc5fd70b38ca0d5051bf9bceb",
+      "textSha256": "e6f635ca90ca5aaa919a511967e22c64837e5555156e1e2e500a8b6580a767c1",
       "steps": 24
     },
     {
@@ -1334,7 +1334,7 @@
       "tableauId": "hallway-empty",
       "reading": "base",
       "file": "auto-dailies/door-opens.png",
-      "sha256": "23ea6497870ca6b3a61aeb2b4109ffde879fafc36a73dfe177c3b5dd3e486fe3",
+      "sha256": "031a382062bad9bab76b5c7fe5e04062d048afc9bbc9a77217dc072d3803f2d6",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1371,7 +1371,7 @@
       "tableauId": "hallway-empty",
       "reading": "variant",
       "file": "auto-dailies/door-opens--3f5e21.png",
-      "sha256": "ade15b5a9052ba0e92102879b8c730291d43a01bf7a20a3b6bc6871d583c88d0",
+      "sha256": "16537089c23cb83d0dd852ae80fde7b649c96ea3ffff1ae41d1a64bab5b3b4ae",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1409,7 +1409,7 @@
       "tableauId": "hallway-shared-distance",
       "reading": "variant",
       "file": "auto-dailies/hallway-threshold--7f5573.png",
-      "sha256": "da63fec7ba7a9d4721f88fe616e92bcd986cf1cbd235a12c248534a3e216c020",
+      "sha256": "2aa9ff81903c2922e70f19a67149dd0bd95a5e4ed7c75c63a0d6b395344fa562",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1447,7 +1447,7 @@
       "tableauId": "hallway-shared-distance",
       "reading": "variant",
       "file": "auto-dailies/hallway-threshold--bcf1f3.png",
-      "sha256": "b11688bb0c9f19c9552ac79b199df91c51af6fc1cb33eb84eef23121b7b89f35",
+      "sha256": "a4c64e900fb17f282d29e7fb5423840fa88237c9c5017eca449cd2ffa8f68fc5",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1484,7 +1484,7 @@
       "tableauId": "hallway-shared-distance",
       "reading": "variant",
       "file": "auto-dailies/hallway-threshold--fbbe31.png",
-      "sha256": "6cace7ee6d6c302dbf8f3447497a6f4ef36289b1a77d893126d33594dee40b17",
+      "sha256": "5d305bf98e8d7ab3c3a72402dbd240c664dda2255c80e1f680e6aa584b637243",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1521,7 +1521,7 @@
       "tableauId": "hallway-mj-active",
       "reading": "base",
       "file": "auto-dailies/mj-corrects-promise.png",
-      "sha256": "f0bab9a8023abfed4497db9cada2e8af39fc4be7dc5509b9fcb5bb45008d8055",
+      "sha256": "e86d0772665e787e24fa8c8eb4146008124a9c24be0619d9889b12cc1bb70ddf",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1549,7 +1549,7 @@
         "peter-restraint-understood"
       ],
       "availableOptionIds": [],
-      "textSha256": "0b7939ea44d81e3680144722cf607126cf7d4146c0a267e56a2ce6d44cb51302",
+      "textSha256": "5889609dc5b5d52a2bd8373e963c5bacab307e4eac6cec47f301ec5fbd896cbc",
       "steps": 27
     },
     {
@@ -1558,7 +1558,7 @@
       "tableauId": "hallway-mj-active",
       "reading": "variant",
       "file": "auto-dailies/mj-corrects-promise--1ea632.png",
-      "sha256": "3d94e7c84a6d39f2d2a4e98cf228b919f40c5d80ba61411fe00f10ab47a3a390",
+      "sha256": "e6e11b204ffba75348230f644979fffb240e136cf133b7ab1ca3eb43413c073c",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1586,7 +1586,7 @@
         "mj-owes-assumed"
       ],
       "availableOptionIds": [],
-      "textSha256": "9340afbf515f1f776fc0e55ede578f4e9b3292e95b2609cc69f4135d138fadb7",
+      "textSha256": "44cde9bac604ef52914ebbf4ae85a9a230191e3e09c5eb3f5c776e7e92458478",
       "steps": 27
     },
     {
@@ -1595,7 +1595,7 @@
       "tableauId": "hallway-peter-active",
       "reading": "base",
       "file": "auto-dailies/peter-hears-limit.png",
-      "sha256": "adf4b663a3d6ca387c21dff67ac8ac45a7f91ad4944cd6c14eef5eccbc3634ca",
+      "sha256": "c75e4f817c4ada0c596a39b51076aa952455ac0910a0aa5cbbf57c1c89a7a5da",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1632,7 +1632,7 @@
       "tableauId": "hallway-peter-active",
       "reading": "base",
       "file": "auto-dailies/peter-accepts-limit.png",
-      "sha256": "a5696b547798b989e076c7cf49fb9870b91718c78ce507e9cb30dbc803140d03",
+      "sha256": "de05b0de06fb17443c7427de7479d685eee5dc7dd473369319693aed9b9201f7",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1660,7 +1660,7 @@
         "peter-restraint-understood"
       ],
       "availableOptionIds": [],
-      "textSha256": "da3558bb5d2f2fa5bf2b9c2f18bd440654eaf110e643eb311c2f1d4fe34cd76b",
+      "textSha256": "4dd0e259a432d8cc11b4014dce22bd20c57ade96f5439ab2ad2fc0933fa4fb50",
       "steps": 29
     },
     {
@@ -1669,7 +1669,7 @@
       "tableauId": "hallway-shared-distance",
       "reading": "base",
       "file": "auto-dailies/stairs-begin.png",
-      "sha256": "76dd842d16fa079caf6e2e3fed81ccae88f4840dc7a9c3bf3401472756595584",
+      "sha256": "113bd6fda65c55848d7a624d3ffbf6e80b999ad3d0ec232f21436d3cc2a9f7e0",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1706,7 +1706,7 @@
       "tableauId": "hallway-shared-distance",
       "reading": "variant",
       "file": "auto-dailies/stairs-begin--5e033b.png",
-      "sha256": "b5162ae707d9e5f806d6151fe1d885b0b75546b3cdd09467d87224c7197dd46c",
+      "sha256": "6a8531aac70a0a4ec38742c11c34c9dc3d27c8e4e3ddabe771a613d3f3defd84",
       "route": [
         {
           "nodeId": "room-reading-choice",
@@ -1744,7 +1744,7 @@
       "tableauId": "hallway-shared-distance",
       "reading": "base",
       "file": "auto-dailies/ending.png",
-      "sha256": "3372b9f76d04fb60872aa2fdb0508e89dade2dfbdcfe56e3e4470b9f912ab35c",
+      "sha256": "bc06edcceba6c52a7fe5d97ab0def8afe1fe82ea370763c2a030584649fd630d",
       "route": [
         {
           "nodeId": "room-reading-choice",
