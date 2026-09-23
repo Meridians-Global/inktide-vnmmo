@@ -371,6 +371,90 @@
       "predictionId": "z5hdwvb3s1rmt0d0pehrjz3gvm",
       "text": "He could protect her without possessing her answer. The city below still needed Spider-Man; the next stair required only Peter Parker to stay one pace behind.",
       "voiceId": "English_ReservedYoungMan"
+    },
+    "voice-plea-reading": {
+      "inputDigest": "ae14f9552b22f19309e141fc06ea7a02f7dada3a9b55f3ea2414b2359d075ae5",
+      "sha256": "485445567d0348f0539d0d9f3e529889146fbfc41ec1943ca68c5991b8561c83",
+      "predictionId": "93jtphe0vnrmr0d0set8vjv3bc",
+      "text": "You heard the name reach for her: a claim, quietly made, waiting for its echo.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-name-settles-v3": {
+      "inputDigest": "44b93ef6e701629a52362d68d1471124384e24aa38bc708d02a90bcf223127c4",
+      "sha256": "f9bb69285efbc7747a32d28c144e879668166252fc42e9890a3f0dc7499c0bef",
+      "predictionId": "r5bz6c6fk1rmt0d0setatn6c64",
+      "text": "MJ repeated the name once, quietly. Peter did not move closer, and did not wait for it to come back changed.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-mj-answer-v1": {
+      "inputDigest": "6ddda3dc04caf49ee272f656117b43e23bb8ff41bd1ffad49df17aeac4572768",
+      "sha256": "65eb220f9c57c301a2160fd39a951b95db7af0b6b750ba9a5d89e88fe0246811",
+      "predictionId": "5jcsympy7nrmy0d0setbj2j0bm",
+      "text": "I can understand why the girl in your memories loved you. You are not asking me to be her—I can hear that. But I am standing here without them.",
+      "voiceId": "English_ConfidentWoman"
+    },
+    "voice-mj-debt-reading": {
+      "inputDigest": "c3be24f740434ced9e53dd81d4e3e905ee91200f5386545451546298c9491fa0",
+      "sha256": "94eb520ce98bd201f37532db813f261218c21fc667b0ddca5c25bff44a8cd282",
+      "predictionId": "bwfgwwqhbsrmy0d0set9xptawg",
+      "text": "You read her stillness as a debt being counted: a man had erased himself for her, and gratitude was waiting for its shape.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-shared-silence-v4": {
+      "inputDigest": "73ffd28e50b0bf7bef7f52bde183dbe7e9dc942934c679503e123b194bbbdff4",
+      "sha256": "37735f4b508621fce4ddbda9310c07d883729a009541363d694a7c3786490a6e",
+      "predictionId": "739p2jg071rmw0d0setsebrt78",
+      "text": "A distant siren crossed the rain. Peter lowered the mask. MJ did not step back—and nothing in her stillness was counting.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-forecast-plead": {
+      "inputDigest": "652baf8959ee771720017d110397a67f3a5b1de53ed4351791507d4efce9e32b",
+      "sha256": "ad44ccea145a7ae1c9ce4a09943db0f2976afac0b8389915970710865962c407",
+      "predictionId": "whqbcbretsrmw0d0settqaa8pw",
+      "text": "You read the lowered mask as the last step before asking: try. Just try to remember.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-peter-offers-distance-v3": {
+      "inputDigest": "cee6fb907af35caf8207fde087da9de5f2d7875925b5b95223e837d70234af99",
+      "sha256": "36344e7c67c43444e44b83415f4f23c84db2a0f799aba08168418c9ca988928f",
+      "predictionId": "jctpb5gxdxrmt0d0setvagzk1m",
+      "text": "Peter did not ask her to remember. “I can call a cab. Or I can take you home. You choose.”",
+      "voiceId": "English_ReservedYoungMan"
+    },
+    "voice-swing-route-reading": {
+      "inputDigest": "cfcf5be10ee7a7118a546f75de952056c775afdf75ba68de13d52f3ead958ef7",
+      "sha256": "850b40de89cd4d3cad5a4f199e8495b6659f935fbf7bab35fec78b7a55ed1783",
+      "predictionId": "n6wj7nhbzsrmt0d0settvswn7r",
+      "text": "You wanted him to carry her home above the streets, the one gift only he could give. MJ’s rule went the other way.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-door-opens-v1": {
+      "inputDigest": "9347e9fdc253cf746717d9f19c7ec0cc490369616913d2d8376e465138dbbacd",
+      "sha256": "45573ba5169a6b734424373694e71b6d006f157ca754740fe8c8b56d35298449",
+      "predictionId": "vvxqajhtq5rmy0d0setrp1fgxc",
+      "text": "MJ opened the apartment door herself. The hallway was dry, ordinary, and bright enough to make every step accountable—no window, no sky, nothing that only he could do.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-hallway-threshold-v3": {
+      "inputDigest": "ac571ed7eed9f5440a0f3336b8c3ad6a6afc3223386ac47d09b18660417ae108",
+      "sha256": "b9ef0927a29c53651a78b27c923583b830cedf7939bc8b23cd23daf14cc43634",
+      "predictionId": "bgds7dt981rmt0d0setra2wx98",
+      "text": "She crossed first and took the stairs. Peter followed one full pace behind, the rooftops he could have offered her left unmentioned.",
+      "voiceId": "English_expressive_narrator"
+    },
+    "voice-mj-corrects-promise-v1": {
+      "inputDigest": "74fff3c0d533cc77f4035cdb24d58a19597b0598ecdf0fb2f072524b2556ae99",
+      "sha256": "4f53f29543c51b8448b03d9f8136cf411787cab9d60c3ef37cfe0473dd841ef1",
+      "predictionId": "f3856zjqxdrmy0d0setsn2cvjg",
+      "text": "Taking me home is not a promise about tomorrow, and it is not a payment. It is one walk, tonight.",
+      "voiceId": "English_ConfidentWoman"
+    },
+    "voice-stairs-begin-v1": {
+      "inputDigest": "2c77c5513e7319d1ce2306948e976cd0b97bcb27e3c03301acbdd58f0c2a28f0",
+      "sha256": "db832cc9864183f5190b50330bc592d21aa0564fe120b9307738e08a3236912a",
+      "predictionId": "xqyvzrb6khrmt0d0setrqfbqk4",
+      "text": "MJ turned toward the stairwell. Peter had asked her for nothing—not even to remember. He waited for her first step, then matched neither her stride nor her silence—only the distance she had chosen.",
+      "voiceId": "English_expressive_narrator"
     }
   }
 }

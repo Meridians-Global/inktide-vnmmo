@@ -27,9 +27,9 @@ describe('production audit', () => {
 
     assert.equal(nameReading?.convergenceMomentId, 'name-settles');
     assert.deepEqual(nameReading?.privateHolderIds, ['mj', 'peter-parker']);
-    assert.deepEqual(nameReading?.payoffMomentIds, ['name-settles']);
+    assert.deepEqual(nameReading?.payoffMomentIds, ['name-settles', 'mj-answer']);
     assert.equal(forecast?.convergenceMomentId, 'peter-offers-distance');
-    assert.deepEqual(forecast?.payoffMomentIds, ['peter-offers-distance']);
+    assert.deepEqual(forecast?.payoffMomentIds, ['peter-offers-distance', 'stairs-begin']);
   });
 
   it('turns declared production targets and static pivotal acting into typed demands', () => {
@@ -41,6 +41,36 @@ describe('production audit', () => {
     assert.ok(!moon.demands.some((demand) => demand.lane === 'performance'));
     const staticMoon = auditExperience(staticFangDecision, productionTargetFor(moonScarExperience.id));
     assert.ok(staticMoon.demands.some((demand) => demand.id === 'performance:question-choice:fang-yuan'));
+  });
+
+  it('demands a distractor on every interpret, predict and decide choice', () => {
+    const undistracted: Experience = {
+      ...spiderMemoryExperience,
+      moments: spiderMemoryExperience.moments.map((moment) => moment.id !== 'restraint-forecast' || moment.next.type !== 'choice' ? moment : {
+        ...moment,
+        next: { ...moment.next, options: moment.next.options.filter((option) => !option.distractor) },
+      }),
+    };
+    const audit = auditExperience(undistracted, productionTargetFor(spiderMemoryExperience.id), composedEvidence(spiderMemoryExperience));
+    const demand = audit.demands.find((candidate) => candidate.id === 'story:choice-distractor:restraint-forecast');
+
+    assert.equal(demand?.reason, 'undistracted-choice');
+    assert.deepEqual(demand?.momentIds, ['restraint-forecast']);
+    assert.ok(!audit.demands.some((candidate) => candidate.reason === 'undistracted-choice' && candidate.id !== demand?.id));
+  });
+
+  it('flags an actor held on one rendition across too many consecutive moments and thin rendition sets', () => {
+    const target = { ...productionTargetFor(spiderMemoryExperience.id), maximumHeldPoseMoments: 2, minimumActorRenditions: 6 };
+    const audit = auditExperience(spiderMemoryExperience, target, composedEvidence(spiderMemoryExperience));
+    const held = audit.demands.filter((candidate) => candidate.reason === 'held-pose');
+    const thin = audit.demands.filter((candidate) => candidate.reason === 'thin-rendition-set');
+
+    assert.ok(held.length > 0);
+    assert.ok(held.every((demand) => demand.lane === 'performance' && demand.momentIds.length > 2 && demand.actorIds.length === 1));
+    assert.deepEqual(thin.map((demand) => demand.id).sort(), ['performance:renditions:mj', 'performance:renditions:peter-parker']);
+
+    const relaxed = auditExperience(spiderMemoryExperience, productionTargetFor(spiderMemoryExperience.id), composedEvidence(spiderMemoryExperience));
+    assert.ok(!relaxed.demands.some((candidate) => candidate.reason === 'held-pose' || candidate.reason === 'thin-rendition-set'));
   });
 
   it('demands a composition brief for every CG the evidence cannot vouch for', () => {

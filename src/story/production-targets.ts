@@ -6,6 +6,9 @@ const readerLedBranching: ProductionTarget = {
   minimumLocationCount: 2,
   minimumReadingSeconds: 180,
   readingWordsPerMinute: 180,
+  distractedChoicePurposes: ['interpret', 'predict', 'decide'],
+  maximumHeldPoseMoments: 5,
+  minimumActorRenditions: 4,
 };
 
 export const productionTargets: Readonly<Record<string, ProductionTarget>> = {

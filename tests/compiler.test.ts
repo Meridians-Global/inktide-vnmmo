@@ -4,15 +4,18 @@ import { compileExperience } from '../src/core/compiler';
 import { moonScarExperience } from '../src/story/moon-scar';
 import { spiderMemoryExperience } from '../src/story/spider-memory';
 import { detectPerformanceBeats } from '../src/core/performance-beats';
+import type { Experience, Moment } from '../src/core/contracts';
+
+type ChoiceOption = Extract<Moment['next'], { type: 'choice' }>['options'][number];
 
 describe('compileExperience', () => {
   it('compiles the prepared catch-up reading', () => {
     const result = compileExperience(moonScarExperience);
     assert.equal(result.ok, true);
-    if (result.ok) assert.equal(result.experience.moments.length, 40);
+    if (result.ok) assert.equal(result.experience.moments.length, 45);
     const spider = compileExperience(spiderMemoryExperience);
     assert.equal(spider.ok, true);
-    if (spider.ok) assert.equal(spider.experience.moments.length, 39);
+    if (spider.ok) assert.equal(spider.experience.moments.length, 43);
   });
 
   it('can compile an experience into an isolated asset namespace', () => {
@@ -68,12 +71,14 @@ describe('compileExperience', () => {
         experience: spiderMemoryExperience,
         choiceId: 'name-reading-choice',
         privateIds: ['peter-name-private', 'mj-name-private'],
+        distractorId: 'plea-reading',
         bottleneckId: 'name-settles',
       },
       {
         experience: moonScarExperience,
         choiceId: 'question-choice',
         privateIds: ['rank-chun-private', 'loss-chun-private'],
+        distractorId: 'witness-question',
         bottleneckId: 'chun-answers',
       },
     ];
@@ -82,11 +87,12 @@ describe('compileExperience', () => {
       const choice = fixture.experience.moments.find((moment) => moment.id === fixture.choiceId)!;
       assert.equal(choice.next.type, 'choice');
       if (choice.next.type !== 'choice') continue;
-      assert.deepEqual(choice.next.options.map((option) => option.nodeId), fixture.privateIds.map((id) => {
+      assert.deepEqual(choice.next.options.map((option) => option.nodeId), [...fixture.privateIds.map((id) => {
         if (id === 'rank-chun-private') return 'rank-question';
         if (id === 'loss-chun-private') return 'loss-question';
         return id;
-      }));
+      }), fixture.distractorId]);
+      assert.ok(choice.next.options.find((option) => option.nodeId === fixture.distractorId)?.distractor);
       for (const privateId of fixture.privateIds) {
         const privateMoment = fixture.experience.moments.find((moment) => moment.id === privateId)!;
         assert.equal(privateMoment.viewpoint.kind, 'private');
@@ -120,13 +126,50 @@ describe('compileExperience', () => {
   it('rejects declared reader insights without both a learning and harvest coordinate', () => {
     const result = compileExperience({
       ...spiderMemoryExperience,
-      readerInsights: [...spiderMemoryExperience.readerInsights, { id: 'decorative-insight', meaning: 'Nothing downstream reads it.' }],
+      readerInsights: [...spiderMemoryExperience.readerInsights, { id: 'decorative-insight', standing: 'grounded', meaning: 'Nothing downstream reads it.' }],
     });
     assert.equal(result.ok, false);
     if (!result.ok) {
       assert.ok(result.errors.includes('Reader insight decorative-insight is never learned'));
       assert.ok(result.errors.includes('Reader insight decorative-insight is never harvested'));
     }
+  });
+
+  it('binds distractors to mistaken reader insights and mistaken insights to a later correction', () => {
+    const editChoice = (momentId: string, edit: (option: ChoiceOption) => ChoiceOption): Moment[] =>
+      spiderMemoryExperience.moments.map((moment) => moment.id !== momentId || moment.next.type !== 'choice' ? moment : {
+        ...moment,
+        next: { ...moment.next, options: moment.next.options.map(edit) },
+      });
+    const errorsOf = (experience: Experience): string[] => {
+      const result = compileExperience(experience);
+      return result.ok ? [] : result.errors;
+    };
+
+    assert.ok(errorsOf({
+      ...spiderMemoryExperience,
+      moments: editChoice('restraint-forecast', (option) => option.id !== 'expect-plead' ? option : { id: option.id, label: option.label, consequence: option.consequence, nodeId: option.nodeId, distractor: true }),
+    }).includes('Distractor restraint-forecast/expect-plead must grant a mistaken reader insight'));
+
+    assert.ok(errorsOf({
+      ...spiderMemoryExperience,
+      moments: editChoice('restraint-forecast', (option) => option.id !== 'expect-plead' ? option : { id: option.id, label: option.label, consequence: option.consequence, nodeId: option.nodeId, grantsInsightIds: option.grantsInsightIds }),
+    }).includes('Choice restraint-forecast/expect-plead grants a mistaken reader insight but is not marked as a distractor'));
+
+    assert.ok(errorsOf({
+      ...spiderMemoryExperience,
+      moments: editChoice('restraint-forecast', (option) => option.distractor ? option : { ...option, distractor: true, grantsInsightIds: ['peter-pleads-assumed'] }),
+    }).includes('Choice restraint-forecast needs at least one grounded option'));
+
+    assert.ok(errorsOf({
+      ...spiderMemoryExperience,
+      moments: spiderMemoryExperience.moments.map((moment) => moment.id !== 'stairs-begin' ? moment : { ...moment, readingVariants: undefined }),
+    }).includes('Mistaken reader insight peter-pleads-assumed is never corrected by a reading variant'));
+
+    assert.ok(errorsOf({
+      ...spiderMemoryExperience,
+      moments: editChoice('departure-decision', (option) => option.id !== 'choose-visible-route' ? option : { ...option, requiresInsightIds: ['peter-pleads-assumed'] }),
+    }).includes('Mistaken reader insight peter-pleads-assumed must not gate a choice option'));
   });
 
   it('keeps delayed reading variants public, choice-bound, and downstream', () => {
@@ -210,7 +253,7 @@ describe('compileExperience', () => {
     assert.equal(spiderBeats.find((beat) => beat.momentId === 'ride-home')?.appearanceId, 'reluctant-trust');
     const moonBeats = detectPerformanceBeats(moonScarExperience);
     assert.equal(moonBeats.find((beat) => beat.momentId === 'chun-answers')?.appearanceId, 'restrained-disclosure');
-    assert.equal(moonBeats.filter((beat) => beat.importance === 'pivotal').length, 3);
+    assert.equal(moonBeats.filter((beat) => beat.importance === 'pivotal').length, 4);
   });
 
   it('rejects a pivotal beat without an explicit rendition', () => {

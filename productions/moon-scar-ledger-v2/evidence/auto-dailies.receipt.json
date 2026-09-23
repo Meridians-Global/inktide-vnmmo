@@ -2,12 +2,12 @@
   "schemaVersion": 1,
   "productionId": "moon-scar-ledger-v2",
   "experienceId": "moon-scar-reading-v1",
-  "experienceSha256": "59c6b08005f7dffa0a4b4573a202d02238bf62e617dec836b6480795fabf0e89",
+  "experienceSha256": "a5d9ab0e00eb97a19008a344730780fb7e4a3a810708351a1db976a2bead5ff8",
   "viewport": {
     "width": 1600,
     "height": 900
   },
-  "capturedAt": "2026-09-19T04:29:13.360Z",
+  "capturedAt": "2026-09-23T00:58:16.485Z",
   "consoleErrors": [],
   "frames": [
     {
@@ -16,7 +16,7 @@
       "tableauId": "cleft-establishing",
       "reading": "base",
       "file": "auto-dailies/cleft-location.png",
-      "sha256": "72416934c7ee9b22ef63972400cd26d618d96f851e231e103b77dcfabff22a61",
+      "sha256": "96f15e0d81d881dc02f74fe3f3ed4927292e1b8bfc1fd8ecb39d2d14ca2ebe9b",
       "route": [],
       "insightIds": [],
       "availableOptionIds": [],
@@ -29,7 +29,7 @@
       "tableauId": "cleft-chun-active",
       "reading": "base",
       "file": "auto-dailies/chun-arrives.png",
-      "sha256": "68d0f25fdafe0d989a996a0a7bd935f4a5bcdb4bc64a5a346823cea543c389e0",
+      "sha256": "d4a2f4783483415c74a63f229687a14d2c5698f119235dc937c3ce036ab57ded",
       "route": [],
       "insightIds": [],
       "availableOptionIds": [],
@@ -42,7 +42,7 @@
       "tableauId": "cleft-fang-active",
       "reading": "base",
       "file": "auto-dailies/fang-private.png",
-      "sha256": "7001b8900c2989f57e1c5f6020d359a4738aca07a078b92a9d5a538395bf9c79",
+      "sha256": "92acbc23d408f1fda2a589a2dc4fb51108963c5e3f76ba82221252e1f84c8c90",
       "route": [],
       "insightIds": [],
       "availableOptionIds": [],
@@ -55,7 +55,7 @@
       "tableauId": "cleft-chun-active",
       "reading": "base",
       "file": "auto-dailies/chun-speaks.png",
-      "sha256": "fe75618c216a9e32ef4f28f97a502bb92d3f7c28a458aff0721902988b21ed43",
+      "sha256": "fd5f9e65e4e3ed381533ed9df3bcada751d95c43631d103ee513991c14bf329b",
       "route": [],
       "insightIds": [],
       "availableOptionIds": [],
@@ -68,7 +68,7 @@
       "tableauId": "cleft-chun-active",
       "reading": "base",
       "file": "auto-dailies/chun-private.png",
-      "sha256": "b8d6abb67ceb77a22b5954cdcf35d4b77010456c351c06c0ae4f3e089b2e1ff2",
+      "sha256": "af5295f72fe99f84ad33c47a5288034e0f1a67dd2c57de6dff29e47c8e321a19",
       "route": [],
       "insightIds": [],
       "availableOptionIds": [],
@@ -81,7 +81,7 @@
       "tableauId": "cellar-establishing",
       "reading": "base",
       "file": "auto-dailies/cellar-location.png",
-      "sha256": "899f0918e501c298b1e7bcf93bd2e6631abbc3e998c40603a522ad8892934f11",
+      "sha256": "072c94ae4ecb94ac18c734ea1f6c0e95e2024d5c9daf6c2bcfc6afff3ed5f2ea",
       "route": [],
       "insightIds": [],
       "availableOptionIds": [],
@@ -94,7 +94,7 @@
       "tableauId": "substrate-study",
       "reading": "base",
       "file": "auto-dailies/substrate-reveal.png",
-      "sha256": "d6efa2c1899684199408bdbf414c426fdf6518c1aa2d1e2f741b1945c385e550",
+      "sha256": "7502a972fa8dca7c2603bfe8cb58b23a9d4b0cbf6353afb5b7b87c21e82225e6",
       "route": [],
       "insightIds": [],
       "availableOptionIds": [],
@@ -107,7 +107,7 @@
       "tableauId": "substrate-study",
       "reading": "base",
       "file": "auto-dailies/evidence-reading-choice.png",
-      "sha256": "08ec8acc48a00ac8b73da59759af7e5ab4a70e343fb220e5d5f79368c58a9760",
+      "sha256": "73c683118a384c12b42ae148bc7855fbae6597c00a5524bc5d4dc0fb9a51103f",
       "route": [],
       "insightIds": [],
       "availableOptionIds": [
@@ -123,7 +123,7 @@
       "tableauId": "substrate-fang-appraisal",
       "reading": "base",
       "file": "auto-dailies/crescent-reading.png",
-      "sha256": "afee235db603d82b22976cb6f6ab64b3be813ded47eb7a459e69efd36f98e84f",
+      "sha256": "df8cd772d9a8ccc453c852a530c5d75ce2ce47443511f970906b8deeff7ff0e7",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -143,7 +143,7 @@
       "tableauId": "substrate-chun-appraisal",
       "reading": "base",
       "file": "auto-dailies/contact-distance-reading.png",
-      "sha256": "517cdc38e0b904b2cf860564cd6ac4b188e0406c73024d3803e50d4963cf5deb",
+      "sha256": "b1828b32a0335d0357e757939c7662d9957ebcecb320b29dcd9f07ba33d81544",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -163,7 +163,7 @@
       "tableauId": "cellar-conversation",
       "reading": "base",
       "file": "auto-dailies/tally-bound.png",
-      "sha256": "b8091376d4a913f7e2534b9d6c29ef508d86354177a9d4f02c19b54c5eb125fc",
+      "sha256": "95741f0c444c09951385be9f485cc9ce00638b7346ef0592ba2ee1c4b86894ee",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -183,7 +183,7 @@
       "tableauId": "fang-question",
       "reading": "base",
       "file": "auto-dailies/question-choice.png",
-      "sha256": "474b73edb9a7145412bfc49888e4fdc1b1bcc6bd5fd2335dd2a3ca7d689c49cd",
+      "sha256": "327951c88c924da04ce5b634cd924827531b4740482193fd09f6debcf742f7c2",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -195,10 +195,61 @@
       ],
       "availableOptionIds": [
         "ask-rank",
-        "ask-loss"
+        "ask-loss",
+        "ask-witnesses"
       ],
       "textSha256": "4d2f486d5aabe813d30d7ce8cc827595312b1fd268ed950ea5941f1cc6e3771c",
       "steps": 10
+    },
+    {
+      "frameId": "witness-question",
+      "momentId": "witness-question",
+      "tableauId": "fang-question",
+      "reading": "base",
+      "file": "auto-dailies/witness-question.png",
+      "sha256": "a1f7ba179f72fa516718f1de72c30d7cefc8ee3f1e64f7eb02c249121eb0cdae",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-witnesses"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "secrecy-as-stake-assumed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "dacee97f631dc6b922fca6b53b0b7998086073bbf363b38d9dad1bd1f6c7f121",
+      "steps": 11
+    },
+    {
+      "frameId": "witness-chun-private",
+      "momentId": "witness-chun-private",
+      "tableauId": "cellar-conversation",
+      "reading": "base",
+      "file": "auto-dailies/witness-chun-private.png",
+      "sha256": "3dae1f42c12f817b445979ce911cd3d92b10f6c94e4eddda135ba9778ef1b590",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-witnesses"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "secrecy-as-stake-assumed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "4a7d33078d6ed82f70cca37d10f973767e01799dab2124b455e04ed766bbd3a7",
+      "steps": 12
     },
     {
       "frameId": "rank-question",
@@ -206,7 +257,7 @@
       "tableauId": "fang-question",
       "reading": "base",
       "file": "auto-dailies/rank-question.png",
-      "sha256": "6b2c9b10c8837508aa3283226bac98869922c937f0012952cf2b914a75bbfba6",
+      "sha256": "1506599625607eecb1d19d513a91327a3f8d2380485836d48460bef75d096cb6",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -230,7 +281,7 @@
       "tableauId": "cellar-conversation",
       "reading": "base",
       "file": "auto-dailies/rank-chun-private.png",
-      "sha256": "dbbc940653b8ccc6549a6feee54b6dbef0415d34705f72a2dc5d1260082f6a58",
+      "sha256": "9e43a023e0468189f795b454cf1a6a5fa5704835ebd33f8e44536077a24d0d8a",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -254,7 +305,7 @@
       "tableauId": "fang-question",
       "reading": "base",
       "file": "auto-dailies/loss-question.png",
-      "sha256": "fdba3a3634f8f3d512947602e9b31088e6cd0af585e9f60d386728572cd23d02",
+      "sha256": "b492a76d2955c422e34ba56ffd1883dcb5fd262b1fe3e44f8521439c78174bd4",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -278,7 +329,7 @@
       "tableauId": "cellar-conversation",
       "reading": "base",
       "file": "auto-dailies/loss-chun-private.png",
-      "sha256": "a7a34cb67d3b066ea385a29f0495c8f7d520f39feed0beb164d89528b4f85010",
+      "sha256": "6de519a9bd11e4fe488e0d074b1ffa5cb413aca151bcca5554c1577dd9e88ef8",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -297,12 +348,37 @@
       "steps": 12
     },
     {
+      "frameId": "chun-answers--03b347",
+      "momentId": "chun-answers",
+      "tableauId": "cellar-disclosure",
+      "reading": "variant",
+      "file": "auto-dailies/chun-answers--03b347.png",
+      "sha256": "b475b296da5116c08400b181c591b90770f0fab6c7a218b92067f69234942ec3",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-witnesses"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "secrecy-as-stake-assumed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "dbb25653683465776ca738b97712a4c2f559f0470c3cde098ef837a83a734b77",
+      "steps": 13
+    },
+    {
       "frameId": "chun-answers--92cdae",
       "momentId": "chun-answers",
       "tableauId": "cellar-disclosure",
       "reading": "variant",
       "file": "auto-dailies/chun-answers--92cdae.png",
-      "sha256": "9a75bd21dc7f4f17c2029eec048e6c789113a7dbd6ba53c1d7137121ee0f27c0",
+      "sha256": "44b72ed090764c3d53c49264913b2da34ac9510b6df98c67c1c679fb06c75ac5",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -326,7 +402,7 @@
       "tableauId": "cellar-disclosure",
       "reading": "variant",
       "file": "auto-dailies/chun-answers--f18b56.png",
-      "sha256": "1158832ec1ec85d70e1f95dad183e6c0b97a1cb04b0f9e35b4179490297143fc",
+      "sha256": "2ba95b6e6d7271da6d2b3a2099028e003d1378ac59e2a41da2fd5e242c64accf",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -350,7 +426,7 @@
       "tableauId": "substrate-held-warning",
       "reading": "variant",
       "file": "auto-dailies/inspection-returns--5c1aa6.png",
-      "sha256": "7b6d87da3c6c267afe393a771820a02ba9d3de84e836d4000a917fcac6786a3f",
+      "sha256": "f19f3764bd980926fa22fcfeee28fbfb60b180f58ba94dc515e713a9e0a9ffc3",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -375,7 +451,7 @@
       "tableauId": "substrate-held-warning",
       "reading": "variant",
       "file": "auto-dailies/inspection-returns--95b4d6.png",
-      "sha256": "a7bca556637f3af5defe141621104790a13fbf7dfc070934206be05ad29183d8",
+      "sha256": "aa216efcdda1cb5c3c8a449457fe3a7993e813b497bb9405fc90cab0c94dee83",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -399,7 +475,7 @@
       "tableauId": "substrate-held-warning",
       "reading": "variant",
       "file": "auto-dailies/inspection-returns--f19559.png",
-      "sha256": "1c148b9ebd3e123152112f1b853c86b6ea03d7ab9707363275110cf9bec0f1de",
+      "sha256": "a35e5ebefd941f0d813f63cadbb3824f03cb39abe3c80bfcd914e5cacb4d94b5",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -423,7 +499,7 @@
       "tableauId": "substrate-study",
       "reading": "base",
       "file": "auto-dailies/reliquary-reading-choice.png",
-      "sha256": "fd73ef0f77aad093ddafc7f30dbe0b01c6457aff0aa4315f7c0825430394172d",
+      "sha256": "5012b3e3364982744fde29ed5a52e0a19e3fdfdd95d445caf646ca9475350287",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -439,18 +515,19 @@
       ],
       "availableOptionIds": [
         "read-fang-calculation",
-        "read-chun-warning"
+        "read-chun-warning",
+        "read-chun-claim"
       ],
       "textSha256": "6564b7ec763d8f118edde5c51c4fb42e5fe44b6fb28b18aed21b88d28856d79a",
       "steps": 15
     },
     {
-      "frameId": "reliquary-reading-choice--e56278",
+      "frameId": "reliquary-reading-choice--2ce78b",
       "momentId": "reliquary-reading-choice",
       "tableauId": "substrate-study",
       "reading": "variant",
-      "file": "auto-dailies/reliquary-reading-choice--e56278.png",
-      "sha256": "8f50db525a0bf45eb61acae3efd491b6647a6f394d03157dedf315d485353f7a",
+      "file": "auto-dailies/reliquary-reading-choice--2ce78b.png",
+      "sha256": "47cc19845082bc155f67cc0961c2c92c69ca176e98370185820a1494463d73a5",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -469,10 +546,40 @@
       "availableOptionIds": [
         "read-fang-calculation",
         "read-chun-warning",
-        "hold-leverage-warning"
+        "hold-leverage-warning",
+        "read-chun-claim"
       ],
       "textSha256": "6564b7ec763d8f118edde5c51c4fb42e5fe44b6fb28b18aed21b88d28856d79a",
       "steps": 19
+    },
+    {
+      "frameId": "chun-claim-reading",
+      "momentId": "chun-claim-reading",
+      "tableauId": "substrate-chun-appraisal",
+      "reading": "base",
+      "file": "auto-dailies/chun-claim-reading.png",
+      "sha256": "8905d92555828fb06775a019522065faadff608e07e240f951ec2499d37c8644",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "read-chun-claim"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "chun-ambition-assumed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "447316cf33e31dc239f14e762a0bc9ffc91915a92f4a827950fc8e9be1a5ab74",
+      "steps": 16
     },
     {
       "frameId": "fang-leverage-private",
@@ -480,7 +587,7 @@
       "tableauId": "substrate-fang-appraisal",
       "reading": "base",
       "file": "auto-dailies/fang-leverage-private.png",
-      "sha256": "7d955be07b1dfa46fda91b68444efe909eee66ba7d97351d874d4448184311ac",
+      "sha256": "b69189f4312f796bed6f88449ff22dc4a4de35775442cecbd6874711622bc869",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -509,7 +616,7 @@
       "tableauId": "substrate-chun-appraisal",
       "reading": "base",
       "file": "auto-dailies/chun-warning-private.png",
-      "sha256": "d609e8ea783b756d0c81887a4d126ba9dec82eb8b594486cb77a55f31cb40eae",
+      "sha256": "b5b71ff329fc591a630bfbed9ffb25105de8cd91ac945da42aa1259417f81d7b",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -538,7 +645,7 @@
       "tableauId": "substrate-fang-appraisal",
       "reading": "variant",
       "file": "auto-dailies/moon-scar-synthesis--736d76.png",
-      "sha256": "14eb1bd78427fa51bdeabe6a418f353f6d249921ea9b5b9a9fa83dd90d1fd61e",
+      "sha256": "a052d7e836c051a97876923696092bebec657a83d3ca66ba0df7cae8064abb87",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -568,7 +675,7 @@
       "tableauId": "substrate-chun-appraisal",
       "reading": "variant",
       "file": "auto-dailies/moon-scar-synthesis--866c6e.png",
-      "sha256": "4c0e27c96727aebcded1d6d41a0198b3fcf3abfb1c5d6647f899c8bcac0954d4",
+      "sha256": "4490d2868a62634bf7acecc6ff9fc2a81c27a79d26151a18aa004d221b3b5ef8",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -598,7 +705,7 @@
       "tableauId": "substrate-study",
       "reading": "base",
       "file": "auto-dailies/two-measures.png",
-      "sha256": "dc1a96ef15095c9ae07f7e07969e854458acf7066e8a23008524e38feb20cb90",
+      "sha256": "f7384447be49a03eaa29edb016d007ae62262772fd565687ff3166802d046b48",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -628,7 +735,7 @@
       "tableauId": "moon-scar-reveal",
       "reading": "base",
       "file": "auto-dailies/moon-scar.png",
-      "sha256": "8d1f3bf99ce72365a6c390279b60dcc98d6e65ddc41c13bf26c4a1e81e86a6a8",
+      "sha256": "8c332c72421568bbc7dac42e2efc18d2e347394805347e5df0f7cf4030dd27c9",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -657,7 +764,7 @@
       "tableauId": "moon-scar-aftermath",
       "reading": "base",
       "file": "auto-dailies/chun-hesitates.png",
-      "sha256": "8cc47ac4c3376cdff7e4fc62c3f07b351f8c8c850489bfb540d4c29cf7640d34",
+      "sha256": "567cf3ed9d065aae15283fd3c49f1da19b8c58ed5df7595a8855cd7d4b2de5d1",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -681,12 +788,42 @@
       "steps": 18
     },
     {
+      "frameId": "chun-hesitates--29730c",
+      "momentId": "chun-hesitates",
+      "tableauId": "moon-scar-aftermath",
+      "reading": "variant",
+      "file": "auto-dailies/chun-hesitates--29730c.png",
+      "sha256": "03ac3ac6c3651b531682192d165a21b0688013c90056295305a56af6369c16a9",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-witnesses"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "read-fang-calculation"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "secrecy-as-stake-assumed",
+        "fang-leverage-understood"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "005f395db4ed0bdba0bd36330cf0fefd04dfc362f5b3fdc23644f196b3503695",
+      "steps": 18
+    },
+    {
       "frameId": "fang-conduct-forecast",
       "momentId": "fang-conduct-forecast",
       "tableauId": "moon-scar-reflection",
       "reading": "base",
       "file": "auto-dailies/fang-conduct-forecast.png",
-      "sha256": "2c1f0ea946d9c817442bef8a0b85edf7e2fc952ab56627f03df621d60428c857",
+      "sha256": "83e1463c6114e987810f75783d4d3611353bf1155d4f3b7be7de025406db3bd1",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -707,10 +844,45 @@
       ],
       "availableOptionIds": [
         "expect-seize",
-        "expect-preserve"
+        "expect-preserve",
+        "expect-delegate"
       ],
       "textSha256": "16f70ebd8f1e5ef066e1c636f9126bb567c410ff554421058e561df69ee8de80",
       "steps": 19
+    },
+    {
+      "frameId": "forecast-delegate",
+      "momentId": "forecast-delegate",
+      "tableauId": "moon-scar-reflection",
+      "reading": "base",
+      "file": "auto-dailies/forecast-delegate.png",
+      "sha256": "05364e185456e19208970de343ba659ac51ecd0d505863adb3d4fcf486efe186",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "read-fang-calculation"
+        },
+        {
+          "nodeId": "fang-conduct-forecast",
+          "optionId": "expect-delegate"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "fang-leverage-understood",
+        "fang-delegates-risk-assumed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "585624e3013820f3e24feb791cec2a9aab11449c693233933c50087d61e9b834",
+      "steps": 20
     },
     {
       "frameId": "forecast-seize",
@@ -718,7 +890,7 @@
       "tableauId": "substrate-fang-appraisal",
       "reading": "base",
       "file": "auto-dailies/forecast-seize.png",
-      "sha256": "1bd5989a78223b95544f9208c049aae281372548e9d8813c3dd5bd8a311a3390",
+      "sha256": "e6df7ff252853815e8861884177003ccae1611512e791f9b1da8de0546d1cf1d",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -751,7 +923,7 @@
       "tableauId": "substrate-chun-appraisal",
       "reading": "base",
       "file": "auto-dailies/forecast-preserve.png",
-      "sha256": "dfb47d0d2b77cf1ee29cc44a7116999a8afab275f93c1274edc87ce466913736",
+      "sha256": "e39fdcbe927d662b05e1070641fc8640ba736110d8707d58f0361630352071e4",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -779,12 +951,45 @@
       "steps": 20
     },
     {
+      "frameId": "fang-does-not-touch",
+      "momentId": "fang-does-not-touch",
+      "tableauId": "moon-scar-restraint",
+      "reading": "base",
+      "file": "auto-dailies/fang-does-not-touch.png",
+      "sha256": "b28328eee301c3643bdfafc9125be945d65207f54221e87744860fe2da36aaa0",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "read-chun-claim"
+        },
+        {
+          "nodeId": "fang-conduct-forecast",
+          "optionId": "expect-seize"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "chun-ambition-assumed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "d22a536fdc758506488ec80c88b8a58ce1f489fecb04f7e7ae642aa30fdba369",
+      "steps": 21
+    },
+    {
       "frameId": "fang-does-not-touch--00b164",
       "momentId": "fang-does-not-touch",
       "tableauId": "moon-scar-restraint",
       "reading": "variant",
       "file": "auto-dailies/fang-does-not-touch--00b164.png",
-      "sha256": "8ea3f7889d6a438f744fd90ad89db481728452865542a0e806dd0d0690978e4d",
+      "sha256": "e15d985b2359fd17872357ecf11f184572a5954e7be1bd5ea57e887cd10931b3",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -817,7 +1022,7 @@
       "tableauId": "moon-scar-restraint",
       "reading": "variant",
       "file": "auto-dailies/fang-does-not-touch--430191.png",
-      "sha256": "a00ec86503de987d5d888452aa8b09438e3671be2f3fc48609e439b13bf10e58",
+      "sha256": "2fb68da9b5d5ce43894af6c4ec3f12ef81fcd298365b9d38e475b1651ca75c20",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -851,7 +1056,7 @@
       "tableauId": "moon-scar-restraint",
       "reading": "variant",
       "file": "auto-dailies/fang-does-not-touch--665093.png",
-      "sha256": "c7e650646c5c2ddfcc636561005962d664dee812f17d8a11424a729c9a82a373",
+      "sha256": "2fee57400d32c7e2ff5873ad03639f8f855ae9a2e81d6ad8023a032d2ac9766b",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -879,12 +1084,46 @@
       "steps": 21
     },
     {
+      "frameId": "conduct-prediction-settles--b1647a",
+      "momentId": "conduct-prediction-settles",
+      "tableauId": "moon-scar-restraint",
+      "reading": "variant",
+      "file": "auto-dailies/conduct-prediction-settles--b1647a.png",
+      "sha256": "938a895a5982842d4ef004bb23a68a25462f729310c39e122df660b7200b64ad",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "read-fang-calculation"
+        },
+        {
+          "nodeId": "fang-conduct-forecast",
+          "optionId": "expect-delegate"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "fang-leverage-understood",
+        "fang-delegates-risk-assumed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "277f07933c8bf0647af0bb992e21c12f7d4bd71fc36e191b613e1e319206edb2",
+      "steps": 22
+    },
+    {
       "frameId": "conduct-prediction-settles--c20578",
       "momentId": "conduct-prediction-settles",
       "tableauId": "moon-scar-restraint",
       "reading": "variant",
       "file": "auto-dailies/conduct-prediction-settles--c20578.png",
-      "sha256": "5a46222f0532623352b4b239f951b740a738a3cf462190c53c01a70c7311a492",
+      "sha256": "56e5f103bfd20ff7b36a292a1f525b6521540f830d8f507fa9e06a456367530b",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -917,7 +1156,7 @@
       "tableauId": "moon-scar-restraint",
       "reading": "variant",
       "file": "auto-dailies/conduct-prediction-settles--d4a251.png",
-      "sha256": "e7beb80e98cfcff98bf14d32d07e32b8737ea4a6f4da60e2bf573a9c69041ea6",
+      "sha256": "9dbdd3e959beb555efce52c63aeaa090131520692d0936eb88984df49e4cb2ba",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -950,7 +1189,7 @@
       "tableauId": "moon-scar-reflection",
       "reading": "base",
       "file": "auto-dailies/trial-decision.png",
-      "sha256": "4d3cd48145c8098f9fedbced1949e6427d45172b1337549435f11d8ae81244bf",
+      "sha256": "afe2cc3eccc7bdb8260c65c03605ee02552c2937916755b12e04206cac1341e6",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -975,10 +1214,49 @@
       ],
       "availableOptionIds": [
         "choose-untouched-original",
-        "choose-split-custody"
+        "choose-split-custody",
+        "choose-repeat-tonight"
       ],
       "textSha256": "ccddc6f32372ca98636cd4e95c63aa5f0a11c36a268294cb1e15fad50854275d",
       "steps": 23
+    },
+    {
+      "frameId": "repeat-tonight-reading",
+      "momentId": "repeat-tonight-reading",
+      "tableauId": "moon-scar-reflection",
+      "reading": "base",
+      "file": "auto-dailies/repeat-tonight-reading.png",
+      "sha256": "497d3d6d1a3c049a82351fa250256859baf52df451be5a5d0d726e6c25bbd228",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "read-fang-calculation"
+        },
+        {
+          "nodeId": "fang-conduct-forecast",
+          "optionId": "expect-seize"
+        },
+        {
+          "nodeId": "trial-decision",
+          "optionId": "choose-repeat-tonight"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "fang-leverage-understood",
+        "haste-as-control-assumed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "7a17b8f9b7cd2b85a8f78d86fcd2eaf99e6897df4584dfd50b559a681a7a279a",
+      "steps": 24
     },
     {
       "frameId": "untouched-original-reading",
@@ -986,7 +1264,7 @@
       "tableauId": "substrate-fang-appraisal",
       "reading": "base",
       "file": "auto-dailies/untouched-original-reading.png",
-      "sha256": "7fc666a3d835375cee1d8b295681f2489536102c835ba214845bf4f69125c9e2",
+      "sha256": "bb4b23f1898027bc053de4ea3129925e82377eb4970e52a598aa25939f34a7fd",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -1023,7 +1301,7 @@
       "tableauId": "substrate-chun-appraisal",
       "reading": "base",
       "file": "auto-dailies/split-custody-reading.png",
-      "sha256": "ba22219df27ae3d276d80f2ad1f16d536751c962691fb83994a741eccc6dec50",
+      "sha256": "36a385616f99fb00a2a4f961e806a7152812362ceeb27d964066373ed64ccdb7",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -1055,12 +1333,12 @@
       "steps": 24
     },
     {
-      "frameId": "seal-order--775d26",
+      "frameId": "seal-order--27d019",
       "momentId": "seal-order",
-      "tableauId": "moon-scar-reflection",
+      "tableauId": "moon-scar-seal-order",
       "reading": "variant",
-      "file": "auto-dailies/seal-order--775d26.png",
-      "sha256": "99c6ba6b5658d4bafe1970a9c25370f23b2d311cf183bb96983ea4144608005b",
+      "file": "auto-dailies/seal-order--27d019.png",
+      "sha256": "03de577c0821c5c4f6a10b98fbf631f7d7f3d32e05c35e9fe8c4bdfe0541540f",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -1092,12 +1370,50 @@
       "steps": 25
     },
     {
-      "frameId": "seal-order--e44fae",
+      "frameId": "seal-order--afb6ab",
       "momentId": "seal-order",
-      "tableauId": "moon-scar-reflection",
+      "tableauId": "moon-scar-seal-order",
       "reading": "variant",
-      "file": "auto-dailies/seal-order--e44fae.png",
-      "sha256": "0a5f30e578445b8397cc35d1f9634521bab69ceb43c447e0f0b1dd25ecd9e62e",
+      "file": "auto-dailies/seal-order--afb6ab.png",
+      "sha256": "9d2ee1442304ce526c71be3d3f6ad6fcc2ec067b7d3e151cf215f7f41390925f",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "read-fang-calculation"
+        },
+        {
+          "nodeId": "fang-conduct-forecast",
+          "optionId": "expect-seize"
+        },
+        {
+          "nodeId": "trial-decision",
+          "optionId": "choose-repeat-tonight"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "fang-leverage-understood",
+        "haste-as-control-assumed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "a8b6d75793747496aae6280e50519358ca96d6ad38e7904a1af7de32c6cba204",
+      "steps": 25
+    },
+    {
+      "frameId": "seal-order--c02faa",
+      "momentId": "seal-order",
+      "tableauId": "moon-scar-seal-order",
+      "reading": "variant",
+      "file": "auto-dailies/seal-order--c02faa.png",
+      "sha256": "d4c548a1047297aceee6287e4665202772b3818b8cef3fb547d02c96398e2ca9",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -1134,7 +1450,7 @@
       "tableauId": "moon-scar-aftermath",
       "reading": "base",
       "file": "auto-dailies/chun-tests-order.png",
-      "sha256": "fbff8231d8f397983747407edf238359430131826d30851952601aa50e7b8535",
+      "sha256": "d6d8f537aec583b68770c9034cd98baee932c37908e02f27ebdc7e045f6b9d33",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -1171,7 +1487,7 @@
       "tableauId": "moon-scar-restraint",
       "reading": "base",
       "file": "auto-dailies/fang-keeps-failure.png",
-      "sha256": "7e841a481d287d5fecacd089a89f6f294abcccd1e263fd1ae40bcb69419d42d0",
+      "sha256": "44157d60cd19f0b1ca603785aa727d052e3cc63a5340b3c50c639c8494d25ec8",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -1208,7 +1524,7 @@
       "tableauId": "moon-scar-reflection",
       "reading": "base",
       "file": "auto-dailies/fang-answers-cost.png",
-      "sha256": "fd7f2f096dc823997b02c34e06fb4a1c43ea83e398bf6a6b097765d6b40f567c",
+      "sha256": "c20057c7a4123c6e7274b933de16d6b62cab99e907013fcda030fdd6288f9817",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -1240,12 +1556,50 @@
       "steps": 28
     },
     {
+      "frameId": "fang-answers-cost--50b75f",
+      "momentId": "fang-answers-cost",
+      "tableauId": "moon-scar-reflection",
+      "reading": "variant",
+      "file": "auto-dailies/fang-answers-cost--50b75f.png",
+      "sha256": "c4f9e00de22913e62da243588f2d8d23c3994da5219c92baafd0e676d257b805",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "read-fang-calculation"
+        },
+        {
+          "nodeId": "fang-conduct-forecast",
+          "optionId": "expect-seize"
+        },
+        {
+          "nodeId": "trial-decision",
+          "optionId": "choose-repeat-tonight"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "fang-leverage-understood",
+        "haste-as-control-assumed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "e3f1c50f49abab6ad7192c70c461f41f8359eb1315c347d7ceeee7acb0ae6b0e",
+      "steps": 28
+    },
+    {
       "frameId": "scar-closes",
       "momentId": "scar-closes",
       "tableauId": "substrate-held-warning",
       "reading": "base",
       "file": "auto-dailies/scar-closes.png",
-      "sha256": "94523e3ab30d3d345054c69c99c4a7e51c331ca9285b6a317d5ba1049b1da909",
+      "sha256": "ca560a8079b9c15a86e780f214b0790e86b77b4e156efb6f540eeb52fce4275e",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -1277,12 +1631,50 @@
       "steps": 29
     },
     {
+      "frameId": "scar-closes--f11d13",
+      "momentId": "scar-closes",
+      "tableauId": "substrate-held-warning",
+      "reading": "variant",
+      "file": "auto-dailies/scar-closes--f11d13.png",
+      "sha256": "4e6a082988464c25c4caaae79b44924147bbc393582a12e76f2817a102227e84",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "read-fang-calculation"
+        },
+        {
+          "nodeId": "fang-conduct-forecast",
+          "optionId": "expect-delegate"
+        },
+        {
+          "nodeId": "trial-decision",
+          "optionId": "choose-untouched-original"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "fang-leverage-understood",
+        "fang-delegates-risk-assumed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "8c6776efd2d80b2e21542eae87c489e01fdb84a4817248dc110db7ca2070eca7",
+      "steps": 29
+    },
+    {
       "frameId": "key-remains",
       "momentId": "key-remains",
       "tableauId": "cellar-disclosure",
       "reading": "base",
       "file": "auto-dailies/key-remains.png",
-      "sha256": "4cf1cff279510e4dcfc552c6c1165d8323a78cfdd1fb17ee92cec52da4a5e13d",
+      "sha256": "567fbec7aee94e1d4e1b83713fb4233bcee944c7e8a805f745b9627de986cd44",
       "route": [
         {
           "nodeId": "evidence-reading-choice",
@@ -1314,12 +1706,49 @@
       "steps": 30
     },
     {
+      "frameId": "key-remains--a12d9b",
+      "momentId": "key-remains",
+      "tableauId": "cellar-disclosure",
+      "reading": "variant",
+      "file": "auto-dailies/key-remains--a12d9b.png",
+      "sha256": "83daa5f33631637dd12c87bbf9810c628f35bc99990ccfe0c142e1e3b66edd6d",
+      "route": [
+        {
+          "nodeId": "evidence-reading-choice",
+          "optionId": "trace-empty-cells"
+        },
+        {
+          "nodeId": "question-choice",
+          "optionId": "ask-rank"
+        },
+        {
+          "nodeId": "reliquary-reading-choice",
+          "optionId": "read-chun-claim"
+        },
+        {
+          "nodeId": "fang-conduct-forecast",
+          "optionId": "expect-seize"
+        },
+        {
+          "nodeId": "trial-decision",
+          "optionId": "choose-untouched-original"
+        }
+      ],
+      "insightIds": [
+        "crescent-absence-noticed",
+        "chun-ambition-assumed"
+      ],
+      "availableOptionIds": [],
+      "textSha256": "cc16417299a1cd13c9eb912eb47875b922859a474f1982e108c2d294e680050a",
+      "steps": 30
+    },
+    {
       "frameId": "ending",
       "momentId": "ending",
       "tableauId": "moon-scar-reflection",
       "reading": "base",
       "file": "auto-dailies/ending.png",
-      "sha256": "e9f5004aa4bf4184691bb699e429ca9cbdcd383d40f62e71c4584af8216b48bd",
+      "sha256": "eb244779b400c4cbc300dd0cface4d9012be72a34507f2581c745d15a49b7f68",
       "route": [
         {
           "nodeId": "evidence-reading-choice",

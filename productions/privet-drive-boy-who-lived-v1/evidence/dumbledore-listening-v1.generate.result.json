@@ -1,0 +1,37 @@
+{
+  "id": "n20eqky7ahrmt0d0senaqak0m8",
+  "model": "bytedance/seedream-4.5",
+  "version": "hidden",
+  "input": {
+    "aspect_ratio": "3:4",
+    "image_input": [
+      "data:image/jpeg;base64,..."
+    ],
+    "max_images": 1,
+    "prompt": "High-fidelity authored 2D visual-novel illustration in a storybook-gothic British register, refined anime-influenced anatomy, crisp naturally tapered ink linework, clean faces and hands, layered wool and velvet cloth texture, palette of sodium-lamp amber, indigo night and suburban brick, cinematic directional light, restrained atmospheric depth, elegant detailed key art readable at phone scale. Create one precise acting variation from the supplied canonical character image. Preserve the exact identity, face, hair, age, full-body proportions, wardrobe, facing direction, canvas, subject scale, padding, linework, shading and palette of the reference. Change only the performance: appraisal. He listens: head tilted a fraction, eyes attentive over the half-moon spectacles, one hand slowly stroking the long silver beard, the other resting quietly. Weighing what he is being told, neither agreeing nor dismissing, the faint amusement gone from the mouth. Both feet stay level and visible, the complete head-to-feet figure remains in frame, hands anatomically clear. Do not mirror, crop, zoom, rotate, change wardrobe, add props or scenery, or redesign the face. Output the isolated actor on a perfectly uniform flat #FF00FF chroma field with no floor, cast shadow, rim light or reflected chroma. No text, letters, numbers, captions, logos, border, interface, placement guides, anonymous silhouettes, duplicate objects, extra limbs, malformed hands, chibi anatomy, glossy 3D, photorealism, vector-flat rendering, painterly blur, coarse pixels, real actor likeness.",
+    "sequential_image_generation": "disabled",
+    "size": "2K"
+  },
+  "logs": "Generating 1728x2304 image with aspect ratio 3:4 at 2K resolution\nGenerating...\nGenerated in 33.2sec\n",
+  "output": [
+    "https://replicate.delivery/xezq/OQWnRhcqekSzR6Wxe5Bsd0KlJePxPlYZfhr9vL6ojgJP4zAdB/tmp_89uk35n.jpg"
+  ],
+  "data_removed": false,
+  "error": null,
+  "source": "api",
+  "status": "succeeded",
+  "created_at": "2026-09-23T00:29:22.132Z",
+  "started_at": "2026-09-23T00:29:22.153787897Z",
+  "completed_at": "2026-09-23T00:29:55.864924452Z",
+  "urls": {
+    "cancel": "https://api.replicate.com/v1/predictions/n20eqky7ahrmt0d0senaqak0m8/cancel",
+    "get": "https://api.replicate.com/v1/predictions/n20eqky7ahrmt0d0senaqak0m8",
+    "stream": "https://stream.replicate.com/v1/files/jbxs-jx272mj33ej3254jyweex7lrjxkeb4bu7er3rd4hpmaply5w5uqa",
+    "web": "https://replicate.com/p/n20eqky7ahrmt0d0senaqak0m8"
+  },
+  "metrics": {
+    "image_output_count": 1,
+    "predict_time": 33.711136555,
+    "total_time": 33.732924452
+  }
+}
